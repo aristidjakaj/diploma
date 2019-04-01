@@ -1,0 +1,1877 @@
+UNIVERSITETI I TIRANËS 
+FAKULTETI I EKONOMISË 
+DEPARTAMENTI STATISTIKE DHE 
+INFORMATIKE E ZBATUAR 
+ 
+ 
+ 
+ 
+  
+ 
+Analiza, Dizenjimi dhe Implementimi i 
+një sistemi vlerësimi për pedagogët 
+Mikrotezë  
+Cikli i Parë i Studimeve 
+Diploma: Bachelor  Informatikë Ekonomike 
+ 
+ 
+ 
+ 
+Punuan:                 
+Kristi Gorea 
+Uendi Sinani 
+Pedagogu udhëheqës: 
+Dr.Elda Kuka Balili 
+ 
+ 
+ 
+ 
+ 
+ 
+Tiranë, _______ 
+ 
+----------------Page (0) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+2       
+Vërtetohet se ky Komision Vlerësimi është mbledhur në datën ____________ për të 
+bërë  vlerësimin  e kësaj  Mikroteze  të  Ciklit  të  Parë  të  Studimeve  për  përftimin  e 
+Diplomës Bachelor në _________.   Vlerësimi   është   realizuar në   përputhje   me  
+rregullat e  Universitetit të Tiranës.   
+ 
+ 
+________________________________ 
+Dr. Emër Mbiemër  
+Titulli 
+Kryetar Komisioni 
+Fakulteti i Ekonomisë 
+Universiteti i Tiranës 
+ 
+ 
+ 
+ 
+________________________________ 
+Dr. Emër Mbiemër  
+Titulli 
+Anëtar Komisioni 
+Fakulteti i Ekonomisë 
+Universiteti i Tiranës 
+ 
+ 
+ 
+ 
+________________________________ 
+Dr. Emër Mbiemër  
+Titulli 
+Anëtar Komisioni 
+Fakulteti i Ekonomisë 
+Universiteti i Tiranës 
+ 
+_________________________________ 
+Dr. Emër Mbiemër  
+Titulli  
+Drejtues i Departamentit ____________ 
+ 
+Fakulteti i Ekonomisë 
+Universiteti i Tiranës 
+ 
+ 
+Data: ______________________ 
+ 
+ 
+© Copyright Kristi Gorea, Uendi Sinani Viti 2018 
+Përmbajtja e këtij punimi është totalisht autentike. Të gjitha të drejtat e rezervuara.  
+ 
+----------------Page (1) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+3       
+ 
+DEKLARATË 
+Ne, të nënshkruarit Kristi Gorea dhe Uendi Sinani deklarojmë që: (1) Kjo mikrotezë 
+përfaqëson punimin tonë origjinal, përveç rasteve të citimeve dhe referencave dhe (2) 
+Kjo  mikrotezë nuk  është  përdorur  më  parë  si  mikrotezë  apo projekt  kursi në  këtë 
+Universitet apo në Universitete të tjera.  
+                                                                                       ________________________ 
+                                      Kristi Gorea, Uendi Sinani 
+     Data 
+ 
+ 
+----------------Page (2) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+4       
+ABSTRAKT 
+Analiza, Dizenjimi dhe Implementimi i një sistemi vlerësimi për pedagogët 
+Studentët: Kristi Gorea, Uendi Sinani 
+Udhëheqësi Shkencor: Elda Kuka Balili 
+Universiteti i Tiranës 
+Fakulteti i Ekonomisë 
+Departamenti Statistikë dhe Informatikë e zbatuar 
+Tiranë,  
+Në ditët e sotme, teknologjia po bëhet pjesë e pothuajse të gjithë sektorëve ekonomik, 
+me një hap shumë të shpejtë. Megjithëse kjo nuk aplikohet shumë në tregun shqiptar, 
+shumë kompani janë duke implementuar teknologji të reja që lehtësojnë veprimtaritë 
+e tyre ditore, jo vetëm per të ditur gjendjen aktuale, por dhe për të pasur një avantazh 
+konkurues ndaj konkurentëve të tyre. Ky nuk është rasti i institucioneve të arsimit në 
+Shqipëri,  ku  shumica  e  të  cilëve  nuk  i  kanë  ndjekur  trendet  e  fundit  të  zgjidhjeve 
+teknologjike  që  tregu  ndërkombëtar  ofron. Për  shumë  vite, universiteteve iu  ka 
+munguar  një  sistem  i  denjë  informacioni  ku  të bëhet  vlerësimi  i  pedagogëve  nga 
+studentët. Ky  projekt  u  krijua  për  t’i  ardhur në  ndihmë studentëve. Ky  sistem 
+vlerësimi i hedhur  në rrjet  u  krijua  për  të lehtësuar  një  nga problemet kryesore të 
+arsimit universitar në Shqipëri. Sistemi do  të bëjë  të  mundur  vlerësimin  e  saktë  të 
+profesorëve duke qenë se studentët ruajnë anonimatin e tyre, si dhe profesorëve i jep 
+mundësinë që të marrin një feedback real të metodave të tyre të mësimdhënies, pikave 
+të tyre të forta e të dobëta. Gjithashtu ky sistem ofron dhe vlerësimin për universitetet 
+kryesore   në   Shqipëri   duke   i   dhënë   një   orientim   maturantëve   mbi   kushtet, 
+infrastrukturën  dhe  jetën  studentore. Mënyra  e  vjetër  e vlerësimit  të pedagogëve  me 
+anë të anketimeve do të ndryshojë në të ardhmen e afërt dhe ky sistem do të ofrojë të 
+gjitha mjetet që kjo të ndodh lirisht. 
+ 
+Fjalë  kyçe:  të  dhëna,  sistem  vlerësimi,  sistem  i  bazuar  në rrjet,  probleme  në 
+arsim, universitet, pedagog, student, mënyrë e vjetër, përfitime. 
+----------------Page (3) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+5       
+ 
+FALENDERIME DHE DEDIKIME 
+ 
+Për  realizimin  e  kësaj  teme  diplome duam  të falenderojmë  pedagogët  tanë  për 
+mbështetjen dhe këshillat që na kanë ofruar gjatë këtij cikli studimesh. 
+Falenderojmë  në  veçanti  pedagogen  tonë  udhëheqëse  Elda  Kuka  Balili  që  na  ka 
+mbështetur dhe suportuar për këtë temë. 
+Gjithashtu  falenderime  shkojnë  dhe  për  shokët/shoqet  e  klasës  për  kohërat  e  bukura 
+që kaluam së bashku. 
+Si  përfundim  duam  të  falenderojmë  familjet  tona  që  na  kanë  qëndruar  pranë  gjatë 
+këtij rrugëtimi. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+----------------Page (4) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+6       
+TABELA E PËRMBAJTJES 
+1.HYRJE ........................................................................................................................................... 10 
+ 2.RISHIKIMI I LITERATURES ............................................................................................................................................ 12 
+  2.1 Sistemi i vlerësimit të pedagogëve ................................................................................................... 12 
+  2.2 Website vlerësimi të ngjashëm ......................................................................................................... 13 
+        2.2.1 Rate my Professors ................................................................................................................... 13 
+        2.2.2 Rate my Teachers ..................................................................................................................... 14 
+        2.2.3 MyEdu ...................................................................................................................................... 14 
+  2.3 Teknologjitë e përdorura .................................................................................................................. 15 
+       2.3.1 Teknologjitë Front-End .............................................................................................................. 15 
+           2.3.1.1 HTML .................................................................................................................................. 15 
+           2.3.1.2 CSS ...................................................................................................................................... 16 
+           2.3.1.3 Javascript ............................................................................................................................ 16 
+      2.3.2 Teknololgjitë Back-End ............................................................................................................... 17 
+          2.3.2.1 PHP ...................................................................................................................................... 17 
+          2.3.2.2 XAMPP ................................................................................................................................. 17 
+3.ANALIZA DHE DIZENJIMI I WEBSITE................................................................................................................................ 18 
+ 3.1 Arkitektura e sistemit ...................................................................................................................... 18 
+      3.1.1 Lloji i arkitekturës ....................................................................................................................... 18 
+  3.2 Rastet e përdorimit ........................................................................................................................... 20 
+  3.3 Formularët e vlerësimit .................................................................................................................... 23 
+       3.3.1 Çfarë e bën një formular efektiv................................................................................................ 23 
+       3.3.2 Krijimi i formularëve të profesorëve .......................................................................................... 27 
+       3.3.3 Krijimi i formularëve të universiteteve ...................................................................................... 29 
+4.DATABAZA E FAQES .................................................................................................................................................... 31 
+  4.1 Krijimi i databazës ............................................................................................................................ 31 
+     4.1.1 Krijimi i tabelës user .................................................................................................................... 31 
+     4.1.2 Krijimi i tabelës pedagogët ......................................................................................................... 31 
+     4.1.3 Krijimi i tabelës universitetet ...................................................................................................... 32 
+----------------Page (5) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+7       
+      4.1.4 Krijimi i tabelës vlerësimped ...................................................................................................... 32 
+      4.1.5 Krijimi i tabelës vlerësimuni ....................................................................................................... 32 
+  4.2 Lidhja e databazës me website ......................................................................................................... 32 
+      4.2.1 Regjistrimi i të dhënave të përdoruesit në databazë ................................................................. 33 
+      4.2.2 Kërkimi në databazë për proçesin e logimit ............................................................................... 33 
+      4.2.3 Regjistrimi i rezultateve të formularëve të pedagogëve ............................................................ 34 
+      4.2.4 Regjistrimi i rezultateve të formularëve të universiteteve ......................................................... 34 
+  4.3 Lidhjet e tabelave në databazë ......................................................................................................... 35 
+5.IMPLEMENTIMI ....................................................................................................................................... 36 
+  5.1 Informacion i përgjithshëm .............................................................................................................. 36 
+      5.1.1 Pasqyra e faqes .......................................................................................................................... 36 
+  5.2 Përdorimi i sistemit ........................................................................................................................... 37 
+     5.2.1 Kryefaqja ..................................................................................................................................... 38 
+     5.2.2 Rreth nesh ................................................................................................................................... 40 
+     5.2.3 Log in .......................................................................................................................................... 41 
+     5.2.4 Regjistrohu .................................................................................................................................. 42 
+     5.2.5 Faqja Pedagogët ......................................................................................................................... 47 
+     5.2.6 Vlerësimi individual i pedagogëve .............................................................................................. 49 
+     5.2.7 Formulari i  pedagogut ............................................................................................................... 50 
+     5.2.8 Faqja Universitetet...................................................................................................................... 51 
+     5.2.9 Vlerësim individual i universiteteve ............................................................................................ 52 
+     5.2.10 Formulari i universitetit ............................................................................................................ 53 
+6.PËRFUNDIME DHE REKOMANDIME ......................................................................................................... 55 
+  6.1 Qëllimi për zhvillime të ardhshme .................................................................................................... 55 
+  6.2 Mirëmbajtja e website ...................................................................................................................... 56 
+  6.3 Konkluzionet ..................................................................................................................................... 57 
+REFERENCA .............................................................................................................................................. 59 
+ANEKS ....................................................................................................................................................... 60 
+----------------Page (6) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+8       
+LISTA E TABELAVE 
+ 
+Tabela 3.1 Rasti i vlerësimit të pedagogut................................................20 
+Tabela 3.2 Rasti i vlerësimit të universitetit...............................................21 
+Tabela 3.3 Rasti i kontaktimit të faqes.....................................................22 
+Tabela 5.1 Pasqyra e faqes..................................................................37 
+Tabela 6.1 Funksionalitetet shtesë.........................................................55 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+----------------Page (7) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+9       
+LISTA E FIGURAVE 
+Figura 3.1 Arkitektura client-server me bazë të dhënash (researchgate.net)........19 
+Figura 3.2 Formulari i pedagogëve......................................................28 
+Figura 3.3 Formulari i universiteteve....................................................30 
+Figura 4.1 Databaza e pedagogëve........................................................31 
+Figura 4.2 Databaza e universiteteve.....................................................32 
+Figura 4.3 Databaza e plotësuar me të dhënat e përdoruesit..........................33 
+Figura 4.4 Regjistrimi i vlerësimeve të pedagogëve...................................34 
+Figura 4.5 Regjistrimi i vlerësimeve të universiteteve.................................34 
+Figura 4.6 Lidhjet e tabelave në databazën regjistrimdb...............................35 
+Figura 5.1 Kryefaqja.......................................................................39 
+Figura 5.2 Rreth nesh......................................................................40 
+Figura 5.3 Log in............................................................................41 
+Figura 5.4 Të dhënat e vendosura gabim.................................................42 
+Figura 5.5 Regjistrimi......................................................................43 
+Figura 5.6 Username i gabuar.............................................................44 
+Figura 5.7 Fjalëkalimi i gabuar...........................................................44 
+Figura 5.8 Konfirmimi i fjalëkalimit të gabuar.........................................44 
+Figura 5.9 Emri i gabuar...................................................................45 
+Figura 5.10 Adresa e gabuar..............................................................45 
+Figura 5.11 Numri i celularit i gabuar...................................................45 
+Figura 5.12 Email i pasaktë...............................................................46 
+Figura 5.13 Universiteti i paplotësuar...................................................46 
+Figura 5.14 Gjinia e paplotësuar.........................................................46 
+Figura 5.15 Regjistrimi i saktë...........................................................47 
+----------------Page (8) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+10       
+Figura 5.16 Faqja Pedagogët................................................................48 
+Figura 5.17 Vlerësimi individual i pedagogëve.......................................49 
+Figura 5.18 Formulari i pedagogëve.....................................................51 
+Figura 5.19 Faqja e universiteteve.......................................................52 
+Figura 5.20 Vlerësimi individual i universiteteve......................................53 
+Figura 5.21 Formulari i universiteteve...................................................54 
+ 
+ 
+ 
+ 
+ 
+----------------Page (9) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+11       
+1. HYRJE 
+Të  jetosh  në  një  botë  ku  teknologjia  është  bërë  një  influencues  kryesor  i  jetës  sonë 
+dhe  në  të  njëjtën  kohë  një  gjenerator  i  madh  i  sasive  të  jashtëzakonshme  të  të 
+dhënave, na  ka çuar në  nevojën e  krijimit të  sistemeve  që  do  t'i  menaxhonin  këto  të 
+dhëna  në  mënyrën  e  duhur.  Sistemet  informative  të  bazuara  në  kompjuter  kanë 
+provuar  të  jenë  zgjidhja më  e  përshtatshme  dhe  efikase  për  të  trajtuar  të  gjitha  këto 
+operacione komplekse. Termi sistemi i informacionit i referohet softuerit të aplikimit 
+specifik që përdoret për të ruajtur rekorde të dhënash në një sistem kompjuterik dhe 
+automatizon  disa  nga  aktivitetet  e  përpunimit  të  informacionit të  organizatës (Paul, 
+2010).  
+Në ditët e sotme, teknologjia po hedh rrënjët në çdo sektor ekonomik në treg, me një 
+ritëm  të  shpejtë  veprimi.  Edhe  pse  kjo  nuk vlen  shumë  në  tregun  shqiptar,  shumë 
+kompani  janë  duke  filluar të  zbatojnë  teknologji  të reja që  thjeshtojnë  operacionet  e 
+tyre ditore jo vetëm për të fituar një pasqyrë të gjendjes së tyre aktuale, por edhe për 
+të fituar një avantazh konkurrues mbi konkurrentët. Ky nuk është rasti i institucioneve 
+arsimore universitare në Shqipëri,  të  cilat nuk po  ndjekin  zgjidhjet  moderne  të 
+teknologjisë që ofron tregu ndërkombëtar. 
+Për shumë vite, universitet kanë vuajtur nga mungesa e implementimit të një sistemi 
+vlerësimi të pedagogëve  dhe komponentëve të strukturës shkollore. Në pjesën më të 
+madhe  të  rasteve  këto  vlerësime  bëhen  me  anë  të  anketimit  fizik  ku  studentit  i 
+paraqitet  një  formular  ku  jo  gjithmonë  opinioni i  tyre  është  real.  Më  pas  këta 
+formularë mblidhen në departamentet përkatës dhe kontrollohen në mënyrë manuale 
+njëri  pas  tjetrit.  Kjo  metodë  nuk  është  efiçente  pasi  kërkon  shumë  kohë  dhe  energji 
+dhe shpeshherë studenti nuk vihet në dijeni të rezultatit. 
+Një  nga  vështirësitë  që  haset  në  komunikimin  student-pedagog është  vlerësimi  i 
+metodologjisë dhe performancës së pedagogut gjatë mësimdhënies. Nisur nga ky fakt 
+përdorimi  i  metodës  së  vjetër  sjell  që pedagogët  nuk  marrin  gjithmonë  vlerësime  të 
+sakta rreth metodave të tyre të mësimdhënies dhe kjo bën që ata të mos kuptojnë se 
+ku mund të përmirësohen. 
+Gjithashtu një problematikë tjetër e rëndësishme është dhe vlerësimi i universiteteve. 
+Kjo bën më të vështirë për maturantët të bëjnë zgjedhjen për hapin e tyre  pasardhës 
+----------------Page (10) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+12       
+akademik. Duke mos qenë në dijeni të informacioneve kryesore, rreth infrastrukturës, 
+jetës studentore dhe mundësive të punësimit në të ardhmen, sjell që maturanti të jetë i 
+paqartë  në  zgjedhjen  e  tij  të  ardhshme. Edhe  pse  aktualisht  ekziston  një  subjekt  që 
+merret  me  këto  vlerësime  që  quhet  Agjensia Britanike  e  Akreditimit(QAA),  ne 
+mendojmë se ka vend për një mënyrë tjetër vlerësimi. Duke qenë se QAA bazohet në 
+disa  kritere  të  përcaktuara  në  një  mjedis  ndryshe  nga  ai  shqiptar,  sjell  që  rezultatet 
+ndonjëherë  të  jenë  ndryshe  nga  realiteti.  Prandaj  ne  kemi  menduar  që  në  websiten 
+tonë,  rezultati  të  përcaktohet  nga  studentët  duke  qenë  se  janë  në  kontakt  direkt  me 
+jetën universitare. Feedback-u i marrë nga këta student do të jetë më afër realitetit ku 
+ne jetojmë krahasuar me atë të QAA. 
+Një  sistem  vlerësimi për  pedagogët  dhe  universitetet  i  bazuar në  internet  do  të ishte 
+zgjidhja  më  efiçente  dhe  e  lehtë  për  këto  probleme. Sistemi  i menaxhimit të 
+informacionit    shpesh    përshkruhet    si    një    metodë    organizative    e    ofrimit të 
+informacionit  të  kaluar,  prezent  dhe  atij të  ardhshëm  në  lidhje  me  operacionet  e 
+brendshme  të  një  strukture  organizative.  Ai  mbështet  funksionet  e  planifikimit, 
+kontrollit  dhe  funksionimit  të  një  organizate  duke  nxjerrë  informacione  në  formë 
+raporti.  (Waston,  1987).  Sistemi  ndërton  ura  komunikimi ndërmjet  përdoruesve  dhe 
+administratorëve nëpërmjet një ndërfaqe të thjeshtë dhe praktike. 
+Meqënëse  sistemi  do  të  jetë  i  bazuar  në  rrjet,  ai  mund  të  aksesohet  kudo  me  anë  të 
+pajisjeve të lidhura në internet. Në këtë sistem përdoruesi do të ketë mundësinë që të 
+bëjë vlerësimin e pedagogut ose universitetit si dhe të lërë komente specifike në lidhje 
+me ta. Gjithashtu ata mund të shikojnë dhe vlerësimet e bëra më parë nga përdorues të 
+tjerë.  
+Ky lloj sistemi do të sillte një risi në arsimin universitar publik shqiptar duke rritur 
+cilësinë e stafit të pedagogëve dhe si pasojë dhe rritjen e efiçencës dhe performancës 
+së mësimdhënies. Sistemi sjell shumë përfitime ku mund të veçojmë transparencën 
+dhe fleksibilitetin në sistemin arsimor universitar.
+----------------Page (11) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+13       
+2. RISHIKIMI I LITERATURËS 
+ 
+2.1 Sistemi i vlerësimit të pedagogëve 
+ 
+Çdo   semestër   shumica   e   institucioneve   kryejnë   një   vlerësim   të   nivelit   të 
+mësimdhënies  zakonisht  duke  përdorur  një  sondazh  ose  pyetësorë  të  plotësuar  nga 
+studentët  e  regjistruar  në  këto  universitete.  Përdorimi  i  këtyre  instrumenteve  u 
+prezantua tek  institucionet  e  larta  të  të  mësuarit  në  SHBA  në  vitet  1920  (Doyle, 
+1983). 
+ 
+Viti 1920  solli  edhe  studimet  e  para  kërkimore  mbi  vlerësimet  e  studentëve ( 
+Remmers  &  Brandenburg,  1927).  Këto  vlerësime  janë  shpesh  indikatori  primar  i 
+efektivitetit  të  mësimdhënies  dhe  përdoren  nga  shumë  institucione  për  promovim, 
+vendim të rritjes së pagave dhe meritave të pedagogëve.  
+ 
+Historikisht, këto lloj vlerësimesh janë kryer duke përdorur laps dhe letër. Studentët 
+do të vlerësonin profesorët duke iu përgjigjur një listë pyetjesh me qarkim ose duke 
+shtjelluar  pyetjet  e  vendosura.  Kohët  e  fundit,  institucionet  janë  zhvendosur  drejt 
+përdorimit të vlerësimit online. Në këtë mënyrë ata kanë konstatuar uljen e kostove në 
+administrimin e   vlerësimeve   dhe   në   përpilimin   e   rezultatit.   Vlerësimet   online 
+zakonisht  nuk  plotësohen  gjatë  proçesit  mësimor,  por  në  një  periudhë të  caktuar 
+kohore kur studenti mund të jetë i lirë ose kur mund të ketë përfunduar kursin. 
+ 
+Provat  tregojnë  se  ka  disa  mënyra  vlerësimi  të  performancës  së  fakultetit  duke 
+përfshirë  metodat  cilësore  dhe  sasiore  (Theall,  2005).  Me  rreth  40  vite  hulumtimi 
+(Theall,2005)  dhe  më  shumë  se  90  vite  përdorimi  (Doyle,  1983),  debatet  vazhdojnë 
+rreth vlefshmërisë dhe besueshmërisë së vlerësimeve dhe vlerësimet si masa të sakta 
+të performancës së mësimdhënies. 
+ 
+----------------Page (12) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+14       
+ Këto  debate  vijnë  si  pasojë  e  mungesës  të  një  përkufizimi  të  qartë  rreth  cilësisë  së 
+mësimdhënies  dhe pasigurisë  se  cilët faktorë  duhet  të  përdoren  si  kriter  i  matjes  së 
+efektivitetit  të  saj.  Një  nga  problemet  kritike  është  sigurimi  i  një  vlerësimi  të  drejtë 
+për pedagogun bazuar në njohuritë e marra gjatë proçesit mësimor nga studentët sesa 
+bazuar  në  opinionet  e  tyre  personale  (Kulik,  2001;  Theall  et.  al.,  2005). Megjithatë, 
+kur instrumentet e vlerësimit janë ndërtuar, administruar dhe analizuar siç duhet, janë 
+mjete tepër të dobishme (Marsh, 1983, Theall et al, 2005). 
+ 
+Sipas  Marsh  (1987)  vlerësimet  e  studentëve  janë:  (1)  shumëdimensionale;  (2)  të 
+besueshme  dhe  të  qëndrueshme;  (3)  të orientuar  drejt  funksionit  të  instruktorit  sesa 
+lëndës  që  shpjegohet;  (4)  relativisisht  të  vlefshme  kundrejt  një  sërë treguesish  të 
+mësimdhënies efektive; (5) të paprekur nga shumëllojshmëri variablash të menduar si 
+paragjykime   potenciale;   (6)   shihen   si   të dobishme   nga   ana   e   fakultetit   për 
+mësimdhënien e tyre, nga studentët për zgjedhjen e kurseve dhe nga administrata për 
+vendimet  në  lidhje  me  stafin.  Ky  studim  është  afër  konsensusit  të  mbështetësve  të 
+përdorimit të SET-it (Student Evaluation of Teaching). 
+ 
+ 
+2.2 Website vlerësimi të ngjashme 
+Meqënëse  sistemet  e  vlerësimit  online  janë  përdorur  prej  vitesh  janë  krijuar  shumë 
+website të ngjashëm që kryejnë të njëjtin funksion. Shumica e tyre janë të vendosura 
+në vendet që flasin anglisht si SHBA, Kanada, Angli etj. Këto sisteme shërbejnë për 
+mijëra  universitete.  Seksionet  e  mëposhtme  do  të  ofrojnë  një  pasqyrë  të  disa  prej 
+ngjashmërive në sistemet më të njohura dhe të përdorura gjerësisht. 
+ 
+2.2.1 Rate my Professors 
+Rate my Professors është faqja më e njohur e kategorisë “rate my teacher”. Kjo faqe 
+webi  numëron  mbi  10  milionë  opinione  për  më  shumë  se  1  milion  profesorë  nga 
+studentët.  Vlerësimet  mbulojnë  më  shumë  se  6000  universitete  nëpër  SHBA,  Angli, 
+Skoci,Uells  dhe  Kanada.Thjesht  kërkon  pedagogun  ose  universitetin  duke  vendosur 
+----------------Page (13) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+15       
+emrin  përkatës.  Në  faqen  e  çdo  pedagogu  shfaqet  vlerësimi  mesatar,  vlerësim  mbi 
+ndihmën  e  dhënë,  qartësinë  në  të  shpjeguar  dhe  thjeshtësinë  në  të  kuptuar. Për  më 
+tepër, përdoruesit mund të krijojnë një listë për çdo individ që nuk gjendet në website. 
+Përdoruesit duhet të vlerësojnë kursin ose profesorin në shkallë nga 1-5 në kategoritë 
+përkatëse. 
+ 
+2.2.2 Rate my Teachers 
+Rate  my  Teachers  është  një  tjetër  website  i  njohur  për  vlerësimin  e  profesorëve. 
+Ndryshe  nga  website  paraardhës,  fokusi  vihet  te  mësuesit  e shkollave  fillore  dhe  të 
+mesme  në SHBA,  Kanada,  UK,  Irlandë,  Australi  dhe  Zelandë e  Re.  Rate  My 
+Teachers u drejtua nga një komunitet publik vullnetarësh të cilët kishin fuqinë për të 
+shtuar, hequr dhe fshirë listat e mësuesve dhe vlerësimet e tyre. RMT u krijua në vitin 
+2001  nga  Mister  Message,  LLC  dhe  më  pas  u  shit  website-t  Rate  My  Professor. 
+Komuniteti publik u    zëvendësua  në  vitin  2017  nga  një  komunitet  privat  moderimi. 
+Komuniteti privat i moderimit u ngarkua për të rishikuar manualisht çdo vlerësim dhe 
+mësues  tës  shtuar në  RMT  që  nga  viti  2001.  Ky  komunitet  shqyrton  mbi  100.000 
+vlerësime në ditë. Sistemi i vlerësimit në këtë website është i njëjtë me të mësipërmin. 
+ 
+2.2.3 MyEdu 
+Website  akademik  MyEdu  gjithashtu  tregon  se  si  studentët  vlerësojnë  profesorët  e 
+universitetit. MyEdu  është  themeluar  në  vitin  2008  me  qendër  në  Austin,SHBA.  
+Tipari  dallues  nga  website  e  tjerë  qëndron  te  fakti  se  ajo  pretendon  të  jetë  i  vetmi 
+komunitet  që  punon  drejtpërdrejtë  me  universitetet  për  të  postuar  edhe vlerësimet  e 
+profesorëve  që  plotësojnë  studentët  në  klasë. Kjo  ndihmon  në  identifikimin  e 
+modeleve  që  çojnë  në  kosto  të  papritura. E  vetmja  pengesë  është  fakti  që  studenti 
+duhet  të  regjistrohet  në  faqen  MyEdu.  Me  një  free  account  studenti  është  i  lejuar  të 
+shohë vetëm tre vlerësimet e fundit. Upgrade i llogarisë bën që të marrë informacion 
+shtesë  jo  vetëm  për  profesorin,  por  dhe  për  lëndën  në  përgjithësi  duke  përfshirë 
+historikun e notave, përqindjen e studentëve të ngelur dhe të tjera. 
+ 
+----------------Page (14) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+16       
+2.3  Teknologjitë e përdorura 
+ 
+2.3.1 Teknologjitë Front-End 
+Ndërfaqja  e  përdoruesit  është  zhvilluar  me  teknologjitë  më  të  fundit  dhe  më  të 
+përdorura të internetit. Që në fazat e hershme të zhvillimit të front-end, projekti kishte 
+për   qëllim   të   jetë   i   lehtë   në   përdorim   edhe   për   individët   me   pak   njohuri 
+teknologjike.Kështu rezultati përfundimtar është një sistem “që bie në sy” dhe me një 
+dizajn  me  ngjyra.  Sistemi  është  tërësisht  i  përdorshëm  në  të  gjitha  platformat  si 
+smartphone,  tablet,  PC  etj.  I  gjithë  sistemi  përbëhet  nga  kombinime  të  ndryshme  të 
+teknologjive  web,  më  të  rëndësishmet  prej  të  cilave  do  t’i shpjegojmë më poshtë.  
+ 
+2.3.1.1 HTML 
+HTML  (HyperText  Markup  Language)  është  gjuha  markup  kryesore  për  faqet  e 
+internetit  dhe  elementët  janë blloqet  themelore  të ndërtimit  në web.  Të dhënat  html 
+janë shkruar  në formë html  përbërë nga  etiketat  (tags),  të cilat  janë të mbyllura  nga 
+simbolet “ < ” ,“ > “ (për shembull <html>), në përmbajtjen e faqes së internetit. Tag-
+et e html në shumicën e rasteve janë çift, pra kanë një tag hapës dhe një tag mbyllës. 
+Ndër tag-et më të përdorur janë ato të tipit text, tabelë dhe imazhe etj. 
+Qëllimi i një web browser është të lexojë dokumentat e html dhe të kompozojë faqe 
+që mund të lexohen dhe dëgjohen. Browseri nuk shfaq tags e html por i përdor ato për 
+të interpretuar përmbajtjen e faqes. 
+HTML  lejon  integrimin  e  imazheve  dhe  objekteve  të  tjera  në  kuadër  të  faqes  dhe 
+mund  të  përdoret  për  të  shfaqur  forma  interaktive.  Ofron  metoda  për  krijimin  e 
+dokumenteve  të  strukturuara.  Përkufizimin  e  elementëve  strukturore  të  rëndësishëm 
+në  tekst  si:  tituj,  paragrafe,  lista  etj.  Ato  gjithashtu  mund  të përfshihen  në  scripts  në 
+gjuhë të tilla si Javasript që ndikon në sjelljen web-html. 
+ 
+ 
+ 
+----------------Page (15) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+17       
+2.3.1.2 CSS 
+CSS  qëndron  për  "Cascading  Style  Sheet". Cascading  Style  Sheet përdoren  për  të 
+formatuar paraqitjen e faqeve të internetit dhe i bëjnë ato të duken më tërheqëse. Ato 
+mund të përdoren për të përcaktuar stilet e tekstit, madhësinë e tabelave dhe aspekte 
+të  tjera  të  faqeve  të  internetit  që  më  parë  mund  të  përcaktoheshin  vetëm  në 
+HTML.CSS  krijon  një  vështrim  uniform  në disa  faqe  të  një  website.  Në  vend  të 
+përcaktimit të stilit të çdo tabelë dhe çdo bllok teksti brenda një faqe  HTML , stilet e 
+përdorura  mund  të  përcaktohen vetëm  një  herë  në  një  dokument  CSS.  Sapo  stili  të 
+përcaktohet në Cascading Style Sheet, mund të përdoret nga secila faqe HTML  që i 
+referohet  skedarit  CSS  (Christensen,  2006).  Gjithashtu,  CSS  e  bën  të  lehtë për  të 
+ndryshuar stile në disa faqe në të njëjtën kohë. Për shembull, një zhvillues web mund 
+të  dëshirojë të  rriti  madhësinë  e  tekstit  nga  10pt  në  12pt  për  tridhjetë  faqe  të  një 
+website. Nëse faqet HTMLi referohen të njëjtës CSS file, madhësia e tekstit duhet të 
+ndryshohet vetëm në CSS file dhe ndryshimi do të ndodhë në të gjitha faqet HTML. 
+Këto   funksionalitete përdoren   gjithashtu   kur   ndërtohen sisteme.   Skedarët   CSS 
+krijohen  një  herë  dhe  pastaj  përdoren  në  të  gjitha  dosjet  e  programit.  Kjo shkurton 
+kohën e zhvillimit dhe  gjithashtu e rrit cilësinë e tij. 
+ 
+2.3.1.3 Javascript 
+JavaScript  është  një  gjuhë  programimi  që  zakonisht  përdoret  në  zhvillimin  e  webit. 
+Kjo është një gjuhë skriptimi client-side, që do të thotë se kodi  përpunohet nga web 
+browser i klientit dhe jo  në web server. Kjo zvogëlon sasinë e trafikut në server duke 
+parandaluar përdoruesit për të dërguar shumë kërkesa të padëshiruara që ngadalësojnë 
+përpunimin  e  serverit.  Kodi  JavaScript  mund  të  vendoset  kudo  brenda  HTML-së  të 
+një  faqeje  web  (Christensen,  2014).  Megjithatë,  vetëm  prodhimi  i  kodit  të  serverit 
+shfaqet në HTML, ndërsa kodi i JavaScript mbetet plotësisht i dukshëm në burimin e 
+faqes. Kodi gjithashtu mund të vendoset në një skedar të veçantë JS, i cili  gjithashtu 
+mund  të shihet  në  një browser. Në  sistem  përdoret  gjerësisht JavaScript duke  filluar 
+nga validimi i  formave dhe gjithashtu në detaje të tjera të vogla që bëjnë dallimin me 
+projekte web të ngjashme. 
+ 
+----------------Page (16) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+18       
+2.3.2 Teknologjitë  Back-End 
+ 
+2.3.2.1 PHP 
+Zhvillimi  i sistemit back-end bazohet  në  programimin  e  gjuhës  PHP.  PHP  qëndron 
+për Hypertext   Preprocessor   dhe   është   një   gjuhë programimi   open   source   për 
+zhvillimin e web-it dhe mund të vendosen në HTML (Php.net). Çfarë dallon PHP nga 
+gjuhët e  tjera  client-side si  JavaScript,  është  se  kodi  ekzekutohet  në  server,  duke 
+gjeneruar  HTML i  cili  pastaj  i  dërgohet  klientit.  Klienti  do të  marrë rezultatet  e 
+ekzekutimit të skriptit, por nuk do të dijë source code pas saj. Kjo bën që  çdo projekt 
+në  web të  jetë  unik  dhe gjithashtu jep  mundësinë e  ruajtjes  së  pronës  së tij 
+intelektuale, e cila kthehet në fitime dhe shpenzime të kompanive ose individëve që e 
+krijuan atë. Në sistemin aktual, duke qenë se nuk kemi marrë njohuri të mjaftueshme 
+mbi programimin server-side, menduam se duke përdorur disa nga funksionet bazike 
+të  gjuhës PHP do  të  krijojmë  databazën  dhe  të  ruajmë  disa  nga  të  dhënat  që 
+gjenerohen nga website jonë. 
+ 
+2.3.2.2 Xampp 
+XAMPP  është  mjedisi  më  i  njohur  për  zhvillimet  në  gjuhën  PHP.  Kjo  paketë  është 
+falas dhe e thjeshtë për tu instaluar dhe përbëhet  nga Apache HTTP Server, databaza 
+MariaDB dhe nga ekzekutuesit  për skriptet e shkruara në gjuhët e programimit PHP 
+dhe  Perl.  Me  anë  të  kësaj  platforme  është  shumë  e  lehtë  për programuesit  që  të 
+krijojnë  një web  server lokal  për qëllime  testimi  dhe zhvillimi. Çdo  gjë që  nevojitet 
+për  të  ngritur  një  server  në  internet - aplikacionin  e  serverit (Apache),  bazën  e  të 
+dhënave  (MariaDB)  dhe  gjuhën  e  shkrimit  (PHP) - është  përfshirë  në  një  skedar  të 
+ekstraktueshëm.   XAMPP   është   gjithashtu   cross-platformë,   që   do   të   thotë   se 
+funksionon në mënyrë të barabartë edhe në Linux, Mac dhe Windows. Duke qenë se 
+kemi  marrë  disa  njohuri  rreth  kësaj  platforme  gjatë  proçesit  mësimor,  menduam  ta 
+përdorim për të krijuar serverin tonë lokal dhe databazën. 
+ 
+ 
+----------------Page (17) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+19       
+3.  ANALIZA DHE DIZENJIMI I WEBSITE 
+ 
+3.1 Arkitektura e sistemit 
+3.1.1 Lloji i arkitekturës 
+Sistemi i vlerësimit të pedagogëve web-based përdor arkitekturën klient-server me 2 
+nivele  ku klienti  komunikon  me  një  server  të  integruar.  Klienti  përdor  pajisjen  e  tij 
+mobile,  e  cila  duhet të  jetë  e lidhur  në  internet,  për  të  hyrë  në  sistem  duke  dërguar 
+kërkesa të ndryshme në server. Serveri përpunon kërkesën dhe pasi vërteton kërkesën, 
+ai dërgon përgjigje  të  përshtatshme  ndaj  klientit.  Ajo, ose  dërgon  një  përgjigje 
+pozitive që përcjell përmbajtjen e kërkuar nga përdoruesi, ose një përgjigje negative 
+nëse  kërkesa  nuk  është  e  vlefshme.  Baza  e  të  dhënave të sistemit  është  ruajtur  në 
+server.  Baza  e  të  dhënave  ka  funksionin  për  të  ruajtur  të  gjitha  të  dhënat  që përdor 
+sistemi, i  cili  kryesisht  konsiston  në  informacionin mbi  të  dhënat  e  përdoruesve  të 
+regjistruar, të dhënat dhe vlerësimet e pedagogëve e universiteteve.  
+ 
+Sistemi  do  të  ketë  një  domain  specifik  ku  përdoruesit  mund  ta  aksesojnë.  Pasi 
+përdoruesi  përpiqet  të  hyjë në  sistem,  serveri  fillimisht  kontrollon  kredencialet  e  tij 
+nëse  ato  përputhen  me  ato  në  bazën  e  të  dhënave. Arkitektura  klient-server  duket 
+shumë e drejtëpërdrejtë, por gjithashtu ka edhe disavantazhe. Meqë serveri menaxhon 
+të gjitha funksionet e sistemit, një defekt në të shkakton një dështim të gjithë sistemit. 
+Uptime  i serverit  është  thelbësor për ekzistencën  e sistemit.  Duke  pasur  parasysh  se 
+shumica e kompanive sot ofrojnë 99% uptime të serverëve të tyre, ky problem mund 
+të ndodhë vetëm në  rastet më të këqija. Gjithashtu, performanca pritet të zvogëlohet 
+me  rritjen  e  përdoruesve  që  përdorin sistemin.  Kur  rritet numri  i  përdoruesve,  do  të 
+ketë më shumë kërkesa për serverin, i cili do të çonte në ngadalësimin e sistemit. Ky 
+do të ishte një problem nëse sistemi do të përdoret nga mijëra njerëz, por në skenarë 
+real sistemi do të përdoret nga numri maksimal nga disa mijë përdorues. 
+ 
+----------------Page (18) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+20       
+Në anën tjetër, ky model ofron një lehtësi në mirëmbajtjen e tij. Ky avantazh arrihet 
+nga fakti që ekziston një minimizim i ndërlidhjeve midis objekteve të sistemit, gjë që 
+zvogëlon nevojën për të mbajtur marrëdhënie të ndryshme midis tyre. Modeli klient-
+server e thekson këtë duke transferuar të gjitha proceset në server. Një avantazh tjetër 
+i madh është që komunikimi është më i shpejtë se modelet e tjera, sepse ka vetëm dy 
+objekte që komunikojnë me njëri-tjetrin, pajisjen e klientit dhe serverin. Nëse shtohet 
+një  shtresë,  do  të  rritet koha  e  korrespondencës  mes  tyre  që  do  të  rezultonte  në  një 
+kohë më të gjatë e nevojshme për të përpunuar kërkesën dhe gjithashtu për t'i dhënë 
+një përgjigje. 
+ 
+Një shembull i përshtatshëm për përdorimin e këtij modeli në sistemin tonë është rasti 
+kur përdoruesi kërkon për një pedagog të caktuar. Ai shkruan emrin e pedagogut që 
+kërkon  dhe  dërgon  kërkesën  në  server.  Më  pas  serveri  kërkon  në  databazë  për 
+përputhje të mundshme. Në rast se gjendet përputhja, serveri kthen rezultatin pozitiv. 
+Në  rast  të  kundërt,  kthen  rezultat  negativ.Kur  rezultati  është  pozitiv,  përdoruesi 
+dërgon  një  kërkesë  për  të  parë  vlerësimin  mesatar  të  pedagogut  dhe  më  pas  serveri 
+kryen të njëjtin proçes dhe kthen rezultatin. 
+ 
+Vendimi për të përdorur këtë arkitekturë erdhi natyrshëm sepse sistemi përshtatet në 
+mënyrë  të  përkryer  me  strukturën  e  faqes.  Ajo  ka  për  qëllim  të  përdoret  nga  jo  një 
+numër  i  madh  përdoruesish,  gjë  që  e  bën  më  të  lehtë  për  serverin  për  të  trajtuar  të 
+gjitha kërkesat në vetvete dhe gjithashtu çdo funksionalitet i sistemit është projektuar 
+për të ndjekur metodën e kërkesës-përgjigje të arkitekturës klient-server. 
+ 
+                            1          2                                  3 
+ 6 5 4 
+ 
+Figura 3.1. Arkitektura client-server me bazë të dhënash  (researchgate.net) 
+ 
+Browser Web 
+server 
+PHP 
+Engine 
+MySQL 
+server 
+----------------Page (19) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+21       
+3.2  Rastet e përdorimit 
+ 
+Për të shpjeguar më mirë disa nga rastet e përdorimit të sistemit, ato do të shfaqen në 
+format  tabelë  si  më  poshtë.  Ka  disa raste  përdorimi  në  sistem  por do  të  shpjegohen 
+vetëm tre sepse do të kërkojë që shumë faqe të shfaqen, gjë që nuk është efektive për 
+këtë rast.  
+Së  pari do  të  shfaqet rasti  i vlerësimit të pedagogut  nga  përdoruesi dhe  pastaj  në  të 
+tjera tabela, raste të ndryshme të përdorimit të këtij website. 
+ 
+Tabela 3.1- Rasti i vlerësimit të pedagogut 
+Rasti i vlerësimit të pedagogut   
+Inicializuesi i veprimit:                Përdoruesi 
+Objektivi i inicializuesit: Të   bëjë   vlerësimin   e   pedagogut   në 
+website duke përdorur një laptop. 
+Pjesëmarrës të tjerë Asnjë 
+Kushti fillestar: Përdoruesi   duhet   të   jetë   i   loguar   në 
+sistem. 
+Rezultati: Një  vlerësim i  ri  pedagogu  shtohet  në 
+databazë. 
+Hapat e ndjekura për këtë veprim: 1. Përdoruesi logohet në sistem. 
+2. Përdoruesi    klikon    në    faqet    e 
+pedagogëve. 
+----------------Page (20) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+22       
+3. Përdoruesi  kërkon  pedagogun  që 
+do të vlerësojë. 
+4. Përdoruesi  plotëson  formularin  e 
+vlerësimit. 
+5. Vlerësimi ruhet në databazë. 
+ 
+ 
+Tabela 3.2- Rasti i vlerësimit të universitetit  
+Rasti i vlerësimit të universitetit  
+Inicializuesi i veprimit:                Përdoruesi 
+Objektivi i inicializuesit: Të   bëjë   vlerësimin   e   universitetit   në 
+website duke përdorur një laptop. 
+Pjesëmarrës të tjerë Asnjë 
+Kushti fillestar: Përdoruesi duhet të jetë i loguar në sistem. 
+Rezultati: Një  vlerësim  i  ri  universiteti  shtohet  në 
+databazë. 
+Hapat e ndjekura për këtë veprim: 1. Përdoruesi logohet në sistem. 
+2. Përdoruesi    klikon    në    faqet    e 
+universiteteve. 
+----------------Page (21) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+23       
+3. Përdoruesi  kërkon  universitetin  që 
+do të vlerësojë. 
+4. Përdoruesi  plotëson  formularin  e 
+vlerësimit. 
+5. Vlerësimi ruhet në databazë. 
+ 
+ 
+Tabela 3.3- Rasti i kontaktimit të faqes 
+Rasti i kontaktimit të faqes  
+Inicializuesi i veprimit: Përdoruesi i rastit 
+Objektivi i inicializuesit: Të   kontaktojë   drejtuesit   e   faqes   për 
+problemet e hasura. 
+Pjesëmarrës të tjerë: Asnjë 
+Kushti fillestar: - 
+Rezultati: Shqetësimi   i   përdoruesit   dërgohet   në 
+emailin e drejtuesit. 
+Hapat e ndjekura për këtë veprim: 1. Përdoruesi      klikon      kategorinë 
+Rreth Nesh. 
+2. Përdoruesi plotëson të dhënat e tij 
+----------------Page (22) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+24       
+personale. 
+3. Përdoruesi     lë     komentin     mbi 
+çështjen ku ka hasur problem. 
+4. Përdoruesi dërgon kërkesën. 
+5. Kërkesa   dërgohet   në   emailin   e 
+administratorëve. 
+ 
+ 
+3.3 Formularët e vlerësimit 
+3.3.1 Çfarë e bën një formular efektiv? 
+Çelësi  për  marrjen  e  të  dhënave  të  sakta  dhe  të  vlefshme  nga  studimet  e  studentëve 
+është kryesisht në hartimin e anketës.  
+ 
+1. Gjatësia e formularit 
+Një gjatësi e anketimeve është gjithmonë një kompromis mes sasisë së informacionit 
+të dëshiruar dhe sa larg mendoni se mund t'i shtyni studentët para se t’iu soset durimi. 
+Në  hulumtimin  e  vlerësimeve  të  studentëve,  nuk  është  e  pazakontë  të  mësosh  rreth 
+sondazheve të frikshme me më shumë se 65 pyetje. 
+ 
+Me  atë sasi pyetjesh,  rreziku  i  shkallës  së  ulët  të përgjigjes  dhe  lodhja  nga  anketimi 
+është  e madhe.  Nga  këndvështrimi  i  studentit,  një  formë  e  shkurtër  dhe  efektive  ku 
+pyetjet  janë  të  lehta  për t'u  kuptuar  dhe  për  të  dhënë  përgjigje  është  ajo  që  me  të 
+vërtetë ka rëndësi. 
+ 
+----------------Page (23) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+25       
+Sidoqoftë,  shuma  mesatare  e  pyetjeve  duhet  të  jetë  diku  rreth  30  në  total  për  një 
+vlerësim  përfundimtar  të  kursit.  Një  studim  i  projektuar  mirë  mund  të  prodhojë 
+shpesh informacion të ngjashëm nga rreth 10 pyetje. 
+ 
+2. Shkallët e anketimit 
+ 
+Një  keqkuptim  i  zakonshëm dhe  një  kritikë  ndaj  formave  të  vlerësimit të  mësuesve 
+është se ata duhet t'i lejojnë studentët të gjykojnë mbi aftësinë e mësimdhënësit për të 
+dhënë mësim dhe sa të ditur ata janë në lëndën e tyre përkatëse. 
+ 
+Vlerësimet  e  nxënësve  për mësimdhënien duhet  të  trajtohen  si  një burim  të dhënash 
+për të ofruar njohuri mbi aftësitë e mësuesve, jo si e vërtetë e padiskutueshme. 
+ 
+Kjo është arsyeja, pse është një ide e mirë, që kryesisht të kemi shkallë përshkruese 
+në vlerësimet e studentëve, jo vlerësuese. Në këtë mënyrë gjithashtu e bën më të qartë 
+për studentët se ata nuk janë duke gjykuar një konkurs të popullaritetit të një lloji. 
+ 
+Së  dyti,  një  faktor  tjetër  i  kritikuar  është  se studentët  po  vlerësojnë  mësuesit  në  një 
+shkallë të bazuar në norma dhe jo në një shkallë të bazuar në kritere. Me fjalë të tjera, 
+nxënësve  u  kërkohet  të  krahasojnë  një  mësues  me  një  tjetër  pa  ndonjë  referencë  të 
+qartë. Përgjigjet nga një student i vitit të lartë ka të ngjarë të jenë të ndryshme nga ato 
+të  një  të  diplomuari,  pasi  ata  kanë  përvojë  të  ndryshme  paraprake  të  mësimdhënies 
+dhe mësuesve. 
+ 
+3. Llojet e pyetjeve 
+Kur  bëhet  fjalë  për  pyetjet  që  duhet  të  mbulojnë dhe  si  duhet  të  formulohen  ato,  ka 
+disa gjëra që krijuesit e sondazheve të nxënësve kanë tendencën të harrojnë. 
+ 
+Një nga qëllimet e vlerësimit të studentëve është të matet se sa nxënës po përfitojnë 
+nga  lënda.  Është  e  rëndësishme  t'u  kërkohet  studentëve  të  vetë-vlerësojnë  fitimet  e 
+tyre   të   njohurive.   Sipas   Elizabeth   Barre,   dallimi   më   i   rëndësishëm   midis 
+----------------Page (24) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+26       
+instrumenteve të vlerësimit të vlefshëm dhe instrumenteve të vlerësimit të pavlefshëm 
+është që instrumentët e vlefshëm t'i kërkojnë studentëve të reflektojnë mbi mësimin e 
+tyre. 
+ 
+4. Vlerësimi global 
+ 
+ 
+Pyetjet që mbulojnë një vlerësim të përgjithshëm mbi një kurs të tërë ose një mësues 
+të  veçantë,  shpesh  shihen  në  anketime  të  vlefshme  pavarësisht  se  kanë  shkallë 
+vlerësuese.  Përdorimi  i  pyetjeve  të  tilla  shihet  shpesh  si  një  mënyrë  e  mirë  për  të 
+përcaktuar mendimet. 
+ 
+5. Strategjitë e mësimdhënies  
+ 
+Për të gjetur një çelës mbi efektivitetin e mësimdhënies, në përgjithësi është një ide e 
+mirë  të  pyesësh  për  sjelljet  dhe  metodat  specifike  të  mësimdhënies  dhe  sa  shpesh 
+ndodhin. 
+ 
+Përfundimisht,  për  të  luftuar  faktorët  që  mund  të  paragjykojnë  dhe  ndikojnë  në 
+rezultatet, çështjet që kanë të bëjnë me interesin e mëparshëm, ngarkesën e kursit, sa 
+përpjekje kanë ushtruar etj., janë të vlefshme gjatë analizës. 
+ 
+Ne shohim shkallët që janë përshkruese dhe  të bazuara në kritere, jo krahasuese dhe 
+jo vlerësuese. Si Elizabeth Barre e thotë edhe vetë: “Ajo çka të gjithë studentët po u 
+thonë kujtdo që i lexon këto formulare është që ky mësues nuk  e ka lidhur materialin 
+e  kursit  me  jetën  reale,  ose  ky  mësues  gjithmonë  ka  gjetur mënyra  për  t'i  ndihmuar 
+studentët të përgjigjen në pyetjet e tyre. Dhe kjo do të na japë një ide se sa shpesh një 
+mësues ka sjellje që ne mendojmë se janë të dëshirueshme, gjë që është shumë më e 
+dobishme sesa të kuptojmë nëse një student mendon se një anëtar i fakultetit është "i 
+shkëlqyeshëm". 
+ 
+ 
+ 
+ 
+----------------Page (25) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+27       
+6. Analiza- Pjesa e ndërlikuar 
+ 
+Në analizën përfundimtare të formave të vlerësimit të studentëve, ka disa gjëra për të 
+menduar. 
+ 
+Kur  trajtojmë paragjykimet,  së  pari  duhet  të vendosim se  cilat  paragjykime duhet  të 
+kontrollohen dhe çfarë duhet të mbetet e paprekur.  
+Siç  u  përmend  më  hollësisht  në  seksionin  mbi  paragjykimet;  disiplina,  madhësia  e 
+klasës  dhe  kushtet  paraprake  të  studentëve  duhet  të  llogariten  në  prezantimin  e 
+rezultateve. Klasat dhe ngarkesa e punës nuk janë paragjykime dhe prandaj nuk duhet 
+të përshtaten statistikisht. 
+ 
+Për  sa  kohë  vazhdojnë  krahasimet,  mësuesit  normalisht  mund  të  krahasohen  kur 
+mësojnë  klasa  të  një  madhësie  të  ngjashme,  në  të  njëjtën lëndë për  studentët  me 
+interesa  dhe  ritëm  pune të  ngjashëm .Normalisht,  kur  këto  karakteristika  dukshëm 
+ndryshojnë ato nuk duhet të përdoren në krahasime të drejtpërdrejta. Për të qenë edhe 
+më  objektiv  në  krahasime,  aspektet  e  lidhura  me  gjininë,  si  nëse  mësuesi  është 
+mashkull apo femër dhe përbërja e klasës mund të peshojmë në ndarjen e rezultateve. 
+ 
+7. Sjellja e ndryshimit 
+ 
+ 
+Gjëja  më  e  rëndësishme  pas  kryerjes  së  gjithë  punës  së  vështirë  të  mbledhjes  së 
+opinioneve të studentëve është sigurisht që të bëhen ndryshime efektive në rutinën e 
+pedagogut.  Kjo  mund  të  jetë  gjithçka që  nga folura  me  një  ton  të  lartë deri  te 
+ndryshimi  i  materialit  të  lëndës.  Shumë  ndryshime  të  vogla  sjellin  përmirësime  të 
+mëdha me kalimin e kohës! 
+ 
+ 
+ 
+ 
+ 
+----------------Page (26) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+28       
+ 
+3.3.2 Krijimi i formularit të profesorëve 
+ 
+Nisur  nga  pikat  e  përmendura  më  sipër  ne kemi  krijuar  një  formular  vlerësimi  për 
+pedagogët  e  universiteteve  shqiptare. Pyetjet  që  kemi  përzgjedhur  kanë  një  natyrë 
+gjithëpërfshirëse    dhe    mendojmë    se    mbulojnë    çdo    aspekt    të    vlerësimit    të 
+mësimdhënies.  Megjithatë,  formulari  i  vendosur  nuk  është  ai  përfundimtari  pasi 
+gjithmonë ka vend për sugjerime dhe përmirësime. 
+ 
+Duke  u  mbështetur  në  pikën  e parë mbi  gjatësinë  e  formularit, formulari ynë 
+konsiston  në  10  pyetje.  Këto  pyetje  karakterizohen  nga  një  natyrë  përshkruese 
+pavarësisht  se  kemi  ekzistencën  e  një  shkalle  vlerësuese.  Ne  kemi  përdorur  këtë 
+metodë për të vlerësuar aftësitë mësimdhënëse të profesorëve dhe jo për ti krahasuar 
+ata me njëri-tjetrin. Meqë është e rëndësishme që edhe studentët të vlerësojnë se sa i 
+ndihmon kjo lëndë në formimin e tyre profesional, ne kemi shtuar dhe pyetje të këtij 
+karakteri.  
+ 
+Pjesa  më  e  rëndësishme  e  formulimit  të  kësaj  ankete  lidhet  me  vlerësimin  e 
+strategjive të implementuara nga pedagogët gjatë proçesit mësimor. Për këto strategji 
+,ne kemi përfshirë disa pyetje si për shembull: 
+- Vlerësoni mënyrën e organizimit të ores mësimore nga pedagogu. 
+- Vlerësoni aftësinë e pedagogut për të krijuar një ambient gjithëpërfshirës dhe 
+motivues për angazhimin e studentëve në orën e mësimit. 
+- Vlerësoni aftësinë për të komunikuar lehtë dhe qartë me studentët etj. 
+ 
+Një tjetër seksion i këtij formulari është dhe pjesa e komenteve. Kjo i jep mundësinë 
+studentëve  të  japin  një  mendim  ose  kritikë  mbi  pedagogun  që  nuk  përfshihet  në 
+pyetjet e mësipërme. 
+----------------Page (27) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+29       
+ 
+ 
+Figura 3.2. Formulari i pedagogëve (nga website i Rate MyProfessor)  
+ 
+ 
+  
+----------------Page (28) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+30       
+3.3.3 Krijimi i formularit të universiteteve  
+ 
+Vlerësimi i pedagogut është vetëm një seksion i eksperiencës së përgjithshme të jetës 
+universitare të studentit. Po aq i rëndësishëm është dhe vlerësimi i vetë universitetit. 
+Sipas  mendimit  tonë, 5  pikat  më    të  rëndësishme  se  ku  duhet  të  mbështetet  një 
+formular i këtij lloji janë: 
+- Reputacioni i universitetit 
+Në  Shqipëri  aktualisht  numërohen  më shumë  se  30  universitete publike  dhe  private. 
+Sipas Instat në vitin 2017-2018 vazhdojnë studimet në të gjitha programet e arsimit të 
+lartë rreth  129.394  studentë. Për një  numër  të tillë  studentësh  numri  i  universiteteve 
+është shumë i lartë. Nisur nga ky fakt, jo të gjithë universitetet janë të besueshme dhe 
+për këtë është shumë i rëndësishëm reputacioni i tyre. 
+- Mundësitë e ofruara në tregun e punës 
+Sipas statistikave të Instat të vitit 2017, rreth 30% e popullsisë nga 15-29 vjeç janë të 
+papunë.  Një  nga  shkaqet  e  përmenduara  është  dhe  mungesa  e  ofrimit  të  mundësive 
+nga  institucionet  private  dhe  publike.  Duke  krijuar  marrëveshje  me  institucione 
+publike dhe private, universitetet duhet t’i ofrojnë studentëve ndihmë për jetën e tyre 
+pas studimeve. Kjo realizohet me anë të zhvillimit të ditës së karrierës, panaireve të 
+ndryshme, praktikave gjatë proçesit mësimor etj.  
+- Infrastruktura e universitetit 
+Përveç  një  kurrikule  të  pasur  mësimore,  është  e  nevojshme  që  universiteti  të  ofrojë 
+dhe  kushtet  bazë  për mbarëvajtjen  e  saj. Kjo  do  të  mundësonte që  studentët  të ishin 
+më të përqëndruar dhe më komod gjatë orëve të mësimit. 
+- Aktivitetet sociale 
+Eksperienca  unversitare  nuk  përfshin  vetëm  pjesën  akademike  por  edhe  atë  sociale. 
+Universiteti duhet të organizojë aktivitete të ndryshme që të promovojë njohje midis 
+studentëve në mënyrë që ti bëjë ata më aktiv në shoqëri dhe të krijojë lidhje që mund 
+të duhen në jetën e tyre profesionale. 
+ 
+----------------Page (29) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+31       
+- Satisfaksioni i marrë në këtë eksperiencë 
+Kjo pikë i vjen në ndihmë më së shumti maturantëve të cilët nuk kanë bërë akoma 
+një zgjedhje mbi universitetin që do të ndjekin.  
+Përveç këtyre pikave, edhe seksioni i komenteve zë një pjesë të domosdoshme të 
+këtij formulari. Studenti mund të japë një mendim ose kritikë mbi universitetin. 
+ 
+ 
+Figura 3.3. Formulari i universitetit (nga website i Rate MyProfessor)  
+ 
+ 
+ 
+ 
+ 
+ 
+----------------Page (30) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+32       
+4.  DATABAZA E FAQES 
+ 
+4.1 Krijimi i databazës  
+Në këtë kapitull do të flasim në mënyrë më të hollësishme për krijimin dhe vendosjen 
+në punë të databazës së faqes. Këtu do të na vijnë në ndihmë dhe teknologjitë back-
+end :  PHP,MySQL  dhe  platforma  XAMPP. Hapi i parë që  ndoqëm  ishte  krijimi  i 
+databazës në platformën XAMPP. 
+  
+4.1.1 Krijimi i tabelës users 
+Tabela e parë e krijuar është ajo e përdoruesit e quajtur “users”. Në tabelën users 
+ruhen të gjitha të dhënat që marrim nga përdoruesi. 
+Kemi  bërë  çelës  primar ID  ndërsa  username  do  të  jetë  unik.  Atributet  e  vendosura 
+janë: NOT NULL, VARCHAR, UNIQUE,INT,TEXT,TINYTEXT. 
+ 
+4.1.2 Krijimi i tabelës pedagogët 
+Tabela  e  dytë e  krijuar  është  ajo  e  pedagogëve  ku  janë  listuar  disa  emra  të 
+pedagogëve të universitetit tonë. 
+ 
+ 
+Figura 4.1- Databaza e pedagogëve (Rate my Professor) 
+ 
+Në këtë tabelë çelës primar është ID. 
+ 
+ 
+----------------Page (31) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+33       
+4.1.3 Krijimi i tabelës universitetet 
+Tabela  e  tretë  e  krijuar  është  ajo  e  universiteteve  ku  janë  listuar  disa  emra  të 
+universiteteve në vendin tonë. 
+ 
+Figura 4.2- Databaza e universiteteve (Rate my Professor) 
+ 
+Në këtë tabelë çelës primar është ID. 
+ 
+4.1.4 Krijimi i tabelës vlerësimped 
+Kjo  tabelë  është  krijuar  me qëllimin  që  të ruajë të  gjitha përgjigjet  e  formularëve  të 
+vlerësimit të pedagogëve.  
+Në këtë tabelë çelës primar është ID.  
+ 
+4.1.5 Krijimi i tabelës vlerësimuni 
+Kjo  tabelë  është  krijuar  me qëllimin  që  të ruajë të  gjitha përgjigjet  e  formularëve  të 
+vlerësimit të universiteteve. 
+Në këtë tabelë çelës primar është ID. 
+ 
+4.2 Lidhja e databazës me website 
+Lidhjen e databazës me website e kemi realizuar me anë të kodeve në gjuhën PHP. 
+ 
+----------------Page (32) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+34       
+4.2.1 Regjistrimi i të dhënave të përdoruesit në databazë 
+Në këtë pjesë kemi realizuar marrjen e të dhënave dhe vendosjen e tyre në databazë. 
+Si  fillim  kemi  krijuar  variablat  që  do të  mbajnë  vlerat  e  çdo  fushe  të  plotësuar  nga 
+përdoruesi në formë. Më pas bëhet lidhja me databazën dhe pastaj me anë të gjuhës 
+SQL, të dhënat e ruajtura në variablat e mësipërm, importohen në databazë. Në rast se 
+ndodh ndonjë gabim gjatë ekzekutimit të kodit, në faqe do të shfaqet mesazhi error. 
+ 
+ 
+Figura  4.3- Databaza e plotësuar me të dhënat e përdoruesit ( nga website Rate my 
+Professor) 
+ 
+4.2.2 Kërkimi në databazë për proçesin e logimit 
+ 
+Pas proçesit të regjistrimit, përdoruesi në të ardhmen duhet të logohet në sistem. Që 
+kjo të ndodhë, duhet që gjatë proçesit të logimit të krahasohen të dhënat e databazës 
+me ato të plotësuara nga përdoruesi në momentin e logimit. Më pas verifikohet nëse 
+personi që po logohet është i regjistruar në sistem.  
+Si  fillim  bëhet  lidhja  me  databazën  dhe  më  pas  merren  të  dhënat  e  përdoruesit  në 
+formën  e  log  in.  Më  pas  duke  përdorur  kodin  SQL  shikohet  nëse  ka  përputhje  me 
+tabelën  e  përdoruesve  në  databazë.  Në  rast  se  ka  përdoruesi  drejtohet  në  faqen 
+kryesore. .  Në  të  kundërt  shfaqet  mesazhi  i  gabimit  “Username  ose  password 
+gabim!”.  
+----------------Page (33) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+35       
+ 
+4.2.3 Regjistrimi i rezultateve të formularit të pedagogut  
+ 
+Në këtë pjesë kemi realizuar marrjen e të dhënave dhe vendosjen e tyre në databazë. 
+Si  fillim  kemi  krijuar  variablat  që  do  të  mbajnë  vlerat  e çdo  fushe  të  plotësuar  nga 
+përdoruesi  në  formularin  e  pedagogut.  Më  pas  bëhet  lidhja me databazën  dhe  pastaj 
+me  anë  të  gjuhës  SQL,  të  dhënat  e  ruajtura  në  variablat  e  mësipërm,  importohen  në 
+databazë. 
+ 
+ 
+Figura 4.4- Regjistrimi i vlerësimeve të pedagogut  
+ 
+4.2.4 Regjistrimi i rezultateve të formularit të universiteteve 
+ 
+Në këtë  seksion kemi  realizuar  marrjen  e  të  dhënave  dhe  vendosjen  e  tyre  në 
+databazë.  Si  fillim  kemi  krijuar  variablat  që  do  të  mbajnë  vlerat  e  çdo  fushe  të 
+plotësuar  nga  përdoruesi  në  formularin  e  universitetit.  Më  pas  bëhet  lidhja  me 
+databazën  dhe  pastaj  me  anë  të  gjuhës  SQL,  të  dhënat  e  ruajtura  në  variablat  e 
+mësipërm, importohen në databazë. 
+ 
+Figura 4.5- Regjistrimi i vlerësimeve të universiteteve  
+----------------Page (34) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+36       
+4.3 Lidhjet e tabelave në databazë  
+ 
+ 
+Figura 4.6- Lidhjet e tabelave në databazën regjistrimdb 
+ 
+Në  figurën  e  mësipërme  paraqiten  lidhjet  e  tabelave  të  ndërtuara  në  databazën 
+regjistrimdb. Siç shohim, çdo përdorues identifikohet nga një username unik. Në çdo 
+formular  të  ruajtur  në  tabelat  vleresimped  dhe  vleresimuni,  kemi  si  çelës  të  jashtëm 
+username e përdoruesit që e ka plotësuar.  
+Emri i pedagogut gjithashtu qëndron si çelës i jashtëm në tabelën vleresimped i marrë 
+nga   tabela   pedagoget.   Në   tabelën   pedagoget   kemi   çelës   të   jashtëm   atributin 
+universiteti i cili lidhet me atributin emer në tabelën universitetet. 
+Atributi  emer  i  tabelës  universitetet  është   atribut  unik  pra  nuk  mund  të  ketë 
+universitete me të njëjtin emër. Në tabelat users dhe vleresimuni ky atribut qëndron si 
+çelës i jashtëm. 
+ 
+ 
+----------------Page (35) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+37       
+5. IMPLEMENTIMI 
+ 
+5.1  Informacioni i përgjithshëm 
+ 
+Qëllimi  i  sistemit  të vlerësimit  të  pedagogut i  ndërtuar  për universitetet në  Shqipëri 
+është të ofrojë një platformë të besueshme dhe zyrtare për cilësimin dhe klasifikimin 
+e  profesorëve. Funksionet  e  këtij website  përfshijnë  funksione  të  përgjithshme  si 
+anketimi  i  pedagogëve  dhe  universiteteve  nga  ana   e  përdoruesve,   pasqyrimi  i 
+rezultatit të këtyre anketimeve etj. Opsioni i log in-it është implementuar për të lejuar 
+përdoruesit të bashkëveprojnë me sistemin. Ky website është i aksesueshëm plotësisht 
+nga çdo pajisje që  është e lidhur në internet. 
+ 
+5.1.1 Pasqyra e faqes 
+ 
+Në këtë seksion, do të shpjegohet gjithë pasqyra e website-it me pikat kryesore të tij. 
+Meqë është  një  sistem  i  madh,  ka  shumë  karakteristika  dhe  specifikime  për  të 
+shprehur  në  lidhje  me  të,  por ne  do  të  tregojmë vetëm  informacionin  më  të 
+rëndësishëm,  kështu  që  lexuesi  i  thjeshtë  mund  të  kuptojë informacionin  më të 
+nevojshëm për sistemin.  Gjithashtu, ky kapitull shërben si një manual përdorimi për 
+përdoruesit  e faqes.  Ajo  ka  për  qëllim  të  jetë  e  lehtë  për  t'u  përdorur  nga  çdo 
+përdorues  i  saj,  edhe nga  ata  me  më pak njohuri teknologjike.  Kjo  arrihet  përmes 
+dizajnit të thjeshtë së bashku me tekstet, tabelat, shifrat, ngjyra etj. Pikat e mëposhtme 
+mund  të  përmenden  në  seksionet  e  mësipërme,  por  kjo  tabelë  informacioni  është 
+krijuar më së  shumti për  të shpërndarë  të  gjitha informacionet  e  rëndësishme në  një 
+vend. 
+ 
+ 
+ 
+ 
+----------------Page (36) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+38       
+Tabela 5.1- Pasqyra e faqes 
+ 
+5.2 Përdorimi i sistemit 
+ 
+Ky  seksion  do  të  japë  një  përshkrim  grafik  të  konfigurimit  të  sistemit  për të krijuar 
+një  ide të  thjeshtë  se  si  funksionon  sistemi.  Janë  të  paraqitura në format  imazhi, 
+kështu që lexuesi mund të ketë një përfytyrim se si sistemi do të duket dhe gjithashtu 
+për  të  mësuar se  si  ta  përdor atë,  në  mënyrë  që  të  mos  ketë  probleme  për  të 
+ndërvepruar me të në të ardhmen. 
+Pasqyra e faqes 
+1. Ky website është krijuar duke përdorur teknologji front end si : HTML, CSS, 
+Javascript dhe teknologji back-end si PHP. 
+2. Qëllimi  i  këtij  website  është    të  ofrojë  një  mjet  për  të  përmirësuar  më  tej 
+mësimdhënien. 
+3. Të gjitha llogaritë e përdoruesve do të shtohen në databazë nga administratori. 
+4. Përdoruesit për tu regjistruar i kërkohet një username unik, një adresë emaili e 
+vlefshme, emri , adresa e banimit, numër telefoni, password, gjinia. 
+5. Përdoruesit  pasi  logohen  kanë  mundësinë  që  të  plotësojnë  formularët  për 
+pedagogët dhe universitetet. 
+6. Studenti  mund  të  vëzhgojë  vlerësimin  e  secilit  professor  dhe  universitet  dhe 
+komentet përkatëse. 
+7. Website  me  të  gjithë  opsionet  dhe  funksionalitet  e  tij  janë  të  aksesueshme 
+online nga çdo pajisje e lidhur me internet. 
+8. Faqja në vetvete është një ndërfaqe grafike përdoruesi (GUI). 
+----------------Page (37) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+39       
+5.2.1 Kryefaqja 
+ 
+Më  poshtë  shfaqet  imazhi  i  faqes  Home  ku  vërehet  logoja  e  websitet  si  dhe  3 
+seksionet  kryesore  të  faqes  :  Home,  Rreth  nesh,  Log  in/  Regjistrohu.  Në  figurën 
+kryesore jepet dhe një përshkrim i shkurtër i funksionit të faqes. 
+Më pas përdoruesi, me anë të emailit, mund të regjistrohet në newsletter-in e website 
+ku do të marrë njoftime rreth të rejave më të fundit në faqe. 
+Gjithashtu   në   Home   shfaqen   dhe   2   ikona   njëra   për   pedagogët   dhe   tjetra   për 
+universitetet. Duke klikuar në to, përdoruesi kalon në kategorinë e dëshiruar. 
+Një pjesë të faqes kryesore ia kemi dedikuar  dhe lajmërimeve të ndryshme që kanë 
+lidhje me studentët. Në këtë mënyrë krijojmë dhe një mjet informimi që t’iu vijë në 
+ndihmë atyre.  
+Më poshtë shfaqet figura e kryefaqes: 
+ 
+ 
+----------------Page (38) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+40       
+ 
+Figura 5.1 Kryefaqja (nga website i Rate MyProfessor)  
+----------------Page (39) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+41       
+5.2.2 Rreth nesh 
+ 
+Në seksionin Rreth nesh gjendet një përshkrim i shkurtër informues rreth faqes. 
+Gjithashtu,  në  rast se  përdoruesi  has  probleme  gjatë  rrugës,  ka  pyetje  ose  sugjerime 
+për të bërë, ne kemi vendosur një formë kontakti. Në këtë formë atyre u kërkohet të 
+vendosin  të  dhëna  si:  Emri,  Email, Vendi,  Koment.  Nuk  është  e  nevojshme  të 
+logohesh në faqe për të dërguar këtë sugjerim. Anë formës gjendet vendodhja jonë në 
+Google Maps. 
+ 
+ 
+ 
+ 
+ 
+Figura 5.2 Rreth nesh (nga website i Rate MyProfessor)  
+ 
+ 
+----------------Page (40) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+42       
+5.2.3 Log in 
+ 
+Në  seksionin  në  vazhdim  shfaqet  faqja  e log  in.  Siç  shikohet  dhe  në  figurë  për  tu 
+loguar, përdoruesi duhet të vendosë username dhe fjalëkalimin e tij. Më pas ai mund 
+të zgjedhë të ruajë fjalëkalimin e tij për logimet e ardhshme. Në rast se përdoruesi ka 
+harruar  fjalëkalimin, me  anë  të  një  klikimi  në  hyperlinkun  e  mëposhtëm, mund  ti 
+dërgohet një email për ta ndryshuar.  
+Nëqoftëse përdoruesi nuk është akoma i regjistruar në sistem, mund të shtypë butonin 
+Regjistrohu për të ndjekur proçedurat e regjistrimit. 
+ 
+ 
+Figura 5.3 Log in  (nga website i Rate MyProfessor)  
+ 
+ 
+----------------Page (41) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+43       
+ 
+Kur përdoruesi ka vendosur të dhënat në mënyrë të gabuar, do të shfaqet një mesazh 
+që  sinjalizon  gabimin.  Pasi  të  dhënat  rivendosen  në  mënyrë  të  saktë,përdoruesi 
+logohet në sistem dhe ridrejtohet në faqen kryesore. 
+ 
+                   
+Figura 5.4  Të dhënat e vendosura gabim (nga website i Rate MyProfessor)  
+ 
+ 
+5.2.4 Regjistrohu 
+ 
+Kur një student kërkon të regjistrohet për herë të parë në website, ai shkon në faqen 
+Regjistrohu ku duhet të plotësojë një formular me informacionet kryesore personale si 
+për shembull: username, emri, fjalëkalimi,adresa  e banimit, numri i celularit, emaili, 
+gjinia dhe universiteti. Gjithashtu fjalëkalimi duhet të konfirmohet 2 herë në mënyrë 
+që përdoruesi të sigurohet që ka vendosur fjalëkalim të saktë. Nëqoftëse përdoruesi ka 
+vendosur të dhënat e gabuara, ai mund të fshijë formularin e plotësuar dhe të rifillojë 
+regjistrimin nga e para.  
+----------------Page (42) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+44       
+ 
+Figura 5.5 Regjistrimi (nga website i Rate MyProfessor)  
+ 
+Ka raste kur të dhënat nga ana e përdoruesit vendosen në mënyrë të gabuar. Për këtë 
+vjen në  ndihmë  validimi  i  formularit  i  krijuar  me  gjuhën  Javascript.  Me  anë  të këtij 
+validimi, ne vendosëm rregulla të qarta sesi duhet të plotësohen të dhënat. Më poshtë 
+kemi renditur të gjitha rastet që një përdorues mund të hasi. 
+ 
+Në figurën 5.6 specifikohet që username nuk duhet të jetë bosh dhe duhet të ketë një 
+gjatësi nga 5 deri në 12 karaktere. Ky username është unik për secilin përdorues. 
+ 
+ 
+----------------Page (43) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+45       
+ 
+Figura 5.6 Username i gabuar (nga website i Rate MyProfessor)  
+ 
+ 
+Në  figurën  5.7  shpjegohet  kushti  për  vendosjen  e    fjalëkalimit.  Ai  nuk  duhet  të  jetë 
+bosh dhe duhet të ketë një gjatësi nga 7 deri në 12 karaktere. 
+ 
+ 
+Figura 5.7 Fjalëkalimi i gabuar (nga website i Rate MyProfessor)  
+ 
+ 
+Në  rastin  kur  fjalëkalimi  i  vendosur  më  parë nuk  përputhet  me  rikonfirmimin  e  tij 
+atëherë shfaqet mesazhi i gabimit në figurën 5.8. 
+ 
+ 
+Figura 5.8 Konfirmimi i fjalëkalimit (nga website i Rate MyProfessor)  
+ 
+ 
+----------------Page (44) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+46       
+Kur  përdoruesi  plotëson  fushën  e  emrit  me  vlera  alfanumerike,  i  shfaqet  mesazhi  i 
+treguar në figurën e mëposhtme. 
+ 
+ 
+Figura 5.9 Emri i gabuar (nga website i Rate MyProfessor)  
+ 
+Në  figurën  5.10  theksohet  se  adresa  duhet  të  përmbajë  dhe  vlera  numerike  përveç 
+tekstit. 
+ 
+ 
+Figura 5.10 Adresa e gabuar (nga website i Rate MyProfessor)  
+ 
+Përdoruesi duhet të vendosë një numër të vlefshëm celulari të përbërë nga 10 shifra. 
+Në të kundërt do të shfaqet mesazhi i mëposhtëm. 
+ 
+ 
+Figura 5.11 Numri i celularit i gabuar (nga website i Rate MyProfessor)  
+ 
+----------------Page (45) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+47       
+ 
+Gjithashtu përdoruesi duhet të vendosë një adresë emaili ekzistuese në përputhje me 
+formatin e tij. Nëse emaili i vendosur nuk ekziston ose është i pasaktë, do të shfaqet 
+mesazhi i figures 5.12. 
+ 
+ 
+Figura 5.12 Email i pasaktë (nga website i Rate MyProfessor)  
+ 
+Nëqoftëse përdoruesi lë pa plotësuar universitetin ose gjininë do të shfaqen mesazhet 
+e figurave 5.13 dhe 5.14.  
+ 
+ 
+Figura 5.13 Universiteti i paplotësuar (nga website i Rate MyProfessor)  
+ 
+ 
+ 
+Figura 5.14 Gjinia e paplotësuar (nga website i Rate MyProfessor) 
+----------------Page (46) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+48       
+ 
+Në fund, pasi të gjitha të dhënat plotësohen në mënyrë të saktë, përdoruesit i shfaqet 
+një mesazh që i konfirmohet se regjistrimi u krye me sukses. Të dhënat e plotësuara 
+ruhen në databazën e userit që do të përdoren në një moment të dytë për tu loguar. 
+ 
+ 
+Figura 5.15 Regjistrimi i saktë (nga website i Rate MyProfessor)  
+ 
+ 
+5.2.5 Pedagogët 
+ 
+Në këtë seksion të website do të shfaqet lista e pedagogëve në të gjithë universitetet e 
+Shqipërisë. Si fillim përdoruesit i jepet mundësia të kërkojë pedagogun  që dëshiron. 
+Poshtë   bar-it   të   kërkimit   janë   listuar   të   gjithë   pedagogët   e   regjistruar   në 
+sistem(meqënëse sistemi është akoma në fazën e testimit, kemi vendosur vetëm disa 
+pedagogë të universitetit tonë). Për çdo pedagog jepet një informacion i shkurtër dhe i 
+përgjithshëm dhe një buton “Plotëso formularin”.Gjithashtu fotot e pedagogëve janë 
+të klikueshme dhe të drejtojnë në faqen e vlerësimit të tyre individual. 
+ 
+ 
+----------------Page (47) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+49       
+ 
+Figura 5.16 Faqja Pedagogët (nga website i Rate MyProfessor)  
+ 
+----------------Page (48) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+50       
+5.2.6  Vlerësimi individual i pedagogëve 
+ 
+Pasi  klikojmë  mbi  foton  e  pedagogut  në  ekran  do  të  shfaqet  pamja  në figurën  5.17. 
+Siç  shihet  qartë  pedagogu  mund  të  marrë  një  vlerësim  mesatar  bazuar  në  numrin  e 
+plotësuar  të  formularëve  për  të.  Përveç  vlerësimit  mesatar,  kemi  dhe  seksionin  e 
+komenteve ku çdo koment i lënë shfaqet në mënyrë anonime për të ruajtur fshehtësinë 
+e përdoruesve. 
+ 
+ 
+Figura 5.17 Vlerësimi individual i pedagogëve (nga website i Rate MyProfessor)  
+ 
+----------------Page (49) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+51       
+5.2.7 Formulari i pedagogut 
+ 
+Në formularin e pedagogëve, përdoruesi do të gjejë të listuara 9 pyetje ku secilën prej 
+tyre  mund  ta  vlerësojë  me  një  notë nga  1  në  5.  Fillimisht  ai  duhet  të  plotësojë 
+username e tij dhe më pas të zgjedhë pedagogun që do të vlerësojë. Pasi plotëson të 
+gjitha  pyetjet,  studenti  mund  të  lërë  një  koment  nëse  dëshiron.  Pas  përfundimit, 
+rezultatet e këtij pyetësori vendosen në databazën e vlerësimit të pedagogëve. 
+ 
+ 
+----------------Page (50) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+52       
+ 
+Figura 5.18 Formulari i pedagogëve (nga website i Rate MyProfessor)  
+ 
+ 
+5.2.8 Faqja Universitetet 
+ 
+Në  këtë  seksion  të  website  do  të  shfaqet  lista  e  disa  universiteteve  të  Shqipërisë.  Si 
+fillim përdoruesit i jepet mundësia të kërkojë universitetin që dëshiron. Poshtë bar-it 
+të  kërkimit  janë  listuar  të  gjithë  universitetet  e  regjistruara  në  sistem(meqënëse 
+sistemi  është  akoma  në  fazën  e  testimit,  kemi  vendosur  vetëm  disa  universitetet 
+kryesore).Fotot  e  universiteteve  janë  të  klikueshme  dhe  të  drejtojnë  në  faqen  e 
+vlerësimit të tyre individual. Në fund të faqes shfaqet dhe një buton për plotësimin e 
+formularit të universiteteve. 
+ 
+ 
+ 
+----------------Page (51) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+53       
+ 
+ 
+Figura 5.19 Faqja e universiteteve (nga website i Rate MyProfessor)  
+ 
+5.2.9 Vlerësimi individual i universitetit 
+ 
+Pasi klikojmë mbi foton e universitetit në ekran do të shfaqet pamja në figurën 5.19. 
+Siç shihet qartë universiteti mund të marrë një vlerësim mesatar bazuar në numrin e 
+plotësuar të formularëve për të. Gjithashtu kemi përfshirë dhe një historik të shkurtër 
+mbi universitetin. Përveç vlerësimit mesatar, kemi dhe seksionin e komenteve ku çdo 
+koment i lënë shfaqet në mënyrë anonime për të ruajtur fshehtësinë e përdoruesve. 
+----------------Page (52) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+54       
+ 
+ 
+Figura 5.20 Vlerësimi individual i universiteteve (nga website i Rate MyProfessor)  
+ 
+5.2.10 Formulari i universitetit 
+Në  formularin  e  universiteteve,  përdoruesi  do  të  gjejë  të  listuara  5  pyetje  ku  secilën 
+prej  tyre  mund  ta  vlerësojë  me  një  notë  nga  1  në  5.  Fillimisht  ai  duhet  të  plotësojë 
+username e tij dhe më pas të zgjedhë universitetin që do të vlerësojë. Pasi plotëson të 
+gjitha  pyetjet,  studenti  mund  të  lërë  një  koment  nëse  dëshiron.  Pas  përfundimit, 
+rezultatet e këtij pyetësori vendosen në databazën e vlerësimit të universiteteve. 
+ 
+----------------Page (53) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+55       
+ 
+Figura 5.21 Formulari i universiteteve (nga website i Rate MyProfessor)  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+----------------Page (54) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+56       
+6. PËRFUNDIME DHE REKOMANDIME 
+ 
+6.1 Qëllimi për zhvillime të ardhshme 
+ 
+Sistemi ka shumë fleksibilitet dhe potencial për përmirësime në të ardhmen. Planet e 
+ardhshme, në   termat e   zhvillimit, përfshijnë   ndryshimet   dhe   optimizimin e 
+eksperiencës  për  përdoruesit  e tanishëm. Karakteristika  dhe  funksione  të  reja  do  të 
+shtohen për krijimin e një ambienti më user-friendly. Disa ndryshime do të zbatohen 
+bazuar  në feedbackun  e  marrë nga  individët  që  përdorin  sistemin  me  qëllim  të 
+lehtësimit  dhe  përmirësimit  të  website  që të  jetë  më  i  leverdisshëm  për  ta.  Pas  çdo 
+diskutimi me studentët dhe stafet akademike të universiteteve, mund të lindin opsione 
+dhe nevoja të reja. Nuk ka fund përmirësimi i këtij  sistemi, për sa kohë ai përdoret 
+nga  studentët. Sistemi  aktual  është  hartuar  në  një  mënyrë  që  përpiqet  të  zgjidhë një 
+problem  që  është  dhënia  e  mendimit  të  lirë  të  studentëve  pa  u  kompleksuar  nga 
+faktorë  të  ndryshëm. Megjithatë, ne  jemi  koshient  që  ka  akoma  shumë  punë për  të 
+bërë si dhe shumë ndryshime dhe përmirësime që ky sistem të jetë optimal. Disa nga 
+funksionalitetet  që mund  të  shtohen në  të  ardhmen  janë  të renditura  në  tabelën  e 
+mëposhtme. 
+ 
+Tabela 6.1-Funksionalitetet shtesë 
+Funksionalitete shtesë 
+1. Profil i plotë i përdoruesit 
+Një opsion që do t’i lejojë të gjithë përdoruesit të plotësojnë dhe të ndryshojnë 
+profilet e tyre me të dhëna shtesë. Këto të dhëna do të shtohen në databazë dhe 
+mund të jenë publike ose private në varësi të zgjedhjes së përdoruesit.  
+2. Ngarkimi i fotove 
+Opsion që i lejon përdoruesit të vendosin foto në profilin e tyre. 
+3. Përdorimi i tags 
+----------------Page (55) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+57       
+Me këtë funksionalitet përdoruesit i jepet mundësia që të përshkruajë profesorët 
+dhe universitetet me anë të fjalëve kyçe. 
+4. Krijimi i një top liste për pedagogët në çdo universitet 
+Bazuar  në  vlerësimet  e  përdoruesve  mund  të  krijojmë  për  çdo  universitet  një 
+renditje  të  pedagogëve  më  të  mire  në  mënyrë  periodike  që  mund  të  jetë  një 
+semestër, një vit etj. 
+5. Krijimi i një top liste për universitetet më të mira 
+Me anë të këtij opsioni, duke përdorur anketimet e plotësuara, krijojmë çdo vit 
+një renditje të universiteteve më të mira në Shqipëri. 
+6. Promovimi i faqes në rrjete sociale 
+Me anë të rrjeteve sociale mund t’i japim një rritje website dhe gjithashtu për të 
+informuar ndjekësit rreth të rejave më të fundit të faqes. 
+7. Krijimi i një aplikacioni 
+Në këtë mënyrë është më e lehtë për studentin për të naviguar në sistem dhe për 
+të marrë njoftime në smartphone e tij. Sipas tendencave më të fundit vihet re që 
+shumica  e  përdoruesve  preferojnë  të  përdorin  aplikacionet  mobile  kundrejt 
+faqeve web.  
+ 
+ 
+6.2 Mirëmbajtja e website 
+ 
+Të kesh në zotërim një website ka përgjegjësitë e veta. Mirëmbajtja e vazhdueshme e 
+website është kritike për suksesin e tij. Me mirëmbajtjen e rregullt të faqes, ajo do të 
+funksionojë  normalisht. Kjo  shmang  pakënaqësinë  e  vizitorëve  për  problemet  e 
+mundshme që mund të ndodhin. 
+ Faqet e internetit janë subjekt i hackimit. Duke përdorur një program mirëmbajtje të 
+përshtatshëm, mund  të shmaget  ky  fenomen  duke mbajtur  çdo  gjë  të  azhornuar. Ka 
+disa detyra të zakonshme të mirëmbajtjes së faqes që duhen kryer si për shembull: 
+ 
+----------------Page (56) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+58       
+1. Back up i faqes 
+ Back up i faqes të internetit është mjaft i rëndësishëm dhe duhet të kryhet në mënyrë 
+periodike.  Kjo  mund  të  evitojë  humbjen  e  ndryshimeve  në  faqe  në  rast  të  ndonjë 
+fatkeqësie ose hackimi. 
+ 
+2. Testimi i shpejtësisë së faqes 
+Testimi i shpejtësisë së ngarkimit të faqes rregullisht është i rëndësishëm. Sidomos në 
+rastin  kur  shtojmë një funksionalitet  të  ri.  Përdoruesit  e  internetit zakonisht  kanë 
+shumë  pak  durim  dhe  nëse  faqja  do  kohë  për  tu  ngarkuar,  ata  nuk  do  të  presin. 
+Prandaj  ne  duhet  të  përmirësojmë  vazhdimisht  shpejtësinë  e  faqes  në  mënyrë  që  të 
+kemi përdorues të kënaqur. 
+ 
+3. Kontrolli i links  
+Duke qenë se  links mund të mos ekzistojnë më ose të dëmtohen, është e rëndësishme 
+që të bëjmë kontrollin e tyre të paktën 1 herë në muaj. 
+ 
+  
+6.3 Konkluzione 
+ 
+Duke marrë në konsideratë të gjitha përfitimet që ky sistem sjell, pritet që të ketë një 
+numër  të  madh  përdoruesish  që  do  ta  përkrahin.Kjo  është  një  mundësi  që  organet  e 
+arsimit  të  lartë  të  mbledhin  informacion  për  stafin  e  tyre.Pra  kjo  do  të  ishte    një 
+lëvizje mjaft e mire strategjike që universitetet mund të përdorin për përmirësimin e 
+mësimdhënies. 
+Gjithashtu  ky  sistem  ofron  dhe  mundësinë  e  vlerësimit  të universiteteve.  Duke  qenë 
+se  ka  një  numër  të  madh  universitetesh,  ky  opsion  shërben  si  një  ndihmë  për 
+maturantët në zgjedhjet e tyre të ardhshme.  
+Edhe  pse  numri  i  plotësuar  i  formularëve  mund  të  jetë  më  i  vogël,  krahasuar  me 
+plotësimet në mënyrë fizike, pritet që cilësia e feedback-ut të marrë të jetë më e mirë 
+----------------Page (57) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+59       
+për shkak të anonimitetit të studentëve si dhe mungesës së presionit për penalizimet 
+që  mund të ndodhin për një vlerësim negativ. 
+Siç e kemi theksuar dhe në fillim, ky sistem do të ishte një risi e veçantë në arsimin 
+universitar publik shqiptar dhe do të sillte rritje cilësie, performance dhe efiçence në 
+mësimdhënie.  
+ 
+ 
+----------------Page (58) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+60       
+REFERENCA 
+ 
+ -PHP 5 Tutorial https://www.w3schools.com/php/default.asp 
+-Internet and WWW : How to program 5th Edition; Paul Deitel, Harvey Deitel, Abbey 
+Deitel; Javascript 
+-Abrami, P. C., d’Appollonia, S., & Cohen, P. A. (1990). The validity of student 
+ratings  on  instruction:  What  we  know  and  what  we  do not.  Journal  of  Educational 
+Psychology, 82(2), 219-231. http://dx.doi.org/10.1037/0022-0663.82.2.219 
+-Kulik, J. A. (2001). Student ratings: Validity, utility, and controversy. In M. Theall, 
+P.  C. Abrami,  &  L.  A.  Mets  (Eds.),  The  Student  Ratings  Debate:  Are  They  Valid? 
+How Can We Best Use Them? (pp. 9-25). San Francisco: Jossey-Bass. 
+-Learning MySQL; Seyed M.M. “Saied” Tahaghoghi & Hugh E. Williams 
+-http://www.instat.gov.al/media/4621/statistika-t%C3%AB-regjistrimeve-
+n%C3%AB-arsim-2017-2018.pdf 
+-http://www.instat.gov.al/media/2791/libri-t%C3%AB-rinjt%C3%AB-n%C3%AB-
+shqip%C3%ABri-sfidat-n%C3%AB-koh%C3%ABt-q%C3%AB-
+ndryshojn%C3%AB.pdf 
+-https://www.ratemyteachers.com/ 
+-HTML & CSS design and build websites; Jon Duckett 
+-http://cte.rice.edu/blogarchive/2015/02/01/studentratings 
+-What makes an effective teacher? (2007) Katherine McKnight, PhD Pearson Jessica 
+Yarbro, John Graybeal, & Lacey Graybeal George Mason University  
+-Interpreting   and   using   student   ratings   data:   Guidance   for   faculty   serving   as 
+administrators and on evaluation committees (2017) 
+-Why is website maintenance important? Gissimee Doe 
+https://smallbusiness.chron.com/website-maintenance-important-48199.html 
+-http://www.ratemyprofessors.com/  
+-Using Student Feedback to Improve Teaching; Peter Seldin 
+----------------Page (59) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+61       
+ANEKS 
+ 
+Kodet në gjuhën SQL: 
+- krijimi i databazës 
+Create database regjistrimdb; 
+ 
+- krijimi i tabelës user 
+CREATE TABLE users ( 
+ID int(11) AUTO_INCREMENT PRIMARY KEY; 
+username  varchar(12) NOT NULL UNIQUE ; 
+password varchar(12) NOT NULL; 
+emri text NOT NULL; 
+adresa varchar(255) NOT NULL; 
+celulari int(10) NOT NULL; 
+universiteti varchar(255) NOT NULL; 
+email varchar(255) NOT NULL; 
+gjinia tinytext NOT NULL; ) 
+ 
+- krijimi i tabelës pedagogët 
+CREATE TABLE pedagoget ( 
+id int(11) AUTO_INCREMENT NOT NULL; 
+emer varchar(255) NOT NULL; 
+universiteti varchar(255) NOT NULL; ) 
+ 
+- krijimi i tabelës universitetet 
+----------------Page (60) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+62       
+CREATE TABLE universitetet ( 
+id int(11) AUTO_INCREMENT NOT NULL; 
+emer varchar(255) NOT NULL; ) 
+ 
+- krijimi i tabelës vlerësimped 
+CREATE TABLE vleresimped( 
+id int(11) AUTO_INCREMENT NOT NULL; 
+username varchar(12) NOT NULL; 
+emer varchar(255) NOT NULL; 
+p1 int(11) NOT NULL; 
+p2 int(11) NOT NULL; 
+p3 int(11) NOT NULL; 
+p4 int(11) NOT NULL; 
+p5 int(11) NOT NULL; 
+p6 int(11) NOT NULL; 
+p7 int(11) NOT NULL; 
+p8 int(11) NOT NULL; 
+p9 int(11) NOT NULL; 
+koment varchar(550) NOT NULL; ) 
+ 
+- krijimi i tabelës vlerësimuni 
+CREATE TABLE vleresimuni ( 
+id int(11) AUTO_INCREMENT NOT NULL; 
+username varchar(55) NOT NULL; 
+emer varchar(255) NOT NULL;  
+----------------Page (61) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+63       
+p1 int(11) NOT NULL; 
+p2 int(11) NOT NULL; 
+p3 int(11) NOT NULL; 
+p4 int(11) NOT NULL; 
+p5 int(11) NOT NULL; 
+koment varchar(550) NOT NULL; ) 
+ 
+Kodi në gjuhën PHP: 
+- lidhja e faqes me databazën 
+   $host="localhost"; 
+   $dbusername="root"; 
+   $dbpassword=""; 
+   $dbname="regjistrimdb"; 
+   $conn= new mysqli($host, $dbusername, $dbpassword, $dbname); 
+ 
+- regjistrimi i të dhënave të përdoruesit në databazë 
+<?php 
+$username= filter_input(INPUT_POST,'userid'); 
+ $psw1= filter_input(INPUT_POST,'passid'); 
+ $psw2= filter_input(INPUT_POST,'confirmpassid'); 
+$emri= filter_input(INPUT_POST,'username'); 
+$email= filter_input(INPUT_POST,'email'); 
+ $adresa= filter_input(INPUT_POST,'address'); 
+ $celulari= filter_input(INPUT_POST,'text1'); 
+ $universiteti= filter_input(INPUT_POST,'university'); 
+----------------Page (62) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+64       
+ $gjinia= filter_input(INPUT_POST,'sex'); 
+ 
+ $host="localhost"; 
+ $dbusername="root"; 
+ $dbpassword=""; 
+ $dbname="regjistrimdb"; 
+ 
+   $conn= new mysqli($host, $dbusername, $dbpassword, $dbname); 
+   if(mysqli_connect_error()){ 
+     die('connect error'); 
+   } 
+   else { 
+     $sql=    "INSERT    INTO    users    (username,password,emri,adresa,celulari, 
+universiteti, email, gjinia) 
+     VALUES 
+('$username','$psw1','$emri','$adresa','$celulari','$universiteti','$email', 
+'$gjinia')"; 
+     if ($conn->query($sql)) { 
+     } 
+     else { 
+       echo "error:". $sql ."<br>" . $conn-> error; 
+     } 
+     $conn-> close(); 
+   } 
+   ?> 
+ 
+----------------Page (63) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+65       
+ 
+- kërkimi në databazë për proçesin e logimit 
+<?php 
+ $con = mysqli_connect ("localhost", "root","","regjistrimdb"); 
+    if (isset($_POST['log'])) { 
+     $username = mysqli_real_escape_string($con,$_POST['uname']); 
+     $password = mysqli_real_escape_string($con,$_POST['psw']); 
+     if ($username !="" && $password != "") { 
+       $sql  =  "SELECT  ID  FROM  users  WHERE  username='$username'  and 
+password='$password'"; 
+       $result= mysqli_query ($con, $sql); 
+       $row= mysqli_fetch_array($result,MYSQLI_ASSOC); 
+       $count=mysqli_num_rows ($result); 
+ 
+       if ($count==1) { 
+         header("location: index.html"); 
+       }else 
+ { 
+         echo "<p style='color:red'> * Username ose passwordi gabim ! *</p>"; 
+       } 
+     } 
+    } 
+   ?> 
+ 
+ 
+ 
+----------------Page (64) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+66       
+ 
+- regjistrimi i rezultateve të formularit të pedagogut 
+<?php 
+$user= filter_input(INPUT_POST,'userid'); 
+$username= filter_input(INPUT_POST,'pedagog'); 
+$p1= filter_input(INPUT_POST,'p1'); 
+$p2= filter_input(INPUT_POST,'p2'); 
+$p3= filter_input(INPUT_POST,'p3'); 
+$p4= filter_input(INPUT_POST,'p4'); 
+$p5= filter_input(INPUT_POST,'p5'); 
+$p6= filter_input(INPUT_POST,'p6'); 
+$p7= filter_input(INPUT_POST,'p7'); 
+$p8= filter_input(INPUT_POST,'p8'); 
+$p9= filter_input(INPUT_POST,'p9'); 
+$koment= filter_input(INPUT_POST,'koment'); 
+ 
+$host="localhost"; 
+$dbusername="root"; 
+$dbpassword=""; 
+$dbname="regjistrimdb"; 
+ 
+$conn= new mysqli($host, $dbusername, $dbpassword, $dbname); 
+if(mysqli_connect_error()){ 
+  die('connect error'); 
+} 
+----------------Page (65) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+67       
+else { 
+  $sql=  "INSERT  INTO  vleresimped  (username,emer,  p1,  p2,  p3,  p4,  p5,  p6,  p7, 
+p8, p9, koment) 
+  VALUES  ('$user','$username','$p1',  '$p2',  '$p3',  '$p4',  '$p5',  '$p6',  '$p7',  '$p8', 
+'$p9','$koment')"; 
+  if ($conn->query($sql)) { 
+  } 
+  else { 
+    echo "error:". $sql ."<br>" . $conn-> error; 
+  } 
+  $conn-> close(); 
+}            ?> 
+ 
+- regjistrimi i rezultateve të formularit të universiteteve 
+<?php 
+$userid= filter_input(INPUT_POST,'userid'); 
+$universiteti= filter_input(INPUT_POST,'uni'); 
+$p1= filter_input(INPUT_POST,'p1'); 
+$p2= filter_input(INPUT_POST,'p2'); 
+$p3= filter_input(INPUT_POST,'p3'); 
+$p4= filter_input(INPUT_POST,'p4'); 
+$p5= filter_input(INPUT_POST,'p5'); 
+$koment= filter_input(INPUT_POST,'koment'); 
+ 
+$host="localhost"; 
+$dbusername="root"; 
+----------------Page (66) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+68       
+$dbpassword=""; 
+$dbname="regjistrimdb"; 
+ 
+$conn= new mysqli($host, $dbusername, $dbpassword, $dbname); 
+if(mysqli_connect_error()){ 
+  die('connect error'); 
+} 
+else { 
+  $sql= "INSERT INTO vleresimuni (username,emer, p1, p2, p3, p4, p5, koment) 
+  VALUES ('$userid','$universiteti','$p1', '$p2', '$p3', '$p4', '$p5','$koment')"; 
+  if ($conn->query($sql)) { 
+ 
+  } 
+  else { 
+    echo "error:". $sql ."<br>" . $conn-> error; 
+  } 
+  $conn-> close(); 
+} 
+?> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+----------------Page (67) Break----------------
+Analiza,Dizenjimi dhe Implementimi      Bachelor në  Informatikë Ekonomike 
+i një sistemi vlerësimi për pedagogët  
+ 
+69       
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+----------------Page (68) Break----------------

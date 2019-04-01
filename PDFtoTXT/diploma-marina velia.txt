@@ -1,0 +1,933 @@
+                                                                                i 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+UNIVERSITETI I TIRANËS 
+FAKULTETI I EKONOMISË 
+Departamenti Statistikë dhe Informatikë e Zbatuar 
+Dega Informatikë Ekonomike 
+ 
+ 
+ 
+ 
+ 
+TEMA 
+Platformat e-Commerce (Magento) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Studenti: Marina VELIA 
+Pedagog udhëheqës: Doktorant Elda Kuka 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+Shtator 2018, Tiranë 
+  
+----------------Page (0) Break----------------
+ 
+ 
+Platformat e-Commerce (Magento) 
+ 
+ii 
+ 
+ABSTRAKTI 
+ 
+                                                       “ e-Commerce isn’t the cherry on the cake, it’s the new cake” 
+                                                                                                      Jean-Paul Agon, L'Oréal CEO 
+“e-Commerce isn’t the cherry on the cake, it’s the new cake” një shprehje e thënë nga Jean-
+Paul  Agon, CEO i L'Oréal.  Me  këtë shprehje  nënkuptojmë se  tregtia  online   është një 
+koncept tërësisht i ri i të bërit biznes, ndoshta më i mirë, më i frytshëm dhe pse i panjohur 
+ende nga një pjesë e konsiderueshme e shoqërisë. 
+Në kohën në të cilën jetojmë interneti është kthyer në elementin më të rëndësishëm të jetës 
+së një individi. Interneti është ‘pika qendrore’ për  komunikim,  eksplorim  dhe lidhje me 
+njerëzit në të gjitha vendet e botës. Rrjedhimisht, rritja e përdorimit të internetit ka çuar në 
+një rritje të zhvillimeve të reja. 
+ E-Commerce  është  shembulli  konkret  i  një industrie  ku  blerja  dhe  shitja  e  produkteve 
+kryhet nëpërmjet internetit. Tashmë thuajse çdo blerje dhe shitje bëhet online dhe sigurisht 
+ka lindur nevoja që të krijohen website të posatshme. Për këtë arsye vendosa që dhe tema 
+ime e diplomës të jetë rreth e-commerce dhe për një një prej platformave më të fuqishme të  
+saj, pra Magento. Magento është një platformë e-commerce, e ndërtuar mbi teknologjinë e 
+një burimi të hapur me një sistem fleksibël  i cili ofron tregtim online,  si dhe përmbajtjen 
+dhe funksionalitetin e dyqaneve të tyre në internet. Në këtë punim do të trajtohet koncepti i 
+e-commerce  dhe platformave e-commerce,  historia dhe  benefitet  që  i  kanë  sjellë ato 
+shoqërisë, zhvillimi i magentos, evoluimi i mëtejshëm që pati që nga momenti kur u krijua 
+e  deri  ne  ditët  e  sotme, kush  e  krijoi  dhe  cilat  ishin  synimet  e  tij  fillestare,  çfarë  të mire  i 
+dha  njerëzimit  dhe  cilat  ishin  efektet  pozitive  e  negative  që  krijimi  i  tij  solli. Në  fund  të 
+këtij punimi do të paraqitet edhe pjesa aplikative e teorisë që do të bazohet në krijimin e një 
+website  për  shitjen  e  produkteve  online, që  sigurisht  do të  bëhet  me  anë  të  platformës 
+Magento. 
+ 
+----------------Page (1) Break----------------
+ 
+Platformat e-Commerce (Magento) 
+ 
+ 
+iii 
+ 
+TABELA E PERMBAJTJES 
+ABSTRAKTI .......................................................................................................................... ii 
+KAPITULLI I: HYRJE ......................................................................................................... 1 
+E-COMMERCE .................................................................................................................... 1 
+1.1 Ҫfarë është E-commerce? .........................................................................................................1 
+1.2 Avantazhet e E-commerce.........................................................................................................2 
+1.3 Disavantazhet e E-commerce. ...................................................................................................4 
+1.4 Historia dhe evoluimi i E-commerce. .......................................................................................5 
+KAPITULL II: PLATFORMAT E-COMMERCE MË TË MËDHA DHE MË TË 
+RËNDËSISHME TË VITIT 2018 ......................................................................................................7 
+2.1 Ҫfarë është Magento? .............................................................................................................10 
+2.2 Krijimi i Magento ....................................................................................................................10 
+2.3 Avantazhet e Magento. ............................................................................................................11 
+2.4 Disavantazhet e Magento. .......................................................................................................12 
+2.5 Krahasimi midis Magento dhe Shopify ..................................................................................13 
+3. IMPLEMENTIMI .........................................................................................................................16 
+3.1 Shkarkimi dhe Instalimi i Magento 2 .....................................................................................16 
+3.2 Ndërtimi i website – it ..............................................................................................................20 
+Konkluzionet......................................................................................................................................25 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+----------------Page (2) Break----------------
+ 
+ 
+Platformat e-Commerce (Magento) 
+ 
+iv 
+ 
+LISTA E ILUSTRIMEVE 
+Figura 1. Shkarkimi i Magento.......................................................................................... 16 
+Figura 2. Faqe web localhost/magento2........................................................................... 16 
+Figura 3. Hapi i parë: Verifikimi i kërkesave për instalim .............................................. 17 
+Figura 4. Hapi i dytë: Shtimi i databazës......................................................................... 17 
+Figura 5. localhost / phpmyadmin ................................................................................... 18 
+Figura 6. Krijimi i databazes        .................................................................................... 18 
+Figura 7. Hapi i tretë: Konfigurimi i faqes....................................................................... 18 
+Figura 8. Hapi i katërt: Personalizimi i dyqanit............................................................... 19 
+Figura 9. Hapi i pestë: Krijimi i llogarisë........................................................................ 19 
+Figura 10. Hapi i gjashtë: Përfunimi i instalimit............................................................. 20 
+Figura 11. Paraqitja e profilit të admin............................................................................ 20 
+Figura 12. Krijimi i kategorive të faqes web..................................................................... 21 
+Figura 13. Krijimi i nënkategorive të faqes web............................................................... 21 
+Figura 14. Ilustrimi i nënkategorive me foto..................................................................... 22 
+Figura 15. Krijimi i katalog-ut të produkteve................................................................... 22 
+Figura 16. Faqja kryesore e website-it............................................................................. 23 
+Figura 17. Paraqitja e nënkategorive................................................................................ 24 
+ 
+----------------Page (3) Break----------------
+ 
+Platformat e-Commerce (Magento) 
+ 
+ 
+1 
+ 
+KAPITULLI I: HYRJE 
+ E-COMMERCE 
+ 
+1.1 Ҫfarë është E-commerce? 
+ 
+Biznesi  elektronik i  njohur  ndryshe  si  e-commerce,  bën  të  mundur  blerjen  ose  shitjen  e 
+mallrave,  produkteve  dhe  shërbimeve  duke  përdorur  internetin. Avantazhi  thelbësor  i 
+tregtisë   elektronike   në   lidhje   me   tregtinë tradicionale është   që   përdoruesi mund   të 
+“shfletojë” dyqanet online,  të  krahasojë  çmimet  dhe  mallrat duke qëndruar në  komoditet 
+përpara kompjuterit të tij. 
+E-commerce  përkufizohet  si  një  frymë  moderne  e të bërit  biznes që  përmbush  nevojat  e 
+kompanive,  tregtarëve  dhe  konsumatorëve. Ajo realizon  në  mënyrë  elektronike  tregtinë  e 
+mallrave,  shërbimeve  dhe  informacionit  nga  kompjuteri  në  kompjuter  ku  biznesi  bëhet 
+online dhe nuk është i nevojshëm përdorimi i monedhës fizike. 
+Në industrinë e telekomunikacionit, e-commerce mund të përkufizohet edhe si bashkësia e 
+aplikacioneve  të cilat  i dedikohen transaksioneve  komerciale. Me  kalimin  e brezave 
+kuptimi  i  ‘biznesit  elektronik” është   tjetërsuar.   Në   fillim   i   referohej   transaksioneve 
+komerciale  në  formë  elektronike  ku  në  përgjithësi  bazohej  mbi  një  teknologji  të  quajtur 
+EDI (Elektronic Data Interchange), e cila përdorej për të dërguar dokumenta komerciale në 
+formë dixhitale. 
+Me kalimin e kohës u shtuan edhe funksione të tjera, si blerja dhe shitja e produkteve ose e 
+shërbimeve  duke  përdorur  WWW  (World  Wide  Web),  përdorimi  i  serverave  të  sigurt  të 
+përshkruara  nga  adresa  që  fillon  me HTTPS  (protokoll i  cili kodon të dhënat  e  klientit  që 
+mund  të shkëmbehen  gjatë  një  blerje  në  internet me qëllim që  ta  mbrojë  atë)  dhe  me 
+shkëmbimin e pagesave online (pagesat me kartë krediti). 
+ 
+----------------Page (4) Break----------------
+ 
+ 
+Platformat e-Commerce (Magento) 
+ 
+2 
+ 
+1.2 Avantazhet e E-commerce. 
+Që  në  hapat  e  para  të  saj  u  vu  re  se  shitja  e  mallrave  dhe  shërbimeve  nëpërmjet  sistemit 
+elektronik do të ishte shumë fitimprurëse dhe revolucionarizimi do të ishte shumë i madh. 
+Me evoluimin e teknologjisë , shumë kompani kanë gjetur mënyra të reja më efikase për të 
+zgjeruar  dhe  përmirësuar  aktivitetin  e  tyre. Disa  nga  avantazhet  e  internetit  dhe  të  e-
+commerce janë: 
+➢ Komunikim i shpejtë. Me zhvillimin e teknologjisë komunikimi dhe shkëmbimi i 
+informacionit  është  përshpejtuar  dhe  si  pasojë  edhe  biznesi  elektronik  është  bërë 
+shumë  më  pak  i  ngadaltë,  më  efikas  dhe  më  praktik  se  metoda  tradicionale  e 
+biznesit ku do të na duhej kohë për të gjetur atë çfarë kërkojmë. Rritja e shpejtësisë 
+mundëson dorëzimin e shpejtë të porosive dhe kryerjen e proçedurave të transportit 
+të mallrave në kohën e duhur.  
+➢ Kapërcimi  i  kufizimeve  gjeografike. Sot  gjithkush  që  ka  dëshirë  dhe  iniciativë  
+për të hapur një dyqan online ka mundësi ta bëjë pa pasur barriera. Me një website 
+të e-commerce, e gjithë bota është sheshi juaj i lojës. Distanca e madhe mes kufijve 
+me kalimin e kohës e  ka shpërbërë çdo kufizim të mbetur të gjeografisë pasi klienti 
+mund  të  kontaktojë  me  biznesin  në çdo  vend  të  botës  njësoj  si  të  ishte  duke  bërë 
+shopping në dyqanin afër shtëpisë por me çmime më të ulëta.  
+➢ Kosto  e  ulët. Një  nga  pozicionet  më  të  prekshme  të  tregtisë elektronike është 
+kostoja e ulët. Marketingu online, shpërndarja e  informacionit në kohë të shkurtër, 
+kontakti  i  drejtpërdrejtë  me  konsumatorët  dhe  shumë  shërbime  të  tjera  reduktojnë 
+shpenzimet e një kompanie.  
+➢ Gjetja e produktit më shpejt. Nuk diskutohet më për t’u lodhur duke shëtitur me 
+karrocë  nëpër  sektorët  e  ndryshëm  të  dyqaneve  në  kërkim  të  produkteve  që 
+dëshiron. Nëpërmjet një faqe web të e-commerce, klientët mund të kërkojnë përmes 
+lundrimit intuitiv ose përdorimit të ‘search box’ për të specifikuar menjëherë gjetjen 
+e  produktit  që  dëshirojnë.  Disa  faqe  interneti  jua  sugjerojnë  vetë konsumatorëve 
+listën e produkteve duke ua bërë më të lehtë blerjen e tyre. 
+----------------Page (5) Break----------------
+ 
+Platformat e-Commerce (Magento) 
+ 
+ 
+3 
+ 
+➢ I pasur me informacion. Në një dyqan fizik ka kufizime për sasinë e informacionit 
+që  mund  të  shfaqet.  Është  e  vështirë  të  përgatitësh  punonjësit  t'u  përgjigjen 
+klientëve  të  cilët  kërkojnë  informacion  për  të  gjitha linjat  e  prodhimit.  Faqet  e 
+internetit   të   e-commerce   mund   të   japin   informacione   shtesë   lehtësisht   të 
+disponueshme për këdo.  
+➢  Miqësor dhe i lehtë për tu përdorur. Ofron komoditet, i lejon konsumatorët dhe 
+tregtarët të familjarizohen në mënyrë të shpejtë me blerjen dhe shitjen online duke 
+synuar ta bëjnë përdorimin e tij të lehtë dhe të kuptueshëm nga të gjithë shtresat e 
+shoqërisë.  
+➢ Eleminon kohën e udhëtimit. Nuk është e pazakontë që konsumatorët të udhëtojnë 
+në distanca të gjata për të vizituar dyqanin e tyre të preferuar fizik. E-commerce u 
+jep  mundësinë  atyre  të  vizitojnë  pothuajse  të  njëjtën  dyqan  nga  shtëpia,  vetëm  me 
+një klikim. 
+➢  Diversitet. E-commerce   i   jep   mundësinë   klientëve   të   zgjedhin   midis   një 
+larmishmërie mallrash   dhe  shërbimesh duke   u  informuar  online  për çmimin, 
+cilësinë, vendin e prodhimit dhe markën për të cilën janë të interesuar. 
+➢  Qëndron  hapur  gjatë  gjithë kohës. Faqet  e  internetit  të  e-commerce  mund  të 
+funksionojnë gjatë  gjithë kohës, mund të hysh dhe të navigosh në çdo moment, pa 
+llogaritur kohën apo distancën në të cilën ndodhesh. Mjafton vetëm një klikim dhe            
+e-commerce  i  jep  mundësinë  të  gjithë  individëve  të  bëjnë  blerje  dhe  shitje  në çdo 
+kohë.  Nga  këndvështrimi  i  tregtarit,  kjo  rrit  numrin  e  porosive  që  ata  marrin.  Nga 
+këndvështrimi i klientit, një dyqan "gjithmonë i hapur" është më i përshtatshëm. 
+ 
+ 
+ 
+----------------Page (6) Break----------------
+ 
+ 
+Platformat e-Commerce (Magento) 
+ 
+4 
+ 
+     1.3 Disavantazhet e E-commerce. 
+Edhe pse lista e benefiteve të e-commerce është e gjatë, përsëri i qëndron  larg të qenurit e 
+përsosur. Në disa nga disavantazhet e e-commerce veçojmë: 
+➢ Është e gjitha online, që do të thotë se klientët nuk mund të prekin, të ndjejnë ose 
+të provojnë produktet e tyre para se t’i blejnë ato. 
+➢ Transaksionet në internet shpesh bëhen më pak personale, gjë që mund ta bëjë më 
+të vështirë për të bërë një lidhje të vërtetë me klientët dhe për t'i bërë ata të kthehen 
+përsëri. 
+➢ Faqja  e  internetit është  e   gjithçka  që  ju  keni, nëse  është  i  ngadalshëm,  i 
+papërshtatshëm,  i  dizajnuar  keq,  ose  nuk  punon  mirë,  vizitorët apo  klientët  do 
+humbasin interesin për dyqanin dhe nuk do të kthehen më në faqen tuaj. Një biznes 
+e-commerce nuk mund të mbijetojë pa një website të fortë. 
+➢ Blerjet online shoqërohen shpesh me çmime të paqarta, kosto dërgimi të lartë, me 
+mungesë të cilësisë së produktit si dhe me mungesën e garancisë. Në vitet e fundit 
+shumë  kompani  e-commerce    kanë krijuar  një  reputacion  të  keq  në  trajtimin  e 
+konsumatoreve   përsa   i   përket   tarifave   të   dërgesave apo çmimit   fillestar   të 
+produkteve. 
+➢ Teknologjia nuk është e përkryer dhe besueshmëria e njerëzve tek rrjeti sa vjen dhe 
+zbehet. Shumë hakera shfrytëzojnë mundësinë për të sulmuar portat e pagesave të 
+konsumatorëve. Krimi kibernetik është një tjetër shqetësim i vazhdueshëm, për më tepër, 
+disa shqetësime të tjera përfshijnë sigurinë, humbjen e privatësisë, dhe çështjet e 
+ndërlikuara ligjore.  
+ 
+ 
+ 
+ 
+----------------Page (7) Break----------------
+ 
+Platformat e-Commerce (Magento) 
+ 
+ 
+5 
+ 
+1.4 Historia dhe evoluimi i E-commerce. 
+ 
+Michael  Aldrich,  një  shpikës,  inovator  dhe  sipërmarrës  anglez  është  paraardhësi  dhe 
+ideatori  i  blerjeve  dhe  shitjeve  të  mallrave  dhe  shërbimeve  online.  Ideja  erdhi  gjatë  një 
+shëtitjeje me bashkëshorten  e  tij,  ku Aldrich  ankohej  për kohën  e  shpenzuar për pazaret  e 
+tyre  javore  në  supermarket.  Kjo  bisedë  nxiti  një  ide  për  të  lidhur  një  televizor  në 
+supermarketin ku ata bënin shpenzimet e përditshme.  
+Menjëherë pas diskutimit Aldrich planifikoi dhe vuri në zbatim idenë e tij.  
+Në  vitin  1979  Aldrich lidhi një  set  televizorësh  me  një  kompjuter  që  kryente  përpunimin 
+online  të  transaksioneve  me linjë  telefonike  ndërmjet  konsumatorëve  dhe  bizneseve,  ose 
+midis  një biznesi  dhe  një  tjetri,  dhe  krijoi  atë që  ai  e  quajti  "teleshopping",  që  do  të thotë 
+blerje  në  distance,  një  teknikë që  më  vonë  u  njoh  si  e-commerce. Gjatë  njëzetë viteve  të 
+fundit,  e-commerce  ka  revolucionarizuar  plotësisht  shitjen  me  pakicë.  Ajo  shkoi  nga  të 
+qenurit  një  model  biznesi  thelbësisht  jo-ekzistues  për  t'u  bërë  një  kërcënim  potencial  për 
+mallin  dhe  biznesin  tradicional  siç  e  njohim.  Evolucioni  i  e-commerce  mund  t'i  referohet 
+një ndërthurjeje të reformave rregullatore dhe inovacionit teknologjik. 
+ 
+ 
+ 
+ 
+ 
+ 
+                               
+ 
+                           Grafiku 2. Rritja e nivelit të rëndësisë së e-commerce ndër vite 
+ 
+----------------Page (8) Break----------------
+ 
+ 
+Platformat e-Commerce (Magento) 
+ 
+6 
+ 
+Në  maj të vitit 2016, Google deklaroi se celulari kishte tejkaluar desktopin në kërkimin e 
+produkteve.  Ky fakt  bëri  që  tregtia dhe  kompanitë  e-commerce  të  vendoseshin  në  rend  të 
+parë dhe çdo gjë u fokusua në blerjen me telefon celular.  
+Kjo çoi  në lindjen e  tregtisë sociale, një  biznes  që  lulëzoi  gjatë  gjithë  vitit.  Sipas  një 
+studimi,  media  sociale  ndikon  në  marrjen  e  vendimit  në  rreth  74%  të  blerësve  online  dhe  
+60% e shitësve me pakicë që kanë ushtruar tregti sociale thonë se kanë fituar klientë të rinj 
+nga rrjete të ndryshme sociale. Tregtia sociale ofron një lehtësi më të madhe duke i lejuar 
+klientët  të  blejnë  direkt  nga  kanalet  e  tyre  të  preferuar  të  mediave  sociale  në  vend  që  të 
+dalin me një karrocë të veçantë blerjesh e të shëtisin nëpër dyqane. Kjo thjeshtësi integrimi 
+do të vazhdojë të rritet dhe të dominojë me hapa të mëdha në vitin 2018 dhe në vazhdim. 
+Në  grafikun 3. paraqiten statistikat e përdorimit të e-commerce në  gjashtë vitet e fundit. 
+ 
+ 
+ 
+ 
+ 
+ 
+                         Grafiku 3. Statistikat e shitjeve të e-commarce gjate 6 viteve të fundit                           
+----------------Page (9) Break----------------
+ 
+Platformat e-Commerce (Magento) 
+ 
+ 
+7 
+ 
+ 
+ 
+ 
+KAPITULL  II: PLATFORMAT  E-COMMERCE  MË  TË  MËDHA  DHE  MË  TË 
+RËNDËSISHME TË VITIT 2018 
+ 
+Për shkak të rritjes së konkurrencës dhe rritjes së kërkesës së konsumatorëve për më shumë 
+komoditet dhe lehtësi, kompanitë e-commerce vazhdimisht përpiqen të punojnë me synim 
+për  sjelljen  e  risive  të  reja  në  mënyrë  që  të  ofrojnë  cilësi  gjithnjë  e  më  të  fuqishme  të 
+platformave  të  tyre.  Ashtu  siç  e  përmendëm  më  lartë,  duke  pasur  parasysh  dhe  ligjet  e 
+ekonomisë  dim  se,  me  rritjen  e  konkurrencës  rritet  cilësia  dhe  me  rritjen  e  cilësisë  rritet 
+kërkesa  e  konsumatorëve.  Kjo  gjë  bën  që  kompanitë  të  përpiqen  të  japin  maksimumin  e 
+tyre. Ky  fenomen  çon  në  krijimin  e  kompanive  më të  fuqishme  dhe  më të  mëdha  ku  deri 
+tani mund të përmendim pesë më të mirat dhe më të njohurat: 
+SHOPIFY 
+Shopify operon në mbi 325,000 dyqane aktive në internet që janë me fokus në tregtinë 
+sociale dhe në mobile shopping, ndërkohë që platforma vazhdon të zhvillohet për të 
+plotësuar kërkesat e dyqaneve online. Disa nga benefitet e saj mund të përmendim: 
+• Ka mbi 100 modele (themes) të ndryshme dyqanesh me të drejtë zgjedhjeje 
+• Ka një larmishmëri aplikacionesh për të zgjeruar funksionalitetin e dyqanit 
+• Ka aftësinë për të lidhur dyqanin në internet me faqen në Facebook dhe për të shitur 
+direkt nga Facebook 
+Pavarësisht këtyre avantazheve, platforma Shopify ka disa dobësi që mund ta vendosin në 
+vështirësi konsumatorin. Së pari, në qoftë se nuk je përdorues i faqes Shopify, do të ketë një 
+tarifë transaksioni shtesë në çdo shitje. Gjithashtu, shtimi i funksioneve shtesë nuk është i 
+lirë,  prandaj,  drejtimi  i  dyqanit  në  Shopify  mund  të  kushtojë  në  saj  të  shërbimeve  të 
+ndryshme.  Së  fundi,  Shopify  ka  gjuhën  e  saj  koduese të  quajtur  'Liquid',  kështu  që  çdo 
+përshtatje në sistem vjen me një kosto shtesë. 
+----------------Page (10) Break----------------
+ 
+ 
+Platformat e-Commerce (Magento) 
+ 
+8 
+ 
+BIGCOMMERCE 
+Krijuar  në  vitin  2009,  BigCommerce  aktualisht  operon  në  mbi  55,000  dyqane  në  internet 
+dhe është ndër ofruesit kryesorë të softuerëve e-commerce. Përdoret nga emrat e mëdhenj si 
+Martha  Stewart  dhe  Toyota  për  NVM-të,  platforma  të  cilat  furnizojnë  dyqane  të  të  gjitha 
+madhësive. Dhe duke pasur parasysh listën gjithëpërfshirëse të karakteristikave të ndërtuara 
+që  ajo  ofron,  BigCommerce  shpesh  konsiderohet  si  alternativa  më  e  mirë  për  ata  që  kanë 
+pak  informacion  ose  nuk  kanë  dije  teknike  ose  thjesht  nuk  mund  të  arrijnë  të  ndryshojnë 
+kodin. Benefitet e BigCommerce janë: 
+• Dyqani mund të integrohet në Facebook, eBay, Google etj 
+• Nuk paguan asnjë tarifë transaksioni 
+• Është ‘miqësor’ në përdorimin e tij 
+Një  nga  problemet  e  BigCommerce  është  mungesa  e  temave  falas.  Aktualisht  ajo  ofron 
+vetëm  7  tema  falas,  ndërsa  shumiça  e  konkurrentëve  të  saj  ofrojnë  më  shumë  se  20  tema 
+falas.  Sidoqoftë,  platforma  ka  një  listë  gjithëpërfshirëse të  temave,  dhe  gjithashtu  lejon 
+përshtatjen e këtyre temave në qoftë se kërkohet që t'i jepet një dyqani një pamje e djenjë 
+dhe tërësisht unike. 
+Yo!KART 
+E  pasur  me  karakteristika  dhe me zgjedhjen  e  zgjuar  të  çmimeve  të  modeleve,  Yo!Kart 
+është  ndërtuar  me një  fokus  të  veçantë  për  të  ndihmuar  fillestarët  të  ndërtojnë  faqete  e-
+commerce  në  mënyrë  sa  më  të lehtë.  Mendojeni si  një  zgjidhje  të  vetme  për  nisjen  e 
+dyqaneve  me  shumë  shitës  p.sh  si  eBay.  Megjithëse  shumë  platforma  të  tjera  të  e-
+commerce  sigurojnë  versione  të  shumëfishta,  Yo!Kart  e  bën  këtë  në  mënyrë  të  përsosur. 
+Benefitet e Yokart: 
+• Është një zgjidhje e gatshme për të nisur një shumëllojshmëri të shitjesh 
+• Platforma  është  miqësore  për  celularët  dhe  ka  aplikacion  specifik vetëm  për 
+Android 
+ 
+----------------Page (11) Break----------------
+ 
+Platformat e-Commerce (Magento) 
+ 
+ 
+9 
+ 
+MAGENTO 
+Duke zotëruar pothuajse një të katërtën e pjesës  së tregut, Magento konsiderohet lider për 
+sa  i  përket  platformave  e-commerce.  Për  shkak  të  besueshmërisë  që  transmeton  dhe 
+shkallës  së  lartë  të cilësisë,  shumë  marka  të njohura  si  Burger  King,  Huawei,  Pepe  Jeans, 
+Liverpool F.C etj përdorin Magento si teknologjinë bazë për dyqanet e tyre online. Deri më 
+tani kjo platformë konsiderohet platforma më e  mirë e  e-commerce për dyqanet online në 
+nivelin e një ndërmarrjeje. Benefitet e Magento: 
+• I lehtë për tu përdorur dhe për tu menaxhuar 
+• Mund të përdoret dhe të instalohet pa qenë nevoja të paguash 
+• Plotëson çdo nevojë për përdoruesit 
+Magento  integron  me  sukses  eksperiencat  dixhitale  dhe  fizike  të  blerjeve,  duke i kënaqur 
+klientët. Përveç platformës së saj të tregtisë me burim të hapur, Magento  krenohet me një 
+portofol  të  fuqishëm  të  zgjidhjeve  të  shumë  kanaleve  të  bazuar  në  cloud,  duke  përfshirë 
+teknologjitë në dyqan, shitës me pakicë dhe menaxher të rregullt. Një nga faktorët kryesorë 
+që  lidhet  me Magento  është  çmimi  i  versioneve  të  saj.  Versioni  bazë  i  komunitetit  është 
+falas,  ndërsa  versioni  i  avancuar  i  ndërmarrjeve  kushton në  një  minimum  prej 20,000 
+dollarë  në vit.  Eshtë  e  panevojshme  të  thuhet  se  versioni  i  komunitetit  nuk  përputhet  me 
+versionin  e  ndërmarrjes,  i  cili ofron  shumë karakteristika  të  ndërtuara  në  cilësi të  larta. 
+Përveç kësaj, natyra fleksible me burim të hapur të platformës e bën atë mjaft komplekse, 
+kështu  që  duhet  një  përdorues shumë  kompetentë  për t’ju përshtatur kësaj platforme. Pra, 
+edhe  me  versionin  e  komunitetit duke  konsideruar hosting,  SSL,  zgjerime,  përshtatje  etj. 
+përsëri do të kushtojë kohë dhe para të konsiderueshme për të marrë dyqanin e e-commerce 
+pikërisht ashtu siç dëshiron përdoruesi.  
+ 
+ 
+----------------Page (12) Break----------------
+ 
+ 
+Platformat e-Commerce (Magento) 
+ 
+10 
+ 
+            2.1 Ҫfarë është Magento?  
+Magento është një platformë e-commerce, e ndërtuar mbi teknologjinë e nje burimi të hapur 
+(open  source)  me  një  sistem  fleksibël    i cili  ofron  tregtimin  e  mallrave  dhe  shërbimeve 
+online, si dhe përmbajtjen dhe funksionalitetin e  dyqaneve në internet. Magento ofron nje 
+marketing  të fuqishëm si dhe katalog menaxhimi. 
+Magento është votuar si një nga platformat më të mira e-commerce në dispozicion sot për 
+sot, duke filluar nga burimet e hapura të komunitetit e deri te ndërmarrjet e mëdha. 
+Qëllimi  i  Magento-s është    të  lejojë  dyqanet  me  vetëm  disa  produkte të  zgjerohet  në 
+dhjetëra mijëra produkte dhe sjellje komplekse por pa ndryshuar përqasjen.  
+Magento  është  projektuar  për  t'u  përdorur lehtësisht  edhe nga  dikush  që  nuk  është 
+sipërmarrës. Kompania e saj është jashtëzakonisht e madhe dhe po aq edhe e dobishme.  
+Ajo ç’ka është  thelbësore në  e-commerce është  shpejtësia. Askush nuk dëshiron t’i duhet 
+të presë që sistemi të ringarkohet kur është duke bërë shumë blerje online. Me një listë të 
+tillë të fuqishme me këto karakteristika, ky aplikacion është  i domosdoshëm në  serverin e 
+çdo individi që  bën blerje online.  
+“Fleksibiliteti ka qenë forca jonë më e madhe që nga dita e parë. Nuk ka sforcime apo 
+kufizime. Gjithçka është e mundur.” (Roy Rubin – CoFounder Magento) 
+ 
+2.2 Krijimi i Magento 
+Në vitin 2007, Varien Inc (kompania zotëruese e Magento-s) nisi dizenjimin dhe krijimin e 
+Magento-s duke  filluar  me  një  version  fillestar.  Magento  zyrtarisht  filloi  zhvillimin  në 
+fillim të vitit 2007.  Shtatë muaj më vonë, më 31 gusht, 2007, u bë publik versioni i parë 
+beta. 
+Më    17  nëntor  2015,  u  shfaq  Magento  2  me  qëllim  që  të  siguronte  mënyra  të  reja  për  të 
+rritur   interesin   e   përdoruesve,   thjeshtësinë   e   përdorimit,   normat   e   konvertimit   dhe 
+gjenerimin e përgjithshëm të të ardhurave. Magento përdor sistemin MySQL, MariaDB për 
+menaxhimin  e bazës  së të dhënave,  gjuhën  e  programimit PHP,  dhe  elemente  të  Zend 
+----------------Page (13) Break----------------
+ 
+Platformat e-Commerce (Magento) 
+ 
+ 
+11 
+ 
+Framework.   Kjo   aplikohet edhe   në object-oriented-programming   dhe   model-view-
+controller  architecture.  Magento  gjithashtu  përdor modelin  entity-attribute-value  për  të 
+ruajtur  të dhënat. Në krye  të  kësaj,  Magento  2  prezantoi  modelin  Model-View  ose 
+ViewModel në kodin e saj duke përdorur JavaScript. Ka një organizim të mirë të mjeteve 
+që përshpejtojnë procesin, që kursejne kohë dhe rritin produktivitetin.   
+Magento 2 ka shumë karakteristika të reja dhe të përmirësuara, arkitektura e saj është mjaft 
+e ndryshme nga të  gjitha versionet  e mëparshme. Magento 2 është shpallur në vitin 2010. 
+Ajo ishte planifikuar të dilte  në vitin 2011, dhe version i saj beta u hodh në  treg  në korrik 
+të  vitit  2015.  Që  atëherë  Magento  1  dhe  Magento  2  kanë  ekzistuar  në  të  njëjtën  kohë. . 
+Sipas studimit të kryer nga AheadWorks në maj të vitit 2015,  Magento la gjurmë në treg 
+mes 30 platformave më të njohura e-commerce.  
+Magento  është  ofruesi i  tre  platformave  të  ndryshme,  Magento  Community Edition, 
+Magento   Enterprise   Edition   dhe   Magento   Enterprise   Cloud   Edition. Sot,   disa   nga  
+përdoruesit e tyre më të mëdhenj janë Burger King, Nestle, Murad, BevMo, dhe Coca-Cola. 
+        2.3 Avantazhet e Magento. 
+Si platforma më fleksibël shumë marka të mëdha përdorin Magento për të fuqizuar biznesin 
+e  tyre  dhe  ende është  platforma  më  e  fuqishme  për  zhvillimin  e  faqeve  e-commerce sot. 
+Nëse  kërkon  të  krijosh  një  biznes  në platformën e-commerce,  kjo  do  të  thotë  që duhet  të 
+dish çfarë strategjie do të  përdorësh dhe sigurisht duhet të  kesh njohuri rreth menaxhimit 
+të biznesit.  Ngritja  e  një  dyqani  e-commerce  nuk  është  aq  e  lehtë  nëse bazat nuk janë    të  
+forta. Në ditët e sotme, pronarët e bizneseve kërkojnë platformat më të mira për zhvillimin 
+e faqeve  të  tyre web të  tregtisë  elektronike,  dhe  magento  është  zgjidhja  më  e  mirë  për  të 
+përmbushur të gjitha nevojat e tyre. Disa nga benefitet për përdorimin e Magento-s janë: 
+• Është  pa  pagesë. Eshtë  efektive dhe  me  kosto  të  ulët.  Magento  është  një 
+platformë me burim të hapur (open source) dhe kështu ka shumë karakteristika 
+që janë plotësisht të lira. Është një teknologji e madhe dhe me rritje të shpejtë.  
+• Përdorim i lehtë.  Ҫdokush që  dëshiron të përdorë platformën e ka të lehtë dhe 
+miqësore  për  të  shtuar  faqe  dhe  për  të  përditësuar  përmbajtjen  në  faqen  e 
+----------------Page (14) Break----------------
+ 
+ 
+Platformat e-Commerce (Magento) 
+ 
+12 
+ 
+internetit.  Lidhja  dhe  navigimi  i  faqeve  është  gjithashtu  shumë  e  lehtë  në 
+Magento.   Këto   karakteristika   i   kursejnë  një  kohë   të   konsiderueshme 
+përdoruesve. 
+• Marketingu. Magento  ka  mjete  dhe  teknologji  të  ndryshme  për  të  promovuar 
+bizneset e e-commerce.  Grumbullon shumë opsione unike si kuponat fleksibël, 
+shitjet private, çmimet e ndryshme, hapjen e fushatave  të  reja etj. 
+• Siguria. Informacioni   i   dyqaneve,   produkteve,   regjistrimeve   të   klientëve, 
+porosive dhe transaksioneve është krejtësisht privat.  
+• Është    i  fuqishëm  dhe efikas. Platforma  Magento  mund  të  përmbajë    deri në 
+500,000  produkte  në  një  dyqan dhe  të  dërgojë  më  shumë  se  80,000  porosi  në 
+orë.  
+• Komunitet  gjigand. Mbi  240,000  biznese  përdorin  Magento  për  nevojat  e            
+e-commerce.  Vetëm  në vitin  2012,  kishte  disa  qindra  përdorues  Magento  me 
+çertifikatat zyrtare nga 35 vende të ndryshme anembanë botës dhe mbi 800,000 
+përdorues të vlerësuar në total. Ky numër është rritur, duke u dhënë të rinjve një 
+shtyllë të fortë mbështetëse dhe mundësi të mëdha për lidhjet e biznesit. 
+• ‘Out of the box’.  Magento i trajton konceptet në  mënyrë  të  organizuar. Mund 
+ta përdorësh për të shitur bileta për park argëtimi apo për muzikë dixhitale në të  
+njëjtën  kohë  pa  ndonjë  shtesë    tjetër  duke  të  dhënë mundësi  të përdorësh 
+imagjinatën, të mendosh jashtë  kutisë. 
+ 
+        2.4 Disavantazhet e Magento. 
+ Magento  është  krijuar  si  një  aplikacion  Java,  por  kodi  bazë i  tij  është  shkruar  në  PHP. 
+Shumica  e  çështjeve  më  të  mëdha që  ka  pasur  me  Magento  janë  si  rezultat  i PHP. 
+Aplikimet  Magento konsumojnë  memorje të  RAM  gjatë  proceseve  të vështira,  dhe  PHP 
+nuk   mund   të   përballojë   ngarkesën   duke çuar   në mosfunksionim   të tij. Disa nga 
+disavantazhet e platformës Magento janë: 
+----------------Page (15) Break----------------
+ 
+Platformat e-Commerce (Magento) 
+ 
+ 
+13 
+ 
+• Kompleksiteti. Nga pikëpamja e përdoruesit është e komplikuar. Sigurisht mund të 
+realizosh  një  shumëllojshmëri  funksionesh,  por  shumicën  e  kohës,  mënyra  për  ti 
+bërë ato nuk është e qartë.  
+• Është    i ngadaltë. Magento  është  relativisht  i ngadaltë    ndryshe  nga  platformat e 
+tjera të e-commerce. Në PHP, ai nuk punon në standardin 8mb, por kërkon të paktën 
+20mb që të funksionojë siç duhet.  
+• Nuk  funksionon  kudo. Nevojitet  të    kesh  server të    mirë    për  menaxhimin  e 
+dyqaneve  në  mënyrë  që  Magento  të  funksionojë. Nëse serveri i duhur nuk  është  i 
+konfiguruar, mund të shfaqen probleme me shpejtësinë.  
+• Kërkon  shumë memorje. Ndryshe  nga platformat  e tjera  si  p.sh BigCommerce, 
+Magento kërkon shumë hapësirë dhe memorje.  
+• Nuk mësohet lehtë . Edhe një programues me përvojë do t’i duhet pak kohë për të 
+mësuar  Magento.  Kjo  gjithashtu  përfshin  dizenjmin, krijimin  dhe  hartimin  për 
+Magento.  
+ 
+2.5 Krahasimi midis Magento dhe Shopify 
+Popullariteti 
+Një  mënyrë  e  mirë  për  të  krahasuar  këto  dy  platforma  është  të  shohim  nga  kush  biznese 
+përdoren  ato. Magento  përdoret  nga  disa  emra  të  mëdhenj  si  Nike,  Rosetta  Stone,  Olimp 
+dhe  Ghiradelli.  Shopify  gjithashtu  ka  disa  emra  të  mëdhenj  si  Tesla  dhe  Los  Angeles 
+Lakers 'Store.  
+Magento është platforma më e përdorur e-commerce, duke zotëruar 14% të vendeve më të 
+mira  në  krahasim  me 6%  për Shopify. Në grafikun 4. paraqiten disa  statistika  që  tregojnë  
+interesin që kanë njerëzit për këto platforma që nga viti 2004 e deri në ditët e sotme. 
+----------------Page (16) Break----------------
+ 
+ 
+Platformat e-Commerce (Magento) 
+ 
+14 
+ 
+ 
+                                        Grafiku 4. Statistika për platformën më të përdorur   
+Konkurrenca 
+Edhe pse Magento ka gëzuar popullaritet për një kohë mjaft të gjatë, për momentin Shopify 
+është ndoshta një nga konkurrentët e tij më të mëdhenj në treg. Pavarësisht kësaj, me daljen 
+në treg të versionit Magento 2.0, konkurrenca është bërë më e fortë pasi klasifikimi i këtij 
+version është në nivelin më të lartë të listës, duke e bërë atë një zgjedhje ideale për të gjitha 
+llojet e biznesit. 
+Kodimi 
+Për sa i përket kodimit, Magento dhe Shopify ndryshojnë shumë nga njëra tjetra. Magento 
+përdor  gjuhën  PHP,  ndërsa  Shopify  përdor  një  gjuhë  kodimi  të  quajtur  Liquid.  Magento 
+është open source , ndërsa Shopify është i patentuar. Kjo është e rëndësishme kur vjen puna 
+për  të  përzgjedhur  platformën  e  përsosur  sepse  përcakton  se  çfarë  mund  të  bëhet  me 
+platformën. Open source do të thotë se kodi burimor është në dispozicion të lirë dhe mund 
+të  modifikohet,  ndërsa  kodi  i  platformës  së  patentuar  nuk  mund  të  modifikohet.  Me 
+Magento,  kodi  i  modelit  mund  të  ndryshohet  për  t'iu  përshtatur  nevojave  specifike  të 
+dyqanit, ndërsa me Shopify nuk mundet. Kjo e bën Shopify një zgjidhje të mirë për dyqane 
+të  thjeshta,  por  jo  ideale  për  ato  më  komplekse  me  funksione  specifike  të  avancuara  që 
+kërkojnë ndryshimin e kodit fillestar. 
+ 
+ 
+----------------Page (17) Break----------------
+ 
+Platformat e-Commerce (Magento) 
+ 
+ 
+15 
+ 
+Ҫmimi 
+Shopify është një shërbim ku përdoruesit paguajnë një tarifë abonimi mujore për të hyrë në 
+të. Në fillim mund të punosh pa pagesë por pas  kësaj, do të duhet të paguash duke filluar 
+me  tarifën bazë  prej 29 $/muaj.  Platforma  e  Magentos  për  biznese  të  vogla  apo  për 
+shërbime fillestare mund të instalohet apo të  shkarkohet pa pagesë, vetëm në raste kur jane 
+kompani dhe biznese të mëdha të cilat kërkojnë shërbime më cilësore duhet të paguash në 
+bazë të shërbimit përkatës.  
+Brandi dhe Dizajni 
+Krijimi  i  një  dyqani  të  suksesshëm  online  përfshin  krijimin  e  një  marke  unike  që  klientët 
+njohin  dhe  respektojnë.  Një  pjesë  e  rëndësishme e  suksesit  është  dizajni. Magento  dhe 
+Shopify  ofrojnë shumë  tema  (themes)  të lira  ose  pa  pagesë.  Këto  tema  (themes)  për të dy 
+platformat  janë  të  krijuara  në  mënyrë  të  tillë  që  të  përshtaten  dhe  të  funksionojnë  me  të 
+gjitha  llojet  e  madhësive  të  ekranit.  Për  arsye  se  temat  (themes)  e  Shopify  nuk  të  lejojnë 
+hapësirë  për  modifikim,  veç ndryshimit  të  ngjyrave  dhe  fontit,  përdoruesit  e  Shopify  nuk 
+janë në gjendje të rregullojnë plotësisht temat, duke krijuar kështu  një problem për markën 
+e dyqaneve. Përmirësimi i Magento 2 përfshin në editim mundësinë për të gjithë ata që janë 
+të apasionuar pas internetit apo informatikës si dhe  ata që nuk kanë shumë njohuri të mund 
+të punojnë lehtësishtë duke krijuar faqe të bukura online në një kohë shumë të shkurtër. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+----------------Page (18) Break----------------
+ 
+ 
+Platformat e-Commerce (Magento) 
+ 
+16 
+ 
+ 
+3. IMPLEMENTIMI 
+3.1 Shkarkimi dhe Instalimi i Magento 2   
+Në fillim,  para  se  të niset projekti duhet  të shkarkohet  dhe  instalohet  Magento në 
+kompjuter. Për të  instaluar Magento-n duhet të  shkarkohet paketa e instalimit të  kësaj platforme. 
+Do të shkarkojmë Magento 2.0 setup edhe Wamp i cili përputhet me versionin e Magento 
+2.0. Shkarkojmë  versionin  e Magento  2.0.2  të  janarit  të  vitit  2016  dhe  Wamp  me  PHP 
+7.0.10.  
+ 
+                                              Figura 1. Shkarkimi i Magento 
+Në faqen e Web kërkojmë localhost/magento2 pasi folderi u emërtua Magento 2. 
+ 
+                                     
+ 
+ 
+                              Figura 2. Faqe web localhost/magento2 
+Hapi i parë: Readiness Check 
+Duhet të verifikohen të gjitha kërkesat e specifikuara për instalimin e Magento 2. Në këtë 
+pjesë të insalimit të platformës zakonisht hasen pengesa për shkak të shfaqjes së erroreve të  
+ndryshme por në këtë rast procedura vazhdon pa problem dhe mund të kalohet në hapin e 
+dytë duke klikuar në butonin ‘Next’. 
+ 
+----------------Page (19) Break----------------
+ 
+Platformat e-Commerce (Magento) 
+ 
+ 
+17 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+             Figura 3. Hapi i parë: Verifikimi i kërkesave për instalim 
+Hapi i dytë:  Add a Database   
+Shtojmë  bazën  e  të  dhënave  të  nevojshme,  si  Database  Server  Host, Database  Server 
+Username, Password etj.  
+ 
+ 
+ 
+ 
+ 
+                       Figura 4. Hapi i dytë:  Shtimi i databazës   
+Më  pas  kalojmë  në  localhost  /  phpmyadmin  në  faqen  web  ku  krijojmë  një  emër  të  ri  të 
+bazës së të dhënave saktësisht me të njëjtin emër të mëparshëm të bazës së të dhënave ku 
+do të shtojmë databazën e nevojshme.  
+----------------Page (20) Break----------------
+ 
+ 
+Platformat e-Commerce (Magento) 
+ 
+18 
+ 
+ 
+                     Figura 5. localhost / phpmyadmin 
+ 
+                         Figura 6. Krijimi i databases         
+Hapi i tretë: Web Configuration 
+Në  këtë hap  vendosim  emrin  e dyqanit  që  duam  të hapim,  plotësojmë të dhënat  përkatëse 
+dhe vazhdojmë në hapin e radhës. 
+ 
+ 
+ 
+ 
+                        Figura 7. Hapi i tretë: Konfigurimi i faqes 
+Hapi i katërt: Customize your Store 
+Gjatë  hapit  të  katërt  bëjmë  personalizimin  e  dyqanit  tonë  ku  ndryshojmë  kohën,  valutën, 
+gjuhën me të cilin duam ta përdorim programin etj. 
+----------------Page (21) Break----------------
+ 
+Platformat e-Commerce (Magento) 
+ 
+ 
+19 
+ 
+ 
+                         Figura 8. Hapi i katërt: Personalizimi i dyqanit 
+Hapi i pestë: Create Admin Account 
+Në hapin e parafundit krijojmë llogarin e administratorit duke plotësuar të gjitha të dhënat e 
+nevojshme. 
+ 
+ 
+ 
+ 
+                    
+Figura 9. Hapi i pestë: Krijimi i llogarisë 
+Hapi i gjashtë: Install 
+Në  hapin  e  gjashtë  dhe  të  fundit  mjafton të klikojmë butonin ‘Install Now’ dhe programi 
+instalohet me sukses. 
+----------------Page (22) Break----------------
+ 
+ 
+Platformat e-Commerce (Magento) 
+ 
+20 
+ 
+ 
+ Figura 10. Hapi i gjashtë: Përfunimi i instalimit 
+ 
+Kjo është paraqitja e platformës pas krijimit të dyqanit online. 
+ 
+ 
+ 
+ 
+ 
+                       Figura 11. Paraqitja e profilit të admin 
+ 
+3.2 Ndërtimi i website – it 
+Për  ndërtimin  e  website-it kam  menduar të  krijoj  një  faqe  për  shitjen  e  produkteve të 
+ndryshme online  me  platformën  Magento.  Website  nuk është thjesht  një faqe  web-i  por 
+është  një  aplikacion  web-i  pasi  përdoruesi  ndërvepron me  faqen.  Faqja  do  të shërbejë për 
+blerje online ku do shiten produke të tilla si produkte kozmetike dhe estetike.  
+Hapi i parë i ndërtimit të website-it  ka të bëjë me përzgjedhjen e një template të caktuar i 
+cili  mund  të shkarkohet direkt  nga  interneti (free) ose  mund  të  blihet. Ҫdo  template  i 
+përgjigjet platformave të caktuara pasi janë të dizenjuara vetëm për platforma specifike si 
+Magento apo Shopify etj.  
+----------------Page (23) Break----------------
+ 
+Platformat e-Commerce (Magento) 
+ 
+ 
+21 
+ 
+Në hapin  e  dytë,  plotësohen kategoritë  dhe  nënkategoritë  e  produkteve dhe  shërbimeve, 
+duke përmbushur të gjitha kriteret e Magento-s. Dizajni duhet të jetë sa më i këndshëm, sa më i 
+lehtë    për  tu  përdorur dhe sigurisht të  jetë  sa  më  tërheqës  për  përdoruesit. Në figurën  12. 
+paraqiten kategoritë e faqes dhe në figurën 13. nën kategoritë e saj. 
+                            Figura 12. Krijimi i kategorive të faqes web 
+                             Figura 13. Krijimi i nënkategorive të faqes web 
+ 
+ 
+----------------Page (24) Break----------------
+ 
+ 
+Platformat e-Commerce (Magento) 
+ 
+22 
+ 
+ 
+ 
+                                    Figura 14. Ilustrimi i nënkategorive me foto 
+Pjesa më e rëndësishme e website-it është vendosja dhe hedhja e produkteve. Ҫdo produkt 
+vendoset  në katalogun  e  caktur,  sipas  llojit, çimimit,  kërkesës  dhe çdo  produkt  ka 
+informacionin e tij përkatës i cili paraqitet në mënyrë të detajuar.  
+Në figurën 15. paraqitet një model katalogu për produktet të cilat janë shitur më shumë. 
+ 
+                                 
+ 
+ 
+ 
+ 
+ 
+ 
+                              Figura 15. Krijimi i katalog-ut të produkteve 
+ 
+----------------Page (25) Break----------------
+ 
+Platformat e-Commerce (Magento) 
+ 
+ 
+23 
+ 
+Në  përfundim  të  ndërtimit  të  të  gjitha  hapave  dhe    pjesëve  përbërëse  të  website-it,  pamja 
+finale e tij paraqitet në këtë formë: Figura 16. paraqet pamjen finale të website-it. 
+ 
+                                      Figura 16. Faqja kryesore e website-it 
+Funksioni i website-it 
+Website-i “Perfect Secret” është një dyqan online për shitjen e produkteve  të ndryshme, 
+parfume,  kremëra, shampo, make  up,  buzëkuqe,  tualete të  ndryshme etj.  Nëpërmjet  këtij 
+website,   konsumatorët   mund   të marrin një  informacion   të   plotë   për   produktet   që 
+dëshirojnë,  si  markën,  cilësinë,  prejardhjen,   çmimin etj. dhe  pasi  vendosin  për  ta  blerë 
+produktin,  mjafton  të  klikojnë  butonin  “ADD  TO  CART”  dhe  të  plotësojnë  të  gjithë 
+informacionin e kërkuar për pagesën dhe porosia është kryer. Gjithashtu  klientët mund të 
+regjistrohen  në website  dhe  kanë  të  drejtë të  japin  vlerësimet, opinionet  apo  sygjerimet  e 
+tyre për produktet. Faqja i jep mundësinë konsumatorëve që të hyjnë në faqe duke hapur një 
+adresë email-i, duke dhënë numrin e telefonit apo një adresë për çdo pyetje apo problem që 
+ata mund të kenë me produktet, mënyrën e shërbimit, cilësinë etj.  
+----------------Page (26) Break----------------
+ 
+ 
+Platformat e-Commerce (Magento) 
+ 
+24 
+ 
+Website-i përmban nëntë kategori kryesore. Kategoria e parë është “Kryefaqja” (HOME) , 
+e cila pëmban një slide-show me foto që prezantojnë ofertat e fundit si dhe produktet më të 
+kërkuara. Kjo është dhe një mënyrë e reklamimit të produkteve të reja.  
+Kategoria  e dytë  është titulluar “BEAUTY”. Kur klikojmë  në këtë  kategori  shfaqen 
+nënkategoritë  se  për  çfarë  produktesh  jemi  të  interesuar,  produkte  për  fytyrën,  për  trupin, 
+parfume  e  kështu  me  radhë. Nëse do të klikojmë në një nga nënkategoritë p.sh ‘face’ 
+(fytyrë)  do të  na  shfaqen  të gjitha  ato  produkte  që  përdoren  për  fytyrën  bashkë me 
+informacionin  e  detajuar  për secilin  prej  tyre. Kështu  vazhdojmë  me  të  gjitha  katekoritë 
+njëra pas tjetrës deri tek e fundit. 
+ 
+ 
+ 
+ 
+ 
+ 
+                                        Figura 17. Paraqitja e nënkategorive 
+ 
+ 
+ 
+----------------Page (27) Break----------------
+ 
+Platformat e-Commerce (Magento) 
+ 
+ 
+25 
+ 
+ 
+ 
+Konkluzionet 
+ 
+Në përfundim të punimit të kësaj teme diplome arrita në konkluzionin se e-commerce luan 
+një  rol  tepër  të  rëndësishëm  për bizneset  dhe shoqërinë  tonë. Edhe  një herë tjetër  bota  e 
+teknologjisë vjen më pranë nesh duke revolucionarizuar mënyrën e të bërit biznes. 
+Drejtimi  i  një  biznesi  të  e-commerce  kërkon shumë  më  pak  investime  kapitale  krahasuar 
+me  blerjen  e  dyqaneve  fizike.  Nuk  ka  nevojë  të  investohet  në  rekrutimin  e  stafit,  nuk 
+paguan qiratë apo shpenzime të tjera të padëshiruara. Mësova gjithashtu rreth platformave  
+të shumëllojshme e-commerce    si    Shopify,    BigCommerce,    Magento    etj.    Sipas 
+informacioneve të marra, krahasimeve dhe një studimi të detajuar për këtë temë, padyshim 
+platforma Magento është e ardhmja e tregëtisë online. Ajo që mësova rreth kësaj platforme 
+është disponueshmëria e saj për të gjitha llojet dhe madhësitë e bizneseve si nga përdoruesit 
+më të thjeshtë që nuk kanë njohuri rreth kodimit, krijimit të faqeve, editorët, dizenjuesit e 
+web-it etj. Magento  jo  vetëm  që  operon  në  kompani  të  mëdha  si  Nike,  Rosetta  Stone, 
+Olimp  dhe  Ghiradelli, por edhe  në  biznese  të  vogla  të  cilat  mund  të  jenë  fillestare  në 
+tregtinë  online. Gjatë  kohës  që  kam  punuar  me  këtë  projekt,  kam  mësur  rreth  tregtisë  së  
+lëvizshme, rrjeteve sociale, dhe se si teknologjia është duke e çuar përpara konsumin tonë. 
+Si pjesa më  e bukur  e  këtij  studimi  duhet  të përmendet ndërtimi  i  faqes  web  me  anë  të 
+platformës Magento ku mësova se sa shumë hapësira të lejonte në dizenjimin, modifikimin 
+dhe zhvillimin e faqeve. Magento padyshim që është platforma më e mirë e-commerce. 
+ 
+ 
+ 
+----------------Page (28) Break----------------
+ 
+ 
+Platformat e-Commerce (Magento) 
+ 
+26 
+ 
+LISTA E REFERENCAVE  
+1. Carmody, Bill, Founder dhe CEO, Trepoint (Janar 13, 2017) “Top 5 E-Commerce 
+Platforms for 2017”.  https://www.inc.com/bill-carmody/top-5-ecommerce-
+platforms-for-2017.html 
+2. Artikull nga Miva (Tetor 26, 2011) “The History Of Ecommerce: How Did It All 
+Begin?” http://www.miva.com/blog/the-history-of-ecommerce-how-did-it-all-
+begin/ 
+3. Creative Minds (Qershor 2 , 2016) “Magento 2 vs. Shopify: Which should you 
+choose?” https://www.cminds.com/magento-2-vs-shopify-choose/ 
+4. The Balance, Ajeet Khurana (Prill 18, 2017) “Advantages of E-commerce Over 
+Traditional Retail” https://www.thebalance.com/advantages-of-ecommerce-1141610 
+5. Artikull nga BSS COMMERCE(Qershor 17, 2015) “What is Magento? The History 
+of Magento” https://bsscommerce.com/blog/magento-and-history-of-magento/ 
+6. Gross Joel, CEO of Coalition Technologies (Gusht 21, 2010)                            
+“Magento – Disadvantages and Problems”                                
+https://joelx.com/magento-%E2%80%93-disadvantages-and-problems/4834/ 
+7. CDN Solution Group Blog (2017) “Top 10 Advantages Of Using Magento As An E-
+Commerce Store Development” https://www.cdnsol.com/blog/top-10-advantages-
+of-magento-for-e-commerce-store-development/ 
+8. Pat Depuy në Mainstreethost (Shtator 22, 2014) “The Top 10 Avantades to using 
+Magento e-Commerce” http://www.mainstreethost.com/blog/top-10-advantages-
+using-magento-ecommerce/ 
+9. Stickler Rebecca, Content Marketing Specialist (Shtator 19, 2016)“The evolution of  
+e-Commerce”  
+https://www.webpagefx.com/blog/general/the-evolution-of-ecommerce/ 
+10.  Wikipedia (Shtator, 2015) “e-Commerce”  
+https://en.wikipedia.org/wiki/E-commerce 
+11. Artikull nga Quora,  Alex Senn (Qershor 30, 2016) “What are  the pros and cons of 
+Magento vs Shopify?” 
+----------------Page (29) Break----------------
+ 
+Platformat e-Commerce (Magento) 
+ 
+ 
+27 
+ 
+ https://www.quora.com/What-are-disadvantages-of-Magento 
+12. Artikull nga BigCommerce (2003) “What is an ecommerce platform? 
+https://www.bigcommerce.com/ecommerce-answers/what-ecommerce-platform/ 
+13. Dr. P. Devaraj, IJECS Volume 05 Issue (Dhjetor 12, 2016) “E-Commerce 
+Performances in Online Market”  https://www.ijecs.in/issue/v5-i12/7%20ijecs.pdf 
+14. AGT India Blog (2017) ” Importance of E-commerce” 
+http://www.agtindia.com/importance-of-e-commerce 
+15. Artikull nga Magic Design Labs (Shkurt 12, 2016) ”Importance of Magento Web 
+Solution for the Developement of Ecommerce Store” 
+http://magicdesignlabs.com/importance-of-magento-web-solution-for-the-
+developement-of-ecommerce-store/ 
+16.  NDREGJONI Zhaneta (Nëntor, 2014) “Aplikimi i tregtisë elektronike tek bizneset e 
+vogla dhe të mesme” http://www.doktoratura.unitir.edu.al/wp-
+content/uploads/2014/12/Doktoratura-Zhaneta-Ndregjoni-Fakulteti-Ekonomise-
+Departamenti-i-Marketingut.pdf 
+17. Artikull nga Shopify (2017) “Shopify makes it easy to switch from Magento” 
+https://www.shopify.com/compare/shopify-vs-magento 
+18. Moeed AHMED, Zëvendës Menaxher në Biznes Dixhital, Sana Safinaz (Mars, 2017) 
+https://magento.com/customers/sana-safinaz 
+ 
+ 
+ 
+ 
+----------------Page (30) Break----------------

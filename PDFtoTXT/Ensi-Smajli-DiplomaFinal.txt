@@ -1,0 +1,1340 @@
+ UNIVERSITETI I TIRANËS 
+FAKULTETI I EKONOMISË 
+DEPARTAMENTI STATISTIKË DHE 
+INFORMATIKË E ZBATUAR 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+Temë Diplome 
+ 
+ 
+ 
+ 
+”Zhvillimi dhe implementimi i një teme në WordPress 
+ lidhur me Content Marketing” 
+ 
+Diplomë e ciklit tё parё tё studimit 
+ ”BACHELOR” 
+ 
+ 
+      
+ 
+ 
+ 
+ 
+Emri/Mbiemri i Studentit                                                               Emri/Mbiemri i Udhëheqësit 
+ 
+Ensi Smajli                                                                                    Prof. Dr. Besa Shahini 
+______________________                                                         _____________________  
+ 
+ 
+ 
+ 
+ 
+ 
+Tiranë, [ 2018] 
+ 
+ 
+----------------Page (0) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 2 
+ 
+ 
+FORMULARI I VLERËSIMIT TË DIPLOMËS NGA UDHËHEQËSI 
+ 
+Emri i studentit diplomant:  ENSI SMAJLI 
+Fakulteti i Ekonomisë      Dega   Informatikë   Ekonomike
+         Grupi IE 304 
+Titulli i temës së punimit: Zhvillimi dhe implementimi i një teme në WordPress lidhur 
+me Content Marketing. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Nr. Kriteret e vlerësimit Pikët e 
+parashikuara 
+Pikët e 
+fituara 
+1. Përkushtimi i  studentit  dhe  respektimi  i  rregullave  dhe  detyrimeve  të 
+procesit të diplomimit 
+15  
+2. Rrjedha logjike e materialit, qartësia dhe stili i shkrimit 20  
+3. Analiza,  interpretimi i gjetjeve dhe hartimi i përfundimeve në përputhje 
+me objektivat e vendosura të punimit 
+25  
+4. Vlera dhe dobia e punimit (adresimi i një problemi konkret dhe aktual) 20  
+5. Cilësia e të shkruarit (respektimi i kërkesave të formatimit, i rregullave 
+të drejtëshkrimit dhe pikësimit sipas manualit) 
+10  
+6. Referencat e përdorura (cilësia dhe mjaftueshmëria e tyre) 10  
+          TOTALI 100  
+----------------Page (1) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 3 
+ 
+ 
+Komente shtesë 
+___________________________________________________________________________
+___________________________________________________________________________
+___________________________________________________________________________
+___________________________________________________________________________
+___________________________________________________________________________
+___________________________________________________________________________
+___________________________________________________________________________
+___________________________________________________________________________
+___________________________________________________________________________
+___________________________________________________________________________
+___________________________________________________________________________
+___________________________________________________________________________ 
+ 
+ 
+Udhëheqësi i Temës: 
+ 
+ (emër/mbiemër/firmë) 
+ 
+DEPARTAMENTI STATISTIKE DHE INFORMATIKE E ZBATUAR 
+ 
+ 
+ 
+Tiranë, më __/__/2018 
+ 
+  
+----------------Page (2) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 4 
+ 
+© Copyright ENSI SMAJLI Viti 2018 
+Përmbajtja e këtij punimi është totalisht autentike. Të gjitha të drejtat e rezervuara.  
+ 
+ 
+ 
+ 
+ 
+DEKLARATË 
+Unë, i nënshkruari ENSI SMAJLI deklaroj që: (1) Ky punim  përfaqëson punimin tim  origjinal, 
+përveç rasteve të citimeve dhe referencave dhe (2) Kjo mikrotezë nuk është përdorur më parë 
+si mikrotezë apo projekt kursi në këtë Universitet apo në Universitete të tjera.  
+                
+Data: 26/09/2018 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+----------------Page (3) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 5 
+ 
+Falenderime dhe mirënjohje 
+ 
+E ndiej veten shumë me fat që më është dhënë mundësia për të kryer punën time kërkimore në 
+një ambient universitar bashkëpunues, si Fakulteti i Ekonomisë në Universitetin e Tiranës. Në 
+këtë mes ka shumë njerëz, të cilët duhet t’i falënderoj për rolin e tyre në suksesin tim.  
+ 
+Së pari, do të doja të shprehja mirënjohjen më të thellë për udhëheqësen time Prof. Dr. Besa 
+Shahini, që më dha mbështetjen e saj gjatë kohës së përgatitjes. I jam mirënjohës për udhëzimet 
+e saj, sugjerimet shumë konstruktive gjatë strukturimit të punimit dhe për mundësitë që më ka 
+krijuar. Aftësitë e saj organizative dhe në zgjidhjen e shpejtë të problemeve, kanë qenë shumë 
+të dobishme në ecjen përpara të projektit tim. 
+ 
+Individët që kam takuar gjatë diplomimit dhe që unë i konsideroj miq janë të shumtë për t’i 
+përmendur. Këta miq kanë qenë atje për mua, kur sfida dukej shumë e madhe për ta kapërcyer. 
+U  jam  mirënjohës  të  gjithë  bashkëpunëtorëve  të  cilët  më  kanë  ndihmuar  drejtpërdrejt  ose 
+tërthorazi, duke më siguruar informacione shumë të dobishme në kohën e tyre shumë të zënë, 
+si dhe ndihmesën për të realizuar kërkimet. Një punë e vazhdueshme kërkimore mund të duket 
+një detyrë e vështirë dhe e mërzitshme, nëse nuk do të kisha miq që do të ma rritnin ritmin e 
+punës në momente të tensionuara. 
+ 
+Dhe  së  fundi  dua  të shpreh  mirënjohjen  më të thellë  për familjen  time. Ju  të gjithë më keni 
+dhënë mbështetjen, inkurajimin dhe dashurinë, shumë të nevojshme për përfundimin me sukses 
+të studimeve të mia. Faleminderit që jeni gjendur kurdoherë për të dëgjuar problemet e mia dhe 
+keni besuar tek unë. Nuk do të isha ky që jam sot, pa të gjithë ju. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+----------------Page (4) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 6 
+ 
+Abstrakt 
+ 
+Në  një  botë  ku  buxheti  për  reklamimin  tradicional  ndjek  një  trend  rënës,  kompanitë  dhe 
+organizatat  e  mëdha  ndërmarrin  politika  dhe  mënyra  të  ndryshme  për  të  arritur  qëllimet  në 
+tërheqjen  e  vëmendjes  ndaj  konsumatorit  dhe  audiencave  të synuara.  Në  kryqëzimin  midis 
+medias të paguar, të zotëruar dhe të fituar marketingu i përmbajtjes (Content Marketing) është 
+kthyer në një kryefjalë përsa i përket industrisë. Megjithëse  aktualisht është një fenomen në 
+rritje,  content  marketing  ështe  ende  një  fushë  e  paeksploruar  për  studime  apo  kërkime 
+akademike.  
+Qëllimi  kryesor  i  studimit  është  të  parashtrojë  njohuri  më  të  thelluara  rreth  marketingut  të 
+përmbajtjes, teorive rreth tij nga shkencëtarë të famshëm, rëndësisë në performancën e biznesit 
+dhe zhvillimin e një nga elementeve të tij kryesor, në rastin tonë një web-page theme në, për 
+aplikime të mëtejshme. 
+Pjesa teorike e studimit përmban informacionin e duhur akademik në lidhje me marketingun e 
+përmbajtjes, bashkëngjitur pjesës teorikë në të cilën trajtohet zhvillimi hap pas hapi i temës, e 
+cila propozon të ndihmojë subjekte të ndryshme në krijimin e një ure lidhëse mes përmbajtjes 
+që ata disponojnë me audiencën ekzistuese dhe të pritshme. 
+Pjesa  praktike  e  studimit  paraqet  në  mënyrën  më  të  optimizuar  të  mundshme,  një  temë  në 
+WordPress e cila ofron fleksibilitet në  reklamimin e cfarëdo lloj produkti apo shërbimi. 
+Fjalë kyç: content marketing, temë, wordpress, zhvillim, performancë 
+  
+----------------Page (5) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 7 
+ 
+Tabela e përmbajtjes 
+Abstrakt ...................................................................................................................................... 6 
+Hyrje .......................................................................................................................................... 9 
+KAPITULLI I – Teoritë e content marketing .......................................................................... 10 
+1.1 Çfarë është content marketing? ...................................................................................... 10 
+1.1.1 Parimet e content marketing. ................................................................................... 11 
+1.1.2 Pse e përdorin bizneset content marketing? ............................................................ 12 
+1.1.3 Formula B.E.S.T ...................................................................................................... 13 
+1.2 Shkenca e viralitetit ........................................................................................................ 14 
+1.3 Content marketing kundrejt marketingut tradicional. .................................................... 14 
+1.3.1 Avantazhet kryesore ndaj marketingut tradicional. ................................................. 15 
+1.3.2 Mënyrë e re komunikimi. ........................................................................................ 15 
+KAPITULLI II – Elementët e përdorur për realizimin e projektit. .......................................... 16 
+2.1 Prezantim i Wordpress ................................................................................................... 16 
+2.2 Bootstrap ........................................................................................................................ 17 
+2.3 XAMPP .......................................................................................................................... 18 
+2.4 Gjuhët e programimit ..................................................................................................... 19 
+2.5 Përpunimi i imazheve ..................................................................................................... 20 
+KAPITULLI III – Koncepti dhe zhvillimi i temës .................................................................. 21 
+3.1 Analiza fillestare dhe skicimi ......................................................................................... 21 
+3.2 Adaptive vs. Responsive Design .................................................................................... 23 
+3.3 Koncepti Vizual.............................................................................................................. 25 
+3.4 Implementimi në HTML, CSS dhe PHP. ....................................................................... 27 
+3.4.1 Header.php ............................................................................................................... 27 
+3.4.2 Index.php, Category.php, Page.php, Page-about.php, Page-contact.php ................ 32 
+3.4.3 Single.php ................................................................................................................ 33 
+3.4.3 Content.php.............................................................................................................. 34 
+3.4.4 Content-single.php ................................................................................................... 35 
+3.4.5 Sidebar.php .............................................................................................................. 35 
+3.4.6 Functions.php .......................................................................................................... 36 
+3.4.7 Style.css ................................................................................................................... 37 
+KAPITULLI 4 .......................................................................................................................... 38 
+Konkluzione ......................................................................................................................... 38 
+----------------Page (6) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 8 
+ 
+Referenca .............................................................................................................................. 38 
+ 
+ 
+Tabela e figurave 
+Figura 1- Pasqyrim i perkufizimit të Content Marketing......................................................... 11 
+Figura 2- Arsyet e përdorimit te Content Marketing nga bizneset .......................................... 12 
+Figura 3 - Formula B.E.S.T ..................................................................................................... 13 
+Figura 4 – Skica nr. 2 ............................................................................................................... 22 
+Figura 5 – Skica nr.1 ................................................................................................................ 22 
+Figura 6 – Skica nr.3 ................................................................................................................ 23 
+Figura 7- Paraqitje vizuale e temës në Photoshop ................................................................... 25 
+Figura 8 – Paraqitje vizuale, seksioni i artikujve ..................................................................... 26 
+Figura 9 – Paraqitje vizuale e pjesës së dytë............................................................................ 26 
+Figura 10  Seksioni footer ........................................................................................................ 26 
+Figura 11- Shiriti i navigimit, kodi .......................................................................................... 27 
+Figura 12 – Shiriti i nsvigimit, stilimi kod ............................................................................... 28 
+Figura 13 – Menuja Header, Kod ............................................................................................ 28 
+Figura 14 – Inicializimi i funksionit ........................................................................................ 29 
+Figura 15 – Stilimi ll-cover ...................................................................................................... 30 
+Figura 16 – Stilimi  ll-bg .......................................................................................................... 30 
+Figura 17 – Stilim CSS ............................................................................................................ 30 
+Figura 18 – Stilimi overlay ...................................................................................................... 30 
+Figura 19 – Kodi homepage-header. ........................................................................................ 30 
+Figura 20 – Category Header ................................................................................................... 30 
+Figura 21 – Page Header .......................................................................................................... 31 
+Figura 22 – Single post header ................................................................................................. 31 
+Figura 23 – Search header me sukses ...................................................................................... 31 
+Figura 24 – Search header pa sukses ....................................................................................... 31 
+Figura 25- Index.php ................................................................................................................ 32 
+Figura 26 – Single.php ............................................................................................................. 33 
+Figura 27- Content.php ............................................................................................................ 34 
+Figura 28- Content-single.php ................................................................................................. 35 
+Figura 29 – Sidebar.php ........................................................................................................... 35 
+Figura 30 – Function.php ......................................................................................................... 36 
+Figura 31 – Function.php ......................................................................................................... 36 
+Figura 32 – Mënyra e vendosjes së artikujve në faqe .............................................................. 36 
+Figura 33- Loop për klasën e postimeve .................................................................................. 37 
+Figura 34 – Sfondi për postimet............................................................................................... 37 
+Figura 35 – Style.css ................................................................................................................ 37 
+ 
+----------------Page (7) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 9 
+ 
+Hyrje 
+Mediat sociale janë burimi i ri i fuqisë së marketingut në botë. Më shumë kompani e përdorin 
+atë në ditët e sotme dhe është provuar të jetë një mjet tepër i fuqishëm. Përdorimi i mediave 
+sociale në mënyrë korrekte do të sjellë imazhin më të mirë të markës, shitjet dhe kënaqësinë e 
+klientit. Sidoqoftë,  marketingu  i  mediave  sociale  është  ende  një  temë  e  re  që  sfidon  çdo 
+marketer dhe pronar biznesi. Ky studim do të diskutojë një prirje të re nga biznesi i industrisë 
+së internetit në vitet e fundit i emëruar pikwrisht content marketing. 
+ 
+Ekspertët  kanë  hulumtuar mbi përmbajtjet  më  virale  që  interneti  ka pare  ndonjëherë,  ose 
+ndryshe  përmbajtje  të cilave  u  ka  dhënë jetë. Këto  përmbajtje  kanë vijuar nga  një  shkallë 
+vendore  e  një  faqe web duke  u  përhapur  më pas  në të gjithë World Wide Web nëpërmjet 
+rrjeteve sociale dhe mjeteve të tjera të komunikimit.  
+ 
+Aktivitetet e content marketing janë tashmë duke u zbatuar në mbarë botën për vite me rradhë. 
+Ky punim synon të jetë një nga të paktat hulumtime akademike për të shqyrtuar këtë strategji 
+marketingu dhe taktikat e saj dhe të mundësojë gjithashtu një ambjent të përshtatshëm nga ana 
+stilistike në reklamimin e përmbajtjeve online. 
+Një nga elementët kryesor të cilësuar edhe në studim, janë pikërisht faqet web. Studimi ilustron 
+zhvillimin e një teme në WordPress më qëllim ofrimin e opurtuniteteve për të gjithë llojet e 
+bizneseve, pavarësisht buxhetit të tyre të investimit në lidhje me marketingun. 
+ 
+Objektivat e punimit 
+1. Njohja me termin Content Marketing, teoritë dhe studimet rreth tij dhe aplikimin në biznese. 
+2.  Zhvillimi  dhe  implementimi  i  njw  teme  në  WordPress  në  ndihmw  të  të  gjithë  llojeve  të 
+ndryshme të bizneseve për promovimin e produkteve apo përmbajtjes që disponojnë.  
+3. Zhvillimi i një dizajni bashkëkohor për temën në WordPress me në fokus përdorimin sa më 
+intuitiv për vizituesin. 
+4. Zhvillimi i skeletit HTML dhe stilimi me anë të framework-ut Bootstrap. 
+5. Optimizimi SEO duke ndërtuar faqen sipas standarteve më të reja. 
+  
+----------------Page (8) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 10 
+ 
+KAPITULLI I – Teoritë e content marketing 
+Një pjesë e konsiderueshme  e marketerëve në të gjithë botën, po fokusojnë vemendjen e tyre 
+drejt content marketing, në mënyrë që t’a njohin atë sa më mirë dhe t’a përdorin në vendin e 
+duhur.  Ekzistojnë shumë teori  dhe  perkufizime  të vetë termit,  ku  shumica  prej  tyre  janë të 
+ngjashme dhe kanë pothuajse të njëjtin kuptim.  
+ “Një fillim i mirë është të qenurit i sinqertë rreth përmbajtjes (content) që dispononi. Edhe pse 
+në të vërtetë, shumica e markave janë bërë mjaft të suksesshme duke folur për veten e tyre. Ne 
+nuk kemi nevojë për më shumë për këtë lloj përmbajtjeje, sidomos kur ky  lloj informacioni 
+është i dobishëm vetëm për një pjesë shumë të vogël të udhëtimit që ndërmerr blerësi. Cilësitë 
+që  mungojnë  janë  tregimet  që  angazhojnë  klientët  e  tyre - dhe  nxisin  konsumatorët  dhe 
+perspektivat për të ndërmarrë një veprim të dëshiruar.”  (Joe Pulizzi 2013 – themelues i Content 
+Marketing Institute, autor i Content Inc.) 
+Pulizzi propozon se qëllimi kryesor dhe përfundimtar i përpjekjeve të content marketing  është 
+të "lëvizë" klientin në një farë mënyre. Ne duhet t'i ndikojmë pozitivisht, t'i angazhojmë ata 
+dhe të bëjmë ç'është e nevojshme për të luajtur një rol të dobishëm në jetën e tyre dhe në bisedat 
+e tyre. 
+ 
+1.1 Çfarë është content marketing? 
+Content  marketing është  një  qasje  strategjike  e  marketingut  e  fokusuar  në  krijimin  dhe 
+shpërndarjen e përmbajtjes së vlefshme, të përshtatshme dhe konsistente për të tërhequr dhe 
+mbajtur një audiencë të përcaktuar qartë dhe padyshim, për të nxitur veprimtarinë fitimprurëse 
+ndaj klientit. Fjala kyçe këtu është pikërisht “e vlefshme”, e cila ndryshon këtë përkufizim nga 
+ai  që  mund  të  përshkruajë  pothuajse  çdo  formë  tjetër  reklamimi  ose  marketingu. Koncepti 
+konsiston në analizën dhe gjetjen nëse një pjesë e përmbajtjes  është lloji i përshtatshëm për të 
+qenë pjesë e një fushate të content marketing nëse njerëzit e kërkojnë atë, nëse njerëzit duan ta 
+konsumojnë  atë,  në  vend  që  ta  shmangin  atë. Rrjedhimisht  do  të zbatohet  për  çdo  pjesë  të 
+content marketing që mund të krijohet, në varësi të faktit nëse marrësi ka marrë vlerën nga ai 
+apo jo. (Forbes 2014) 
+ 
+ 
+----------------Page (9) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 11 
+ 
+1.1.1 Parimet e content marketing. 
+1. Plotëso një nevojë - përmbajtja juaj duhet t'i përgjigjet disa nevojave të paplotësuara 
+ose  pyetjeve  për  klientët  tuaj.  Ajo  duhet  të  jetë  e  dobishme  në  një  farë  mënyre  tek 
+klienti, mbi atë që mund të ofroni si produkt ose shërbim. 
+2. Të jesh   i   qëndrueshëm - virtyti   kryesor   i   një   botuesi   të   suksesshëm   është 
+qëndrueshmëria. Nëse jeni të abonuar në një revistë mujore apo gazetë ditore e-mail, 
+përmbajtja duhet të dorëzohet gjithmonë në kohë dhe siç pritet. Ky është edhe fakti pse 
+shumë kompani bien poshtë. Çfarëdo lloj përkushtimi që bëni ndaj përmbajtjes suaj, 
+duhet t’a dorëzoni atë vazhdimisht. 
+3. Të jesh human - përfitimet e të mos qenurit një entitet gazetaresk është se nuk keni 
+asgjë për të mbajtur mbrapa nga të qenit vetvetja. Gjeni atë që ju prezanton në formën 
+më të mirë të mundshme dhe ndajeni atë.  
+4. Të kesh  një pikëpamje - content  marketing  nuk  është  një përmbajtje enciklopedike 
+dhe  as  një raport  historie.  Mos  kini  frikë  të  merrni  anën  e  çështjeve  që  mund  t'ju 
+orientojnë ju dhe kompaninë tuaj si një ekspert. 
+5. Shmangni të folurin rreth shitjeve - sa më shumë që flisni për veten tuaj, aq më pak 
+njerëz do të vlerësojnë përmbajtjen tuaj. 
+6. Të jesh më i miri i llojit tënd - megjithëse mund të jetë e vështirë për t’u arritur në 
+fillim, qëllimi për përmbajtjen tuaj në fund të fundit është që të jetë më i miri i llojit të 
+vet. Kjo do të thotë që për përmbajtjen tënde, ajo që shpërndan është më e mira e asaj 
+që gjendet dhe që është e disponueshme.  
+ 
+Figura 1- Pasqyrim i perkufizimit të Content Marketing 
+Burimi Mandloys Digital Agency, 2013 
+ 
+----------------Page (10) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 12 
+ 
+1.1.2 Pse e përdorin bizneset content marketing? 
+Mediat  sociale  provohen  të  jenë  të  suksesshme  kur  implementohen  me  content  marketing. 
+Përmbajtja vendase në rrjetet sociale rezulton në rritje të angazhimit me audiencën e synuar 
+dhe mundësinë për të arritur një shkallë të dëshirueshme virale. Kjo është arsyeja kryesore pse 
+bizneset synojnë t’a  adoptojnë content  marketing  si  pjesë të rëndësishme  të strategjisë 
+marketing.  
+Figura 2 më poshtë pasqyron 4 nga arsyet pse bizneset i drejtohen content marketing. 
+ 
+ 
+Megjithatë, është e  rëndësishme  të bëhet  një studim  më i  hollësishëm  mbi  parashtrimin  e 
+përfitimeve që kanë kompanitë. Pulizzi dhe Barret (2009, 9-20) shpjegojnë më poshtë disa nga 
+arsyet pse content marketing është i domosdoshëm të implementohet.  
+ Ka një ndryshim në qëndrimet e blerësve ndaj mediave tradicionale dhe besueshmërisë 
+së përmbajtjes: Blerësit kanë nevojë për materiale që i bën ata më të mençur dhe më të 
+ditur. 
+ Burimet  tradicionale  të  medias  nuk  mund  të  llogariten  për  të  ndihmuar  në  arritjen  e 
+klientëve tuaj: mjetet e mediave sociale mund të ofrojnë të dhëna më të mira dhe më të 
+vlefshme. 
+ Kompanitë e mediave po pakësojnë buxhetet e tyre, duke zvogëluar kështu cilësinë e 
+përmbajtjes. Këto reduktime të vazhdueshme tregojnë mundësi të konsiderueshme për 
+bizneset që të bëhen vetë botuesi për të tërhequr konsumatorët e etur për informacion. 
+ Për shkak se teknologjia është e lirë dhe e lehtë për t'u përdorur, edhe kompanitë e vogla 
+mund të ofrojnë zgjidhje të shkëlqyera të përmbajtjes në bazë të klientëve të synuar. 
+Duke u bërë vetë botues, bizneset mund të mbledhin një sasi të madhe të të dhënave në 
+lidhje me klientët aktual dhe të ardhshëm, lehtësisht dhe pa kosto.  
+Figura 2- Arsyet e përdorimit te Content Marketing nga bizneset 
+Burimi: Demand Metric 2013 
+----------------Page (11) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 13 
+ 
+ Kompania duhet të jetë eksperti i fushës së vet, prandaj ata duhet të zotërojnë burimin 
+më të besueshëm të përmbajtjes që do të tërheqë dhe mbajë klientët dhe perspektivat në 
+të ardhmen. 
+1.1.3 Formula B.E.S.T  
+Krijuar nga Pulizzi dhe Barrett (2009, 27-29) me qëllim që ta bëjnë më të lehtë për kompanitë 
+të drejtohen në krijimin e përmbajtjes së vlefshme dhe të përshtatshme" për audiencën e synuar. 
+Me fjalë të tjera, do të thotë që kompanitë nuk duhet të fillojnë të bëjnë një fushatë të content 
+marketing para se të kenë një strategji të përmbajtjes së shëndoshë. B.E.S.T mund të aplikohet 
+në pothuajse të gjithë llojet e mediave (online, e shkruar). 
+ 
+ 
+ 
+ 
+B.E.S.T, e cila ilustrohet më lart në figurën 3, synon të thjeshtojë një proces të komplikuar të 
+marketingut në mënyrë që strategjia e marketingut të një kompanie të jetë: 
+ E sjelljes (Behavioral) - Çdo gjë që një biznes komunikon me klientët e tij ka një qëllim. 
+Është thelbësore për të realizuar qëllimin e komunikimeve apo bisedave të tilla. 
+ E  rëndësishme  (Essential) – Të shpërndajë informacionin  e  duhur  për  audiencën  e 
+synuar në mënyrë që t’i ndihmojë në përmirësimin dhe lehtësimin e jetës së tyre. 
+ Strategjike (Strategic) - Përpjekjet për content marketing duhet të jenë pjesë e integruar 
+e  strategjisë së përgjithshme të biznesit. 
+ E synuar (Targeted) - Përmbajtja duhet të jetë pikërisht në shënjestër të një audience të 
+caktuar në mënyrë që të jetë me të vërtetë i rëndësishëm për blerësit. 
+Figura 3 - Formula B.E.S.T 
+Burimi (Barret dhe Pulizzi) 
+ 
+----------------Page (12) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 14 
+ 
+1.2 Shkenca e viralitetit  
+Viraliteti  është  një tjetër  qëllim  i  content  marketing.  Sa  më  virale  të  jetë përmbajtja,  aq  më 
+shumë njerëz e konsumojnë atë. Në këtë mënyrë fushata e marketingut bëhet më efektive. 
+ Në studimin “What makes online contents go viral?” ( Jonah Berger 2012) doli në përfundimin 
+se përmbajtjet virale kanë tendencën të jenë: 
+ Surprizuese - Gjetja e lidhjeve konkrete midis ideve në dukje të shkëputura është çelësi 
+për të shtuar faktorin e befasisë. 
+ Interesante - Çështja  nuk  është  ajo  që  e  bën  një  temë  interesante,  por  si  munden 
+marketerët të bëjnë një temë interesante. Berger (Prof. Assoc në Marketing, Universiteti 
+i Pensilvanisë) sugjeron se përgjigjja për këtë pyetje është të bëhen pyetje interesante 
+në lidhje me temën përkatëse.  
+ Intensiteti  dhe  Pozitiviteti - Përmbajtja  virale  shkakton  emocion  nga  audienca  e  saj. 
+Intensiteti  i  kësaj  përmbajtjeje  është  faktori  kryesor  që  nxit  viralitetin e  tij  dhe 
+pozitiviteti cilësohet si përshpejtuesi i saj. Ka disa udhëzime të tjera praktike për të bërë 
+një pjesë të përmbajtjes më emocionale: 
+o Transformimi i një ideje në një histori – tregimet janë shumë më emocionuese. 
+o Përdorimi i ligjëratës së drejtë – është më gjithëpërfshirëse se ajo e zhdrejtë. 
+o Përdorimi i humorit - informacioni i vjetër mund të rinovohet duke u thënë në 
+mënyrë  spontane.  Ekzagjerimi  gjithashtu  funksionon  por  ama  duhet  treguar 
+kujdes të mos përdoren përmbajtje ofenduese dhe të pakëndshme. 
+o Të bëhesh  inspirues  me  përmbajtjen - Sigurimi  i  një perspektiv  të  re  për  një 
+tematikë  të  njohur  mund  të  krijojë  momente inspiruese  tek  audienca,  gjë që 
+shkakton veprimin e shpërndarjes së përmbajtjes në mënyrë imediate. 
+ Vepruese - Përmbajtja e përbashkët është shpesh vepruese, praktike dhe personalisht e 
+dobishme.  Përmbajtja  duhet  të  zgjidhë  probleme  për  audiencën  dhe  gjithashtu  të 
+shpjegojë  se  si  informacione  të  tilla  mund  të përdoren  në  situata  të ndryshme  që të 
+shmangin paqartësinë. 
+1.3 Content marketing kundrejt marketingut tradicional. 
+Marketingu ka qenë gjithmonë rreth  tregimeve që kapin imagjinatën e një audience dhe e lëviz 
+atë për të vepruar. Sa më shumë e imponon historinë, aq më tepër do t’a përqafojnë klientët 
+mesazhin. Marketingu tradicional e arrin me anë të reklamave televizive, të shtypura dhe radio.  
+----------------Page (13) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 15 
+ 
+Content Marketing përfshin krijimin e materialeve të lira si artikuj, video, blogje, tweet-e dhe 
+e-mail për të informuar, argëtuar dhe edukuar. Qëllimi është pikërisht i njëjtë me marketingun 
+tradicional:  maksimizimi  i  klientëve  potencial  dhe  shitjeve.  Content  marketing  është  më  i 
+fokusuar në tërheqjen e njerëzve se sa transmetimin e një mesazhi për ta. Me fjalë të tjera, ju 
+jeni duke botuar dhe postuar përmbajtje në mënyrë të vazhdueshme të cilat do të informojnë 
+vendimet blerëse dhe të zgjidhin e problemeve të tyre. Ai bazohet në faktin se  konsumatorët i 
+besojnë botuesve më shumë se sa reklamave. 
+1.3.1 Avantazhet kryesore ndaj marketingut tradicional. 
+1. Përmbajtja  ka  një  afat më  të  gjatë  ruajtjeje:  sapo  të  ndalosh  pagesën  për  një  fushatë 
+reklamuese, ajo hiqet nga qarkullimi, ndërsa një përmbajtje e konsideruar e mirë mund 
+të jetojë për muaj dhe vite. 
+2. Përmbajtja mund të rrisë audiencën juaj: njerëzit kanë më shumë gjasa të kalojnë një 
+artikull të mirë në rrjetet e tyre të medias sociale. 
+3. Përmbajtja mund të përshtatet në segmente të ndryshme të audiencës: reklamat kanë 
+një madhësi zakonisht të përshtatshme për të gjithë produktet e marketingut. 
+4. Përmbajtja i shpërblen konsumatorët me informata kuptimplote: mesazhet dhe bisedat 
+rreth shitjeve janë e kundërta. 
+1.3.2 Mënyrë e re komunikimi. 
+Disa nga korporatat më të fuqishme dhe më të suksesshme në botë, përfshirë Microsoft, Procter 
+& Gamble dhe Cisco Systems, po përqëndrohen pikërisht në përmbajtje për të komunikuar me 
+konsumatorët  e  tyre.  Një  ilustrim  i  rëndësisë  që  disa  kompani  po  i bashkohen  asaj  mund  të 
+shihet  tek Coca-Cola.  Përmbajtja  është  thelbësore  për  planet e  tyre  me  qëllim  dyfishimin 
+madhësisë të biznesit  deri në vitin 2020. 
+Jonathan Mildenhall, VP Global Advertising Strategy and Creative Excellence the Coca-Cola 
+Company,  citoi  se: "Të  gjithë  reklamuesit  kanë  nevojë  për  shumë  më  tepër  përmbajtje  në 
+mënyrë që të mbajnë angazhimin me konsumatorët të freskët dhe të përshtatshëm, për shkak të 
+lidhjes 24/7. Nëse do të jeni të suksesshëm në mbarë botën, duhet të keni ide të trasha dhe të 
+pjellore në thelb ". 
+Për të përfunduar, njerëzit kanë më shumë gjasa të përdorin internetin për të marrë informacion 
+rreth  produkteve. Faqet e  internetit  që  ofrojnë përmbajtje  me  cilësi  të  mirë  me një  bazë  të 
+qëndrueshme  kanë  shanset  më  të  mira  për  t'u  renditur  lart nga  motorët  e  kërkimit. Modelet 
+----------------Page (14) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 16 
+ 
+tradicionale të marketingut tentonin të shënonin fitimet më të mëdha për subjektet me buxhetet 
+më të mëdha. Sot, kjo po ndryshon, sepse kushdo që arrin të krijojë përmbajtjen më të mirë dhe 
+gjeneron bisedat më stimuluese mund t’ia dalë në krye të listës. 
+ 
+KAPITULLI II – Elementët e përdorur për realizimin e projektit. 
+Në kapitullin  e  mëposhtëm është bërë një përshkrim  dhe  analizë e  të gjithë elementeve 
+(aplikacione & tools) të përdorura në ndërtimin e temës në WordPress. 
+2.1 Prezantim i Wordpress 
+Wordpress është një Content-Management-System, me fjalë të thjeshta, një software, me anë 
+të të cilit  mundësohet  krijimi  i  një faqe web-i  dhe  menaxhimi  i  përmbajtjes  së faqes. 
+Karakterizohet kryesisht    nga    niveli    i    lartë i    personalizimit    dhe    lehtësisë së 
+përdorimit.WordPress është kompletisht open-source, që do të thotë, që kodi i programit është 
+i hapur dhe i aksesueshëm nga cdokush. Gjithashtu, cdo lloj përdoruesi mund t’a shkarkojë, 
+instalojë dhe përdori pa pasur nevojë të paguaj ndonjë tarifë. 
+Wordpress-i është CMS më e përdorur për momentin në të gjithë botën. Sipas statistikave nga 
+W3Techs, 61% e  faqeve të webit që perdorin një CMS, menaxhohen me anë të WordPress. 
+Ndërsa sipas statistikave të BuiltWith, ajo përbën rreth 46% të tregut,  gjë e cila  e cilëson si 
+liderin  ndër  CMS.  Në të dy statistikat, WordPress ndiqet  nga  CMS si  Joomla,  Drupal  dhe 
+Typo3. Po të merren parasysh edhe faqet të cilat janë të krijuara pa një CMS sipas statistikës 
+së W3Techs, përben rreth 22% të tregut. Ndërkohë versioni aktual i WordPress është shkarkuar 
+më shumë se 30.8 milion herë sipas të dhënave më të fundit. 
+Mënyra e funksionimit të WordPress 
+Megjithëse WordPress fillimisht është ideuar si një software për blogje, me kalimin e kohës 
+është zhvilluar në një CMS të mirëfilltë, me të cilin u mundësua edhe implementimi i faqeve 
+të tjera të webit. Meqenëse është i shkruar mbi skriptin PHP, për funksionimin e tij nevojitet 
+dhe  një webspace,  i  cili  supporton  PHP.  Gjithashtu  nevojitet  edhe  nje databazë MySQL,  ku 
+duhet të ruhen të gjitha të dhënat e faqes. 
+Dizajni i një faqeje web-i të ndërtuar mbi Wordpress drejtohet nga aktivizimi i një teme, e cila 
+nga ana teknike përbëhet nga disa file CSS dhe disa “templates” që përmbajne strukturen bazë 
+----------------Page (15) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 17 
+ 
+HTML, që gjenerojne faqen. Në dosjen zyrtare të temave ndodhen për momentin më shumë se 
+2500 subjekte të ndryshme, të cilat mund të shkarkohen falas. 
+2.2 Bootstrap 
+Për ndërtimin temës është përdorur Framework-u i mirënjohur Bootstrap. Ky i fundit është një 
+Framework falas,  për  ndërtimin  e  faqeve  të webit  i  cili është i  ndërtuar  në bazë të disa 
+shablloneve HTML dhe CSS, për të paraqitur elementë të ndryshëm të faqeve të webit. Këto 
+elementë janë formulare,  butona, tabela, navigime,  menu dhe  nje Grid-System  per layout-e. 
+Gjithashtu është e mundur të shtohen edhe module opsionale Javascript-i (p.sh. Slideshow për 
+imazhe)  për  interaksione  të ndryshme.  Më tej,  Bootstrap  mundëson ndërtimin  e dizajneve 
+“Responsive” për  faqet  e webit, lidhur  me  një optimizim  të faqes, psh.  në rastin  kur  një 
+perdorues viziton faqen nga një tablet ose smartphone. 
+Si funksionon Bootstrap? 
+Bootstrap bazohet ne gjuhen Stylesheet LESS, qe korrespondon me nje superset te CSS. Kjo 
+do  të thotë që cdo  komandë CSS është edhe  një komandë e  vlefshme  LESS. Me  LESS 
+mundësohet  edhe  krijimi  i  paradigmave  të programimit  (variablat,  nesting),  të rregullave, 
+funksioneve dhe operatorëve. E gjitha kjo përdoret për të shmangur përsëritje të kodit në CSS. 
+Në përdorimin e Bootstrap-it ne aksesojme filet CSS, të cilat gjenerohen nga kompilimi i fileve 
+LESS.  Kjo është e  rëndësishme,  pasi  filet  LESS  deri  tani  nuk janë të lexushme  nga web-
+browserat. Informacione të mëtejshme per LESS mund të gjenden në lesscss.org.  
+Ndërtimi i Boostrap 
+Boostrap  ka ndërtim modular dhe përbëhet nga pjesët e mëposhtme. 
+ Grid System dhe një Responsive Design 
+ CSS-Stylesheet base 
+ Komponente të riperdorueshëm 
+ Javascript-Plugins (opsionale) 
+Avantazhe 
+1. Duke pasur një linjë të qartë strukturale kursehet më shumë kohë si për zhvilluesit dhe 
+dizenjuesit. 
+2. Bootstrap sjell elementa të gatshëm si ikona, kutiza, butona dhe pulldoën menu. 
+----------------Page (16) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 18 
+ 
+3. Mundëson zgjerime si Modal-Box, Tooltips dhe Tabs (me integrimin e JQuery). 
+4. Të gjithë elementët janë të definuara, përmes së cilës cdo komponent paraqitet i njëjte 
+në browsera të ndryshëm 
+Disavantazhe 
+1. I gjithë framework-u është shumë i madh, gjë e cila bën që të vonojë në hapjen e faqes. 
+Prandaj rekomandohet të mos merren edhe komponentë të cilë nuk përdoren. 
+2. Layout-i duhet t’i përshtatet framework-ut. 
+2.3 XAMPP 
+XAMPP është një paketë falas dhe open source cross-platform e zhvilluar nga Apache Friends, 
+që  përbëhet  kryesisht  nga  Apache  HTTP  Server,  databaza  MariaDB  dhe  interpretues  për 
+skriptet  në  gjuhët  e  programimit  PHP  dhe  Perl.  XAMPP  qëndron  për  Cross-Platform  (X), 
+Apache (A), MariaDB (M), PHP (P) dhe Perl (P). Është një program intuitiv dhe i lehtë, që 
+mundëson lehtësisht krijimin e një serveri lokal për web, me qëllime testimi dhe implementimi. 
+Çdo  gjë  që  nevojitet  për  të  ngritur  një  server  në  internet - aplikacionin  e  serverit  (Apache), 
+bazën e të dhënave (MariaDB) dhe gjuhën e shkrimit (PHP) - është përfshirë në një skedar të 
+ekstraktueshëm.  
+XAMPP është gjithashtu Cross-Platform, që do të thotë se funksionon në mënyrë të njejte si 
+në  Linux,  Mac  dhe Ëindoës.  Meqenëse  shumica  aktuale  e  serverave  përdorin  të  njëjtat 
+komponente si XAMPP, e bën tranzicionin nga një server lokal në një server online shumë të 
+lehtë. XAMPP vjen me një numër të moduleve të tjera duke përfshirë OpenSSL, phpMyAdmin, 
+MediaËiki,  Joomla, WordPress  dhe  më  shumë.  Instanca  të  shumta  të  XAMPP  mund  të 
+ekzistojnë  në  një  kompjuter  të  vetëm,  dhe  çdo  instancë  e  dhënë  mund  të  kopjohet  nga  një 
+kompjuter në tjetrin. 
+  
+----------------Page (17) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 19 
+ 
+2.4 Gjuhët e programimit 
+1. HTML5 
+HTML5  është  versioni  më i  ri  i  standardit  të  HTML.  Ofron  tipare  të  reja  të  cilat sigurojnë 
+përkrahje maksimale jo vetëm për multimedia, por gjithashtu edhe për krijimin e aplikacioneve 
+web që mund të interaktojnë më përdoruesin, me të dhënat e tij dhe serverët, më lehtësisht e në 
+mënyrë më efektive. 
+Duke  qenë se HTML5  është  në  zhvillim  e  sipër,  ndryshimet  në  tipare  të ndryshme  janë  të 
+pashmangshme. Jo të gjitha karakteristikat janë të suportuara nga të gjithë browser-at deri më 
+tani. Gecko  dhe  Firefox  ofrojnë  suport  të  kënaqshëm për  HTML5, ndërkohë që puna  rreth 
+zhvillimit të tij vazhdon më tej. 
+HTML5  inkorporon  një  stil  të  ri  që  largohet shumë  nga  limitimet  e  versioneve  të vjetra  të 
+HTML.  Gjuha  e  programimit  në  HTML5  ofron  pajisje  të  mira  punë  dhe  efekte  shumë 
+funksionale, duke lejuar krijimin e faqeve-web të cilat mund të krahasohen lehtësisht me ato të 
+krijuara duke përdorur Flash-in. 
+2. Cascading Style Sheets 
+CSS është  një  gjuhë  stilesh  e  përdorur  për  prezentacionin  e  një  dokumenti  i  shkruajtur  në 
+gjuhën markup. Përdorimi më i zakonshëm është stilimi i faqeve Web i shkruajtur në HTML 
+dhe XHTML, edhe pse  gjuha mund t’i aplikohet çdo dokumenti XML, duke përfshirë SVG 
+(shqip Grafikë Vektoriale e Shkallëzueshme) dhe XUL.  
+CSS mund të përdoret nga lexuesit e faqeve të rrjetit të caktojnë ngjyrën, stilet e shkronjave, 
+planimetrin  ose  layout,  dhe  pamje  të  tjera  të  prezantimit  të  dokumentit.  Është  kryesisht  i 
+projektuar për të bërë të mundur ndarjen e përmbajtes së faqeve (e shkruajtur në HTML, ose 
+një gjuhë markup të ngjashme)  nga  prezantimi  i  dokumentit  (i  shkruar në  CSS). Kjo  ndarje 
+lehtëson përdorimin, jep më shumë fleksibilitet dhe kontroll në specifikimin e karakteristikave 
+të  prezentimit,  dhe  zvogëlon  ndërlikimin  dhe  ripërsëritjen  e  përmbajtjes  strukturale.  CSS 
+specifikon një skemë prioriteti për të saktësuar kush rregull stili aplikohet në qoftë se një ose 
+më shumë rregulla gjëhen në një element i veçantë. Në këtë “shkallëzim”, prioritetet ose pesha 
+llogariten dhe i caktohen rregullave, kështu që rezulatet janë të parashikueshme. Specifikimet 
+e CSS mbahen nga World Wide Web Consortium (W3C). 
+----------------Page (18) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 20 
+ 
+3. PHP 
+PHP:  Hypertext  Preprocessor  (ose  thjesht  PHP)  është  një  gjuhë  skriptimi  server-side e 
+projektuar për web-development, por gjithashtu përdoret si një gjuhë programimi me qëllim të 
+përgjithshëm.  
+Kodi PHP mund të përfshihet në kodin HTML, ose mund të përdoret në kombinim me sisteme 
+të ndryshme të modelit të web-it, CMS dhe web frameworks. Kodi PHP zakonisht përpunohet 
+nga një PHP interpreter, që zbatohet si një modul në web server ose si një ekzekutues i Common 
+Interface  Gateëay  (CGI). Webserveri  kombinon  rezultatet  e  kodit  PHP  të  interpretuar  dhe 
+ekzekutuar, të cilat mund të jenë çdo lloj të dhënash, përfshirë imazhet, me faqen e internetit 
+të gjeneruar. Kodi  PHP  gjithashtu  mund  të ekzekutohet  me një ndërfaqe  komanduese  (CLI) 
+dhe mund të përdoret për të zbatuar aplikacione grafike të pavarura. 
+Përkthyesi  standard  PHP,  i  mundësuar  nga  Zend  Engine,  është software i  lirë  i  lëshuar  nën 
+licencën PHP. PHP është transmetuar gjerësisht dhe mund të vendoset në shumicën e serverave 
+në internet pothuajse në çdo sistem dhe platformë operative, pa pagesë. 
+ 
+2.5 Përpunimi i imazheve 
+Adobe Photoshop 
+Adobe Photoshop është një program përpunues për raster graphics i zhvilluar dhe publikuar 
+nga Adobe Systems për macOS dhe Ëindoës. 
+Programi  mund të  modifikojë  dhe  kompozojë  imazhe raster në  shtresa  të  shumëfishta  dhe 
+mbështet ne maska, kompozime alfa dhe disa modele me ngjyra duke përfshirë RGB, CMYK, 
+CIELAB, ngjyrën ne nje pike te caktuar dhe duotone. Photoshop ka mbështetje të madhe për 
+formatet e skedarëve grafik, por gjithashtu përdor formatet e veta PSD dhe PSB që mbështesin 
+të gjitha tiparet e lartpërmendura. Përveç raster graphics, Photoshop ka aftësi të kufizuara për 
+të përpunuar ose për të renderuar tekst, grafikë vektoriale, grafika 3D dhe video. Funksioni i 
+Photoshop-it mund të zgjerohet me anë të Photoshop plug-ins, programe të zhvilluara dhe të 
+shpërndara  pavarësisht  nga  Photoshop  që  mund  të  funksionojnë  brenda  saj  dhe  të  ofrojnë 
+funksione të reja ose të zgjeruara. 
+ 
+----------------Page (19) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 21 
+ 
+Adobe Illustrator 
+Adobe Illustrator është një program me bazë editimin dhe krijimin e grafikave vektoriale dhe 
+vizatimeve. Shërven për prodhimin e grafikut që ju mund të ndryshoni ne madhësi të ndryshme 
+pa humbje të cilësisë - në ndryshim me programet e perpunimit të imazheve me bazë pixel, si 
+p.sh. Photoshop. Programi u zhvillua në vitin 1987 nga kompania me baze ne Kaliforni Adobe 
+Systems për Apple Macintosh dhe ende ruhet dhe tregtohet nga Adobe sot. KY program punon 
+gjithashtu edhe në sistemet operative Windows, si dhe MacOS Apple dhe mban për vite vendin 
+si një aplikacion standard në fushën e grafikës vektoriale. 
+Sipas klasifikimit, Illustrator-i teknikisht qëndron midis programeve CAD, gjithashtu të bazuar 
+mbi  përpuniminim  e  imazheve  vektoriale  si  AutoCAD,  dhe pragrameve  artistike,  bazuar  në 
+përpunimin e imazheve raster, si Painter dhe Photoshop.  
+Icomoon 
+IcoMoon  është një  aplikacion  per  ikonografinë,  duke  ofruar  tre  shërbime  kryesore:  Paketa 
+Vector Icon, IcoMoon App, dhe hosting te ikonave si SVGs ose fonts.  
+IcoMoon  siguron shumë  paketa te ndryshme  pa  pagesë  të ikonave të cilat mund  t'i  gjeni  në 
+skedën e bibliotekës të aplikacionit IcoMoon. Secili prej tyre ka një licensë me të cilën mund 
+t'i referoheni. 
+Vizitoni  linkun https://icomoon.io/app duke  përdorur  një Webbrowser modern  për  të  filluar 
+përdorimin  e  aplikacionit  IcoMoon.  Ky  aplikacion  HTML5  ju  lejon  të  kërkoni  ikonat  që  ju 
+nevojiten. Ju  mund të shkarkoni  këto  ikona, të bëni  disa  perpunime themelore,  të importoni 
+ikonat tuaja, të krijoni fontet e ikonave (një font me ikona si glyphs) ose të gjeneroni ikona në 
+SVG, Polymer, PDF, XAML, PNG dhe CSS sprites. 
+KAPITULLI III – Koncepti dhe zhvillimi i temës 
+Në këtë seksion të punimit, paraqitet strukturimi i zhvendosjes së konceptit apo idesë fillestare 
+drejt  shërbimit  final.  Në fjalë më të thjeshta,  kalimi  mes  hapash  të tillë si  skicimi,  koncepti 
+visual apo implementimi në kod. 
+3.1 Analiza fillestare dhe skicimi 
+Ideimi përsa i përket kryefaqes është bërë në 3 skicat e bashkangjitura si më poshtë: Skica e 
+parë ka një skelet tradicional të ndarë në 4 pjesë, të cilat janë shiriti i navigimit me logon dhe 
+----------------Page (20) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 22 
+ 
+menunë, vendin ku shfaqet artikulli më i rëndësishëm, një slider me artikuj të tjerë dhe footerin 
+me informacionet përkatëse. 
+Skica e dytë, e cila është përzgjedhur edhe për zhvillim të mëtejshëm, ka një design të fokusuar 
+më shumë në imazhe  dhe  tituj.  Shiriti  i  navigimit  në këtë skicë, është ideuar  të qëndrojë 
+gjithmonë prezent në krye të faqes, sado që përdoruesi të avancojë në fund të faqes, në mënyrë 
+që të ketë gjithmonë aftësinë për të naviguar ne 
+faqet ose kategoritë e ndryshme. Artikujt do të 
+paraqiten  në kutiza  me  madhësi  të ndryshme, 
+ku secila kutizë ka si sfond imazhin kryesor të 
+artikullit  dhe  mbi  të vendoset  titulli  dhe  një 
+hyrje  mbi  artikullin.  Mund  të navigohet me 
+butonat poshtë faqes për të aksesuar artikujt më 
+të ri  ose  më të vjetër,  sipas  interesit  të përdoruesit.  Dhe  në fund  ndodhet edhe  footer-i  me 
+informacionet e veta.  
+ 
+ 
+Skica e tretë ka një paraqitje disi më të ndryshme. Shiriti i navigimit është me i madh dhe ka 
+një rëndësi tjetër, pasi në të gjinden më shumë informacione. Në pamje të parë përdoruesit i 
+shfaqet një galeri imazhesh, ku secili imazh është i lidhur me një artikull. Dallues është fakti 
+Figura 5 – Skica nr.1 
+Figura 4 – Skica nr. 2 
+Burimi: Autori 
+ 
+Burimi: Autori 
+ 
+----------------Page (21) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 23 
+ 
+se ato nuk kanë asnjë mbishkrim në mënyrë 
+që të tërhiqet  sa  më shumë vemendja e 
+përdoruesit.  Më pas  ndodhet  një slider  me 
+artikuj,  secili  me  titullin  dhe  hyrjen  e  vet. 
+Footer-i   i   këtij   prototipi është një nga 
+elementët   që do   të përdoret   në dizajnin 
+përfundimtar,   pasi   fokusohet   në mediat 
+sociale në ndihmë të content marketing. 
+Pse është zgjedhur   prototipi   i   dytë? 
+Implementimi i imazheve në sfond krijon një 
+koncept të përgjithshëm mbi artikullin. Mbi 
+të do të vendoset një titull i cili e tërheq më 
+tej lexuesin, dhe si rrjedhim hyrja do të jetë 
+anash me një shkrim të vogël, me qëllim që 
+t’a beje lexuesin të afrohet  dhe  të “investojë” me një levizje  trupore  në këtë artikull për  të 
+vazhduar me leximin e tij. Drejtimi i levizjes do te jetë nga e majta në të djathtë, e përshtatshme 
+me kulturën tonë të leximit. 
+3.2 Adaptive vs. Responsive Design 
+ Adaptive Layout 
+Layout-i adaptiv është menduar të jetë i optimizuar për rezolucione të ndryshme grafike , por 
+jo për të gjitha. Kjo zgjidhje nuk është perfekte, por gjithsesi shumë e gjere. Bërthama e këtij 
+layout-i është e bazuar në një skelet statik në kombinim me Media Queries. Për të ndërtuar këtë 
+lloj layout-i, krijohen pamje te ndryshme per vieëport-e ekzakte. Në rastet me të shumta këto 
+janë variante për desktop, tablet dhe smartphone. Matja për madhësitë e këtyre pamjeve bëhet 
+zakonisht nga orientimi i pajisjeve të caktuara. iPad-i dhe iPhone-i merren si shembuj, pasi janë 
+shumë të përdorur dhe nga ana tjetër e kanë bërë internetin mobile shumë të përhapur. E gjitha 
+kjo mund të shpjegohet si një optimizim i caktuar për pajisje të caktuara. 
+Avantazhe 
+ Mund të punohet mirë me skica klasike, meqë ekzistojnë masa fikse. 
+ Hapësire e lirë punimi dhe zhvillimi. 
+Figura 6 – Skica nr.3 
+Burimi: Autori 
+ 
+----------------Page (22) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 24 
+ 
+ Lehtësisht i konvertueshëm në kod sa i përket anës teknike. 
+ Permbajtjet duhet të optimizohen për matje të mirëdefinuara, por mund të jenë jo 
+fleksibël 
+Disavantazhe 
+ Paraqitje me gabime në pajisje të cilat nuk jane pjesë të definimeve. 
+ Kodim në CSS më shumë se saështë e nevojshme. 
+ 
+ Responsive Layout 
+Layout-i  Responsiv është  mënyra  më  e  mirë  për  të  optimizuar  një  faqe  për  çdo  madhësi  të 
+imagjinueshme  të  ekranit.  Layout-i  responsiv  punon  me  një  skelet  fluid,  në  kombinim  me 
+media  queries  arsye  pse  lloji  i  paraqitjes  është prandaj  "elastik".  Në  kontrast  me  Layout-in 
+Adaptive, ai nuk është i optimizuar në mënyrë specifike për një pikëpamje specifike, por dizajni 
+është  zhvilluar  në  mënyrë  që  hapësira  e  disponueshme  të  përdoret  gjithmonë  në  mënyrë 
+optimale. Vetëm kufiri i sipërm është vendosur shpesh në mënyrë që faqja e internetit të mos 
+ketë  kolona shumë  të  gjera në  ekranet  e  mëdhenj. Media  Queries  të layout-it  responsiv 
+orientohen  si  rregull  në  dizajn  dhe  jo  në  përmasat  e  një  rezolucioni  te  caktuar. Navigimi 
+kryesor,  për  shembull,  rrëshqet  nën  logon  nëse dizajni  ka  nevojë  për  ndryshim në  mënyrë 
+informacioni të shfaqet sa më mirë që të jetë e mundur. Si rezultat, një layout responsiv shpesh 
+punon  me  më  shumë breakpoints  ose media  queries  sesa  një  Layout  Adaptiv.  Një  Layout 
+Responsiv fokusohet në paraqitjen fleksibël dhe përpunimin e përsosur të informacionit.  
+Avantazhe 
+ Cdo rezolucion ekrani merret paraysh në mënyrë optimale. 
+ Nuk kemi “dhurim” të hapësirës në faqe. 
+ Informacioni qëndron në plan të parë. 
+ Pajisjet mobile (smartphone) të së ardhmes mbulohen automatikisht. 
+ 
+Disavantazhe 
+ Duhet gjetur një balancë e “artë” midis skicave dhe konvertimit në kod. 
+----------------Page (23) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 25 
+ 
+ Është më e komplikuar në zhvillim. 
+ Kompleksitet me i lartë në përshtatjen e permbajtjes së faqes. 
+3.3 Koncepti Vizual 
+Në këtë seksion do të prezantohet zhvillimi i idesë me anë të programit Photoshop. Si fillim, 
+paraqitet pjesa e parë e faqes, e cila do të përbëhet nga shiriti i navigimit, i përbërë nga menuja 
+dhe logoja, si dhe lajmi më i fundit ose artikulli, në varesi të perdorimit të faqes. Duhet theksuar 
+që imazhi mbulohet nga një lloj “hije” e zezë me transparence rreth 80%, gjë e cila ende lejon 
+me qartësi shikimin e imazhit, por ofron edhe mundësinë e leximit të tekstit mbi të. Teksti është 
+i  ndarë në dy  pjesë;  titulli është i  shkruar  me  shkronja  kapitale  dhe  në bold,  për t’i dhënë 
+rëndësinë e duhur. Më pas levizim në pjesën në të djathtë ku vendoset prezantimi i artikullit, 
+lajmit qe jep një ide konkrete mbi përmbajtjen. Ilustruar si më poshtë në Fig. 7. 
+Pjesa e dytë e faqes, përfshin pjesën e mbetur të artikujve. Ndryshe nga skica, theksoj se është 
+bërë një ristrukturim, përsa i përket paraqitjes së elementeve. Bëhet fjalë për blloqe të mëdha, 
+të ndara në tre më të vegjël, secili me të njëjtën gjuhë dizajni si pjesa e mësipërme. Ilustrim si 
+më poshtë në Fig.9. 
+Figura 7- Paraqitje vizuale e temës në Photoshop 
+Burimi autori 
+ 
+----------------Page (24) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 26 
+ 
+Pjesë tjetër e rëndësishme e temës 
+është seksioni  i  artikujve. Nëse 
+perdoruesi vendos të aksesojë një 
+artikull të caktuar atëherë ai do të 
+kalojë në faqen e    artikullit. 
+Përbëhet nga dy kolona kryesore, 
+kolonën  e  tekstit (madhësi rreth 
+3/4 të faqes) me  informacionet 
+përkatëse   dhe   pjesa   tjetër   me 
+madhesi rreth 1/4 është e 
+rezervuar          për          mundësi 
+reklamimesh si dhe nje qoshku ku 
+paraqiten artikuj   te   ngjashem. 
+Illustruar si në Fig. 8.  
+Pjesa e fundit përmban footer-in i 
+cili   përbëhet   nga   kategoritë e 
+ndryshme  të faqes,  buton  i  cili  të 
+Figura 9 – Paraqitje vizuale e pjesës së dytë 
+Figura 8 – Paraqitje vizuale, seksioni i artikujve 
+Figura 10  Seksioni footer 
+Burimi: Autori 
+ 
+Burimi: Autori 
+ 
+ Burimi: Autori 
+ 
+----------------Page (25) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 27 
+ 
+lejon  të bësh subscribe  dhe  gjithashtu  kolonat  e  copyrights, linqeve  për  privatsinë dhe 
+rregullave të përdorimit. Ilustruar në fig. 10. 
+3.4 Implementimi në HTML, CSS dhe PHP. 
+Wordpress-i punon me anë të templateve specifike të cilat mund të kombinohen në mënyra të 
+ndryshme nga zhvillluesi për optimizime dhe paraqitje sa më korrekte të informacioneve. Disa 
+nga  këto  si:  index.php,  functions.php,  styles.css;  janë të përhershme  dhe  kërkohen  nga  vetë 
+Wordpress-i  pasi është i  struktuar  në këtë lloj  mënyre.  Por  meqenëse mund  të krijohen  më 
+shumë se dy, mënyrë sipas së cilës është punuar për zhvillimin e shërbimit, të ofron mundësinë 
+të punosh me module fleksibël dhe të ndërtosh lidhjet që nevojiten. 
+3.4.1 Header.php 
+Ne  këtë template  përfshihen  deklarimet  e  ndryshme  që nevojiten  për  faqen.  Mund  të 
+përmendim  deklarata  per  HTML5,  lidhjen  me  fletat  e  stilimit  (CSS),  libraritë Javascript  që 
+nevojiten për framework-un Bootstrap si dhe shiriti i navigimit bashkë me pjesën e seksionit 
+Hero. 
+ Shiriti i navigimit. 
+Ky element është ndërtuar me ndihmën e elementit të ri <nav> i cili është paraqitur në HTML5, 
+me anë të të cilit mundësohet më thjeshtë leximi nga motorët e kërkimit (Google, Bing, Yahoo, 
+etj). Pjesa e brendshme përmban strukturën, elementin <div> i cili luan rolin e një kutie fluide, 
+në menyrë që menuja të okupjë gjithmonë të gjithe hapesirën e lejuar. Vijohet me standartin, 
+përsa i përket punimit me një Grid System, përdorimi i rreshtave dhe kolonave (Sqarim: cdo 
+rresht  ndahet  ne 12  kolona  me madhesi  te barabarta  dhe  mund  te veprohet  sipas  interesit  te 
+koduesit per te nderthurur keto shifra. Për informacione të mëtejshme mund te vizitoni faqen 
+zyrtare http://getbootstrap.com/docs/4.1/layout/grid/ ). Në këtë seksion  bëhet edhe  ndarja e 
+Figura 11- Shiriti i navigimit, kodi 
+Burimi autori 
+ 
+----------------Page (26) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 28 
+ 
+mëtejshme në dy kolona kryesore, kolona e parë përmban vendin për logon dhe kolona tjeter 
+vendin per menunë. Paraqitja e kodit në fig. 11. 
+Sa i përket pjesës së stilimit (fig. 12), kemi të bëjmë 
+me  një ndërthurje  të klasave  në mënyrë që të gjithë 
+elementët të marrin    formën    më optimale    të 
+mundshme. Të rëndësishme  janë pikërisht  atributet 
+position:fixed dhe top:0 të cilat pozicionojnë shiritin 
+e navigimit të fiksuar në pjesën e sipërme të faqes, z-
+index:1001 tregon se në cilën shtresë qëndron, në këtë 
+rast  numri 1001  përdoret  për  ta  vendosur  sipër  cdo 
+elementi  tjetër  që ekziston  në faqe.  Atributet  e  tjera 
+jane elementa stilimi për një pamje sa më të arritur nga ana stilistike. 
+Ne fig. 11 paraqitur më lart, shikojme dy funksione PHP:  
+get_home_url() – funksion i vendosur  tek  linku  i  logos i  cili shërben për  të drejtuar 
+përdoruesin e faqes tek kryefaqja. Baza e funksionit është thjesht marrja e linkut të kryefaqes 
+në mënyrë dinamike dhe e paraqet në kod, në rastin kur kompilohet nga serveri. 
+clean_custom_menus_header() – funksioni do  të analizohet më në thellësi  në figurën 
+Fillimisht bëhet deklarimi i emrit të menusë, në menyrë që të lokalizohet si objekt dhe të jetë e 
+Figura 12 – Shiriti i nsvigimit, stilimi kod 
+Figura 13 – Menuja Header, Kod 
+Burimi: Autori 
+ 
+Burimi: Autori 
+ 
+----------------Page (27) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 29 
+ 
+mundur të bëhet  edhe  paraqitja  e  elementeve.  Pasi  lokalizohet menuja,  merren  të gjithë 
+elementët, i jepet nje secilit një ID dhe krijohet nje variabël ku ruhen të dhënat në kod HTML 
+për të realizuar paraqitjen. Me anën e nje loop-i foreach kalohet në cdo element të array dhe 
+ruhet  në formën  e  një liste  të padefinuar me linkun përkatës.  Pasi  bëhet  ruajtja në variablin 
+$menu_list  kjo e fundit paraqitet me anën e funksionit echo.  
+Ne menyre që të arrihet  i gjithë shpjegimi i mësipërm menutë duhen inicializuar me anën  e 
+funksionit të mëposhtëm. Ilustruar në fig. 14. 
+ 
+ 
+ 
+ 
+ Seksioni Hero 
+Përbëhet nga tag-u <header> i cili tregon se elementi ndodhet në fillim të  faqes dhe ka rolin 
+e një baneri me informacionet më të rëndësishme të momentit.  Header-i sherben  gjithashtu 
+edhe si sfond pasi në të do të vendoset imazhi i artikullit. Kodi ilustruar si mëposhtë: 
+Ky bllok është i ndarë në dy pjesë:  
+<div class=”overlay”>  </div> që shërben thjesht si një “perde” e zeze me transparence 80% 
+per efekt leximi të tekstit të vendosur.  
+Figura 14 – Inicializimi i funksionit 
+Burimi: Autori 
+ 
+----------------Page (28) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 30 
+ 
+<div class=”container”> </div>  eshte  i  vendosur  i  centruar  mbi  imazhin  dhe  permban  ne 
+rastin  e  mesiperm  titullin,  separatorin  dhe  tekstin  hyrës. Stilimet  përkatëse  ilustruar  si  më 
+poshtë në fig. 15, 16, 17, 18. 
+Përsa  i  përket  funksionalitetit,  headeri  ka nje 
+paraqitje të ndryshme të cilat kontrollohen me anë të një deklarate IF. 
+o HOMEPAGE HEADER – paraqet titullin e artikullit dhe një përshkrim të shkurtër. 
+ 
+Figura 19 – Kodi homepage-header. 
+o CATEGORY HEADER – paraqet emrin e kategorisë. 
+ 
+Figura 20 – Category Header 
+o PAGE HEADER – paraqet titullin e faqes. 
+Figura 16 – Stilimi  ll-bg Figura 15 – Stilimi ll-cover 
+Figura 18 – Stilimi overlay Figura 17 – Stilim CSS Burimi: Autori 
+ 
+Burimi: Autori 
+ 
+Burimi: Autori 
+ 
+----------------Page (29) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 31 
+ 
+ 
+Figura 21 – Page Header  
+o SINGLE POST HEADER – paraqet vetëm imazhin kryesor të atij artikulli. 
+ 
+Figura 22 – Single post header 
+o SEARCH HEADER – kur termi gjendet paraqet rezultatet perkatëse, kur nuk është i 
+suksesshëm paraqet një imazh të caktuar më një lajmërim “Oops, there is no [termi i 
+kerkuar] here...”  
+ 
+Figura 23 – Search header me sukses 
+ 
+Figura 24 – Search header pa sukses 
+ 
+Funksione të tjera që përdoren në seksionin e headerit janë: 
+set_featured_image_bg() – vendos linkun për imazhin përkatës të artikullit. 
+the_permalink() – vendos linkun përkatës për artikullin. 
+the_title() – vendos titullin përkatës për artikullin.  
+excerpt(XX) – merr nga teksti i artikullit një numër të caktuar XX dhe e paraqet atë.  
+single_cat_title() – vendos titullin e kategorisë në të cilën ndodhet përdoruesi. 
+get_the_title() – merr dhe paraqet titullin e faqes së vizituar. 
+the_search_query() – paraqet termin e kërkuar nga përdoruesi. 
+ 
+Burimi: Autori 
+ 
+Burimi: Autori 
+ 
+Burimi: Autori 
+ 
+Burimi: Autori 
+ 
+----------------Page (30) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 32 
+ 
+3.4.2 Index.php, Category.php, Page.php, Page-about.php, Page-contact.php 
+Template-t e cituara në titull janë të ndërtuara afërsisht njëlloj, por shërbejnë për funksione të 
+ndryshme. Të gjitha ndërtohen nga tag-u <section>, i cili është i përbërë nga një kuti fluide me 
+rreshtin përkatës, dhe brenda rreshtit kemi përmbajtjen e dëshiruar; në shembullin e mëposhtëm 
+(fig. 25) paraqitet index.php ku kodi në qendër është një listë e padefinuar, në të cilën do të 
+shfaqen  postimet  më të fundit. Category.php ben  paraqitjen  e  postimeve  në një kategori  të 
+caktuar. Page.php,  page-about.php dhe page-contact.php janë me  bazë të njëjtë thjesht 
+ndryshojnë nga funksioni përshkruar nga vetë emri i tyre. 
+ 
+Funksionet e përfshirë në këto templates janë të listuara si më poshtë: 
+get_header() – bën thirrjen e template-it header.php 
+get_footer() – bën thirrjen e template-it footer.php 
+have_posts() - kontrollon nëse ka postime. 
+the_post() – thërret të dhënat e një postimi 
+locate_template(‘[emri  i  template-it.php]’) – lokalizon   dhe   përdor   një 
+template, në rastin tonë content.php  
+Figura 25- Index.php 
+Burimi: Autori 
+ 
+----------------Page (31) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 33 
+ 
+next_post_link() – kërkon për postime më të vjetra. 
+previous_post_link() – kërkon për postime më të reja. 
+the_content() – therret dhe paraqet informacionet e faqes. 
+ 
+3.4.3 Single.php 
+Ndertuar  ne  baze  te  njejte  afersisht  si  index.php,  por  nuk  kemi  me  perdorimin  e  tag-ut 
+<section>, por <article> pasi është më specifik për një artikull dhe e lejon më lehte leximin 
+nga makinat kërkuese dhe në të njëjtën kohë bëhet edhe një optimizim i SEO. 
+Funksionet e përdorura të listuara si më poshtë: 
+get_header() – bën thirrjen e template-it header.php 
+get_footer() – bën thirrjen e template-it footer.php  
+have_posts() - kontrollon nëse ka postime 
+the_post() – thërret të dhënat e një postimi 
+locate_template(‘[emri i template-it.php]’) – lokalizon dhe përdor një 
+Figura 26 – Single.php  Burimi: Autori 
+ 
+----------------Page (32) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 34 
+ 
+template, në rastin tonë content-single.php  
+get_sidebar() – thërret template-in sidebar.php 
+3.4.3 Content.php 
+Ky template merret me paraqitjen e një kutize të vetme, atë të postimeve në faqen kryesore ose 
+të kategorive.  Përbëhet  nga  një element  i  vetëm  (nje  element  liste),  por  që natyrisht  ka  në 
+brendësi një kombinim sub-elementesh. Vetë elementi <li> shërben si imazhi që do të qëndrojë 
+në sfond ku do të aplikohet  “perdja” e zezë. Mbi këtë të fundit kemi informacionin e nevojshëm 
+sic është titulli, data dhe një tekst hyrës. Paraqitja teknike e content.php në fig. 27.  
+ 
+Figura 27- Content.php  
+Funksionet përbërëse janë. 
+set_entry_class() – vendos classen e duhur per elementin li (do shpjegohet me teper nen 
+kapitullin functions.php) 
+set_featured_image_bg() – vendos linkun per imazhin perkates te artikullit 
+the_permalink() – vendos linkun perkates per artikullin 
+the_title() – vendos titullin perkates per artikullin  
+the_time(get_option(‘date_format’)) – paraqet daten e artikullit 
+the_category(‘, ‘) – paraqet ciles kategori i perket artikulli 
+excerpt(XX) – merr nga teksti i artikullit nje numer te caktuar XX dhe e paraqet ate 
+Burimi: Autori 
+ 
+----------------Page (33) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 35 
+ 
+3.4.4 Content-single.php 
+Është afërsisht i njejte me content.php, por ndryshon pasi nuk është i limituar në një kutizë të 
+përsëritshme. Ky template paraqet zakonisht një artikull të vetëm me të gjitha informacionet 
+përkatëse. 
+ 
+3.4.5 Sidebar.php 
+Në këtë template është për t’u theksuar nga rëndësia funksioni i cili bën thirrjen e postimeve të 
+së njëjtes kategori, pasi bazohet në WP_Query, një funksion shumë i fuqishëm i Wordpress-it. 
+Me  anë të tij mund  të bëhen  kërkime  tepër  ekzakte  me  variabla të definuara  globalisht  në 
+databazë. Informatat që mund të ruhen variojnë nga përmasa të vogla, si variabla teke, deri në 
+përmasa gjigande, si array multidimensionale. 
+Në figurën. 29 p.sh. shikojmë një array të thjeshtë ku bëjmë kërkesë që të ruajmë identitetin e 
+kategorisë së postimit  në të cilin  ndodhemi,  ruajmë një numër  të caktuar  postimesh  që na 
+interesojnë dhe  eleminojme postimin  aktual  ku  ndodhemi.  Pasi  niset  kjo  kërkesë të gjithe 
+informacionet e duhura ruhen nën variablin $related dhe mund të paraqiten saktësisht artikujt 
+e të njëjtës kategori. 
+Figura 28- Content-single.php 
+Figura 29 – Sidebar.php 
+Burimi: Autori 
+ 
+Burimi: Autori 
+ 
+----------------Page (34) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 36 
+ 
+3.4.6 Functions.php 
+Seksioni i funksioneve sic e paraqet edhe vetë emri, është një file të cilin Wordpress-i e kërkon 
+në mënyrë që të ketë një bazë me funksione ku mund të futen gjithe funksionet e pershtatura 
+ose të krijuara. Si rezultat i ofron zhvilluesit një kontroll më të madh mbi temën e vet dhe në të 
+njëjtën kohë bën edhe optimizimin e faqes, pasi është strukturë e krijuar nga vetë Wordpress-
+i. Më poshtë jepen shpjegimet përkatëse për të gjitha funksionet e përdorura.  
+ Definimi i emrit të temës. 
+ 
+Figura 30 – Function.php 
+ Shtimi  i suportit  për imazhe  kryesore  në artikuj,  që lidhet  me shumicen  e  pjesëve  të 
+mësipërme. 
+ 
+Figura 31 – Function.php 
+ Funksion i cili shërben për të vendosur emrin e klasës për elementin <li> me qëllim 
+paraqitjen e përmbajtjes sipas strukturës së mëposhtme. 
+ 
+Figura 32 – Mënyra e vendosjes së artikujve në faqe 
+Burimi autori 
+ 
+Burimi autori 
+ 
+Burimi: Autori 
+ 
+----------------Page (35) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 37 
+ 
+Pasi duhej përsëritur cdo katër herë nga fillimi, ishte e nevojshme të gjendej një zgjidhje sa me 
+efikase. Si rezultat u krijua një variabël, në të cilin është ruajtur një array me rradhën e caktuar. 
+Variacioni u arrit në sajë të përdorimit të modulit të katrës, pasi u mundësua që të kalohet cdo 
+herë në pozicionet [0,1,2,3] dhe të përsëritej, e cila përkon me pozicionet e të dhënave në array. 
+ 
+Figura 33- Loop për klasën e postimeve 
+Ne  funksionin  e  meposhtem  ilustrohet  mënyra  se  si  bëhet  thirrja  e  imazhit  kryesor  nga  një 
+artikull. Si fillim lokalizohet  ID e artikullit të aksesuar, më pas disponohet informacion mbi 
+imazhin. Url ruhet në një variabël e cila paraqitet si gjendje e funksionit. 
+ 
+Figura 34 – Sfondi për postimet 
+3.4.7 Style.css 
+Është një file e cila përmban informacione mbi temën si emrin, autorin, përshkrimin, versionin 
+e shumë të tjera. Përdoret nga Wordpress-i për të ruajtur mbishkrime të stilimit standart që vjen 
+me temën, duke qenë se është edhe fleta e fundit e stilimeve që therritet në faqe dhe shfuqizon 
+cdo stilim tjetër të mëparshëm. 
+ 
+Figura 35 – Style.css 
+  
+Burimi: Autori 
+ 
+Burimi: Autori 
+ 
+Burimi: Autori 
+ 
+----------------Page (36) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 38 
+ 
+KAPITULLI 4  
+Kapitulli  IV  dhe  i  fundit  i  studimit  përmban  konkluzionet  të nxjerra  nga  punimi  dhe 
+rekomandime  të mundshme  mbi  implementimin  e  strategjisë së Content  Marketing  dhe 
+përmirësime të mudshme mbi punimin e realizur, temën në WordPress. 
+Konkluzione  
+Si përfundim bazuar në studimin e mwsipërm mediat sociale provohen të jenë të suksesshme 
+kur implementohen me content  marketing.  Përmbajtja vendase  në  rrjetet  sociale  rezulton  në 
+rritje  të  angazhimit  me  audiencën  e  synuar  dhe  mundësinë  për  të  arritur  një  shkallë  të 
+dëshirueshme  virale. Për  shkak  se  teknologjia  është e  lirë  dhe  e  lehtë  për  t'u  përdorur,  edhe 
+kompanitë e vogla mund të ofrojnë zgjidhje të shkëlqyera të përmbajtjes në bazë të klientëve 
+të synuar.  
+Ideja për të ndërtuar një Theme Wordpress ishte një përvojë e re dhe interesante për mua. Si 
+një kornizë PHP,  zgjodha BootStrap, megjithëse përdorimi i kësaj kornize ishte pothuajse i 
+panjohur për mua. Nuk ishte gjithmonë e lehtë për të gjetur zgjidhjen e duhur, kështu që kisha 
+shumë kërkime për të bërë Kjo pjesë më ndihmoi të gjeja mënyra të reja për funksionalitetin e 
+temave të Wordpressit. Një pjesë e madhe e motivimit tim, ishte vendimi për të zbatuar këtë 
+tezë diplome si një ide biznesi. Mund të them me siguri se kjo tezë e diplomës më ndihmoi në 
+aftësitë e mia të dizajnit dhe programimit. 
+ 
+Referenca 
+[1] The Content Marketing Institute, 6 principles of Content Marketing, Joe Pulizzi September 
+2013 https://contentmarketinginstitute.com/2013/09/principles-epic-content-marketing/ 
+[2] What is     Epic     Content     Marketing,     Hubspot     Agency,     December     2013 
+https://blog.hubspot.com/agency/what-is-epic-content-marketing 
+ [3] Josh     Steimle, What is     Content     Marketing,     December     2014,     Forbes 
+https://www.forbes.com/sites/joshsteimle/2014/09/19/what-is-content-
+marketing/#55afb68110b9 
+[4] Michelle        Linn,        Content        Marketing        Institute        November,        2016 
+https://contentmarketinginstitute.com/2016/11/content-marketing-definitions/ 
+----------------Page (37) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 39 
+ 
+[5] Neil  Patel, Why  SEO  is  all  about  Content  Marketing, https://neilpatel.com/blog/seo-is-
+content-marketing/ 
+[6] Introduction to WordPress, https://wordpress.org/ 
+[7] What you need to know about Bootstrap http://getbootstrap.com/ 
+[8] XAMPP, https://www.apachefriends.org/index.html 
+[9] Carrie Cousins. Your design With a hero header. https://designmodo.com/hero-headers/ 
+[10] Icomoon. About. https://icomoon.io/#about 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+----------------Page (38) Break----------------
+Ensi Smajli 
+ 
+KRIJIMI I NJË TEME NË WORDPRESS LIDHUR ME CONTENT MARKETING 
+ 
+Faqe 40 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+----------------Page (39) Break----------------

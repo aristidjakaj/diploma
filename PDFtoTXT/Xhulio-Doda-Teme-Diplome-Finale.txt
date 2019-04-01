@@ -1,0 +1,1689 @@
+  
+  
+        Universiteti i Tiranës 
+        Fakulteti i Ekonomisё 
+   Dega Informatikë Ekonomike 
+             Departamenti i Statistikës dhe Informatikës së Zbatuar 
+  
+TEMË DIPLOME 
+Menaxhimi i rezervimit të vizitave 
+mjekësore për pajisjet Android
+ 
+  
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+Studenti:             Udhëheqësi shkencor: 
+Xhulio Doda             Prof.Dr. Areti Stringa 
+ 
+ 
+ 
+Tiranë 2018 
+ 
+----------------Page (0) Break----------------
+Abstrakt 
+ 
+Kypunimprovont’ijapëzgjidhjeproblematikaveadministrativetëklinikaveapo           
+spitalevepërsaipërketrezervimittëvizitavemjekësore.Eksperiencanëklinikatapospitaletnuk              
+ështëaspakekënaqshme.Pritjanërradhëtëgjatadhemarrjaeinformacionevetëgabuararreth                
+orareve të doktorëve janë kthyer në një pritshmëri për pacientët.  
+NëseksionineparëautorieksploronsisteminoperativAndroiddukeufuturnëdetaje              
+përsaipërketpjesëveintegralenëcdoaplikacion.Mëtejngateoriaukaluanëpraktikëduke                 
+krijuarparaqitjenejashtmenëformatinpërkatësXML(EXtendedMarkupLanguage)sidhe             
+dizenjimiikoditpërgjegjëspërfunksionimeaplikacionitqëngarregjistrimidhelog-imidhederi               
+tekrezervimidheanullimiinjëvizite.Nëfundukrijuaedheaplikacioniiadministratoritme                
+funksioninemenaxhimittëshërbimeveqoftëkyshtimiapofshirjaetijdhemarrjae               
+informacionit rreth klientëve apo pacientëve. 
+Qëllimiipunimitështëtijapëzgjidhjeteknikeproblematikavemetëcilatpërballensi              
+administratorëtashtuedhepacienët.Meanëtëzgjidhjeveteknologjikeështëbërëperpjekjapërtë              
+zbuturbarrierënnëkohëtëproceseveadministrativedhepërtëpërmirësuarshërbiminnë             
+përgjithësi. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                                                       2 
+ 
+----------------Page (1) Break----------------
+ 
+ 
+Permbajtja e tabelës 
+ 
+1. Hyrje4 
+2. Hyrje në Android5 
+2.1 Çfarë është Android?5 
+2.2 Bazat e Aplikacioneve7 
+2.3 Pjesët përbërëse të një Aplikacioni9 
+2.3.1 Activities9 
+2.3.2 Services10 
+2.3.3 Content Providers11 
+2.3.4 Broadcast Receiver12 
+2.3.5 Aktivizimi i Komponentëve13 
+2.4 Android Studio14 
+2.4.1 Struktura e projektit15 
+3. Krijimi i ndërfaqeve16 
+3.1 Ndërfaqja e regjistrimit dhe e login-it16 
+3.2 Ndërfaqet e activities të tjera20 
+4. Aplikacioni i përdoruesit25 
+4.1 Klasa Register dhe Login26 
+4.1.1 Klasa Register26 
+4.1.2  Klasa Login29 
+4.2 Komunikimi me serverin dhe databazën30 
+4.2.1 Koncepti i threading30 
+4.2.2 AsyncTask31 
+4.2.3 Klasa BackgroundTask32 
+4.2.4 JSON- format i marrjes së të dhënave37 
+4.3 Klasa MainActivity dhe DataMan38 
+4.4 Grupi i klasave për menaxhimin e shërbimeve dhe vizitat e rezervuara41 
+4.4.1 Klasa Shërbimi dhe FutureCheck41 
+4.4.2 Klasa ShërbimAdapter dhe FutureCheckAdapter42 
+                                                                                       3 
+ 
+----------------Page (2) Break----------------
+4.4.3 Klasa Sherbime dhe FutureChecks44 
+4.4.4 Klasa Rezervim46 
+4.5 Klasa për modifikimin e të dhënave të përdoruesit47 
+4.6 Klasa Rreth_Nesh48 
+5. Aplikacioni i administratorit49 
+5.1 Klasat për identifikimin dhe shfaqjen e profilit50 
+5.2 Klasa BackgroundTask51 
+5.3 Klasat për menaxhimin e shërbimeve, rezervimeve dhe klientëve.52 
+5.4 Klasa Sherbim, Klienti dhe FutureCheck53 
+6. Konkluzione dhe sugjerime53 
+7. Pasqyra e figurave53 
+8. Referencat        54 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                                                       4 
+ 
+----------------Page (3) Break----------------
+1. Hyrje 
+ 
+Gjatë dekadës së fundit, me ardhjen e smartphonave, jeta e njerëzve ka pësuar një 
+metamorfozë totale. Disa vite më përparë njerëzit i përdornin pajisjet mobile, pra celularët, 
+vetëm si një mjet apo kanal komunikimi. Ndërsa tani jemi të gjithë dëshmitar të këtij ndryshimi. 
+Të gjithë e mbajnë me vete celularin kudo që shkojnë dhe qëndrojnë vazhdimisht të lidhur me 
+botën virtuale. 
+Nukkaqenëvetëmcelulariaiqëkandryshuarjetënenjerëzve,poraplikacionetekrijuar                
+përsmartphone-tdhepajisjetetjeramobilesicjanëtabletëtapoedheoratinteligjentetëdalanë                 
+tregvitetefundit.Këtoaplikacionekanëbërëtëmundurnjëkomunikimmëtëthjeshtëdhetë                 
+shpejtëndërmjetnjerëzve.Mundtëregjistroheshnënjërrjetsocialdhengapajisjajotemobiletë                
+shohëshpostimetemiqve.Pra,njëanëpozitiveeaplikacioneveështëthjeshtësianëgjetjendhe               
+aksesimin  e informacionit.  
+Pra,njëanëpozitiveeaplikacioneveështëthjeshtësianëgjetjendheaksesimine             
+informacionit.Dukeqëndruarnështëpimundtëporosisëshgatimengarestorantetëndryshme,të              
+gjesh receta gatimi apo të reja nga bota politike, shoëbiz etj. 
+Njëprejsistemeveoperativeqëpërdoretprej2.53miliardpajisjeshmobileështësistemi             
+operativAndroid[1].Kysistemoperativështëopen-sourcedhelinux-based.Shumëzhvillues            
+krijojnëaplikacionetëcilatdotëekzekutohenmbikëtësistemkaqtëshpërhapurdhetë               
+suksesshëmnëditëtesotme.Dyqanikumundt’igjeshkëtoaplikacionedheprejtëcilitmundt’i                  
+shkarkoshpërt’ipërdorurmëpasquhetPlayStore.PlayStoreështëdyqanizyrtariAndroid,ku               
+gjendettëgjithaaplikacionet,prejrrjetevesociale,teklojrat,programetpërdërgimine             
+mesazheve dhe shumë të tjera.  
+DhevetëprocesipërtahedhuraplikacioninnePlayStoreeshtemëseithjeshtë.Fillimisht              
+duhettëpërditësoshllogarinëtëndeGmailnënjëllogariGooglePlayDeveloperdukekryernje               
+pagesëtënjëhershmeprej20dollarësh.Mepasdukendjekurhapatngafaqjazyrtareevetë                
+Google dhe aplikacioni juaj do jetë gati për tu shkarkuar brenda 2-3 orëve [2]. 
+ 
+ 
+2. Hyrje në Android 
+ 
+2.1 Çfarë është Android? 
+ 
+Android është një system operativ open-source i bazuar në Linux, I cili përdoret për 
+pajisjet mobile si smartphone dhe tablet. Android u zhvillua nga Open Handset Alliance, e 
+drejtuar nga Google, ku merrnin pjesë dhe shumë kompani të tjera [3]. Ky sistem operativ për 
+pajisjet mobile ofron një qasje të unifikuar për zhvillimin e aplikacioneve, kjo do të thotë se një 
+                                                                                       5 
+ 
+----------------Page (4) Break----------------
+programues mund të programojë vetëm në Android dhe aplikacioni i tij do të ekzekutohet në 
+shumë pajisje të tjera të bazuara në platformën Android.  
+ 
+  
+Figura 2.1 Stema e Android 
+ 
+Kysistemoperativofronnjëframeworktëpasuricilimundësonkrijimineaplikacioneve              
+inovativedhelojravepërpajisjemobilenënjëambjentprogramiminëgjuhënJava.Aplikacionet              
+nëAndroidkrijohensinjëkombinimidisapjesëvepërbërësetëndryshmedhetëvecantatëcilat                 
+mundtëthërritennëmënyrëindividuale.PërshembullnjëActivityofronnjëndërfaqegrafike              
+përpërdoruesindhenjëServicenëmënyrëtëpavarurzhvilloninformacionetqëishfaqen              
+përdoruesit.  
+Nganjëpjesëpërbërësemundtëinicializohetnjëpjesëtjetërpërbërësedukepërdorurnjë              
+Intent.Mundedhetëinicializohetnjëpjesëpërbërësetjetërnënjëaplikaciontjetër.Për              
+shembull,ngaWhat’sAppmundtëkalojmënëGmaildukeshtypurnjëadresëe-mailosemund                
+të kalojmë në Gallery për të ngarkuar një foto. 
+Androidofronnjëframeworkpërshtatësicililejonkrijuesintëpërdorëburime            
+(resources)unikepërkonfigurimetëndryshmetëpajisjeve.Mundtëkrijonilayout-etë             
+ndryshmenëXMLpërmadhësitëndryshmetëekranitdhemëpassistemivendossecilinlayout                 
+të aplikojë bazuar në madhësinë aktuale të ekranit. 
+Mundtëdeklaronicilësispecifiketëcilatikërkonaplikacionikështuqëdyqanetsi              
+Google Play Store të mos e lejojë instalimin në pajisje të cilat nuk e kanë këtë specifikë. 
+Androidështënjësistemoperativopen-source,icilikapushtuarnjëtregunesistemeve              
+operativemobile.Pranëditëtesotmeshumicaepajisjepërdorinkëtëplatformë[4].Kyfaktka                 
+tërhequrnjëkomunitettëmadhzhvilluesishdheprogramuesishdhesëbashkumeto,njëmori               
+meaplikacionetëcilësisësëlartë.DomethënënëgjendjenesotmetëGooglePlayStore               
+vlerësohetmëshumënjëideemirësesanjëzhvillimipërsosurpërnjëaplikacion.Kjokashtyrë                  
+kompanineGoogletëkrijojekursekumundtëaftësosheshnëkrijiminenjëaplkacionibrenda               
+                                                                                       6 
+ 
+----------------Page (5) Break----------------
+disajavëvedukesupozuarpaknjohuriparaprakeneinformatike[5].Dukesjellëzvogëlimine              
+kostove të prodhimit të një aplikacioni në këtë platformë.  
+ 
+ 
+2.2 Bazat e Aplikacioneve 
+ 
+AplikacionetAndroidshkruhennëgjuhëneprogramimitJava.MëpasAndroidSDK            
+(SoftwareDevelopmentKit)dotëkompilojëkodinsëbashkumeçdotëdhënëdheburimetnë                
+njëAPK,njëpaketëAndroid,ecilaruhetsinjëfilemeprapashtesën.apk.NjëfileAPK                  
+përmbantëgjithapjesëtpërbërësetënjëaplikacioniAndroiddheështëfiletëcilinpërdorin               
+pajisjetAndroidpërtëinstaluaraplikacionin.Këtojanëdisangavecoritëeaplikacionevenë              
+Android: 
+●Sistemi operativ Android është një sistem Linux me shumë përdorues ku çdo aplikacion 
+është një përdorues i vecantë. 
+●Sistemi i cakton çdo aplikacioni një ID përdoruesi unike. Sistemi vendos të drejta 
+aksesimi për çdo file në mënyrë që vetëm ai përdorues i caktuar të mund t’i aksesojë ato 
+file. 
+●Çdo proces ka makinën e vet virtuale, pra kodi mund të ekzekutohet në mënyrë të pavarur 
+nga proceset e tjera. 
+●Çdo aplikacion ka procesin e vet. Android e nis një process kur një prej komponentevë 
+ose pjeseve përbërëse do të ekzekutohet, dhe të mbyllet kur nuk do të nevojitet më apo 
+kur sistemi të ketë nevojë për memorje për aplikacionet e tjera. 
+ 
+NëkëtëmënyrësistemiAndroidilejonaplikacionittëketëaksesvetëmnëkomponentët              
+qëinevojitendhejomëtepër.Kjokrijonnjëambjenttësigurtnëtëcilinaplikacionetnukmund                   
+të aksesojnë pjesë të tjera të sistemit pervecëse atyre për të cilat iu është dhënë leje. 
+Megjithatë ka mënyra që një aplikacion të ndajë të dhëna me aplikacionet e tjera. Është e 
+mundur që dy aplikacioneve t’iu caktohet I njëtji ID përdoruesi, në këtë mënyrë ata do të jenë në 
+gjendje të aksesojnë filet e njëri-tjetrës. Për të kursyer burimet e sistemit, aplikacionet me të 
+njejtin ID përdoruesi mund të ekzekutohen në të njëjtin process dhe të ndajnë të njëjtën makinë 
+virtuale. Një aplikacion mund të kërkojë të drejta për të aksesuar të dhëna sic mund të jene SMS 
+të përdoruesit, kamerën, kartën SD, Bluetooth dhe shumë të tjera. Në këto raste përdoruesi duhet 
+të garantojë vetë këto të drejta.  
+ 
+                                                                                       7 
+ 
+----------------Page (6) Break----------------
+  
+Figura 2.2 Kërkimi I të drejtës për aksesimin e të dhënave 
+ 
+ 
+2.3 Pjesët përbërëse të një Aplikacioni 
+ 
+Pjësëtpërbërësetënjëaplikacioniapondryshekomponetëtjanëblloqetëdomosdoshme            
+përtëndërtuarnjëaplikacionAndroid.Shpeshkëtakomponentëbazohennënjëri-tjetrin,por             
+seciliekzistonsinjëentitetIpavarurdheluajnënjërolspecificnëndërtimineaplikacionitdhe                 
+ndikojnë në sjelljen e përgjithshme të aplikacionit. 
+Kakatërllojetëndryshmetëkomponentëvetëaplikacionit.Secilishërbenpërnjëqëllim              
+tëcaktuardhekanjëcikëljetetëndryshmeqëpërcaktonsesikomponentikrijohetdhe               
+shkatërrohet. 
+Këto janë katër llojet e komponentëve: 
+●Activities (aktivitetet) 
+●Services (shërbimet) 
+●Content providers 
+●Broadcast receivers 
+                                                                                       8 
+ 
+----------------Page (7) Break----------------
+ 
+ 
+2.3.1 Activities 
+ 
+Njëaktivitetpërfaqësonnjëekrantëvetëmmenjëndërfaqetëpërdoruesit.Përshembull,              
+njëaplikacionemail-imundtëketënjëaktivitetqëshfaqlistëneemail-evetëreja,njëaktivitet                 
+tjetërnëtëcilinmundtëshkruaninjëmailtëridhenjëaktivitettjetërpërtëlexuarmail-et.Edhe                    
+pseaktivitetetpunojnësëbashkupërtëkrijuarnjëtërësitëbashkuar,seciliprejtyreështëi                 
+pavarurngatëtjerët.Siitillë,çdoaplikacionmundtëfillojënjëngakëtoaktivitete,sicndodh                  
+kur nga What’s App hapim aplikacionin e kamerës për të dërguar një foto. 
+Pra,njëaplikacionzakonishtkonsistonnëshumëaktivitetetëlidhurangushtëndërmjet            
+tyre.Shpeshnjëaktivitetiaplikacionitpërcaktohetsi“kryesori”(mainactivity),iciliishfaqet               
+përdoruesitkurhapaplikacioninpërherëtëparë.Mëpasçdoaktivitetmundtënisnjëaktivitet                 
+tjetërnëmënyrëqëtëkryejnëpunëtëndryshme.Çdoherëqënisnjëaktivitetiri,aktivitetii                   
+mëparshëmndalohet,porsistemieruanatënëstack.Kurnisnjëaktivitetiri,aivendoset(push)                  
+nëmajëtëstackdhemerrvëmendjenepërdoruesit.Kystackimplementonalgoritminetipit“last                
+in,firstout”,kështuqë,kurpërdoruesimbaronpunëmeaktivitetindheshtypbutoninBack,ky                
+aktivitet do të dal (pop) nga stack-u dhe do të vazhdoj aktiviteti i mëparshëm. 
+Kurnjëaktivitetndalohetsepsedotënisnjëiri,dotënjoftohetnjëndryshimnëgjendje                  
+nëpërmjetmetodave“callback”tëciklittëjetëssëaktivitetit.Kadisametoda“callback”qënjë               
+aktivitetmundtëmarri,sipasojëendryshimitsëgjendjessëtij,nësesistemipoekrijon,ndalon,                  
+rimarrëaposhkatërronatë.Secilicallbackofronmundësinëpërtëperformuardetyraspecifiketë              
+cilatjanëtëpërshtatëshmemendryshiminegjendjes.Nesëdotëkemindalimineaktivitetit,ai                
+duhettëlëshojëçdoobjekttëmadh,sinetworkapolidhjamedatabazën.Kuraktivitetirinis,                
+mundtërimarriburimetenevojshmedhetërifillojëveprimettëcilatishinndërprerë.Këto               
+tranzicione të gjendjes janë të gjitha pjesë e ciklit të jetës së një aktiviteti. 
+ 
+2.3.2 Services 
+ 
+Njëshërbimështënjëpjesëpërbërëseapokomponenticiliekzekutohetnëbackground             
+përtëkryerdetyratëgjata.Njëshërbimnukofronnjëndërfaqegrafikepërpërdoruesin.Një                
+shërbimmundtëluajëmuzikënëbackgroundndërkohëqëpërdoruesindodhetnënjëaplikacion              
+tjetër, apo të marrë të dhëna nga rrjeti pa bllokuar ndërveprimin e përdoruesit me një aktivitet.  
+Njëcomponentinjëaplikacionitjetërmundtënisnjëshërbimdheaidotëvazhdojtë                 
+ekzekutohetnëbackgroundedhenësepërdoruesidotëhapnjëaplikaciontjetër.Përmëtepërnjë                
+componentmundtëlidhetmenjëshërbimdhetëndërveprojmetëdhetëperformojkomunikim                
+ndermjet proceseve.  
+Një shërbim ka dy forma: 
+                                                                                       9 
+ 
+----------------Page (8) Break----------------
+●I nisur (started) 
+Një sherbim quhet “i nisur” kur një component e nis atë duke thirrur metoden 
+startService(). Pasi nis, shërbimi mund të punoj në background për një kohë të pacaktuar, 
+edhe nëse komponenti që e nisi mund të shkatërrohet. Shpesh një shërbim kryen një 
+detyrë të vetme dhe nuk kthen një rezultat tek thirrësi. Ai mund të shkarkojë apo ngarkojë 
+një file në rrjet. Kur mbaron së kryeri detyrën shërbimi ndalon.  
+ 
+●I lidhur (bound) 
+Një shërbim quhet “i lidhur” kur një component i një aplikacioni lidhet me të 
+duke thirrur metoden bindService(). Një shërbim i lidhur ofron ndërfaqe klient-server që 
+lejon komponentët të ndërveprojnë me shërbimin, të dërgojnë kërkesa, të marrin përgjigje 
+etj. Një shërbim i lidhur punon aq sa kohë një component i aplikacionit është i lidhur me 
+të. Me një shërbim mund të lidhen më shumë sesa një component njëherësh, pork ur të 
+gjithë të prishin lidhjen shërbimi do të shkatërrohet. 
+ 
+Njëshërbimekzekutohetnëthread-inkryesortëprocesithost,shërbiminukkrijon            
+thread-inevetdhenukpunonnënjëprocestëvecantë,vecsenërastetkurspecifikohete                 
+kundërta.Kjonënkuptonqë,nëseshërbimidotëkryejpunëintensivenëCPU,duhetkrijuarnjë                
+threadiriBrendatëcilitshërbimitëkryejpunenevet.Dukepërdorurnjëthreadtëvecantë                  
+reduktohetriskuigabimeveANR(ApplicationNotResponding)dhethread-ikryesori            
+aplikacionit të qëndrojë i dedikuar ndaj ndërveprimit me përdoruesin.  
+ 
+2.3.3 Content Providers 
+ 
+Një“contentprovider”aponjëofruesipërmbajtjesmenaxhonnjëtërësitëdhënashtë              
+përbashkëta.Tëdhënatmundtëruhennënjëfilesistemi,njëdatabazëSQLite,nëweb,oseçdo                 
+memorie,magazinë,tëqëndrueshmetëcilënaplikacionimundtaaksesojë.Nëpërmjetcontent            
+provideraplikacionetmundtëmarrinapoedhetëmodifikojnëtëdhënat,nësecontentprovider-i              
+elejonnjëgjëtëtillë.Përshëmbull,sistemiAndroidofronnjëcontentprovidericilimenaxhon                 
+informacionetrrethkontaktevetëpërdoruesit.Siitillë,çdoaplikacionmetëdrejtatenevojshme               
+mundtëmarrinjëpjesëtëkëtyretëdhënavepërtëlexuaraposhkruarinformacionrrethnjë                 
+personinëvecanti.Contentprovidersjanëgjithashtutëdobishmepërtëlexuardheshkruartë               
+dhëna të cilat janë private për aplikacionin dhe jo të përbashkëta. 
+Pra,ofruesitepërmbajtjesosendryshecontentprovidersmenaxhojnëaksesinnënjëset             
+tëstrukturuartëdhënash.Ataenkapsulojnëtëdhënat,dhemundësojnëmekanizmapër            
+përcaktiminesigurisëtëtëdhënave.Contentprovidersjanëndërfaqjastandarteecilabënlidhjen               
+e të dhënave në një proces me kodin i cili ekzekutohet në një proces tjetër. 
+                                                                                       10 
+ 
+----------------Page (9) Break----------------
+Kurnevojitetmarrjaetëdhënavenënjëcontentprovider,përdoretobjektiitipit              
+ContentResolverngakonteksti(Context)iaplikacionitpërtëkomunikuarmeofruesin(provider)            
+sinjëklient.ObjektiContentResolverkomunikonmeobjektinofrues.Objektiofruesmerr            
+kërkesat për të dhëna nga klientët, kryen detyrën e kërkuar dhe më pas kthen rezultatet. 
+ 
+2.3.4 Broadcast Receiver 
+ 
+Njëmarrësbroadcast-eshaponjëbroadcastreceiverështënjëkomponenticiliu             
+përgjigjetnjoftimevebroadcast.Shumëbroadcastkrijohenngasistemi,përshembull,njënjoftim            
+broadcastqëlajmëronseekraniështëfikur,bateriapombaron,apoubënjëscreenshot.               
+Aplikacionetmundtëlëshojnënjoftimebroadcastgjithashtu,përshembull,tëbëjtëditurtek              
+aplikacionetetjerasedisatëdhënaushkarkuannëpajisjedhejanëtëdisponueshmeedhepërto.                  
+Broadcastreceiversnukshfaqinndërfaqepërpërdoruesin,pormegjithatëatomundtëshfaqin             
+lajmërimenëstatusbar,përtëlajmëruarpërdoruesinkurnjëngjarjebroadcastështëduke              
+ndodhur.  
+Sicepërmendemdhemësipër,njëvecantiesistemitAndroidështëseçdoaplikacion              
+mundtënisnjëkomponenttënjëaplikacionitjetër.Përshembull,nësenjëpërdoruesdotëbëj                 
+njëfotografimefotokamerënepajisjes,kamundësiqëtëekzistojënjëaplikaciontjetërqëebën                 
+këtëdheqëaplikacionijonëmundtapërdorë.Pranëvendqëprogramuesitëzhvillojnjëaktivitet                 
+përtëbërëfotografi,aipërdoraplikacioninCameratëAndroid.Programuesinukkanevojëta               
+inkorporojëapotëbëjlidhjenmeaplikacioninekamerës.Aithjeshtnisaktivitetineaplikacionit               
+tëkamerësqëshërbenpërtëfotografuar.Pasimbarohet,fotografiaikthehetaplikacionittë              
+mëparshëm.Ndërkohëpërdoruesitdot’iduketsekameraështëpjeseeaplikacionittë             
+mëparshëm. 
+Kursisteminisnjëkomponent,ainisnjeprocespëratëaplikacion(nësenukështëende                
+nëekzekutim)dheinicializontëgjithaklasatenevojshmëpëratëkomponent.Kykomponentdo               
+tëpunojënëprocesineaplikacionittëvetëjonëprocesineaplikacionitqëenisi.Ndryshenga                  
+aplikacionetnësistemetetjera,aplikacionetAndroidnukkanënjëpikëtëvetmehyrje(single               
+entry point), nuk ka funksion main(). 
+Çdoaplikacionekzekutohetnëprocesetëndarameautorizimepërfileqënukmundtë               
+aksesohenngaaplikacionetëtjera.Përkëtëarsyenukmundtëaktivizojënëmënyrëtë               
+drejtpërdrejtënjëkomponenttënjëaplikacionitjetër.Megjithatë,këtëmundtabëjsistemi             
+operativAndroid.Pra,përtëaktivizuarnjëkomponenttënjëaplikacionitjetër,aplikacionii              
+mëparshëmduhett’inisisistemitnjëmesazhicilispecifikonintent-in(synimin)qëtënisnjë                
+komponent të caktuar. Më pas sistemi akzivizon komponentin. 
+ 
+2.3.5 Aktivizimi i Komponentëve 
+ 
+                                                                                       11 
+ 
+----------------Page (10) Break----------------
+Trengakatërllojetekomponentëveactivities,services,broadcastreceiversaktivizohen           
+nëpërmjetnjëmesazhiasinkroniquajturintent.Intent-etlidhinkomponentëindividualme            
+njëri-tjetrin,qoftënësekomponentiipërketatijaplikacioniaponjëtjetër.Njëintentkrijohetme               
+anë të një objekti të tipit Intent, i cili specifikon një mesazh për të aktivizuar një komponent. 
+Përaktivitetetdheshërbimet,njëintentspecifikonvepriminpërtëkryer,përshembulltë              
+shohapotëdërgojëdiçka.Nëdisaraste,mundtëaktivizohetnjëaktivitetpërtëmarrërezultate                 
+prej tij. Në këtë rast aktiviteti duhet të kthej rezultatet në një Intent.  
+Përbroadcastreceivers,intentispecifikonvetëmlajmëriminicilidotëbëhetbroadcast,             
+përshembull,njëbroadcasticililajmëronsebateriapombaronpërfshinvetëmnjëstringqë                
+tregon “bateria po mbaron”. 
+Komponentitjetër,contentprovider,nukaktivizohetnganjëintent.Aiaktivizohetvetëm            
+kur është objektiv i një kërkese nga ContentResolver.  
+●Për të nis një activity: 
+Një aktivitet mund të niset si një rast i ri i një Activity duke kaluar një Intent në metodën 
+startActivity(). Intent-i përshkruan aktiviteti i cili do të niset dhe mban të dhënat e nevojshme. 
+Nëse dëshirohet të merren rezultate nga aktiviteti kur të mbarojë, thërritet metoda 
+startAcivityForResult(). Aktiviteti fillestar e merr rezultatin si një objekt Intent të vecantë në 
+metodën onActivityResult(). 
+ 
+●Për të nis një service 
+Një service apo shërbim është një komponent që kryen detyra në background pa patur një 
+ndërfaqe grafike. Një shërbim mund të niset për të kryer një detyre të vetme (one-time operation 
+) duke kaluar një Intent në metodën startService(). Intent-i përshkruan shërbimin i cili do të 
+aktivizohet dhe mban të dhënat e nevojshme. Nëse shërbimi është i përcaktuar si një ndërfaqe 
+klient-server, mund të kryhet lidhja me shërbimin nga një komponent tjetëe duke kaluar një 
+intent në metodën bindService() 
+ 
+●Për të dërguar një broadcast 
+Një broadcast është një mesazh të cilin çdo aplikaxion mund ta marri. Sistemi shpërndan 
+broadcast-e të ndryshme. Një broadcast mund të dërgohet tek aplikacionet e tjera duke kaluar një 
+intent në metoden sendBroadcast().  
+ 
+2.4 Android Studio 
+ 
+AndroidStudioështënjëIDE(IntegratedDevelopmentEnvironment)zyrtarepër          
+zhvillimineaplikacionevenëplatformënAndroid.AndroidStudioupublikuanë16Majtë2013               
+nëkonferencënI/OtëGoogle.Bazuarnësoftware-ineJetBrainsIntelliJIDEA,AndroidStudio              
+ështëkrijuarnëmënyrëspecifikepërzhvilliminnëplatformënAndroid.Mbieditorinefuqishëm              
+                                                                                       12 
+ 
+----------------Page (11) Break----------------
+tëIntelliJ,AndroidStudioofrondhemëshumëvecoridhecilësitëcilatshtyjnëproduktivitetin               
+kur ndërton një aplikacion Android si: 
+●Një sistem fleksibël i bazuar në Gradle 
+●Një emulator i pasur dhe i shpejtë 
+●Një ambjent i unifikuar ku mund të zhvillohen aplikacione për çdo pajisje 
+Android 
+●Instant Run për të bërë ndryshime gjatë punës së aplikacionit pa ndërtuar një APK 
+të re 
+ 
+Figura 2.3 Ndërfaqja e Android Studio 
+ 
+2.4.1 Struktura e projektit 
+ 
+Çdo project në Android Studio përmban një ose më shumë module filet e source code dhe 
+file burimi. Llojet e moduleve janë: 
+●Modulet e aplikacionit Android 
+●Modulet e librarisë 
+●Modulet e motorrit të aplikacionit Google 
+ 
+                                                                                       13 
+ 
+----------------Page (12) Break----------------
+Android Studio i shfaq filet e projekteve në panelin anësor të majtë (Android project 
+view). Ky panel është organizuar në module për të ofruar akses më të shpejt në filet apo burimet 
+e projektit. Çdo modul aplikacioni përmban folderat e mëposhtëm: 
+●manifest​: ​përmban file-in AndroidManifest.xml 
+●java​: ​përmban të gjitha file-t me kod në Java 
+● ​res​: ​përmban të gjitha file-t e tjera që nuk përmbajnë kod, si layout XML 
+ 
+ 
+Figura 2.4 Paneli i moduleve 
+ 
+ 
+3. Krijimi i ndërfaqeve 
+ 
+3.1 Ndërfaqja e regjistrimit dhe e login-it 
+ 
+NdërfaqeteaplikacionitikrijojnëXML(EXtensibleMarkupLanguage).XMLështënjë             
+gjuhëekrijuarpërtëruajturtëdhëna,ndryshengaHTMLecilashfaqtëdhënat.XMLështë                  
+krijuar për të qenë më e thjeshtë për tu lexuar nga njerëzit dhe makina.  
+Përkrijiminendërfaqespërdorimlayout-et.Njëlayoutpërcaktonstrukturenpamore           
+(vizuale)tëndërfaqessëpërdoruesit.AndroidofronnjëfjalorXMLiciliikorrespondonklasës               
+Vieëdhenënklasavetësaj.AvantazhiideklarimittëndërfaqessëpërdoruesitnëXMLështëse                
+tëmundësonnjëndarjemëtëmirëtëprezantimittëaplikacionitngakodi,icilikontrollon                
+                                                                                       14 
+ 
+----------------Page (13) Break----------------
+sjelljenendërfaqes.Përshkrimetendërfaqessëpërdoruesitjanëtëjashtmepërkodine              
+aplikacionit,prandërfaqjamundtëmodifikohetmëthjeshtëpapaturnevojënpërtëmodifikuar              
+apo ndryshuar kodin e aplikacionit.  
+Përtëfilluarpunënekrijimittëndërfaqesnëpanelinanësorndjekimpath-in             
+res->layout->activity_register.xml,qëështëlayoutiactivitytëregjistrimit,atykudhendodhet            
+file-iXML.Ndërfaqenendërtojmësinjë​LinearLayout,​qëështënjëgrupviewiciliirradhittë                   
+gjithëelementetfëmijënënjëdrejtimtëvetëm.Drejtiminmundtaspefikojmëmeanëtëatributit                
+android:orientation.Nëndërfaqeneregjistrimitdotëpërdororientiminvertikal,pratëgjithë             
+fëmijët do të vendosen njëri poshtë tjetrit, një për çdo rresht, pavarësisht gjerësisë së tyre.  
+Fushatqëdotëjenënëndërfaqenepërdoruesitjanërespektivisht:emri,mbiemri,gjinia,              
+mosha,usernamedhepassword-i.Këtojanëtëdhënatëcilatdotëmerrenngapërdoruesi               
+nëpërmjet ndërfaqes dhe më pas do të dërgohen në databazë. 
+PërtëshfaqurtekstpërdoretelementiTextViewndërsapërtëmarrtëdhënatnga              
+përdoruesipërdoretelementetëtipitEditText.Mëposhtëdotëjependyshëmbujtëmarrënga                
+file XML i ndërfaqes.  
+<​TextView 
+    ​android​:layout_width=​"wrap_content" 
+    ​android​:layout_height=​"wrap_content" 
+    ​android​:text=​"Username" 
+    ​android​:padding=​"10dp"​/> 
+ 
+Sicshihetelementirrethohetngatag-etdhebrendatijvendosenatributet.Meanëtë              
+atributit​android:layout_widthdhe​android:layout_heightpërcaktohenpërmasateelementit,që          
+në kod do të jenë aq sat ë mbulojnë teksin e vendosur në atributin ​android:text. 
+<​EditText 
+    ​android​:layout_width=​"match_parent" 
+    ​android​:layout_height=​"wrap_content" 
+    ​android​:id=​"@+id/regUsername" 
+    ​android​:padding=​"10dp"​/> 
+ 
+ElementiEditTextshfaqnëekrannjëfushëkumundtëfutentëdhënat.Nëkëtëelement                
+shtohetdheatributiandroid:id,meanëtëcilitelementiticaktohetnjëID,qëmëpastëkapetdhe                   
+aksesohet me anë të kodit për tu marrë teksti. 
+Për elementin e password-it EditText i shtojmë një atributë shtëse, llojin e input, i cili do 
+të për të fshehur karakteret për arsye sigurie. Atributi do të jetë 
+android:inputType=”textPassword”. 
+<​EditText 
+    ​android​:layout_width=​"match_parent" 
+    ​android​:layout_height=​"wrap_content" 
+    ​android​:id=​"@+id/regPassword" 
+                                                                                       15 
+ 
+----------------Page (14) Break----------------
+    ​android​:inputType=​"textPassword" 
+    ​android​:padding=​"10dp"​/> 
+ 
+Pasikaplotësuartëgjithafushatmetëdhënatpërkatëse,përdoruesidotështypibutonin               
+“Regjistrohu”,icilidotënisitëdhënat.ButonindotakrijojmënëXMLmeanëtëelementit                  
+Button.  
+<​Button 
+ android​:layout_width=​"match_parent" 
+ android​:layout_height=​"​w​rap_content" 
+ android​:text=​"Regjistrohu" 
+ android​:id=​"@+id/regButton"​/> 
+ 
+Dukepaturdisafusha,ndërfaqjaepërdoruesitështëmëemadhesesamadhësiaeekranit               
+tëcelularit.NëkëtërastdotëpërdorimScrollView,icililejonlayout-inqëtëjetëmëimadh                   
+sesaekranifizik.NjëScrollViewështënjëFrameLayout,sipasojëduhetvendosurnjëelement              
+fëmijëicilidotëketëtëgjithëpërmbajtjenqëdotëbehetscroll.Fëmijavetëmundtëjetënjë                    
+layoutmanagermenjëhierarkikomplekseobjektesh.Fëmijaqëpërdorpëraplikacioninnëfjalë              
+ështënjëLinearLayoutmëatributineorientimitvertikal.Pra,mundësohetnjëashensorpërtë              
+levizur lart ose poshtë në ndërfaqe për të akesuar të gjitha fushat nga përdoruesit. 
+<​ScrollView 
+    ​android​:layout_width=​"fill_parent" 
+    ​android​:layout_height=​"fill_parent" 
+    ​android​:id=​"@+id/ScrollView01"​> 
+ 
+                                                                                       16 
+ 
+----------------Page (15) Break----------------
+ 
+Figura 3.1 Ndërfaqja e regjistrimit 
+Fileiemërtuaractivity_login.xmldotëgjendetnëpanelinanësornëpathin            
+app->res->layout->activity_login.xml.PërdorimpërsërinjëLinearLayoutpërkrijimine        
+ndërfaqesnëmënyrëqëelementëttëvendosennjëripastjetrit,dukepërdoruratributin             
+orientation:vertical,praelementëtdotëvendosennjëriposhtëtjetritpërtëkrijuarrregullnë              
+grafikë. 
+Kurpërdoruesidotëshkojtëlogohetnjëkëtëndërfaqe,atijdot’ishfaqendyfusha.Ato                 
+janëusernamedhepassword-itëcilatjanëtënevojshmepërtëbërëidentifikiminetij.Ashtusi                 
+nërastinerregjistrimitpërdordyelementë:TextViewpërtëshfaqurtekstinseçfarëduhettë                
+vendosipërdouresinëhapësiratboshedheEditTexttëcilatkrijijnëfushatkurpërdoruesidotë               
+japi të dhenat e tij për të bërë të mundur identifikimin e tij.  
+Elementëve EditText dhe Button u përcaktohet një ID, nëpërmejt atributit android:id në 
+mënyrë që të behet e mundur kapja e këtyre elementëve në klasat korrespondente të java dhe 
+aksesimit të tyre. 
+ 
+                                                                                       17 
+ 
+----------------Page (16) Break----------------
+ 
+Figura 3.2 Nërfaqja e loginit 
+ 
+ 
+3.2 Ndërfaqet e activities të tjera 
+ 
+Pasi të logohet përdoruesi do të ketë nevojë për një menu me të cilën të navigojë apo të 
+kalojë nga një activity në një tjetër. Pra një menu është jetësore për aplikacionin, si për atë të 
+klientëve si edhe për atë të administratorit.  
+Për krijimin e kësaj menuje do të përdoret kontenieri i tipit DrawerLayout,  në të cilin do të 
+vendosim si fëmijë një NavigationView. Ky është një panel që shfaq opsionet kryesore të 
+navigimit të aplikacionit në anën e majtë të ekranit. Eshtë i fshehur në pjesën më të madhe të 
+kohës, por shfaqet kur përdoruesi rrëshqet gishtin nga e majta në të djathë të ekranit, ose shtyp 
+butonin në anën e majtë të toolbarit. Ky element shfaqet me gjatësinë e ekranit. 
+<​android.support.design.widget.NavigationView 
+    ​android​:layout_width=​"match_parent" 
+    ​android​:layout_height=​"match_parent" 
+    ​android​:layout_gravity=​"start" 
+    ​android​:id=​"@+id/navigation_menu" 
+    ​app​:menu=​"@menu/drawer_menu" 
+    ​> 
+ 
+</​android.support.design.widget.NavigationView​> 
+                                                                                       18 
+ 
+----------------Page (17) Break----------------
+ 
+Në këtë NavigationView do të implementojë një menu në të cilin kam vendosur 
+atributin id:drawer_menu, për ta kapur në një layout tjetër.  
+Në file-n XML drawer_menu.xml do të krijojë një menu duke vendosur item, të cilët do të 
+shfaqen dhe përdoruesi do t’i klikojë për të naviguar Brenda aplikacionit të vizitave mjekësore.  
+<?​xml version=​"1.0" ​encoding=​"utf-8"​?> 
+<​menu ​xmlns:​android​=​"http://schemas.android.com/apk/res/android"​> 
+    <​group ​android​:checkableBehavior=​"single"​> 
+        <​item 
+            ​android​:id=​"@+id/profili_id" 
+            ​android​:title=​"Profili" 
+           ​></​item​> 
+        <​item 
+            ​android​:id=​"@+id/rreth_nesh_id" 
+            ​android​:title=​"Rreth nesh" 
+            ​></​item​> 
+        <​item 
+            ​android​:title=​"Sherbimet" 
+            ​android​:id=​"@+id/sherbimet_id" 
+            ​></​item​> 
+        <​item 
+            ​android​:title=​"Rezervimet" 
+            ​android​:id=​"@+id/rezervimet_id" 
+            ​></​item​> 
+    </​group​> 
+    <​item ​android​:title=​"Rregullime"​> 
+        <​menu​> 
+            <​item 
+                ​android​:title=​"Modifikime" 
+                ​android​:id=​"@+id/modifikime_id" 
+                ​></​item​> 
+            <​item 
+                ​android​:title=​"Logout" 
+                ​android​:id=​"@+id/logout_id"​></​item​> 
+        </​menu​> 
+    </​item​> 
+ 
+</​menu​> 
+ 
+Pra, menuja do të hapet me anë të tag-eve <menu> dhe cdo element i menusë do të 
+vendoset Brenda tag-eve <item>, emri do të përcaktohet me anë të atributit 
+                                                                                       19 
+ 
+----------------Page (18) Break----------------
+android:tittle=”Modifikime”, dhe do të shtohet edhe atributi android:id që do të nevojitet në 
+implementimin e listener të NavigationView.  
+Kjo menu do të ndodhet në të majtë të ekranit, pra duke bërë “swap” ose duke 
+rrëshqikur gishtin nga e majta në të djathtë të aplikacionit do të shfaqet menuja. Për ta bërë më te 
+dukshme do të krijojë një toolbar që do të ndodhet në cdo acivity të aplikacionit dhe do të mbajë 
+dhe emrin e faqes apo activity ku ndodhet user-i. Për më tepër në krahune majtë të aplikacionit 
+do të vendoset butoni i quajtur ndryshe “hamburger” që do të hap menunë. Pra dhe përdoruesit e 
+rinjë do ta dinë sit ë hapin menunë. 
+Në një file të ri XML do të krijoj layout-in e ri të toolbar-it që do të ndodhet në cdo 
+layout tjetër të aplikacionit, si ai i përdoruesit si dhe ai i administratorit. 
+ 
+<?​xml version=​"1.0" ​encoding=​"utf-8"​?> 
+<​android.support.v7.widget.Toolbar 
+    ​xmlns:​android​=​"http://schemas.android.com/apk/res/android" 
+    ​xmlns:​app​=​"http://schemas.android.com/apk/res-auto" 
+    ​android​:layout_width=​"match_parent" 
+    ​android​:layout_height=​"wrap_content" 
+    ​android​:id=​"@+id/toolbar" 
+    ​android​:background=​"?attr/colorPrimaryDark" 
+    ​android​:minHeight=​"?attr/actionBarSize" 
+    ​android​:fitsSystemWindows=​"true" 
+    ​app​:theme=​"@style/ThemeOverlay.AppCompat.Dark.ActionBar" 
+    ​> 
+</​android.support.v7.widget.Toolbar​> 
+                                                                                       20 
+ 
+----------------Page (19) Break----------------
+ 
+Figura 3.3 Paraqitja e NavigationView 
+ 
+Për ta vendos këtë toolbar të krijuar nga unë në cdo layout të aktiviteteve, përdor tagun 
+<include> 
+<​include 
+    ​android​:layout_height=​"wrap_content" 
+    ​android​:layout_width=​"match_parent" 
+    ​layout=​"@layout/toolbar_layout" ​/> 
+ 
+Një element tjetër i dobishëm që do të përmend në këtë pjesë të relacionit është element 
+i quajtur Spinner. Ai është një element që mundëson vendosjen e një menuje të tipit drop-down 
+menu. Ky element do të përdoret në pjesën e rezervimit të vizitës, pra kur do të caktohet data, ora 
+dhe muaji i vizitës mjekësore nëpërmjet aplikacionit. Më poshtë do të jepet një shembull, i 
+krijimit të Spinner në file-in XML. 
+<​Spinner 
+    ​android​:layout_width=​"wrap_content" 
+    ​android​:layout_height=​"wrap_content" 
+    ​android​:id=​"@+id/spinner_muaji" 
+    ​android​:layout_margin=​"10dp" 
+    ​android​:layout_gravity=​"center_horizontal"​/> 
+                                                                                       21 
+ 
+----------------Page (20) Break----------------
+ 
+ 
+Në castin që përdoruesi do të shtyp në menu elementin “Sherbimet”, ai do të presi që në 
+ekranin e celularit të tij të shfaqen të gjitha shërbimet e ofruara prej qendrës spitalore apo 
+poliklinikë. Të dhënat e këtyre shërbimeve do të merren nëpërmjet një stringe JSON dhe do të 
+ruhen në një ArrayList<> të përberë nga objekte të krijuara për t’i ruajtur këto të dhëna. Problemi 
+qëndron në castin që këto të dhëna do të duhet t’i shfaqim në ndërfaqen e përdoruesit. Pra do të 
+ketë një numër të madh objektesh që do të përmbajne të njëjtat lloje informacioni. Për t’i shfaq 
+këto informacione do të krijohet një file XML dhe do të krijohet struktura e shfaqjes të të 
+dhënave në fushat përkatëse. Kjo strukturë do të përsëritet aq herë sa do të jenë objektet, që të 
+shfaqen të gjithë. Prandaj do të përdoret kontenieri i tipit ListView i cili bën të mundur paraqitjen 
+e elementëve të shumtë në mënyrë të përsëritur, njëri mbi tjetrin në orientimin vertikal. 
+<​ListView 
+    ​android​:layout_width=​"match_parent" 
+    ​android​:layout_height=​"match_parent" 
+    ​android​:id=​"@+id/xhulio_list_view"​> 
+ 
+ 
+4. Aplikacioni i përdoruesit 
+ 
+Ky është aplikacioni që cdo përdorues dhe klient do të ketë në aparatin e tij celular 
+Android. Me anë të këtij aplikacioni, sic është thënë dhe më lartë, përdoruesi ose në këtë rast 
+klienti do të ketë mundësitë të shikoj shërbimet që ofron klinika, të rezervoj një takim për një 
+vizitë mjekësore duke përcaktuar orarin, datën dhe muajin. Të shoh se cili ështe mjeku përgjegjës 
+për secilën lloj vizite. Të shoh rezervimet që ka kryer dhe të anullojë një rezervim në rast nevoje.  
+Klasat java, duke përfshirë këtu dhe aktivitetet, që e bejnë të mundur krijimin dhe 
+mirë-funksionimin e këtij aplikacioni janë: 
+1.Klasat e regjistrimit, loginit  profilit të përdoruesit/klientit: 
+●Login 
+●Register 
+●MainActivity 
+2.Klasat që nevojiten për shfaqjen dhe përpunimin e shërbimeve: 
+●Sherbim 
+●Sherbimet 
+●SherbimAdapter 
+●Rezervim 
+3.Klasat për shfaqjen dhe përpunimin e rezervimeve 
+●FutureCheck 
+●FutureChecks 
+●FutureCheckAdapter 
+                                                                                       22 
+ 
+----------------Page (21) Break----------------
+4.Klasa e modifikimit të të dhënave të user-it 
+●Modifikime 
+●Pop 
+5.Klasa për prezantimin e klinikës 
+●Rreth_Nesh 
+6.Klasa për komunikimin dhe përpunimin e të dhënave 
+●BackgroundTask 
+●DataMan 
+ 
+Regjistrimidheloginijanëdyaktivitete(activity),sitëtillakanënjëndërfaqegrafikeme               
+tëcilënpërdoruesimundtëndërveprojë.Pra,këtoklasakujdesenpërkrijiminenjëdritarejenëtë                 
+cilënmundtëvendosetndërfaqjanëpërmjetmetodessetContentView(View).Përkrijimine           
+aktivitetitpërdoretmetodaonCreate(Bundle)ecilathirretnëfillimtëklasës.Metoda            
+setContentView()merrsiparametërnjëlayouticilidotëpërcaktojndërfaqenpërkëtëaktivitet               
+të caktuar, pra bën lidhjen me ndërfaqen e përdoruesit.  
+ 
+ 
+4.1 Klasa Register dhe Login 
+ 
+Këto dy klasa mundësojnë krijimin e një user-i të ri dhe login-in e tij në aplikacion në 
+mënryë që të përdori të gjitha funksionalitetet e aplikacionit. 
+ 
+4.1.1 Klasa Register 
+ 
+KlasaRegisterkujdesetpërrregjistriminepërdoruesit.File-inpërtëaksesuarkëtëklasëe              
+gjejmë në panelin anësor  sipas path-it app->java->Register.  
+EnisimdukekrijuarinstancatetipitEditTextpërtëaksesuardhetërhequrtëdhënatnga                
+ndërfaqjakuikashkruarpërdoruesi,dhedisavariablatëtipitstringkutëmbajmëkëtotëdhëna                  
+të cilat më pas do t’i dërgohen databazës.  
+EditText ​regEmri​,​regMbiemri​,​regUsername​,​regPassword​,​regMosha​, 
+regGjinia​,​regRePassword​,​regEmail​; 
+Button ​Regjistrohu​; 
+String ​emri​,​mbiemri​,​username​,​password​,​mosha​,​gjinia​,​repassword​,​email​; 
+ 
+Mëpaspërtëkrijuar(inicializuar)aktivitetinthërritetmetodaonCreate()dhepassaj             
+metodasetContentView()ecilapërcaktonseciladotëjetëndërfaqjaeaktivitetittëregjistrimit,               
+ku si parametër i jepet file activity_register në XML. 
+                                                                                       23 
+ 
+----------------Page (22) Break----------------
+protected void ​onCreate(Bundle savedInstanceState) { 
+    ​super​.onCreate(savedInstanceState); 
+    setContentView(R.layout.​activity_register​); 
+ 
+PërtëaksesuarelementëtendërfaqessëpërdoruesitthërritetmetodafindViewById()ku            
+si parametër merr id e specifikuar në atributin e elementit në XML. 
+regEmri​=(EditText)findViewById(R.id.​regEmri​); 
+regMbiemri​=(EditText)findViewById(R.id.​regMbiemri​); 
+regUsername​=(EditText)findViewById(R.id.​regUsername​); 
+regPassword​=(EditText)findViewById(R.id.​regPassword​); 
+regRePassword​=(EditText)findViewById(R.id.​regRePassword​); 
+regEmail​=(EditText)findViewById(R.id.​regEmail​); 
+regMosha​=(EditText)findViewById(R.id.​regMosha​); 
+regGjinia​=(EditText)findViewById(R.id.​regGjinia​); 
+Regjistrohu​=(Button)findViewById(R.id.​regButton​); 
+ 
+Përtëvazhduarrregjistriminpërdoruesidotështypbutoninetitulluar“Rregjistrohu”.            
+Pra,këtijbutonidot’ivendosimnjëlistenericilidotëshkaktojnjëeventmeshtypjenebutonit,                   
+praktikishtdotënistëdhënatnëdatabazë.Kjobëhetnëpërmjetmbishkrimit(override)të              
+metodësonClick(),dheklasajonëdotëimplementojëndërfaqen(interface)          
+View.onClickListener. 
+@Override 
+public void ​onClick(View v) { 
+    ​emri ​= ​regEmri​.getText().toString(); 
+    ​mbiemri ​= ​regMbiemri​.getText().toString(); 
+    ​password ​= ​regPassword​.getText().toString(); 
+    ​repassword​=​regRePassword​.getText().toString(); 
+    ​email​=​regEmail​.getText().toString(); 
+    ​username ​= ​regUsername​.getText().toString(); 
+    ​mosha​= ​regMosha​.getText().toString(); 
+    ​gjinia ​= ​regGjinia​.getText().toString(); 
+ 
+Metoda onClick() do të vendosë se çfarë do të ndodhë pasi përdoruesi të shtypi butonin. 
+Në fillim të merren të dhënat nga fushat e ndërfaqes. 
+if​(​emri​.equals(​""​)||​mbiemri​.equals(​""​)||​password​.equals(​""​)||​repasswor
+d​.equals(​""​)||​email​.equals(​""​)||​username​.equals(​""​)||​mosha​.equals(​""​)
+|| ​gjinia​.equals(​""​)) {Toast.​makeText​(Register.​this​,​"Plotesoni te 
+gjitha fushat"​,Toast.​LENGTH_LONG​).show();} 
+ 
+Mëpaskontrollojnësepërdoruesinukkalënëfushabosh.Përtëparandaluarnjë              
+regjistrimtëgabuar,dukenisurstringjeboshenëdatabazë.Nësenjëngafushatdotëjetëbosh,                 
+dotëshfaqetnjëmesazhpërpërdoruesin.PërtashfaqurmesazhinpërdorimToast,iciliofronnjë                 
+                                                                                       24 
+ 
+----------------Page (23) Break----------------
+feedbacktëthjeshtënënjëdritarepop-uptëvogël.Aimbushvetëmhapësirënenevojshmedhe                
+aktivitetindërkohëqëndronidukshëmdheaktiv.Toastenisimdukepërdorurmetodën             
+makeText,ecilamerr3parametra,kontekstineaplikacionin,njëmesazhinqëdoshfaqet,dhe               
+kohëzgjatjen e toast.  
+    ​else if​(!​password​.equals(​repassword​)){ 
+Toast.​makeText​(Register.​this​,​"Passwordi   
+gabuar"​,Toast.​LENGTH_LONG​).show();} 
+ 
+Kontrollohet që përdoruesi ta ketë shkruar password-in saktë, duke vendosur një fushë 
+të dytë re-password. Nëse përdoruesi ka gabuar gjatë shkrimit të password-it atëherë do të 
+ngrihet një toast për ta lajmëruar atë.  
+else ​{  String method = ​"register"​; 
+        BackgroundTask backgroundTask = ​new ​BackgroundTask(​this​); 
+        backgroundTask.execute(method, ​emri​, ​mbiemri​, ​username​, 
+password​, ​mosha​, ​gjinia​,​repassword​,​email​);}} 
+ 
+Nësepërdoruesinukkalënëfushabosheosenukkashkruarpassword-ingabim,të              
+dhënatdot’ikalojnënjëklasetjetër,BackgroundTaskeciladotëmundësojëkomunikiminme               
+databazën.PërtëkaluartëdhënatnëklasënBackgroundTastpërdoretmetodaexecute()ecila              
+kalonstringatsiparametratëklasësAsyncTaskecilashërbenpërmenaxhiminekomunikimit              
+medatabazën.PërklasënBackgroundTask,ecilabëntëmundurkomunikiminmeserverin,dotë               
+flas në pikat në vazhdim. 
+ 
+4.1.2  Klasa Login 
+ 
+KlasaLogindotëkujdesetpërlogiminepërdoruesit.File-inpërtëaksesuarkëtëklasëe                
+gjejmë në panelin të Android Studio anësor  sipas path-it app->java->Login.  
+EnisimdukekrijuarinstancatetipitEditTextpërtëaksesuardhetërhequrtëdhënatnga                
+ndërfaqjakuikashkruarpërdoruesi,dhedisavariablatëtipitstringkutëmbajmëkëtotëdhëna                  
+tëcilatmëpasdot’idërgohendatabazës.Nëndërfaqeneloginitkavetëmdyfusha,username                 
+dhe password, të nevojshme për të bërë identifikimin e përdoruesit. 
+ 
+EditText ​loginUsername​, ​loginPassword​; 
+Button ​Login​; 
+ 
+AktivitetikrijohetngametodaonCreate()dhelidhetmendërfaqennëpërmjetmetodës           
+setContentView()ecilamerrsiparametërndërfaqeneloginit.Elementëtaksesohennëpërmjet            
+metodës findViewById() me anë të ID unike të tyre.  
+                                                                                       25 
+ 
+----------------Page (24) Break----------------
+ButonittëloginitivendosimnjëlistenermeanëtëmetodëssetOnClickListener().Kur             
+tështypetbutoni,dotëkontrollohetqëfushatnukjanëlënëboshdhemëpasdotëkalohentë                   
+dhënat në klasën BackgroundTask me anë të metodës execute(). 
+ 
+ 
+4.2 Komunikimi me serverin dhe databazën 
+ 
+Meqënëse komunikimi me serverin dhe databazën është jetesore për sistemet e 
+menaxhimit, dhe në aplikacionin tim si rast specifik, po dal pak jashtë rradhe për të shpjeguar 
+menyrën sesi do të kalohen të dhënat nga aplikacioni drejt serverit që me pas t’i ruajë ato në 
+tabelat e posacme të databazës. Scriptet e serverit të cilët merren me përpunimin e të dhënave 
+janë në gjuhën PHP. 
+ 
+ 
+4.2.1 Koncepti i threading 
+ 
+NjëaplikacionAndroidkatëpaktënnjëthreadkryesor.Kythreadkrijohetnëtënjëjtën               
+kohëqëkrijohetklasaApplicationpëraplikacioninAndroid.Përgjegjësitëethead-itkryesorjanë             
+tëvizatojëndërfaqenepërdoruesit,tëmenaxhojëndërvepriminmepërdoruesin,tëvizatojë            
+pixel-anëekran,tënisiaktivitete.Çdopjesëkodiqështohetnënjëaktivitetpërdorinburimete                 
+mbeturangathread-ikryesor,prathreadiUI(ndërfaqesgrafike),nëmënyrëqëaplikacionitë               
+jetë në gatishmëri (responsive) të përdoruesit. 
+Kadisarreshtakodtëcilatmundtëekzekutohenpërnjëkohëshumëtëgjatë,saqënuk                 
+lejohenngaplatformaAndroidtëekzekutohennëthreadinkryesor,praatëtëndërfaqesse              
+përdoruesit.Njëshembull,tëcilindotapërdordhepërkrijimindhefunksionimineaplikacionit               
+tim,ështëthirrjanërrjet(networkcall).MundtëkrijojmënjëinstancëtëURLConnectiondheta                
+bëjthirrjenerrjetitnëaktivitetinqëekzekutohetnëthread-inkryesor.Kodidotëkompilohet               
+mirë,porgjatëkohëssëekzekutimitdotëhidhetnjëpërjashtim(exception)itipit              
+NetworkOnMainThreadException.Pra,kyështënjëpërjashtimqënxirretkurnjëaplikacion           
+kërkontëkryejdetyranërrjetnëthread-inkryesor.Kypërjashtimnxirretpëraplikacionetëcilat                
+synojnëtëperformojnënësisteminoperativAndroid3.0HoneycomboseAPImëtëlarta.              
+Aplikacionettëcilatperformojnënëversionemëtëvjetrajanëtëlejuaratëkryejnëthirrjenërrjet                 
+në thread-in kryesor. 
+Rastiinjëthirrjeapodetyrenërrjetështënjërastekstrem.Mundtëketëplotdetyratë                  
+tjera,tëcilatnëseshtohenshumë,shtojnëpunën,dhekjosjellsipasojëndaliminapondarjene                 
+kohësmethread-inkryesor.Nëkëtërastaplikacionikatendencëntëndalojëosetëbllokohet.               
+Përdoruesidotëmendojëseçfarëkaqënukshkonmeaplikacionin.Nërastinmëtëkeq                 
+përdoruesitmundt’ishfaqetnjëmesazhitipiterror,icilithotë“Applicationnotresponding.               
+                                                                                       26 
+ 
+----------------Page (25) Break----------------
+Wouldyouliketowaitorkilltheapplication”.Prariktheheminërastinepërmendurmëlartku                  
+aplikacioninukpërgjigjetdhepërdoruesidotëdetyrohettambylliaplikacionin,qëështëdiçkae               
+pakëndëshme.  
+“Çdo thread rezervon një vend në memorie i cili përdoret kryesisht 
+për të ruajtur variablat lokale dhe parametrat gjatë ekzekutimit të 
+një thread-i. Vendi në memorie rezervohet në castin kur krijohet 
+  thread-i dhe lirohet kur ai mbaron” 
+  - Anders Goransson, Efficient Android Threading 
+ 
+ 
+4.2.2 AsyncTask 
+ 
+AsyncTaskështënjëklasëabstrakteeofruarngaAndroidecilandihmonnëpërdorimin              
+mëtëmirëtëthread-ittëndërfaqes.Kjoklasëlejontëkryhendetyranëbackgrounddheshfaq                 
+rezultatet në thread-in kryesor pa patur nevojë të manipulohen threads të ndryshëm apo handlers. 
+AsyncTaskështëprojektuarpërtëqenënjëklasëndihmësendërmjetThreaddheHandler.             
+AsyncTask duhet të përdoret për detyra të shkurtra. 
+AsyncTask ka katër etapa: 
+1.onPreExecute(),thërritetnëthread-inendërfaqessëpërdoruesitpërparasetëkryhet            
+detyra. Ky hap përdoret zakonisht për të ngritur detyrën. 
+2.doInBackground(Params...),thirretnëthread-inbackgroundmenjëherëpasi       
+onPreExecute()mbaronsëekzekutuari.Kyhappërdoretpërtëkryerpërpunimedhe            
+detyranëbackgroundtëcilatmundtëmarrinpakkohë.Parametrateasynchronoustask              
+kalohennëkëtëhap.Rezultatiipërpunimitdotëkthehetngakyhapdhedot’ikalohen                 
+hapittëfundit.Gjatëkëtijhapimundtëpërdoretedhemetoda           
+publishProgress(Progress...)përtëpublikuarnjëosemëshumënjësitëprogresit.Këto            
+vlera publikohen në thread-in kryesor, në hapin onProgressUpdate(Progress...) 
+3.onProgressUpdate(Progress...),thirretnëthread-inkryesor,atëtëndërfaqessë         
+përdoruesit,pasnjëthirrjëngapublishProgress(Progress...).Kohaeekzekutimitështëe           
+papërcaktuar.Kjometodëpërdoretpërtëshfaqçdollojëprogresinëndërfaqene             
+përdoruesitndërkohëqëvijonpërpuniminëbackground.Përshembull,mundtëpërdoret            
+për të animuar një progress bar apo të shfaq ditarin në në fushe shkrimi tekst. 
+4.onPostExecute(Result),thirretnëthread-inkryesorpasikambaruarhapi         
+doInBackground(),prakambaruarpërpuniminëbackground.Rezultatii         
+doInBackground() i kalohet këtij hapi si një parametër. 
+AsyncTaskpërdortrellojeparametrash:Params,ProgressdheResult,tëcilatjanë            
+parametratgjatëfazavetëquajturadhendryshegenerictypes.Atoshprehennëcastinqë              
+trashëgohet klasa AsyncTask, AsyncTask<Params,Progress,Result>.  
+                                                                                       27 
+ 
+----------------Page (26) Break----------------
+1.Params: lloji i parametrave i cili dërgohet përpara ekzekutimit të detyrës 
+2.Progress: lloji i njësive të progresit që publikohen gjatë përpunimit në background 
+3.Result: lloji i përfundimeve që vijnë nga përpunimi në background 
+ 
+ 
+4.2.3 Klasa BackgroundTask 
+ 
+DukeqenësegjuhaepërdorurpërkrijiminenjëaplikacioniAndroidështëJava,ecila                
+ështënjëgjuheeorientuardrejtobjektitdhenalehtësonpunëmepërdorimineobjektevene                
+kodintonë,krijojnjëklasëtëreequajturBackgroundTaskeciladotëbëjtëmundurlidhjenme                   
+databazën.KjoklasëdotëtrashëgojëklasënAsyncTaskpërtëlehtesuarlidhjendhe             
+komunikimin, duke hequr ngarkesën nga threadi kryesor.  
+ 
+public class ​BackgroundTask ​extends ​AsyncTask<String,Void,String> 
+ 
+Sicshihetllojetepërgjithshme(generictypes)qëdotëmarrëAsyncTaskjanëstringpër               
+ParamsdhestringpërResult,ndërsallojiProgressdotëjetëvoidpasinukshfaqetasnjënjësiapo                  
+mesazhprogresigjatëpunësnëbackground.Pra,dotëkalohendisaparametratëtipitstring,të                
+cilatdotëjenëusernamedhepasswordnërastineloginitpërtëbërëtëmunduridentifikimine                  
+përdoruesit.Dhedotëmerrendisaparametratëtipitstring,tëcilatdotëjenëtëdhënatetij,të                    
+marrangadatabaza,tëcilatdotëshfaqennëprofilinepërdoruesit.NëklasënLogindheRegister                 
+krijojnjëobjekttëtipitBackgroundTask.Nëlistenerinebutonavetëlogindheregjistrimdotë                
+thirretmetoda.execute()meanëtësëcilësdotëkalojnëparametrateparë,Params,tëcilatdotë                  
+përdoren nga metoda doInBackground().  
+ 
+String method = ​"login"​; 
+BackgroundTask backgroundTask = ​new ​BackgroundTask(​this​); 
+backgroundTask.execute(method,​username​, ​password​); 
+ 
+Mësipërkammarrëshembullinethirrjessëmetodësexecutenëklasënlogin.Sic              
+shihetndodhetdhenjëstringtjetëreemërtuarmethod,ecilashërbensikontrollpërtëkuptuar                 
+nëse do të  komunikohet për të identifukuar një login apo për të rregjistruar një përdorues të ri. 
+Parametratemarrëngandërfaqjaepërdoruesit,dotëruhennëstringatpërkatesedhemë               
+pasëdotëkalohennëmetodëndoInBackground(String...params),tëcilënembishkruajmëpërtë             
+bërëtëmundurthirrjennërrjet,prakomunikiminmedatabazën,dukekryerpërpunimete              
+nevojshme në një thread background. 
+String method=params[​0​];  
+ 
+                                                                                       28 
+ 
+----------------Page (27) Break----------------
+Tëdhënatdotëkalojnësinjëvektorstringjeshparams.Nëfillimdotëmerretparametrii                
+parë,prastringueparë,përtëkontrolluarnësedotëjetërastiinjëregjistrimiapoinevojëspër                    
+tuidentifikuarsinjëpërdoruesekzistues.Meanëtëkushtitifdotëbehetimundurkontrolli,pra                  
+do të kemi dy rastet: 
+●if​(method.equals(​"register"​)) 
+●else if​(method.equals(​"login"​)) 
+Këto dy raste janë për të ilustruar shembujt e mësipërm, pasi klasa BackgroundTask 
+menaxhon komunikimin me serverin e cdo klase të aplikacionit. Më pas do të vazhdohet me 
+marrjen e parametrave të tjerë të nevojshëm. 
+DotëkrijohetnjëinstancëeklasësURL(UniformResourceLocator)qëdotënevojitet               
+përtëgjeturvendodhjenenjëburiminëInternet.Adresaeserveritmetëcilindotëduhettë                   
+komunikojëaplikacionidot’ikalohetsiparametërnëdeklarimineinstancësURL.Përtëdërguar               
+dhemarrëtëdhënadotëkrijohetnjëobjektiklasësHttpURLConnectiondukethirrur              
+URL.openConnection()ecilakthennjëlidhjetëremeburiminespecifikuarngakjoURL,dhe               
+mëpasehedh(casting)rezultatintekHttpURLConnection.Vendosimnjëflamuricilidotë               
+tregojësekjoURLConnectiondotëlejojëoutputdheinputtëtëdhënave,gjëqënukmundtë                  
+bëhetpasilidhjatëvendoset.Kjobëhetemundurdukevendosurnëtruevlerënetipinbuleane                 
+(boolean)nëmetodënsetDoOutput()dhesetDoInput().Përcaktojmëdhemetodën,eciladotë             
+jetë POST, me anë të metodës setRequestMethod(). 
+ 
+String login_url=​"http://10.0.2.2/ServerSide/Login.php"​; 
+URL url=​new ​URL(login_url); 
+HttpURLConnection httpURLConnection= (HttpURLConnection) 
+url.openConnection(); 
+httpURLConnection.setRequestMethod(​"POST"​); 
+httpURLConnection.setDoInput(​true​); 
+httpURLConnection.setDoOutput(​true​); 
+ 
+PërdërgiminetëdhënavedotëpërdoretOutputStreamdhepërmarrjenetyredotë                
+përdoretInputStream,tëcilatebëjnemëtëthjeshtë.Nukkarëndësinësestreamështënjëfileapo                 
+stringsepsemënyraedërgimitdhemarrjesdotëjetëenjëjta.Tëdhënattëcilatdot’inisen                   
+serveritdotëbuferohenmëpërparënëpërmjetBufferedWriter,icilimbështjellnjëWriter             
+ekzistues dhe bufferon output-in. 
+ 
+OutputStream outputStream=httpURLConnection.getOutputStream(); 
+BufferedWriter bufferedWriter=​new 
+BufferedWriter(​new​OutputStreamWriter(outputStream,​"UTF-8"​)); 
+ 
+Nënjëstringtëquajturdatadotëruhentëdhënattëcilatdot’inisenserverit.Përparase                   
+tënisenkëtotëdhënadotëenkodohensipasformatitUTF-8.Përtabërëkëtëpërdorimklasën                 
+                                                                                       29 
+ 
+----------------Page (28) Break----------------
+URLEncoderdhemetodën.encode(),dukepërdorurciftincelës-vlerë(key-value).Tëgjitha           
+karakteretpërvecshkronjave(‘a-z’,’A-Z’),shifrave(0...9)dhekaraktereve​ ​'.','-','*','_'dotë              
+kthehen në vlerën hekzadecimale përkatëse të paraprira nga %. 
+ 
+String data=URLEncoder.​encode​(​"username"​,​"UTF-8"​)  + ​"=" ​+ 
+URLEncoder.​encode​(username,​"UTF-8"​)+​"&"​+ 
+URLEncoder.​encode​(​"password"​,​"UTF8"​)+​"="​+URLEncoder.​encode​(password,​"U
+TF-8"​); 
+ 
+PastajkystringqëpërmbantëdhënatdotëshkruhetnëobjektinbufferedWriterqë              
+krijuamdhedotëdërgohendukethirrë.flush().Pasitëjenënisur,dotëmbyllimoutputstream-in                
+dhe bufferedWriter. 
+ 
+bufferedWriter.write(data); 
+bufferedWriter.flush(); 
+bufferedWriter.close(); 
+outputStream.close(); 
+ 
+Pasinisentëdhënatdrejtserverittëspecifikuarsiparametërgjatëkrijimittëobjektit              
+URL,dotëpritetnjëpërgjigjeprejserverit.Kjopërgjigjemundtëpërmbajëtëdhëna,osenjë                 
+komunikimngaservernësendodhnjëdështimapokaproblemetëtjera.Përtëmarrëpërgjigjen                
+ngaserveridotëpërdoretnjëobjektiInputStreamdhenjëBufferedReader,iciliështënjëklasë                 
+përtëlexuartextnganjëinputstreamqëpërmbantextdukeigrumbulluar(buffer)nëmënyrëqë                
+tëofrojënjëleximefiçienttëkaraktereve,vektorëvedherreshtave.Madhësiaebuffer-itnuk             
+është e specifikuar.  
+ 
+InputStream​ inputStream=httpURLConnection.getInputStream(); 
+  BufferedReader bufferedReader=​new ​BufferedReader(​new 
+InputStreamReader(inputStream,​"iso-8859-1"​)); 
+  StringBuffer stringBuffer=​new ​StringBuffer(); 
+  String line=​""​; 
+  ​while​((line=bufferedReader.readLine())!=​null​){ 
+      stringBuffer.append(line); 
+  } 
+bufferedReader.close(); 
+  inputStream.close(); 
+  httpURLConnection.disconnect(); 
+  ​return ​stringBuffer.toString(); 
+ 
+Pasitëlexohetmesazhiiardhurngaserver,aidotëkthehetdhekjostringdotëkalojësi                   
+parametër i llojit Result metodës onPostExecute(). 
+                                                                                       30 
+ 
+----------------Page (29) Break----------------
+MetodaembishkruaronPostExecute(String...result)dotëmenaxhojëmesazhine         
+komunikuarprejserverit.Nëpërmjetkësajmetodedotëpërcaktohetseçfarëdotëndodhnëse               
+vjennjëmesazhdështimiapotëdhënatepërdoruesittësapoidentifikuarnëdatabazënepërdorur                
+prejaplikacionit.Nërastinkurregjistrimikandodhmesukses,apokanjëpërdoruesekzistuestë                
+regjistruarmekëtotëdhëna,serverdotënisnjëmesazh,icilidotëpërpunohetnë                 
+onPostExecute dhe ky mesazh do t’i shfaqet përdoruesit nëpërmjet AlertDialog. 
+Nërastinkurpërdoruesikërkontëlogohet,pasindodhautentikiminëserver,tëdhënate               
+tijdot’idërgohenaplikacionitnëformënenjëstringetëtipitJSON.Kjostringëdotëparsohet                  
+nëpërmjetmetodës.user_data()tëklasëssëkrijuarDataManpërmenaxhimineparsimittëtë              
+dhënave. 
+ 
+protected void ​onPostExecute(String result) { 
+    DataMan dataMan=​new ​DataMan(result); 
+    ​if​(result.equals(​"Not Found"​)){ 
+        ​alertDialog​.setMessage(result); 
+        ​alertDialog​.show(); } 
+    ​else if​(result.equals(​"Success"​)){ 
+        Intent intent=​new ​Intent(​ctx​, MainActivity.​class​); 
+        ​ctx​.startActivity(intent);}} 
+ 
+4.2.4 JSON- format i marrjes së të dhënave 
+ 
+JSON(JavaScriptObjectNotation)ështënjëformatmepeshëtëlehtëpërshkëmbimine              
+tëdhënave.Kyformatështëipavarurngagjuhaeprogramimitqëperdoretdheështëithjeshtë                 
+për tu kuptuar nga njerëzit, dhe për tu ndarë (parse) dhe gjeneruar nga makinat. 
+JSON është i ndërton në dy struktura: 
+●Një bashkim i cifteve celës-vlerë, që shihet si një objekt 
+●Një listë e renditur, që shihet një një vektor 
+ 
+Objektet në stringun JSON shprehen ndërmjet dy kllapave gjarpërueshe ( {} ) dhe 
+përmbajnë ciftet celës- vlerë. Këto cifte ndahen me dypikësh ( : ), ciftet ndërmjet tyre ndahen me 
+presje. Ndërsa vektorët në stringen JSON shprehen nëpërmjet kllapave katrore ( [] ). 
+Më poshtë do të jepet shembulli i stringës që server do t’i dërgojë aplikacionit kur 
+përdoruesi me username: xhuliodo do të kryejë login-in. 
+ 
+{ 
+"response": 
+{"id":"1","emri":"Xhulio","mbiemri":"Doda","mosha":"21","gjinia":"mashkull","username":"xh
+uliodo","password":"123"} 
+                                                                                       31 
+ 
+----------------Page (30) Break----------------
+} 
+ 
+Pra,kavetëmnjëobjektmeemrin“response”,ndërsanërastinkurpërdoruesidotë               
+kërkojëtëshohshërbimet,serveridot’idërgojënjëstringtëgjatë,qëpërbehetnganjëobjekt,që                  
+përmban një vektor, elementët e të cilit janë objektet që përmbajnë të dhënat mbi shërbimet.  
+ 
+ 
+4.3 Klasa MainActivity dhe DataMan 
+ 
+KlasaMainActivityështëklasakryesoreeaplikacionit,kjoështëklasa(aktiviteti)qëdo             
+tëhapeteparakurpërdoruesitështypmbiikonëneaplikacionit.Nësepërdoruesiështëloguar                
+mëpërparadotëshfaqetdirektkjoklasë,nësepërdoruesinukështëiloguarnëaplikacion,                
+atëherë ai do të drejtohet në klasën login.  
+Enisimrradhënsipasnjërendillogjik,dukefilluarngahapiloginit.Përdoruesidotë               
+vendostëdhënatevetanëfushatpërkatësetëllojitEditText,këtodotëmerrendhedotëruhen                   
+nëstringatpërkatësenëklasënLogin.classdhenëpërmjetnjëinstancetëkrijuarngaklasa              
+BackgroundTaskdotëmerrënmemetodën.execute(Params...).Mëpaskëtotëdhënadot’i               
+dërgohenserveritdukepërdorurmetodënPOST.Nëanëneserveritkëtotëdhënadot’imarri                
+fileiquajturLogin.phpqëdotëaksësohetnëpërmjetURL=          
+“​http://10.0.2.2/ServerSide/Login.php​”.Dukeeparëngaanaeserverit,brendanëfile-ine            
+loginit,tëdhënatdotëmerrenmëanëtëvektorittëstringut$_POST[]dhedotëruhennëdy                   
+variabla. 
+Mëpasserverdotëkërkojënëdatabazënësekëtotëdhënajanëtësakta,dukedërguar                 
+querynëMYSQL.Nësetëdhënatgjendenatëherë,scriptinëPHPdotëkrijojënjëstringJSON                 
+dhe do ta printojë, ndërkohë që aplikacioni rri në pritje. 
+echo json_encode(array('response'=>$user)); 
+Nëse nuk gjendet, atëherë do të printohet një mesazh tjetër.  
+ echo "Not Found"; 
+NëcastinqënëmetodëndoInBackground()tëklasësBackgroundTaskdotëvijnjëstring,              
+atëherëstringudot’ikalohetmetodësonPostExecute(),nëtëcilëndotëkontrollojënësestringu               
+përmbanmesazhin“NotFound”apostringunJSON,ecilapërmbannjëvektortëtitulluar              
+response.  
+if​(result.startsWith(​"response"​,​2​)){ 
+    dataMan.user_data(​ctx​);} 
+Nërastinqëloginiukryemesuksesdhënëaplikacionvijnëtëdhënatepërdoruesit,                
+metodaonPostExecute()dotëkrijojënjëinstancëtëklasësDataManecilaparsontëdhënate                
+përdoruesitdheiruanatonënjëfiletëtipitSharedPreferences.Androidlejontëruhentëdhëna                 
+tënjëaplikacioninënjëfile,cilipërbëhetngacifticelës-vlerë.Edhekurpërdoruesidelprej                
+aplikacionit pa bërë logout, ky file do të ekzistojë. 
+                                                                                       32 
+ 
+----------------Page (31) Break----------------
+public void ​user_data(Context ctx){ 
+        ​try ​{ 
+            JSONObject parentobject=​new ​JSONObject(​data​); 
+            JSONObject finalObject = 
+parentobject.getJSONObject(​"response"​); 
+            ​id​=finalObject.getString(​"id"​); 
+            ​emri​=finalObject.getString(​"emri"​); 
+            ​mbiemri​=finalObject.getString(​"mbiemri"​); 
+            ​username​=finalObject.getString(​"username"​); 
+            ​gjinia​=finalObject.getString(​"gjinia"​); 
+            ​mosha​=finalObject.getString(​"mosha"​); 
+        } ​catch ​(JSONException e) { 
+            e.printStackTrace(); 
+        } 
+ 
+    ​SharedPreferences 
+pref=ctx.getSharedPreferences(​"user_data"​,Context.​MODE_PRIVATE​); 
+    SharedPreferences.Editor editor=pref.edit(); 
+    editor.putString(​"emri"​,​emri​); 
+    editor.putString(​"mbiemri"​,​mbiemri​); 
+    editor.putString(​"username"​,​username​); 
+    editor.putString(​"gjinia"​,​gjinia​); 
+    editor.putString(​"mosha"​,​mosha​); 
+    editor.putString(​"id"​,​id​); 
+    editor.putBoolean(​"initalised"​,​true​); 
+    editor.putBoolean(​"logged_in"​,​true​); 
+    editor.commit(); 
+    Intent intent=​new ​Intent(ctx,MainActivity.​class​); 
+    ctx.startActivity(intent);} 
+ 
+Prasicshihetdhengakodi,nëmetodëdotëkalohetstringuidërguarngaserver,kuaido                   
+tëparsohetdukekërkuarvleratsipascelësavepërkatës,dhemëpaskëtovleradotëruhennë                 
+filen e tipit SharedPreferences.   Dhe më pas do të niset aktiviteti MainActivity. 
+NëmetodënonCreate()tëklasësMainActivitydotëkrijohetnjëobjektitipitfileicilido                 
+të përmbaje filen e sapokrijuar, duke marrë si parametër path-in e tij. 
+ 
+File​ file=​new ​File​(​"/data/data/"​+getPackageName()+ ​"/shared_prefs/" ​+ 
+"user_data.xml"​); 
+ 
+Meanëtëkushtit“if”dotëkontrollojënësekyfileekziston(file.exists()),dhenëse                 
+file-inukekzistonatëherëdotëstartohetaktivitetiLogin.class,prapërdoruesidotëshkojënë               
+panelineloginit.Nëtëkundërttëdhënatdotëmerrenngafiledhëdotëvendosennëfushat                   
+                                                                                       33 
+ 
+----------------Page (32) Break----------------
+përkatësememetodën.setText(Stringstring).NdërfaqjaeMainAcitivity,osesiciparaqitet            
+përdoruesitsiProfili,dotëkëtënjëcontainertëtipitGridLayout,icilimundëson2kolonapër                 
+cdorresht.NatyrishtnëkëtëaktivitetjanëkrijuarinstancatellojitToolbardheNavigationView              
+për t’i mundësuar përdoruesit navigimin në aplikacion.  
+ 
+ 
+Figura 4.1 Profili i përdoruesit 
+ 
+4.4 Grupi i klasave për menaxhimin e shërbimeve dhe vizitat e rezervuara 
+ 
+Përmenaxhiminesherbimevedherezerviminspecifikittënjëshërbimingaanae             
+përdoruesitkamkrijuardhepërdorentreklasat:Shërbimi,ShërbimetdheShërbimAdapter.           
+Ndërsapërtëparëvizitaterezervuaradheanulliminenjërezervimispecifikkamkrijuardhedo                 
+tëpërdorenklasat:FututeCheck,FutureChecksdheFutureCheckAdapter.Këtoklasavendosat’i           
+trajtoj së bashku pasi funksionimi i tyre llogjik është i ngjashëm.  
+ 
+ 
+4.4.1 Klasa Shërbimi dhe FutureCheck 
+ 
+                                                                                       34 
+ 
+----------------Page (33) Break----------------
+Pasitëdhënatmbishërbimeteofruaradherezervimetekryeradotëvijnëmeanëtë                 
+stringutsipasformatitJSON,ështëenevojshmeqëkëtotëdhënatëruhennëobjekte.Përtë                 
+mundësuarkrijiminekëtyreobjektevekrijovadyklasat:Shërbimipërtëruajturtëdhënatmbi               
+shërbimet e ofruara, dhe FutureCheck për të ruajtur të dhënat mbi rezervimet e kryera.  
+TëdhënatqëdotëmbajënjëobjektitipitShërbimijanë:id,shërbimi,lloji,përshkrimi                
+dhemjeku.NdërsatëdhënatqëdotëmbajënjëobjektitipitFutureCheckjanë:id,sherbimi,ora,                  
+mjeku , data, muaji , ora, viti dhe kontroll.  
+IddotëmbajëvlerënpërkatëseteIDtëshërbimitaporezervimitpërkatës,iciliështë                
+uniknëdatabase.Ndërsakontrolldotëmbajënjënumëricilidotëshërbejësikontroll,trejanë                   
+rastet: 
+●Rezervimi është aktiv kontroll=0 
+●Rezervimi është kryer kontroll=1 
+●Rezervimi është anulluar kontroll=-1 
+Secilangakëtoklasakakonstruktorinevetë,nëtëcilinmerrënvleratdheucaktohen                
+secilësprejfushave.Këtofushadotëjenëprivatëdhedotëaksesohenmeanëtëmetodave                 
+String get(), që do te jenë për cdo fushe dhe do të kthejnë vlerën e fushës. 
+ 
+4.4.2 Klasa ShërbimAdapter dhe FutureCheckAdapter 
+ 
+Ndërfaqjaeshërbimevedheerezervimevetëkryeradot’ishfaqipërdoruesitnjëlistëme               
+disaelement.PërtabërëtëmundurkëtëkampërdoruelemenintinListViewnëlayout-ineseciles                
+prejdyaktiviteteve.Bydefault,ListViewshfaqvetëmnjërreshtpërcdoartikull(item),pra               
+mundtëshfaqinjëvektor,osemëmirënjëArrayListmestringaedeklaruarsi               
+ArrayList<String>.Pornërastinekëtijaplikacioni,ajocfarëduatëshfaqnëkëtëListViewnuk                
+janë stringje, por objektet e krijuara nga klasat e sipërpërmendura: Sherbimi dhe FutureCheck.  
+Përkëtëdotëpërdorendyklasat:ShërbimAdapterdheFutureCheckAdapter,tëcilatdotë              
+veprojnësipërshtatëspërtëvendosurcdovlerëtëobjektitnëvendineduhur,kontenierinetipit                 
+TextView dhe butonat, dhe shfaqur të gjitha objektet përkatëse. 
+TëdyjakëtoklasadotëtrashëgojnëklasënArrayAdaptertëpërbërengaelementet,që              
+jane objekte të këtyre dy klasave. 
+ 
+public class ​SherbimAdapter ​extends ​ArrayAdapter<Sherbimi> 
+public class ​FutureCheckAdapter ​extends ​ArrayAdapter<FutureCheck> 
+ 
+TëdyjakëtoklasadotëpërmbajnëmetodëngetView(),eciladotëbëjtëmundur                
+vendosjëneteksit(vlerës)nëkontenierinevet.Fillimishtdotëkrijojënjëinstancëtëklasës               
+LayoutInflater,qëdotënaduhetpërtëmarrëfile-inXMLqëdotëshërbejësistrukturëpër                  
+paraqitjen e objektit, dhe ia kalojmë këtë nje objekti të klasës View nëpërmjet metodës .inflate().  
+                                                                                       35 
+ 
+----------------Page (34) Break----------------
+public ​View getView(​final int ​position, View convertView, ViewGroup 
+parent) { 
+ 
+LayoutInflater xhulioInflater= LayoutInflater.​from​(getContext()); 
+ View 
+v=xhulioInflater.inflate(R.layout.​sherbimet_list_view​,parent,​false​); 
+ 
+         ​item ​= getItem(position);  
+TextView 
+sherbimi_view=(TextView)v.findViewById(R.id.​sherbimet_sherbimi_id​); 
+TextView lloji_view 
+=(TextView)v.findViewById(R.id.​sherbimet_lloji_id​); 
+TextViewpershkrimi_view=(TextView)v.findViewById(R.id.​sherbimet_persh
+krimi_id)​; 
+ TextView 
+mjeku_view=(TextView)v.findViewById(R.id.​sherbimet_mjeku_id​); 
+ 
+        sherbimi_view.setText(​item​.getSherbimi()); 
+        lloji_view.setText(​item​.getLloji()); 
+        pershkrimi_view.setText(​item​.getPershkrimi()); 
+        mjeku_view.setText(​item​.getMjeku()); 
+        ​sherbim_id​=​item​.getId(); 
+ 
+        ​rezervo​=(Button) v.findViewById(R.id.​sherbimet_rezervo​); 
+        ​rezervo​.setTag(position); 
+        ​rezervo​.setOnClickListener(​new ​View.OnClickListener() { 
+            ​@Override 
+            ​public void ​onClick(View v) { 
+                Intent intent=​new ​Intent(​activity​,Rezervim.​class​); 
+                intent.putExtra(​"sherbim_id"​,​sherbim_id​); 
+                ​activity​.startActivity(intent); } 
+        }); 
+        ​return ​v;} 
+ 
+NëpërmjetkëtijobjektitëklasësVieëmundtëkapdhetëaksesojëtëgjithafushatefilet                 
+XML,tëkrijuarmëpërparëqëdotëshërbejësistrukturëpërparaqitjenekëtyretëdhënave.                 
+ObjektiitemështënjëobjektiklasësShërbimi,icilidotëmarrëpozicioninsekudotëvendoset                   
+nëListView,meanëtënumritintposition.KrijimiiobjektevedhepopullimiiArrayList-esdotë                 
+bëhët në klasat FutureChecks dhe Shërbimet.  
+BrendanëmetodëngetView()ështëmbishkruardhemetoda.setOnClickListener()ecila           
+dotëpërcaktojësecfarëdotëndodhënërastinseshtypetnjëbuton.Problemiqëndronseduke                  
+pasurshumëartikujnëListViewdotënevojitettëdihetsenëcilinprejartikujveështështypurky                  
+                                                                                       36 
+ 
+----------------Page (35) Break----------------
+butondhecfarëdotëkryejëspecifikisht.Sicshihetmëlartë,nëklasënShërbimAdapterkybuton                
+dotënisnjëaktivitettjetërpërcaktiminekohëssëvizitës,pradatës,orës,muajitevitit.Ndërsa                   
+në FutureCheckAdapter do të shërbejë për të anulluar një rezervim të kryer.  
+ 
+4.4.3 Klasa Sherbime dhe FutureChecks 
+ 
+Këto dy klasa janë klasat që do të shfaqin shërbimet dhe rezervimet e kryera apo 
+anulluara nëpërmjet ndihës së dy klasave të tjera.  Ato do të lidhen me filet XML përkatëse të 
+cilat do të përmbajnë si cdo aktivitet tjetër toolbar-in dhe navigation view, për më tepër do të 
+kenë dhe elementet ListView, të cilave do t’ju atrubuohet një ID përkatese. 
+<​ListView 
+    ​android​:layout_width=​"match_parent" 
+    ​android​:layout_height=​"match_parent" 
+    ​android​:id=​"@+id/xhulio_list_view"​> 
+</​ListView​> 
+ 
+Këto aktivitete do të inicializohen sipas mënyrës së mëtejshmë. Përdoruesi do të shtypi në 
+navigation view Shërbimet apo Rezervimet, në listener do të krijohet një instancë e klasës 
+BackgroundTask dhe do të kalohen parametrat nëpërmjet metodës .execute(). Në rastin e 
+shërbimeve të ofruara do të kalohet vetëm një string i quajtur method që do të përmbajë se cfarë 
+kërkon të aksesojë përdoruesi. Në rastin e Rezervimeve vec stringut method që do të ketë 
+përmbajtjen “checkUps” dhe do të merret Id e përdoruesit e ruajtur në file-in SharedPreferences 
+në menyrë që nga databaza të tërhiqen vetëm rezervimet e kryera nga ky përdorues, jo të gjitha. 
+Në castin që klasa BackgroundTask do të marrë stringun JSON ajo do t’ja kalojë klasave 
+Sherbim dhe FutureCheckUps të cilat do të kujdesen për parsimin e stringës. Në ndryshim nga 
+klasa MainActivity e cila ka vetëm një objekt, në keto dy rastë stringa përmban një objekt, me 
+një vektor objektesh brenda. 
+ 
+String data=getIntent().getExtras().getString(​"data"​); 
+sherbimiArrayList​=​new ​ArrayList<Sherbimi>(); 
+try ​{ 
+    JSONObject primeObject=​new ​JSONObject(data); 
+    JSONArray jsonArray=primeObject.getJSONArray(​"sherbimet"​); 
+ 
+    ​for​(​int ​i=​0​;i<jsonArray.length();i++){ 
+        JSONObject jobj=jsonArray.getJSONObject(i); 
+        String id=jobj.getString(​"id_sherbim"​); 
+        String sherbimi=jobj.getString(​"sherbimi"​); 
+        String lloji=jobj.getString(​"lloji"​); 
+        String pershkrimi=jobj.getString(​"pershkrimi"​); 
+                                                                                       37 
+ 
+----------------Page (36) Break----------------
+        String mjeku=jobj.getString(​"mjeku"​); 
+  ​sherbimiArrayList​.add(i,​new 
+Sherbimi(id,sherbimi,lloji,pershkrimi,mjeku));} 
+ 
+Të dhënat do të merren dhe parsohen nëpërmjet një cikli for dhe njëkohësisht do të 
+bëhet popullimi i një ArrayList-e që përbehet nga objektet e këtyre dy klasave. Pas popullimit të 
+ArrayList do të bëhet popullimi i ListView duke përdorur përshatësit që krijuam: 
+ListAdapter itemList= ​new 
+SherbimAdapter(​this​,R.layout.​activity_sherbimet​,​sherbimiArrayList​); 
+ListView sherbimiList=(ListView)findViewById(R.id.​xhulio_list_view​); 
+if ​(sherbimiList != ​null​) { 
+    sherbimiList.setAdapter(itemList); 
+} 
+ 
+Pas këtij hapi lista është plotësuar dhe puna ka mbaruar. 
+ 
+ 
+                                                   
+      Figura 4.2 Aktiviteti i Sherbimeve                     Figura 4.3 Aktiviteti i Rezervimeve të kryera 
+ 
+ 
+4.4.4 Klasa Rezervim 
+ 
+                                                                                       38 
+ 
+----------------Page (37) Break----------------
+Kjo klasë është përgjegjëse për caktimin e datës muajit, e orës për vizitën që përdoruesi 
+dëshiron të kryejë. Ky aktivitet do të niset kur përdoruesi do të shtyp mbi butonin Rezervo në 
+aktivitetin Shërbime. Në castin e shtypjës së butonit kësaj klase do t’i kalohet ID e shërbimit që 
+përdoruesi ka dëshiruar të rezervojë.  
+Ky aktivitet do të shfaqet si një pop-up, për këtë do të vendosim kufijtë e aktivitetit më të 
+vogla sesa madhësia e ekranit, duke marrë parametrat e gjerësisë dhe lartësise dhe duke i 
+shumezuar ato respektivisht me 0.8 dhe 0.9 . 
+DisplayMetrics dm=​new ​DisplayMetrics(); 
+getWindowManager().getDefaultDisplay().getMetrics(dm); 
+int ​width=dm.​widthPixels​; 
+int ​height=dm.​heightPixels​; 
+getWindow().setLayout((​int​)(width*​.9​),(​int​)(height*​.8​)) 
+ 
+Për caktimin e kohës së dëshiruar për rezervimin kam përdorur Spinners, të cilët janë 
+menu të tipit drop-doën. Në këtë mënuyrë përdoruesi do të shtyp mbi spinner dhe do t’i hapet një 
+listë që do të përmbajë mundësitë që mund të zgjedh, dhe më pas do të shtyp butonin të titulluar 
+“Kryej Rezervimin”.  
+Në listener të këtij butoni do të merret ID e klientit nga file i ruajtur në castin e loginit 
+dhe ID e shërbimit të dëshiruar që i kalohet nga aktiviteti i Sherbimeve. Më pas do të thirret 
+instance e klasës BackgroundTask  dhe këto stringa sëbashku me stringën method që tregon së 
+cfarë do të kryhet i kalohen klasës BackgroundTask. 
+ 
+4.5 Klasa për modifikimin e të dhënave të përdoruesit 
+ 
+Për modifikim e të dhënave kam krijuar dy aktivitete të quajtura Modifikime dhe Pop(e 
+merr emrin sepse është një pop-up).  
+Në aktivitetin Modifikime përdoruesit do t’i shfaqet një ndërfaqe ku mund të zgjedhi se 
+cilën prej të dhënave dëshiron të ndryshojë dhe duke shtypur mbi butonin përkatës atëhere do të 
+niset aktiviteti Pop, i cili është një pop-up  dhe aty do të shkruajë të dhënën e re dhe do të dërgojë 
+atë në server për ndryshimin në fushën përkatëse në databazë.  
+ 
+  
+                                                                                       39 
+ 
+----------------Page (38) Break----------------
+                                                            
+            Figura 4.4 Aktiviteti Modifikime                                           Figura 4.5 Aktiviteti Pop 
+ 
+ 
+ 
+4.6 Klasa Rreth_Nesh 
+ 
+Kjo klasë është pjesë e aktivitetit Rreth_Nesh, i cili shfaq të dhënat rreth klinikës. Këto të 
+dhëna jepen nga administatori nëpërmjet aplikacionit të administatorit. Ky aktivitet niset duke 
+shtypur mbi opsionin Rreth_Nesh në menunë anësore. Në listener do të krijohet një instancë e 
+klasës BackgroundTask e cila menaxhon të gjitha komunikimet me serverin, dhe do të kalohet 
+vëtëm një parametër, që është stringa method. Scripti PHP në pjesën e serverit do të dërgojë të 
+dhënat të marra nga tabela rreth_nesh që ndodhet në databazë. Këto të dhëna do të merren dhe do 
+të parsohen në klasën Java Rreth_Nesh.class . Pasi të parsohen dhe të ruhen në stringat përkatëse 
+ato do të ruhen në fushat përkatëse.  
+Nëse përdoruesi ka një rast urgjent dhe ka nevojë të komunikojë më klinikën, ai mund të 
+shtyp mbi numrin e celularit të klinikës dhe menjëherë do të hapet aktiviteti DIALER me numrin 
+e klinikës të vendosur. Ose mund të shtypi mbi fushën email për informacione të mëtejshme. 
+Që të hapet aktiviteti i DIALER do të implementojë në listener të fushës TextView kodin 
+e mëposhtëm: 
+switch​(v.getId()) { 
+    ​case ​R.id.​celular​: 
+                                                                                       40 
+ 
+----------------Page (39) Break----------------
+    Intent intent = ​new ​Intent(Intent.​ACTION_DIAL​); 
+    intent.setData(Uri.​parse​(​"tel:" ​+ ​cel​)); 
+    startActivity(intent); 
+        ​break​; 
+    ​case ​R.id.​email​: 
+  Intent emailIntent = ​new ​Intent(Intent.​ACTION_SENDTO​, 
+Uri.​parse​(​"mailto:" ​+ ​email​)); 
+        startActivity(Intent.​createChooser​(emailIntent, ​"Chooser 
+Title"​)); 
+        ​break​;} 
+ 
+ 
+5. Aplikacioni i administratorit 
+ 
+Kyështëaplikacioniqëdot’iofrohetadministatorittëklinikës,icilimeanëtëkëtij                
+aplikacionimundtëshohshërbimetqëofronklinika,tëfshijënjëshërbimqëdëshiron,apotë                
+shtojënjëshërbimtëri.Ngaanatjetëraimundtëshohdheklientëteregjistruarnëkëtë                  
+apliakacionmeqëllimrezerviminevizitavemjekësore.Ajoqëështëmëedobishmeështëfakti               
+qëadministatoritëshohsecilatjanërezervimetpërvizitamjekësoredheprejcilitklientështë                
+kryer. Në këtë mënyrë do të ketë më të thjeshtë për të organizuar punën e tij të përditshme. 
+Klasatjava,dukepërfshirëkëtudheaktivitetet,qëebejnëtëmundurkrijimindhe              
+mirë-funksionimin e këtij aplikacioni janë: 
+1.Klasat për loginin dhe shfaqjen e profilit 
+●Login 
+●MainActivity 
+2.Klasat për shfaqjen dhe menaxhimin e shërbimeve 
+●Sherbimet 
+●Sherbimi 
+●SherbimAdapter 
+●ShtoSherbim 
+3.Klasat për shfaqjen dhe menaxhimin e rezervimive të kryera 
+●FutureCheck 
+●FutureCheckAdapter 
+●FutureChecks 
+4.Klasat për shfaqjen e klientëve 
+●Klientet 
+●Klienti 
+●KlientAdapter 
+5.Klasa për menaxhimin e komunikimit me serverin dhe databazën 
+                                                                                       41 
+ 
+----------------Page (40) Break----------------
+●BackgroundTask 
+ 
+ 
+5.1 Klasat për identifikimin dhe shfaqjen e profilit 
+ 
+Klasa përgjegjëse për identifikim e përdoruesit, që është dhe një aktivitet, është 
+Login.class. Ky është aktiviteti që do t’i shfaqet administatorit kur do të dëshirojë të përdori 
+aplikacionin dhe do të nevojitet identifikimi i tij. Në ndërfaqe do t’i shfaqen fushat username dhe 
+passëord dhe një buton për të kryer loginin. Të dhënat do të merren prej ketyre dy fushave dhe 
+do t’i dërgohen serverit duke përdorur klasën ndihmëse për komunikimin me serverin 
+BackgroundTask. Serveri do të kryjë identifikim e administratorit duke kërkuar në tabelën e 
+quajtur admin në databazë. Nëse identifikimi do të jetë i suksesshëm, serveri do t’i nisë 
+aplikacioni të dhënat që ndodhen në tabelën rreth_nesh, të cilat do të shfaqen në profiling e 
+administatorit, të cilat dhe mund ti modifikojë. 
+Aktiviteti kryesor që do të krijohet në castin që administrator do të shtypë mbi ikonën e 
+aplikacionit është MainActivity, ose sic i paraqitet personit si aktiviteti Rreth_Nesh. Në castin që 
+krijohet ky aktivitet do të kontrollohet nëse administatori është identifikuar më përparë. Nëse kjo 
+gjë ska ndodh atëherë do të nis aktiviteti Login. 
+ 
+ 
+5.2 Klasa BackgroundTask 
+ 
+Ashtusiedhenëaplikacioninepërdoruesit,edhenëaplikacionineadministatoritkam             
+krijuarnjëklasëpërtëpaturmëtëlehtëkomunikiminmeserverin.Kjoklasëështëtitulluar                
+BackgroundTask,pasipjesamëerëndësishmeesajështëtëkryejëkomunikimin,ckadotëbëhet                
+nganjëthreadnëbackground.Ashtusiceshpjegovadhemëpërparë,thirrjeterrjetitnuklejohen                 
+tëbëhennëthread-inkryesor,pasimundtëjenëtëgjatadhetëbllokojnëthread-in.Nëndihmë                 
+mëvjenklasaAsyncTask,tëcilënklasaBackgroundTaskdotatrashëgojësëbashkumekatër              
+metodat e saj:  
+●onPreExecute() 
+●doInBackground() 
+●onProgressUpdate() 
+●onPostExecute() 
+ShumëerendësishmeështëmetodadoInBackground(),tëcilëndotambishkruajnëpërtë             
+menaxhuarkomunikinpërsecilinrast.Tëdhënatdotëkalohennëpërmjetmetodës.execute()dhe              
+parametrat hyrës do të jenë të tipit string, ashtu si edhe ato të daljes të onPostExecute(). 
+                                                                                       42 
+ 
+----------------Page (41) Break----------------
+Parametriiparëqëdot’ikalojëkësajklasedotëjetëgjithmonëstringamethod,ecilado                  
+tëpërmbajëqëllimin.NëklasënBackgroundTaskdotëmerretkyparametëritipitstringdhedo                
+tëkrahasohetmerastetpërkatëse.MëpasklasadotëkrijojëinstancëneklasësURLpërtë                 
+caktuarURLkudotëdërgohentëdhënat,tëcilatdotëruhennënjëBufferedWriterdhedotë                   
+nisenmemetodënflush().Pasdërgimitdotëpritetdhepërgjigjiaeserveriteciladotëruhetme                   
+anëtëBufferedReader.Kjostringëmëpasdot’ikalohetmetodësonPostExecute()eciladotë                
+caktojë se kujt aktiviteti do t’i kalohen këto të dhëna. 
+Tëdhënatdot’idërgohenserveritnëformatinemetodësPOST,kurseserverdot’i               
+dërgojë sipas formatit JSON, i cili do të parsohet në aktivitetet përkatëse. 
+ 
+ 
+5.3 Klasat për menaxhimin e shërbimeve, rezervimeve dhe klientëve. 
+ 
+Për të bërë të mundur shfaqjen dhe menaxhimin e shërbimeve, rezervimeve dhe klientëve 
+do të përdoren klasat e mëposhtme, të cilat janë të ngjashme me ato të përdorura në aplikacionin 
+e përdoruesit të thjeshte: 
+Klasat për shërbimet: 
+●Sherbimet 
+●Sherbimi 
+●SherbimAdapter 
+●ShtoSherbi 
+Klasat për rezervimet: 
+●FutureCheck 
+●FutureChecks 
+●FutureCheckAdapter 
+Klasat për klientët 
+●Klienti 
+●Klientet 
+●KlientAdapter 
+ 
+ 
+5.3.1 Klasa Sherbim, Klienti dhe FutureCheck 
+ 
+Tëdhënatqëdotëvijnëmbitëtrellojet,dotëkenënevojëtëruhennëobjektenëmënyrë                    
+qëtëshfaqenmevonënëmënyrëtërregullt.Prandajkamkrijuarkëtotreklasa.Secilaprejtyra                  
+kakonstruktorinevet,icilicaktonvleratfushavepërkatëse,tëcilatjanëdeklaruarsiprivate.Për                 
+                                                                                       43 
+ 
+----------------Page (42) Break----------------
+tëaksesuartëdhënatqëatoruajnëkamkrijuarmetodatellojitget()qëkthejnëstringatpër                 
+secilën fushë.  
+KlasaSherbimidotëpërmbajefushat:shërbimi,lloji,përshkrimi,id,mjekudhecmimi.             
+KlasaKlientidotëpërmbajëfushat:emri,mbiemri,mosha,gjinia,id.KlasaFutureCheckdotë               
+përmbajë fushat: id, shërbimi, mjeku, data, ora, muaji, viti, emri, mbiemri,kontroll, cel dhe email. 
+Fushakontrolldotënevojitetpërtëkontrolluarnëserezervimiështëendeaktiv,është              
+anulluarapoështëkryer.Numriicelularitdheadresaeemaileklientëvedotëshfaqetvetëmnë                  
+aktivitetinerezervimeve,pasijanëtëdhënadelikatedhenukduhetqëadministratort’ishoh               
+edhe nëse klienti nuk ka kryer asnjë rezervim. 
+ 
+6. Konkluzione 
+ 
+Shpërhapja dhe evoluimi i përdorimit të smartphone-ave ka bërë të mundur një 
+transformim në jetën e përditshme të njerëzve. Por ky ndryshim nuk ka patur efekt mbi mënyrën 
+e rezervimit të vizitave mjekësore. Problematika si rradhët e gjata dhe keqinformime rreth 
+orareve të doktorëve janë kthyer në normalitet. Kto probleme janë të zgjidhshme me anë të 
+teknologjisë të platoformës Android në formën e një aplikacioni të aksesueshëm kurdo dhe kudo. 
+Pikërisht në këtë mënyrë i kam zgjidhur problemet e parashtruara më lart. 
+Fillimisht kam hulumtuar pjesën teorike të komponentëve të një aplikacioni. Kam 
+analizuar funksionin e secilit prej tyre dhe mënyrën e ndërveprimit me njëri-tjetrin si dhe 
+mënyrën e ndërveprimit me vetë sistemin operativ Android. Gjithashtu kam shfaqur IDE 
+(Integrated Development Environment) me të cilin kam punuar së bashku me strukturën e 
+ndjekur të projektit. 
+Më pas, kam eksploruar mjetet e ofruara dhe mënyra e përdorimit të tyre duke 
+shfrytëzuar gjuhën XML. Duke shfrytëzuar njohuritë e marra fillova të krijoj aplikacionin e 
+përdoruesve, në këtë rast të pacienteve apo klientëve, më specifikisht me ideimin e ndërfaqjeve 
+të aktiviteve me të cilat do ndeshet kushdo ta përdori.  
+Për të vazhduar më tej, kam krijuar llogjikën e rregjistrimit dhe log-imit nëpërmjet 
+klasave Register dhe Login. Ato kujdesen që përdoruesi të mos lerë asnjë fushë bosh dhe 
+gjithashtu për interaktivitetin në momentin që shtypet butoni përkatës. 
+Para se të trajtoja komunikimin me databazën kam trajtuar konceptin e threading se 
+bashku me klasën AsyncTask. Koncepte të cila ndihmojnë në optimizimin e burimeve të aparatit 
+ku aplikacioni po ekzekutohet. Me pas zhvillova klasën BackgroundTask që kryen komunikimin 
+me databazën dhe kam trajtuar mënyrën sesi ky shkëbim ndodh së bashku me strukturën e të 
+dhënave e përdorur. 
+Klasa kryesore MainActivity është ajo që i shfaqet përdoruesit kur aplikacioni hapet. 
+Nëqoftëse dikush është log-uar atëherë do shfaqen informacionet personale të tij. Në të kundërt 
+përdoruesi do të ridrejtohet në fazën e log-imit apo rregjstrimit. Nga ana tjetër klasa DataMan 
+kujdeset për të percjellë informacionet nga databaza në aplikacion në formatin JSON. 
+                                                                                       44 
+ 
+----------------Page (43) Break----------------
+Më tej, kam krijuar grupet e klasave për menaxhimin e shërbimeve dhe vizitave e 
+rezervuara. Klasat Shërbimi dhe FutureCheck krijojnë objekte të cilat popullohen me të dhëna 
+nga databaza dhe së bashku me ShërbimAdapter dhe FutureCheckAdapter i përshtasin ato në një 
+ListView duke mundësuar shfaqjen e më shumë informacioneve nga sa mund të shfaqë madhësia 
+e ekranit. Në fund klasat Sherbime dhe FutureChecks kujdesen për llogjikën e rezervimeve duke 
+përdorur Id-në e përdoruesit dhe veprimeve paraprake rezervuese kurse klasa Rezervim është 
+përgjegjëse për caktimin e muajit, datës dhe orarit të rezervimit. 
+Kam krijuar gjithashtu edhe klasën Modifikime e cila mundëson përditësimin e të 
+gjithë dhënave. Ky funksion targeton më së shumti ndryshimin e fjalëkalimit duke rritur sigurinë 
+e llogarisë. Ndërsa klasa Rreth_Nesh shfaq informacione rreth klinikës që janë të modifikueshme 
+nga vetë ajo nëpërmjet aplikacionit të administratorit. 
+Si pjesë plotësuese e aplikacionit të përdoruesve kam krijuar edhe aplikacionin e 
+administatorit. Pjesa e log-imit është shumë e ngjashme me aplikacionin e parë. Po ashtu 
+komunikimi me databazën ndodh nëpërmjet klasës BackgroundTask duke mënjanuar 
+shpërdorimin e burimeve të thread-it kryesor. Gjithashtu klasat për menaxhimin e shërbimeve, 
+rezervimeve dhe klienteve edhe pse janë të ngjashme ato kryejnë funksione të ndryshme. Kjo 
+arrihet me lidhjen e identifikuesve të pacintëve bashkë me rezervimet e kryera prej tyre. Me pas 
+këto rezervime lidhen me doktorët që zhvillojnë shërbimin përkatës. Domethënë arrihet lidhja 
+indirekte e pacientëve me doktorët. 
+ Në përfundim mund të them se kam finalizuar mundin dhe përpjekjet e ideve të mia. 
+Kam krijuar aplikacionet për të dyja palët si për pacienët ashtu edhe për klinikat. Kto dy 
+aplikacione ofrojne lidhjen ndërmjet tyre duke shfrytëzuar mjetet dhe teknologjinë që ofron 
+platforma Android.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                                                       45 
+ 
+----------------Page (44) Break----------------
+7. Pasqyra e figurave 
+Figura 2.1: Stema Android..............................................................................6 
+Figura 2.2:Kërkimi i të drejtës për aksesim të dhënash.............................................8 
+Figura 2.3: Ndërfaqe e Android Studio...............................................................13 
+Figura 2.4: Panel i moduleve...........................................................................14 
+Figura 3.1: Ndërfaqja e regjistrimit...................................................................17 
+Figura 3.2: Ndërfaqja e loginit........................................................................18 
+Figura 3.3: Paraqitja e NavigationView..............................................................21 
+Figura 4.1 Profili i përdoruesit.........................................................................34 
+Figura 4.2 Aktiviteti i Sherbimeve....................................................................38 
+Figura 4.3 Aktiviteti i Rezervimeve të kryera........................................................38 
+Figura 4.4 Aktiviteti Modifikime......................................................................40 
+Figura 4.5 Aktiviteti Pop...............................................................................40 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                                                       46 
+ 
+----------------Page (45) Break----------------
+8. Referencat 
+[1] - ​https://www.statista.com/statistics/330695/number-of-smartphone-users-worldwide/​ (2016) 
+[2] - ​https://support.google.com/googleplay/android-developer/answer/113469?hl=en​ (2018) 
+[3] - ​http://www.openhandsetalliance.com/press_110507.html​ (2007) 
+[4] - 
+https://www.statista.com/statistics/263453/global-market-share-held-by-smartphone-operating-sy
+stems/​ (2018) 
+[5] -  ​https://developers.google.com/training/​ (2018) 
+[6] -​ ​Android Studio Development Essentials - Android 7 Edition (2017) 
+[7] -  ​https://developer.android.com/index.html​ (2018) 
+[8] - “Thinking in Java (4th Edition)” - Bruce Eckel (2006) 
+[9] - “Efficient Android Threading” - Anders Goransson (2014) 
+[10] - “Android Programming: Pushing the Limits” - Erik Hellman (2013) 
+[11] - “The Busy Coder's Guide to Advanced Android Development” - Mark Murphy (2009) 
+[12] - “Java: A Beginner's Guide” - Herbert Schildt (2014) 
+                                                                                       47 
+ 
+----------------Page (46) Break----------------

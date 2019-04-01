@@ -1,0 +1,787 @@
+ 
+ 
+1 
+ 
+ 
+UNIVERSITETI I TIRANËS 
+FAKULTETI I EKONOMISË 
+DEPARTAMENTI I STATISTIKËS DHE 
+INFORMATIKËS SË ZBATUAR 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     TEMË DIPLOME 
+ 
+ 
+SEO, FAKTOR KYÇ NË POZICIONIMIN E NJË WEBSITE NË 
+KRYE TË MOTORËVE TË KËRKIMIT. 
+Metoda për optimizimin e një website. 
+        
+    Diplomë e ciklit të parë të studimit  
+               “Bachelor” 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Emri/Mbiemri i Studentit:                                     Udhëheqës: 
+Rinola PARLLAKU                                                    Elda Kuka (Balili) 
+ 
+Grupi: IE-304 
+ 
+     
+     Tiranë, [Shtator, 2018] 
+ 
+----------------Page (0) Break----------------
+ 
+ 
+2 
+ 
+ 
+ 
+© Copyright Rinola PARLLAKU, 2018 
+Përmbajtja e këtij punimi është totalisht autentike. Të gjitha të drejtat e rezervuara. 
+Deklaratë 
+Unë, e nënshkruara Rinola Parllaku deklaroj që: 
+(1) Kjo temë përfaqëson punimin tim origjinal, përveç rasteve të citimeve dhe referencave dhe 
+(2) Kjo temë nuk është përdorur më parë si temë apo projekt kursi në këtë Universitet apo në 
+Universitete të tjera. 
+Rinola PARLLAKU 
+Emri Mbiemri dhe Firma e Studentit 
+Data_____/_____/______ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+----------------Page (1) Break----------------
+ 
+ 
+3 
+Mirënjohje 
+Ky punim vjen si rezultat i tre viteve studimi të vazhdueshëm në Fakultetin e Ekonomisë, por 
+edhe si rezultat i formimit tim arsimor të gjithë këtyre vitetve. Për këtë arsye nuk do të arrija 
+të  përfundoja  këtë  punim  pa  ndihmën  e  pakushtëzuar  dhe  të  vazhdueshme të  personave  të 
+mëposhtëm. Fillimisht, falenderoj prof. Elda Kuka (Balili) për mbështetjen dhe ndihmën e saj 
+gjatë  gjithë  këtij  studimi.  Sigurisht,  duke  studiuar  pranë  FEUT,  ndihem  mirënjohëse  për 
+secilin profesor, të cilët më mësuan që informatika eshte e ardhmja e sigurt dhe me bindën për 
+formimin profesional që kam zgjedhur. I jam mirënjohëse gjithashtu të gjithë mësuesve të mi 
+ndër vite që e kanë bërë proçesin e përfitimit të njohurive më të thjeshtë dhe dashur për mua 
+dhe që kane ndikuar në formimin tim arsimor. 
+Falenderimet  më të  veçanta ia kushtoj  familjes  time, që  ka  qenë  gjithmonë  e  gatshme  të më 
+mbështesë,   motivojë   dhe   bindë   për   përpjekje   të   vazhdueshme pavarësisht   çdo   gjëje. 
+Falenderoj po ashtu miqtë e mi të cilët në çdo moment kanë pasur më shumë besim se unë tek 
+vetja ime. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+----------------Page (2) Break----------------
+ 
+ 
+4 
+Abstrakt    
+Përparimet  e  shpejta  dhe  tepër  të  avancuara  të  teknologjisë  ndër  vite  kanë  bërë  që  të 
+shfrytëzohet teknologjia  përveç  të  tjerash  dhe  në  botën  e  biznesit  dhe  gjenerimit  të  të 
+ardhurave.  Ditët  e  sotme  përballemi  me  forma  nga  më  të  ndryshmet  të  përdorimit  të 
+teknologjisë  nga  bizneset,  si  në  pajisje  të  azhornuara  me  përparimet  më  të  fundit  si  dhe  në 
+formën e të të zhvilluarit të biznesit. Ndërtimi i faqeve dhe aplikacioneve web ka përfshirë çdo 
+biznes   tashmë,   pavarësisht   madhësisë   së   biznesit,   llojit   dhe   shtrirjes.   Duke   parë   këtë 
+gjithëpërfshirje   është   mëse   e   arsyeshme   që   bizneset   të   investojnë   në   Search   Engine 
+Optimization  më  të  mirë  dhe  eficente. Për  këtë  arsye  optimizimi  i  websites  përbën  një  temë 
+aktuale, e cila po merr vëmendje të madhe nga studiues të ndryshëm. Nëpërmjet këtij punimi 
+synoj  të  tregoj  rëndesinë  e  Search  Engine  Optimization  në renditjen  e websites  në  krye  të 
+motorëve të kërkimit dhe të paraqes disa nga metodat për optimizimin e websites.  
+Në  këtë  punim si fillim do prezantohet termi SEO dhe  si  funksionojnë metodat  e  kërkimit  
+zvarritja, indeksimi, përpunimi dhe marrja e rezultateve. Më pas do të paraqiten teknikat dhe 
+dy algoritme për rankimin e faqes web si dhe krahasimi i këtyre algoritmeve.  Kur flasim për 
+SEO dhe digital marketing nuk mund të anashkalojmë fjalët kyçe të përdorura. Në këtë punim 
+përshkruhet rëndësia e tyre dhe dy mjete që sugjerohet të përdoren nga krijuesit e websites. Po 
+ashtu kam zgjedhur një website specifik dhe kam matur performacën e         SEO-s për të me 
+anë të dy  programeve  të ndryshme. Gjithashtu  kam  zgjedhur të demostroj  disa  hapa  për 
+optimizimin e një website të ndërtuar me Wordpress. Për websiten kam aktivizuar një plugin: 
+Yoast SEO për optimizimin e disa elementëve si titujt ose imazhet. 
+Metoda  e  përdorur  gjatë  punimit  është  ajo  analizuese  dhe  krahasuese.  Bazuar  në  të  dhënat 
+sekondare të siguruara nëpërmjet burimeve të ndryshme dhe  analizimit të tyre mundohem të 
+jap përgjigje sa më të qarta në lidhje me vlerësimin e performancës për websiten dhe metodat 
+për optimizimin e tij. 
+ 
+Fjalë kyçe: SEO, Wordpress, HTML,URL , Algoritëm, Meta Tag, HITS.  
+ 
+----------------Page (3) Break----------------
+ 
+ 
+5 
+Listë shkurtimesh  
+SEO - Search Engine Optimization  
+HTML - HyperText Markup Language  
+CSS -  Cascading Style Sheet  
+CMS - Content Management System  
+URL -  Uniform Resource Locator  
+HITS -  Hyperlink-Induced Topic Search Algorithm 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+----------------Page (4) Break----------------
+ 
+ 
+6 
+Tabela e përmbajtjes 
+ 
+1. Hyrje ..................................................................................................................................... 7 
+2. Çfarë është Search Engine Optimization ? ........................................................................... 8 
+2.1  Si funksionon metoda e kërkimit? .................................................................................. 8 
+2.1.1  Si funksionon Google? ............................................................................................ 9 
+2.2  Çfarë është on-page dhe off-page SEO ? ..................................................................... 10 
+2.3  SEO- Taktikat dhe metodat. ......................................................................................... 10 
+2.4  Algoritme për rankimin e faqeve web. ......................................................................... 11 
+2.5  SEO- Website Domain ................................................................................................. 14 
+2.6  Stili  File naming .......................................................................................................... 14 
+3.  SEO – Optimizimi i fjalëve kyçe. ...................................................................................... 15 
+3.1  Frekuenca e fjalëve kyçe .............................................................................................. 15 
+3.2  Pesha e fjalëve kyçe ..................................................................................................... 15 
+3.3  Rëndësia e fjalëve kyçe ................................................................................................ 15 
+3.4  Mjeti Keyword Suggestion........................................................................................... 15 
+3.5  Vlerësuesi Keyword Traffic ......................................................................................... 15 
+3.6  Vendi më i mirë për të vendosur fjalët kyçe: ............................................................... 15 
+4.  Digital Marketing ............................................................................................................... 17 
+A.  SEO Audit Tool ............................................................................................................. 17 
+B. Google PageSpeed Insights ............................................................................................ 20 
+5. Hapat e optimizimit të Website-it ....................................................................................... 22 
+6.  Përfundime ......................................................................................................................... 28 
+ 
+ 
+ 
+ 
+----------------Page (5) Break----------------
+ 
+ 
+7 
+1. Hyrje  
+Zhvillimi dita-ditës i shoqërisë njerëzore sikurse dhe rritja e nevojave për secilin prej nesh si 
+individ ka  qenë  ndër  ata  faktorë  të  cilët  kanë  shtyrë  teknologjinë  të  jetë  sot  kryefjalë  e  çdo 
+aktiviteti  jetësor.  Mjafton  të  hedhim  një  sy  përreth,  në  çdo  fushë  me  të  cilën  kemi  të  bëjmë 
+gjatë  rutinës  sonë  të  përditshme  dhe  lehtësisht  mund  të  evidentojmë  kontaktet  tona  të   
+pashmangshme  dhe  jetësore  për  ne,  tashmë  edhe  me  arritjet  më  të  fundit  teknologjike. 
+Praktikisht  secili nga ne në çdo moment të caktuar të ditës është i rrethuar në një lloj mënyre  
+apo tjetër nga teknologjia. Ne sajë te evolimit të teknologjisë individët mund të jenë koherent 
+me  të  rejat  dhe  lajmet  më  të  fundit  nga  bota.  Shumë  aktivitete  rutinë  tonat  janë  reduktuar  
+tashmë dhe janë zëvëndësuar nga proçese teknologjike apo pajisje mekanike duke rezultuar në 
+më shumë kohë të lirë dhe lehtësim të jetesës. 
+Duke  qenë  se  teknologjia  është bërë  pjesë  e  pandashme  e  jona,  është  e  kuptueshme  që          
+biznesi tashmë synon ta shfrytëzojë këtë lidhje tonën me teknologjinë në mënyrën më të mirë 
+të mundshme. Pra kemi të bëjmë më një rikonceptim të përdorimit  të  teknologjisë  nga  një  
+biznes.  Teknologjia dhe lidhja e fortë e blerësit  me  të shihet  një nga mënyrat më premtuese 
+të gjenerimit të të ardhurave.   
+Por,  lind  pyetja,  si  mund  të  arrijmë  që  duke  shfrytëzuar  mediumet  që  teknologjia  ofron  së 
+fundmi të afrojmë sa më shumë klientë potencialë drejt nesh, të kemi sa me shumë të tillë që 
+zgjedhin të rikthehen tek biznesi ynë, duke maksimizuar kështu arsyen më primare të krijimit 
+të biznesit tonë, fitimin? Gjendemi përballë një situate ku të bërit biznes apo reklamim  online 
+po tërheq shumë vëmendjen dhe dedikimin e kompanive të sotme dhe në këtë fenomen rolin 
+më madhor e zë ndërveprimi i blerësit me teknologjinë. 
+Për të bërë që biznesi  ynë online të jetë sa më afër përdoruesit, që me shumë gjasa mund të 
+kthehet në blerës potencial, është e nevojshme që website-i ynë të jetë sa më afër tij, sa më i 
+dukshëm krahasuar me website-t e tjerë konkurente dhe të shfaqet si plotësues ndaj nevojës së 
+përdoruesit.  Këtë  pozicionim  tek  klienti  e  mundëson  Search  Engine  Optimization.  Po  cilat 
+janë metodat  e duhura që duhet të përdorim për optimizimin e websites? Kjo është kryefjala e 
+këtij punimi. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+----------------Page (6) Break----------------
+ 
+ 
+8 
+2. Çfarë është Search Engine Optimization ? 
+SEO (Search Engine Optimization) është   një grup   teknikash dhe   strategjish   të   cilat   të 
+implementuara  siç  duhet  ndikojnë në rritjen  e  vizitorëve në  një  website  të  caktuar.  Kjo  gjë 
+arrihet  nëpërmjet  renditjes  së  website-it ndër  rezultatet  e  para  që i shfaqen  përdoruesit  në 
+momentin që bën një kërkim në një motor kërkimi. Një optimizim më i mirë sjell një renditje 
+më të lartë dhe më shumë të ardhura për biznesin. 
+SEO është një teknikë për: 
+✓ Dizenjimin  dhe  zhvillimin  e  website-s  që të rankohet  sa  më lart  kur  bëhet  një 
+kërkim nga motorët e kërkimit. 
+✓    Përmirësimin  e  vëllimit  dhe  cilësisë  së trafikut  në  një  website  nga  motorët  e 
+kërkimit. 
+✓ Mënyrën  se  si  funksionojnë  algoritmet  e  kërkimit  dhe  çfarë  mund  të  kërkojnë 
+përdoruesit e thjeshtë. 
+2.1  Si funksionon metoda e kërkimit?  
+Motorët e kërkimit kryejnë disa aktivitete në mënyrë që të nxjerrin të dhënat nga kërkimi. 
+✓ Zvarritja- 
+✓ Zvarritja (Web Crawling) është një proçes gjatë së cilit një program kompjuterik kalon 
+nga një faqe tek tjetra dhe ‘skanohen’ përmbajtjet e faqeve. Gjatë këtij proçesi motori i 
+kërkimit merr në shqyrtim fjalët kyçe të faqes, llojin e përmbajtjes së faqes, linqet në 
+faqe  etj.  Ky  informacion  që  mblidhet  më  pas  dërgohet  në  server  për  tu  bërë  gati  për 
+indeksim.  Programet  janë  të destinuara  ti  japin  prioritet  ndër  të  tjera  fjalëve  kyç në 
+header,  metadata  dhe  fjalitë e  para.  Ky proçes është  një proçes i  vazhdueshëm  dhe 
+sistematik  duke  qenë  se  përmbajtjet  e  faqeve  evoluojnë  dita  ditës  dhe  kështu  bëhet  i 
+rëndesishëm indeksimi i ri si rezultat i informacioneve të reja që vijnë nga crawling. 
+Në këtë pikë bëhet i rëndësishëm SEO.Duke qenë se programet gjatë Crawling 
+mbledhin  informacion  nga  faqet  dhe  i  indeksojnë, informacion të  cilin  më pas do 
+përdorin për t’ja  disponuar  faqen  si rezultat  organik  përdoruesit,  është e rëndësishme 
+----------------Page (7) Break----------------
+ 
+ 
+9 
+të bëhet një  optimizim i  mire  i faqes.  Duhet patur  parasysh që fjalët kyç që ne  presim 
+të na  identifikohen  për lexuesin,  të vendosen në pjesët e lexueshme nga web crawlers 
+që të arrijmë renditjen lart në faqen e rezultateve organike. 
+Sa më efektiv të jetë optimizimi i faqes, aq më të përzgjedhura  mirë  do jenë fjalët      
+dhe aq me  lehtë do  i  shfaqet  faqja  jonë  përdoruesit  duke    qenë se merr renditje 
+më të lartë nga motori i kërkimit. Crawler të tjerë paraqiten në tabelën e mëposhtme. 
+            
+           Tabela 1. Motorët e kërkimit dhe crawler e tyre, Burimi: Sharda University Paper 
+            2.1.1  Si funksionon Google? 
+Kur  është  fjala  për  SEO,  Google  është  motor  kërkimi  që ka  më  shumë  rëndësi.           
+Google ka pjesën më të madhe të trafikut të kërkimit. 
+Bing  dhe  Yahoo  !,  po  rriten  në  rëndësi,  por  ende  kontrollojnë  vetëm  një  përqindje 
+relativisht të vogël të  trafikut të kërkimit. 
+          Ka tre nivele për teknologjinë e Google: 
+• “Bot” ose “spider” që indekson faqet e webit. 
+• Indeksi që përmban gjithë informacionin për faqen. 
+• Stringu që kërkohet nga përdoruesit që ta gjejnë motorët e kërkimit.  
+ 
+ 
+                    Tabela 2. Mënyra si funksionon Google,  
+----------------Page (8) Break----------------
+ 
+ 
+10 
+✓ Indeksimi-
+Për  të  kuptuar  më  mirë  konceptin  e  indeksimit,  shpesh  përdoret  shembulli 
+klasik i libravedhe librarisë ku librat janë faqet ekzistuese në web të cilat duhen        
+indeksuar apo më saktë identifikuar në mënyrë që të dihet se cila faqe ti disponohet 
+përdoruesit në momentin që ai bën një kërkim. Sa herë që si rezultat i crawling vijne          
+faqe të reja me informacione, ribëhet proçesi i indeksimit. 
+✓ Përpunimi - 
+Kur vjen  kërkesa  e  kërkimit,  motorët  e  kërkimit  e  përpunojne  atë,  dmth.  e  krahason 
+stringun e kërkuar me faqet e indeksuara në bazën e të dhënave. 
+✓ Marrja e rezultateve - 
+Hapi  i  fundit  në  aktivitetet  e  motorëve të  kërkimit  është  marrja  e  rezultateve  më  të 
+mira  që përputhen  me  kërkimin  që ka bërë përdoruesi.  Në  thelb,  kjo është thjesht 
+shfaqja e tyre me browser. 
+ 
+2.2  Çfarë është on-page dhe off-page SEO ? 
+Për optimizimin e websites ka dy mënyra: 
+On-Page  SEO - Kjo  mënyrë përfshin  sigurimin  e  përmbajtjes  së  mirë,  zgjedhjen  e  duhur të 
+fjalëve kyçe,  vendosjen  e  fjalëve kyçe  në  vendet  e  duhura,  vënien  e  titullit  të duhur  për  çdo 
+faqe, etj. 
+ 
+Off-Page SEO - Përfshin ndërtimin e linqeve, rritjen e popullaritetit të linqeve duke paraqitur 
+direktoritë e hapura,  motorët e kërkimit, shkëmbimet e linqeve etj. 
+ 
+2.3  SEO- Taktikat dhe metodat. 
+ 
+Teknikat e SEO klasifikohen në dy kategori të mëdha: 
+ 
+White Hat SEO - Teknika që motorët e kërkimit na i rekomandojnë si pjesë e një dizajni të 
+duhur. 
+ 
+ 
+----------------Page (9) Break----------------
+ 
+ 
+11 
+Një taktikë SEO konsiderohet si White Hat nëse ka karakteristikat e mëposhtme: 
+ 
+✓ Përputhet me udhëzimet e motoreve të kërkimit. 
+✓ Siguron  që  një  përmbajtje  website  duhet  të jetë  krijuar  për  përdoruesit  dhe  jo  vetëm 
+për motorët e kërkimit. 
+✓ Siguron cilësi të mirë të faqeve të internetit. 
+ 
+Black Hat SEO - Teknika që motorët e kërkimit nuk i miratojnë dhe përpiqen të minimizojnë  
+efektin e tyre. Këto teknika njihen gjithashtu si spamdexing. 
+ 
+Një taktikë SEO, konsiderohet si Black Hat ose Spamdexing nëse ka karakteristikat e 
+mëposhtme: 
+✓ Përpjekjet për përmirësime në rankime nuk janë miratuar nga motorët e kërkimit dhe / 
+ose përfshijnë mashtrimin. 
+✓ Dërgimi  i  përdoruesve  në faqe  të ndryshme  nga  ajo  që kanë rankuar  motorët  e 
+kërkimit. 
+✓ Përsëritja  e  fjalëve  kyçe  në  metatage,  dhe  përdorimi  i  fjalëve  kyçe  që  nuk  janë  të 
+lidhura me përmbajtjen e internetit. Kjo quhet  metatag stuffing. 
+✓ Krijimi i faqeve web me cilësi të ulët që përmbajnë shumë pak përmbajtje por janë të 
+mbushura me fjalë kyçe dhe fraza shumë të ngjashme. Këto faqe quhen Doorway ose  
+Gateway Pages. 
+2.4  Algoritme për rankimin e faqeve web. 
+ 
+Algoritmi  HITS – Është  Hyperlink-Induced  Topic  Search  Algorithm,  ky  algoritëm është 
+krijuar nga Jon Kleinberg. Ai bën rankimin e websites duke u bazuar te Hubs dhe Authority. 
+Authority: Authority përfaqson një burim informacioni të vlefshëm. 
+Hub: Hub përfaqson faqen që shenjon te authority. 
+Hapat e algoritmit HITS : 
+1. Shkruani matricen e faqeve të webit.  
+2. Më pas fusni frekuencën e parametrave të ndryshëm(bold, italic, fjalë kyçe). 
+3. Llogarisni hubs dhe authorities për çdo faqe web. 
+4. Normalizoni vlerat për çdo faqe web dhe llogarisni rankimin e pjesshëm për çdo faqe. 
+----------------Page (10) Break----------------
+ 
+ 
+12 
+5. Pastaj shtoni peshat e parametrave në rankimin e pjesshëm të llogaritur. 
+6. Rendisni  pozicionet e  faqeve  të  webit  sipas  gradave  të  llogaritura  që  korrespondojnë 
+me vlerat hub dhe vlerat Authority të faqeve të webit. 
+7. Dilni. 
+Në figurën 2 të gjitha detajet e faqeve web futen manualisht dhe më pas llogaritet Min. Hub 
+dhe Max Hub, Autoriteti Min dhe Autoriteti Max. 
+ 
+ 
+Tabela 3. Outputi i algoritmit HITS, Burimi: Dept. of Computer Science & Engineering GZS 
+PTU Campus, India 
+ 
+Algoritmi i ngjashmërisë semantike - Koncepti i ngjashmërisë semantike është algoritmi  që 
+përdoret  në  shumë  fusha.  Kur  të  dhënat ose  dokumentet  kanë  të  njëjtin kuptim  atëherë 
+përdoret metoda semantike e ngjashmërisë bazuar në  fjalë kyçe të njëjta të cilat janë nxjerrë 
+nga  dokumente  të  ndryshme. Algoritmi   i  Ngjashmerisë Semantike implementohet  duke 
+përdorur gjuhën e programimit C# dhe Visual Studio 2010. 
+Faktorët për krahasimin e dy algoritmave: 
+ 
+o Efiçenca  Kohore  =    Koha  mesatare  e  kërkimit  të një faqe  webi/Nr  total  të faqeve  të 
+webit *100 
+o Saktësia: Saktësia tregon  nëse faqja me gradën më të lartë të faqes gjendet në krye apo 
+jo. 
+----------------Page (11) Break----------------
+ 
+ 
+13 
+o Gjenerimi  i  faqeve  specifike  të  përdoruesit:  Ky  parametër  specifikon  nëse  shfaqja  e 
+faqes është sipas interesit të përdoruesit ose jo. 
+o Raporti i Saktësisë : Ky faktor  specifikon se sa përqind e përmbajtjes është e duhura 
+ne raport me  pyetjen e kërkuar nga perdoruesi. 
+o Raporti i Rëndësise: Ky faktor tregon dallimin mes  faqes më lart të renditur dhe faqes 
+më pak të renditur. 
+Në bazë të një studimi  të bërë nga Dept.  of Computer  Science  &  Engineering  GZS  PTU 
+Campus, India kanë rezultuar përqindjet e mëposhtme:  
+ 
+ 
+Faktorët 
+ 
+Algoritmi 
+HITS 
+Algoritmi i 
+Ngjashmërisë 
+Semantike 
+Eficenca Kohore 72 % 87% 
+Saktësia 79% 91% 
+Gjenerimi i faqeve 
+specifike të përdoruesit: 
+No No 
+Raporti i Saktesisë 90% 92% 
+Raporti i Rëndësise 30% 41% 
+ 
+Tabela 4. Studimi mbi faktorët, Burimi: Dept. of Computer Science & Engineering GZS PTU 
+Campus, India  
+ 
+Paraqitja grafike e tabelës së mësipërme: 
+ 
+   
+   Tabela 5. Paraqitja grafike 
+ 
+----------------Page (12) Break----------------
+ 
+ 
+14 
+2.5  SEO- Website Domain 
+ 
+Fjalët  kyçe  në emër  të  domain-it  janë  shumë të  rëndësishme.  Përdorimi  i  fjalëve  kyçe  në 
+domain ju jep një avantazh të fortë konkurrues mbi konkurrentët tuaj. Duke pasur fjalë kyçe 
+në  emrin  tuaj  të  domain-it    rritet  numri  i  klikimeve  përmes  regjistrimeve  të  motorëve  të 
+kërkimit dhe reklamave të paguara, si dhe bëhet më i lehtë përdorimi i fjalëve kyçe. 
+Mbani dy deri në tre fjalë në emrin e domain-it që do të jetë e lehtë për ti memorizuar. Disa 
+nga faqet më të rëndësishme të internetit bëjnë një punë të madhe në promovim për të krijuar 
+fjalën  e  tyre  në treg.  Disa  shembuj  janë  eBay,  Yahoo  ,  Expedia,  Slashdot,  Fark,  Wikipedia, 
+Google, etj. 
+2.6  Stili  File naming  
+✓ Emri i skedarit duhet të jetë i shkurtër dhe përshkrues. 
+✓ Gjithmonë është mirë të përdorni të njëjtat fjalë kyçe në një filename, si dhe në titullin 
+e faqes. 
+✓ Mos   përdorni   emrat   e   skedarëve   si   service.htm   ose   job.htm   pasi   ato   janë   të 
+përgjithshme.    Përdorni    emrin    aktual    të    shërbimit    në    emrin    e    skedarit    si           
+kompjuter-repairing.htm. 
+✓ Mos përdorni më shumë se 3-4 fjalë në emrat e skedarëve. 
+✓ Ndajini fjalët kyçe me vije në mes dhe jo underscore. 
+ 
+• Emrat e skedarëve që google i sheh si të duhurit janë si më poshtë: 
+seo-relevant-filename as seo relevant filename 
+• Emrat e skedarëve me underscore nuk janë një opsion i mirë. 
+seo_relevant_filename as seorelevantfilename  
+----------------Page (13) Break----------------
+ 
+ 
+15 
+3.  SEO – Optimizimi i fjalëve kyçe. 
+      3.1  Frekuenca e fjalëve kyçe 
+Frekuenca llogaritet mbi bazën e herëve që një fjalë kyçe shfaqet në titullin e një website ose në 
+përshkrimin e websites. Përsërisni fjalët kyçe në një dokument sa më shumë të jetë e mundur, 
+dhe tre deri në shtatë herë në listën tuaj të metatageve. 
+      3.2  Pesha e fjalëve kyçe 
+I  referohet  numrit  të  fjalëve  që  shfaqen  në  faqen  tuaj  të  internetit  në  krahasim  me  numrin  e 
+përgjithshëm  të  fjalëve  që  shfaqen  në të  njëjtën  faqe.  Disa  motorë  kërkimi  e  konsiderojnë 
+peshën e  fjalëve  kyçe  kur  bëjnë rankimin  e  websites  në bazë të një fjale  kyçe  të caktuar. Një 
+teknikë që funksionon shpesh është ndarja në disa faqe më të vogla, zakonisht të mëdha sa një 
+paragraf, që theksojnë fjalë të caktuara. Në këtë mënyrë rritet pesha e fjalës që kemi theksuar.   
+      3.3  Rëndësia e fjalëve kyçe  
+Kjo i referohet se sa në fillim apo lart në një faqe, janë gjetur fjalët kyçe. Vendosja e fjalëve 
+kyçe  në  titullin  e  parë  dhe  në  paragrafin  e  parë u  jep  atyre  rëndësi.Vendi  ku  janë vendosur 
+fjalët  kyçe është shumë i  rëndësishëm.  Psh  në pjesën  më të madhe  të kërkimeve  vendosja  e 
+fjalëve kyçe në titujt e faqes ose në heading tags u jep më shumë  rëndësi atyre. 
+          
+      3.4  Mjeti Keyword Suggestion  
+ 
+Ky mjet sugjeron fjalë kyçe të lidhura me fjalën tonë të cilat mund të përdoren gjatë kryerjes së 
+optimizimit. 
+      3.5  Vlerësuesi Keyword Traffic 
+ 
+Ky  mjet  na  tregon  rreth  përafërsisht  sa  kërkime ditore fjalët  kyçe  do  të  merrnin.  Ky  mjet 
+përdoret për të hulumtuar fjalë kyçe më të mira për faqen tonë të internetit. 
+ 
+      3.6  Vendi më i mirë për të vendosur fjalët kyçe: 
+• Fjalët kyçe të vendosen në <title> tag(s). 
+• Fjalët kyçe të vendosen në <meta name="description">. 
+----------------Page (14) Break----------------
+ 
+ 
+16 
+• Fjalët kyçe të vendosen në <meta name="keyword">. 
+• Fjalët   kyçe   në<h1>   ose   në headline   të tjera. I   ndihmon   vizitorët   të kuptojnë 
+përmbajtjen e websites dhe mënyrën se si ajo është organizuar. 
+ 
+ 
+      Tabela 6.  Optimizimi me H1 dhe paraqitja në Browser. 
+• Fjalët kyçe në <a href="http://yourcompany.com">keywords</a> link tags. 
+• Fjalët kyçe në alt tags.  
+• Fjalët kyçe në <!--> taget e komentit. 
+• Fjalët kyçe në URL ose në adresën e website.  
+ 
+----------------Page (15) Break----------------
+ 
+ 
+17 
+4.  Digital Marketing 
+Le të marrim një rast studimi konkret,një website të ndërtuar me Wordpress (https://Primis.al). 
+Për  këtë  website  do  të  përdorim  disa  metoda  për  të  parë  peformancën  e  tij  ne  Digital 
+Marketing (SEO).  Do të shohim në përfundim sugjerimet që na ofron metoda përkatëse për 
+optimizimin e websites. 
+  A.  SEO Audit Tool 
+Shkruajmë të dhënat për websiten tonë, keyword-i që kam zgjedhur është primis dhe rezultatet 
+janë si më poshtë: 
+ 
+ 
+Tabela 7. Vendosja e të dhënave për Primis.al 
+ 
+ 
+ 
+ 
+----------------Page (16) Break----------------
+ 
+ 
+18 
+    
+ 
+                                Tabela 8.  Shpejtësia dhe URL                                     
+ 
+Tabela 9.  Analiza e imazheve  
+ 
+----------------Page (17) Break----------------
+ 
+ 
+19 
+ 
+                Tabela 10. Analiza e pesë fjalëve më të përdorura 
+ 
+                    
+Tabela 11. Analiza për rrjetet 
+sociale            
+----------------Page (18) Break----------------
+ 
+ 
+20 
+Nga analiza e mësipërme ka rezultuar që website ynë nuk ka një performancë të lartë 
+përkatësisht 76%. Sugjerimet për elementët përkatës janë paraqitur me anë të tabelave të 
+mësipërme. 
+ B. Google PageSpeed Insights 
+ 
+ 
+ 
+Tabela 12. Analiza e aplikacionit mobile.  
+ 
+ 
+ 
+                                             
+Tabela 13. Sugjerim për optimizimin e imazheve 
+----------------Page (19) Break----------------
+ 
+ 
+21 
+• Për analizën e websites në Desktop: 
+ 
+ 
+ 
+Tabela 14. Analiza e aplikacionit ne Desktop 
+ 
+ 
+                                                           
+Tabela 15. Sugjerim per optimizim, minimizimi i CSS 
+----------------Page (20) Break----------------
+ 
+ 
+22 
+Me metoden e dyte kam kontrolluar performancen e websites ne Desktop dhe Mobile. 
+Ka rezultuar performancë e ulët përkatësisht 45% për Mobile dhe 21% për Desktop. 
+Sugjerimet për optimizimin e websites janë paraqitur në tabelat e mësipërme.  
+5. Hapat e optimizimit të Website-it 
+1. Ndryshimi  i  parë  që  bejmë është  struktura  e  permalinks.  Në  Website-in e ndërtuar, “by  
+default” ky    opsion    është    i vendosur    ?p=123 njësoj si në tabelën më    poshtë:     
+                                 
+Tabela 17.  Ndryshimi i strukturës së permalinks 
+Pra  identifikimi  i  artikujve  dhe  faqeve  bëhet  me  anë  të  ID  së  tij.Ky  lloj  identifikimi  nuk 
+ndihmon  në  të  qenurit  të identifikueshëm  nga  motorët  e  kërkimit.  Në  këtë  mënyrë  është  i 
+nevojshëm optimizimi i strukturës. Struktura që zgjedhim është /%postname%/ 
+                   
+                                 Tabela 18.  Ndryshimi i strukturës së permalinks. 
+Konkretisht zbatuar në site do kemi rezultatin e mëposhtëm si URL: 
+       
+Tabela 19. Optimizimi i URL 
+----------------Page (21) Break----------------
+ 
+ 
+23 
+          Tanimë me këtë strukturë presim ndryshimet e mëposhtme:  
+o Çdo hapësirë bosh zëvendësohet me (-). Sipas Google Webmasters, (-) është më e preferuar sesa 
+(_) për një arsye shumë të thjeshtë.Në rast se faqja jonë përmban në link apartament_me_qera, 
+kjo konsiderohet një fjalë e vetme ku apartament dhe qera janë të pandashme nga njëra tjetra.Në 
+këtë    mënyrë    përdoruesi    duhet    të    kërkojë    tek    motorët e    kërkimit    ekzaktësisht 
+apartament_me_qera në mënyrë që ti shfaqet si rezultat artikulli/faqja jonë. Nëse  hapësirat do 
+jenë  të  zëvëndësuara  me  (-)  atëherë apartament  dhe  qera konsiderohen  si  fjalë  të  veçanta  dhe 
+përdoruesi mund të depërtojë më lehtë në faqen tonë, duke rritur kështu mundësitë për trafik. 
+o Çdo  shkronjë  kthehet  në  lowercase. URL  bëhet  më  e  këndshme,  më  e  kuptueshme  dhe  më  e 
+memorizueshme në syrin e përdoruesit. 
+o Fjalët kyç mund të jenë në URL. Ky përbën një avantazh tepër të madh duke qenë se përdoruesi 
+shtyp fjalët kyç në lidhje me informacionin që ka nevojë dhe prania e këtyre fjalëve kyç në URL 
+e bën më të lehtë të gjendet. 
+ 
+2. Titujt  
+o Yoast ndër të tjera ofron mundësinë që ne të përcaktojmë mënyrën sesi titujt e faqeve,postimeve 
+etj, do të shfaqen. Në Websiten tonë ato paraprakisht janë si më poshtë: 
+ 
+Tabela 20.  Konfigurimi fillestar formatit të titullit 
+ 
+ 
+ 
+----------------Page (22) Break----------------
+ 
+ 
+24 
+ 
+Tabela 21. Optimizimi i formatit të titullit 
+ 
+Evidentojmë nga formati që:  
+%%title%% - Zëvendësohet me titullin e faqes/postimit  
+%%sep%% - Ndarësi i përzgjedhur më sipër në opsionet e plugin nga ana jonë do zëvendësojë 
+ndarësin në titull.  
+%%sitename%% - Emri site-it.  
+3. Optimizimi i imazheve. 
+Imazhet shoqëruese të artikujve apo postimeve kanë gjithashtu rëndësinë  e tyre.  Imazhet ndihmojnë 
+përdoruesin  të  kuptojë  më mirë  shkrimin  dhe  gjithashtu  mund  të jenë  terheqëse  për  syrin  e  tij  duke 
+bërë që ai të zgjedhë atë shkrim për të lexuar. Optimizimi i imazheve mund të bëhet nga dizenjatori 
+por dhe me ndihmën e plugins. Në vijim do konkretizojmë secilën nga të dy mënyrat.  
+Një imazh i zgjedhur dhe optimizuar mirë plotëson disa kushte. Ai imazh do jetë një prezantim dhe 
+konkretizim  i  titullit  të  artikullit,  do  shtyjë  përdoruesin  të  lexojë  artikulllin  dhe  do  jetë  ndihmesë 
+përshkrimi i  tij  në  kërkimin  e  fjalëve  kyç.  Konkretisht më  poshtë  paraqitet  një  imazh  me  të  dhënat 
+origjinale siç është shkarkuar nga interneti dhe ndryshimet që ne bëjmë për ta optimizuar. 
+ 
+----------------Page (23) Break----------------
+ 
+ 
+25 
+             
+   Tabela 22. Imazhi perpara optimizimit                   Tabela 23. Imazhi pas optimizimit.  
+Problemi  qëndron  në  faktin  se  në  rastin  e  një  Website-i të  madh,  ku  çdo  ditë  postohen  dhe  hidhen 
+artikuj  të  ndryshëm,  bëhet  e  vështirë  të  optimizosh çdo  imazh  individualisht.  Përveç kësaj  do 
+konsumonte shumë kohë si proçes. Për këtë përdorim një plugin të caktuar(SEO Optimized Images) I 
+cili  merret  posaçërisht më  optimizimin  e  imazheve.  Ky  plugin konfigurohet  në  mënyrë  që  për  çdo 
+imazh  në  site,  të  bëjë  në  mënyrë  automatike  vendosjen  e  titullit  dhe  Alt  përkatëse,  bazuar  tek  të 
+dhënat  e  artikullit.  Konkretsht  në  Website  janë  përzgjedhur  strukturat  e  mëposhtme  ku përcaktohen 
+nga do merret burimi i shkrimeve në foto: 
+ 
+ 
+----------------Page (24) Break----------------
+ 
+ 
+26 
+ 
+Tabela 24. Konfigurimi plugin-it për Alt e imazheve 
+XML Sitemap 
+Një  tjetër  optimizim  i  nevojshëm  për  Website-in  tonë  është  një  XML  sitemap  i  postimeve,  faqeve, 
+tipeve  custom  të  postimeve  , kategorive  tag-eve  etj,.  Ky  optimizim  sjell  shumë  përfitime për  ne  në 
+lidhje me motorët  e  kërkimit.  Në  një Website  me  sitemap të ndërtuar dhe  aktivizuar, sa  herë  që  një 
+postim  i  ri  shtohet  apo  një  faqe  e  re  krijohet,  ky  sitemap  i  dërgohet  automatikisht  motorëve  të 
+kërkimit.  Kështu  proçesi  gjatë  së  cilit  motori  kërkimit  gjen faqen  tonë bëhet  më i  mundur  dhe  më i 
+shpejtë, duke e bërë faqen tonë më të frekuentuar nga përdoruesit duke qenë se ju shfaqet si rezultat. 
+ 
+ 
+                                     Tabela 25. Opsioni i krijimit të XML Sitemap 
+----------------Page (25) Break----------------
+ 
+ 
+27 
+ 
+Pasi  zgjedhim  të  bëjmë  XML  sitemap  të  faqes  web,  rezultatet  do  shfaqen  si  më  poshtë,  ku  shohim 
+katër  grupime. Secili  grup  mban  elementet  përkatëse  të  krijuara  si  për  shembull,  page-sitemap 
+përmban  të  gjitha  faqet  e  krijuara  ne  faqen  web.Po  njëlloj  dhe  post-sitemap  përmban  të  gjitha 
+postimet e krijuara gjer më tani në site. 
+ 
+Tabela 26. Analiza për çdo faqe të websites, Burimi: Autori 
+ 
+Tabela 27. Analiza për çdo faqe të website, Burimi: Autori 
+ 
+ 
+ 
+ 
+----------------Page (26) Break----------------
+ 
+ 
+28 
+6.  Përfundime 
+ 
+Në këtë punim, së pari kam shqyrtuar dy  algoritme kryesore për rankimin e faqeve  web dhe 
+bazuar  në të dhëna  sekondare  të cituara  më sipër  kam  bërë krahasimin  e  tyre  duke  dalë në 
+përfundimin se Algoritmi i Ngjashmërisë Semantike ka parametra më të larta. Ky përfundim 
+është marrë duke u bazuar  në faktorët e marrë në shqyrtim nga studimi i kryer. 
+ 
+Së dyti, nga matja e performancës së websites që kam përzgjegjur të marr nën shqyrtim më ka 
+rezultuar një nivel performance jo shumë i lartë. Konkretisht 76 % nga Seo Audit Tool dhe 21 
+% nga Google PageSpeed Insights. 
+Megjithatë  ky  studim  ka  rezultuar  i  vlefshëm  pasi  nga metodat    e  përdorura  kam  marrë 
+sugjerime  konkrete  mbi  të gjithë elementët  e  websites  që rezultonin  me  performancë të ulët 
+dhe kishin nevojë për përmirësim. 
+ 
+Aftësitë  e  mira  SEO  tregojnë gjithashtu aftësi  të  mira të menaxhimit  të  webit,  pasi tregojnë 
+për  organizimin e informacionit dhe përmbajtjen e lëndës. 
+ 
+Së  fundi,  faqet  duhet  të  bëjnë  atë  që  është  e  nevojshme  pasi  konkurrenca është shumë e 
+madhe, që do të thotë i duhet kushtuar vëmendje proçeseve kyçe si SEO në mënyrë që të rritet 
+dukshmëria e websites përkundrejt të tjerëve. Për këtë arsye kryefjala e këtij punimi jane disa 
+taktika mbi  titujt  dhe  imazhet qe  kane  rezultuar  te suksesshme  ne  menyre  qe  te  plotësohet 
+qëllimi kryesor: Website të jetë në krye të motorëve të kërkimit. 
+Metodat  e  SEO  do  të  vazhdojnë  të  rriten  në  rëndësi  dhe  hulumtimi  në  këtë  fushë  është  i 
+detyruar të rritet ashtu si interneti vazhdon të rritet.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+----------------Page (27) Break----------------
+ 
+ 
+29 
+Bibliografia 
+ 
+[1] Spencer,  S. Stricchiola ,  J. Enge,  E  (2012). The  Art  of  SEO:  Mastering  Search  Engine 
+Optimization. 
+[2] Gunjan, V. K. (2012). Search engine optimization with Google. 
+ URL: https://www.ijcsi.org/papers/IJCSI-9-1-3-206-214.pdf 
+[3] Yoast Tutorial [online].  
+URL: https://yoast.com/wordpress-seo/ 
+[4] Tutorials Point, SEO tutorials. [Online]  
+URL: http://www.tutorialspoint.com/seo/ 
+[5] Torbert, M. (2011, 10 12). WordPress-all in one SEO Pack. Retrieved 12 13, 2011, from 
+ URL: http://wordpress.org: http://wordpress.org/extend/plugins/all-in-one-seo-pack/ 
+[6] Spencer,  S. Stricchiola ,  J. Enge,  E  (2012). The  Art  of  SEO:  Mastering  Search  Engine 
+Optimization 
+[7]  Marziah  Karch.  About.com  Guide.  What  Is  PageRank  and  How  Do  I  Use  It?  [Online]  
+URL: http://google.about.com/od/searchengineoptimization/a/pagerankexplain.htm 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+----------------Page (28) Break----------------
+ 
+ 
+30 
+ 
+Zvarritja (Web Crawling) është një proçes gjatë së cilit një program kompjuterik 
+kalon nga një faqe tek tjetra dhe“skanohen”përmbajtjet e faqeve. Gjatë këtij proçesi  m
+otori kërkimit merr në shqyrtim fjalët kyçe të faqes, llojin e përmbatjes së faqes,      lin
+qet në faqe etj. Ky informacion që mblidhet  më pas dërgohet në server për tu  bërëgati
+ për indeksim.Programet janë të destinuara ti japin proritet ndër të tjera fjalëve 
+kyç në header, metadata dhe fjalitë e para. Ky proçes është një proçes i vazhdueshëmd
+he sistematik duke qenë se përmbajtjet e faqeve evoluojnë dita ditës dhe kështu 
+bëhet i rëndësishëm indeksimi i ri si rezultat i informacioneve të reja që vijnë nga 
+crawling.   
+Në këtë pikë bëhet i rëndësishëm SEO.Duke qenë se programet gjatë Crawling mbledhin informacion 
+nga faqet dhe i indeksojnë, informacion të cilin më pas do përdorin për t’ja disponuar faqen si rezultat 
+organik përdoruesit, është e rëndësishme të bëhet një optimizim i mire i faqes. 
+Duhet patur  parasysh që fjalët kyç që ne presim të na identifikohen për lexuesin, 
+të vendosen në pjesët e lexueshme nga web crawlers në mënyrë që të arrijmë të 
+renditemi lart në faqen e rezultateve organike. 
+Sa më efektiv të jetë optimizimi i faqes, aq më të  përzgjedhura  mirë  do jenë fjalët   dhe aq me  lehtë 
+do  i  shfaqet  faqja  jonë  përdoruesit  duke qenë se merr renditje më të lartë nga motori i kërkimit. 
+Zvarritja (Web Crawling) eshte nje process gjate se cilit nje program kompjuterik kalon nga nj faqe tek 
+tjetra dhe ‘skanohen ’ permbajtjet e faqeve. Gjate ketij procesi motor ii kerkimit merr ne shqyrtim 
+fjalet kyce te faqes, llojin e permbajtjes se faqes, linqet ne faqe etj. Ky informacion qe mblidhet me pas 
+dergohet ne server per tub ere gati per indeksim. Programet jane te destinuara ti japin prioritet nder te 
+tjera fjaleve kyc ne header, metadata dhe fjalite e para. Ky process eshte nje process i vazhdueshem 
+dhe sistematik duke qene se permbajtjet e faqeve evoluojne dita dites dhe keshtu behet i rendesishem 
+ideksimi i ri si rezultat i informacioneve te reja qe vijne nga crawling. 
+ 
+ 
+ 
+ 
+ 
+----------------Page (29) Break----------------

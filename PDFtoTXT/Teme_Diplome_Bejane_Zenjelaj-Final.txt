@@ -1,0 +1,1221 @@
+1 
+ 
+UNIVERSITETI I TIRANËS 
+FAKULTETI I EKONOMISË 
+DEPARTAMENTI STATISTIKË 
+DHE INFORMATIKË E ZBATUAR 
+  
+ 
+ 
+Temë Diplome 
+ 
+ 
+ 
+VPN- BENEFITE, KOMPONENT DHE IMPLEMENTIM  
+ 
+ 
+ 
+Diplomë BACHELOR 
+ 
+ 
+ 
+ 
+ 
+Emri/Mbiemri i Studentit:                                Emri/Mbiemri i Udhëheqësit: 
+Bejane Zenjelaj                                                       Prof. Dr. Areti Stringa 
+ 
+Tiranë, Tetor  2018 
+----------------Page (0) Break----------------
+2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Nuk pretendoj që në këtë punim të kem arritur të trajtoj në perfeksion VPN, dhe gjithcka rreth tyre, 
+por shpresoj që sado pak të kem arritur të krijoj një punim te plotë dhe gjithpërfshires. Krijimi i këtij 
+punimi ishte një rrugëtim i gjatë të cilin pata fatin të mos e bëj vetëm.  Nuk mund të lë pa përmendur 
+profesoren udhëheqese të time, Prof. Areti Stringa, e cila u tregua gjithmonë e gatshme për të më 
+mbështetur dhe përgjigjur cdo pyetjeje  të timen. Gjithashtu dëshiroj të permend fakultetin ku unë 
+kalova 3 vitet e Bachelor, që kanë qenë të paharrueshme për mua. Së treti dëshiroj të falemnderoj 
+kompaninë në të cilën unë punoj për lehtësimet e mundura. 
+ 
+ 
+ 
+ 
+Faleminderit të gjithëve!
+----------------Page (1) Break----------------
+3 
+ 
+ 
+ 
+Abstrakt 
+Interneti sot është një domosdoshmëri e të gjithëve dhe si i tillë ai ka marrë një zhvillim të gjithanshëm. 
+Por, si me cdo gjë tjetër, një zhvillim i gjithanshëm sjell dhe probleme të pa identifikuara më parë. Një 
+nga problemet kryesore është dhe siguria. Tashmë asnjëherë nuk jemi 100% të mbrojtur kur jemi online 
+dhe ky disavantazh i madh i internetit duhet rregulluar disi. Një nga shumë mënyrat e gjetur janë VPN. 
+VPN është një rrjet privat virtual krijuar brenda një rrjeti publik që me anë të disa teknologjive të caktuara 
+siguron privatësinë dhe sigurinë e të dhënave.  Demonstrimi i çka u përmend më sipër është dhe qëllimi i 
+kësaj teme. 
+----------------Page (2) Break----------------
+4 
+ 
+ 
+Pёrmbajtja 
+Tabela e figurave ........................................................................................................................................... 5 
+Hyrje ............................................................................................................................................................. 6 
+Rishikim i literaturës ..................................................................................................................................... 6 
+1. Bazat e VPN .............................................................................................................................................. 7 
+1.1  Vështrim i përgjitshëm rreth VPN. .................................................................................................... 7 
+1.2  Nevojat dhe përfitimet nga VPN ........................................................................................................ 8 
+1.3 Ndarjet e VPN ..................................................................................................................................... 9 
+1.4 Veprimet qё bёn VPN ....................................................................................................................... 10 
+1.5  Kërkesat e VPN ................................................................................................................................ 10 
+1.6 Performanca e VPN .......................................................................................................................... 12 
+1.7 Enkriptimi në VPN ........................................................................................................................... 13 
+2. Teknologjitë e VPN ................................................................................................................................ 15 
+2.1 Firewall-et ......................................................................................................................................... 15 
+2.2 Enkriptimi dhe autentifikimi ............................................................................................................. 21 
+3. Protokollet e tynelimit në VPN ............................................................................................................... 25 
+3.1 Protokolli PPTP ................................................................................................................................ 25 
+3.2 L2TP mbi IPSec VPNs ..................................................................................................................... 25 
+3.3 SSTP ................................................................................................................................................. 26 
+3.4IKEv2 ................................................................................................................................................. 29 
+3.5 Open VPN ......................................................................................................................................... 29 
+3.6 L2F .................................................................................................................................................... 30 
+4. Implementimi i VPN ............................................................................................................................... 30 
+4.1 Konfigurimi i serverit. ...................................................................................................................... 31 
+4.1.1 Krijimi i mjedisit për instalimin e VPN Server.......................................................................... 31 
+4.1.2 Konfigurimi i VPN server. ......................................................................................................... 34 
+4.2 Konfigurimi I lidhjes klient-server. .................................................................................................. 37 
+Përfundime .................................................................................................................................................. 39 
+Referencat ................................................................................................................................................... 40 
+----------------Page (3) Break----------------
+5 
+ 
+ 
+Tabela e figurave 
+ 
+Figura 1 Skema e VPN ndërmjet dy rrjeteve të sigurtë ................................................................................ 7 
+Figura 2 Rrjeti privat virtual (VPN) .............................................................................................................. 8 
+Figure 3 Pozicionimi i firewall-eve .............................................................................................................. 15 
+Figure 4 Njё Firewall tipik .......................................................................................................................... 16 
+Figure 5 Një paketë filtrimi në ruter ........................................................................................................... 17 
+Figure 6 Njё Firewall host-bastion.............................................................................................................. 18 
+Figure 7 Një zonë perimetri në firewall ...................................................................................................... 19 
+Figure 8 Një server proxy si një firewall .................................................................................................... 20 
+Figure 9 Funksionet kriptografike............................................................................................................... 22 
+Figure 10 Mekanizmi i lidhjes SSTP. ......................................................................................................... 28 
+Figure 11 Përzgjedhja për instalim e AD, DHCP dhe DNS. ...................................................................... 31 
+Figure 12 Përzgjedhja e roleve të shërbimit ................................................................................................ 32 
+Figure 13 Vendosja e domainit për në direktorinë active ........................................................................... 32 
+Figure 14 Vendosja e NetBIOS. ................................................................................................................. 33 
+Figure 15 Instalimi i Remote Acess ............................................................................................................ 34 
+Figure 16 Konfigurimi i aksesit në distancë ............................................................................................... 34 
+Figure 17 Konfigurimi i acess remote nga Serveri. .................................................................................... 35 
+Figure 18 Përshtatja në konfigurimin e serverit të aksesit në distancë. ...................................................... 35 
+Figure 19 Përzgjedhja e VPN nga llojet e aksesit në distancë. ................................................................... 36 
+Figure 20 Vendosja e kredencialeve në Acitve Directory .......................................................................... 36 
+Figure 21 Konfigurimet IP në Windows ..................................................................................................... 37 
+Figure 22 Krijimi i lidhjes VPN, ................................................................................................................. 37 
+Figure 23 Përzgjedhja e internetit për tu lidhur me serverin AD. ............................................................... 38 
+Figure 24 Përzgjedhja e vetive të VPN. ...................................................................................................... 38 
+Figure 25 Pamja pas përfundimit ................................................................................................................ 39 
+ 
+----------------Page (4) Break----------------
+6 
+ 
+Hyrje  
+Jetojmë në shekullin e 21-të, në një kohë kur të qenurit online vjen natyrshëm për këdo. Ajo çka para pak 
+vitesh  mendohej  si  komoditet,  sot  shihet  si  domosdoshmëri. Është e  domosdoshme  prania  e  internetit 
+gjatë çdo hapi të jetës dhe punës tonë dhe kjo ndonëse na ka lehtësuar shumë, na ka sjellë dhe shumë 
+probleme. Problemi me kryesor dhe më i madhi ngelet siguria. Rrjeti i internetiti është i tillë që ne nuk 
+mund ta kontrollojmë dot dhe si pasojë kjo na lë shume vurnerabël ndaj shulmeve apo 'syve' dashakeq.  
+Por si mund të mbrohemi ne nga kjo e metë e internetit? Fatmirësisht zhvilluesit dhe shkencëtarët kanë 
+arritur në shumë mënyra dhe pikërisht një prej tyre do të diskutojmë sot. VPN-Virtual Private Netëork 
+është pikërisht një nga këto mënyra. Por cfarë është ajo? VPN është krijmi i një rrugëkalimi të sigurt në 
+rrjetën e madhe të internetit duke na siguruar privatësinë.  
+Siç  u  përmend  privatësia është pika  kyce  e  kësaj  teknologjie  dhe  për  këtë përdoret shumë enkriptimi, 
+protokollet e ndryshme dhe bashkëpunimi me fireëallet për të krijuar atë tunelin e sigurt. Në vazhdimësi 
+të temës do të trajtohen pikërisht këto komponentë. 
+Teoria na ndihmon shumë të kuptojmë thelbin e çështjes, por është praktika ajo që na e fikson atë në 
+mendje. Duke ndjekur këtë filozofi në përmbajtje të këtij punimi gjendet dhe një implementim praktik i 
+rastit duke treguar hap pas hapi.  
+Rishikim i literaturës 
+Implementimi i VPN në rrjetin tonë është një proçes i cili kërkon një studim të mëparshëm të VPN, pasi 
+ndonëse janë teknologji mbizotëruese sot, ato kërkojnë një proçes të mirëstudiuar për t'u implementuar. 
+Implementimi që do të shihet më poshtë është rasti kur ne krijojmë çdo gjë 'from scratch' në kompjuter 
+lokal, por përgjithësisht në profesionet tona në kompani do të na duhet te punojmë shumë me pjesën e 
+fundit të konfigurimit të saj. 
+Ekzistojnë disa mënyra të ndryshme për të instaluar VPN dhe punime rreth kësaj, por gjithësecila prej 
+tyre fokusohet në një aspekt të veçantë. Në këtë punim synohet të paraqitet mënyra e plotë e instalimit.  
+Fillimisht do të instalojmë Virtual Machine dhe serverin e zgjedhur në të. Më pas duhet bërë konfigurimi i 
+Active Directory dhe zbatimi i proçedurave pasardhësë. Pasi përfundohet kjo, kalojmë të konfigurimi i 
+NetBios  për  të  komunikuar  në  rrjetin  lokal.  Rrjedhimisht  kalojmë  të  Remote  Access  dhe  te  vet 
+konfigurimi i VPN.  
+Në fund të gjithë këtij proçesi na lind e drejta për të krijuar lidhjen me VPN, që është dhe hapi i fundit. 
+Kjo pjesë është shumë e thjeshtë dhe është përgjithësisht ajo çka shumë programues mund t'ju duhet të 
+konfigurojnë në kompjuterat e tyre të punës.  
+----------------Page (5) Break----------------
+7 
+ 
+ 
+1. Bazat e VPN 
+1.1  Vështrim i përgjitshëm rreth VPN. 
+ 
+VPN është një mënyrë e  sigurt  e  kalimit  të të dhënavë   në një rrjet  të pasigurt duke  mundësuar 
+enkriptimin  e  të dhënave  gjatë kalimit  në tunel. VPN  ka  dy  tipe,  lidhjen  me  akses  të largët  të një 
+përdoruesi të vetëm në rrjetin e kompanise, dhe lidhjen site-to-site që nënkupton lidhjen midis dy rrjëtave 
+të sigurta  të kompanise. VPN gjithashtu i  jep  kompanisë  mundësi  të  ulë  kostot e  saj  me  një lidhje  të 
+tillë.[1]  
+ 
+ 
+Figura 1 Skema e VPN ndërmjet dy rrjeteve të sigurtë 
+Tipret bazë për VPN janë: 
+ 
+Është virtuale: 
+VPN nuk është një rrjet fizik sigurie që mund të zotërohet nga përdoruesi, por është një lidhje në rrjet 
+midis përdoruesve të ndryshëm që me anë të teknikave të protokollit të tunelimit bëhet i dukshëm për 
+përdoruesin.Për të kapërcyer pasojat e mospasjes së një rrjeti fizik, duhet të krijohet marrëveshja e nivelit 
+të  shërbimit  për  të  ofruar,  në  mënyrën  më  të  mirë  të  mundshme,  performancë  dhe  disponueshmëri  të 
+kërkesave që i nevojiten VPN. 
+ 
+Është Private: 
+Privatësia  e  VPN  qëndron  në faktin  se  ai  siguron  konfidencialitetin  dhe  integritetin  e  të dhënave. 
+Përgjithësisht trafiku i VPN kalon  shpesh kalon nëpër rrjete publike  dhe kështu ky funksion bëhet i 
+domosdoshëm.  Kërkesat e sigurisë përfshijnë: 
+ Vërtetësia e origjinës së të dhënave 
+ Ripërtëritja  e çelsave kriptografikë në mënyrë ciklike 
+----------------Page (6) Break----------------
+8 
+ 
+ Enkriptimin e të dhënave 
+ Maskimi i adresës.  
+ 
+Është rrjet: 
+Edhe pse fizikisht jo i tillë, VPN-ja trajtohet si një zgjerim të infrastrukturës së rrjetit të kompanisë. Kjo 
+do të thotë që duhet të jetë në dispozicion të pjesës tjetër të rrjetit, me anë të routerave dhe adresimit. 
+ 
+1.2  Nevojat dhe përfitimet nga VPN 
+ 
+Të gjithë e dimë se interneti është i domosdoshëm në ditët e sotme dhe gjithnjë e më shumë jeta jonë , por 
+dhe  e ardhmja e biznesit, po drejtohet drejt tij. Duke trajtuar aspektin e biznesit, sot thuajse çdo kompani 
+ka një ëebsite të vetin ku reklamohet, ka një mënyrë komunikimi të brendshme etj,, dhe kjo gjë ka rritur 
+nevojën për VPN, pasi interneti është si një xhungël ku duhet te mbrohesh nga çdo sulm i mundshëm dhe 
+pikërisht këty hyn teknologjia VPN. 
+Figura e mëposhtme ilustron kalimin e sigurt të të dhënave në rrjetin e madh të internetit mes degëve apo 
+komponentëve të ndryshëm të një kompanie. Ofruesit e shërbimit në internet (ISPs) ofrojnë shërbimin në 
+internet me kosto efektive (nëpërmjet lidhjeve direkte apo numrave të telefonave), duke eleminuar linjat e 
+dedikuara, kostot e telefonatave të largëta, lidhjet e gjata, etj. [4] 
+ 
+ 
+ 
+         Degë zyre 
+ 
+Internet/Rrjet tjetër publik 
+ 
+ 
+Interneti i            Partnerë 
+Kompanisë              
+                                                                                                                                                                                                        
+          Biznesi 
+ 
+Figura 2 Rrjeti privat virtual (VPN) 
+ 
+Statistikisht është llogaritur një përfitim 47% e kostos së ËAN dhe 8-% e kostos së lidhjes dial-up, nga 
+zvendësimi i linjave të dedikuara VPN; statistikë kjo e marrë nga një raport kërkimor në 1997. 
+Teknologjitë e  VPN po  bëhen  gjithnjë  e  më  të  standartizuara, por jo  të  gjitha  produktet  në  treg 
+mbështesin të gjitha metodat VPN. Ndërkohë që disa metoda të VPN mund të jenë përdorur në lidhjen 
+me njëra tjetrën, disa të tjera janë zgjidhje alternative. VPN mund të përcaktohet duke patur parasysh 
+nevojat në bazë të pikave të mëposhtme: 
+ 
+ Sigurinë 
+ Nevojat e biznesit 
+----------------Page (7) Break----------------
+9 
+ 
+ Përshtatja me sistemin aktual 
+ Perfomancën 
+  
+Zgjidhja  ideale  do  të ishte  zhvillimi  i  një teknologjie  VPN  nga  kompanitë bazuar  në nevojat  e  tuyre. 
+Zgjidhjet e VPN bazuar në IPSEC sot avancojnë kryesisht në mjedisinIPv4, por është e rëndësishme që 
+ato  kanë  mundësi  dhe  kapacitet  për  tu  zhvendosur  në  IPv6 dhe  ruajtur  kominikimin  e  brendshëm  të 
+kompanisë. Eksperienca me rrjetat luan gjithashtu një rol shumë të rëndësishëm në këtë ekuacion. [4] 
+ 
+1.3 Ndarjet e VPN 
+1.3.1 Llojet e VPN  
+VPN mund të kategorizohet si më poshtë: [2] 
+1. VPN e bazuar në software mundëson më tepër fleksibilitet në atë se si do të manaxhohet trafiku 
+i rrjetit. Ky tip është i përshtatshëm kur pika fundore e VPN nuk është e kontrolluar nga e njëjta 
+palë, dhe ku disa fireëalle të ndryshme apo dhe rutera janë në përdorim. Ajo do të përdoret me 
+përshpejtues të enkriptimit të hardware për të rritur performancën. 
+ 
+2. VPN e bazuar në firewall është një nga llojet e VPN që bazohet në aftësitë e firewall. Ky tip i 
+VPN e bën sigurinë duke përdorur mekanizmat e firewallit për tu futur në aksesin e një rrjeti të 
+brëndshëm. Kjo përfshin përkthimin e adresave, autenticitetin e përdoruesit, alarmet në kohë 
+reale dhe loget e shpeshta. 
+ 
+3. SSL VPN lejon përdoruesit të lidhen me VPN duke përdorur një web browser. Një avantazh në 
+përdorimin e SSL VPN është lehtësia në përdorim, sepse të gjitha standartet që mbështesin web 
+browserat e lejojnë protokollin SSL. 
+ 
+ 
+4. VPN të bazuara në hardware ofron shërbim më të gjërë në rrjet, performancë më të mirë dhe më 
+shumë besueshmëri, që kur nuk ka procesor të ngarkuar. Gjithesi është me i shtrenjtë. 
+ 
+1.3.2 Dy tipet më të shpeshta të VPNs. 
+Remote-Access—E quajtur ndryshe edhe rrjeti privat virtual dial-up (VPDN), është një përdorues i lidhur 
+në një  lidhje lokale dhe  që  ka  punonjës  që  i  nevojiten  të  lidhen  me  rrjetin  privat  nga  vendndodhje  të 
+ndryshme. Tipikisht, një kompani që dëshiron të implementojë një një VPN në distancë disa forma të 
+lidhjes  në  distancë  VPN  përdor  disa  forma  të  lidhjes  dial-up  që  përdoret  nga  ISP-të.  Përdoruesit  në 
+distancë mund të thërrasin një numër 1-800 për të arritur në internet dhe përdorin programin e klientit të 
+VPN për të aksesuar rrjetin e mbrëndshëm të kompanisë. Një shembull i mirë është i një kompanie që i 
+nevojitet  një  akses  në  distancë  i  VPN  është  një  firmë  e  madhe  me  qindra  shitës.  Lidhja  në  distancë 
+mundëson siguri,  enkripton  lidhjen  ndërmjet  kompanisë dhë  përdoruesit  përmes  një  ofrues  shërbimi  si 
+palë e tretë.  [3] 
+----------------Page (8) Break----------------
+10 
+ 
+Site-to-Site - Përmes paisjeve të dedikuara një kompani mund të lidhet me disa përdorues përgjatë një 
+rrjeti publik të tillë si është interneti. Cdo përdorues i nevojitet vetëm një lidhje lokale me rrjetin publik, 
+duke  kursyer  shumë  para  nga  ndërtimi  i  lidhjeve  të  privatizuara  e  të  kushtueshme.  VPN  site-to-site 
+ndërton  ndërmjet  zyrave  të  të  njëjtës  kompani  dhe  quhet  intranet  VPN,  ndërkohë  që  kur  një  lidhje 
+përdoret me klientë ose partnerë biznesi jashtë rrjetit të kompanisë quhet ekstranet VPN. [3] 
+1.4 Veprimet qё bёn VPN 
+ 
+ Enkapsulimi i IP - kjo përfshin bashkëngjitjen e paketave të të dhënave TCP/IP brënda një pakete 
+me  një  adresë  IP  apo  të  një  Fireëall  ose  një  server  që  vepron  si  një  pikë  fundore  VPN.  Ky 
+enkapsulim fsheh hostin. 
+ Enkriptimi - bëhet në pjesën e të dhënave të paketës. Enkriptimi mund të bëhet ose në pjesën e 
+transportit që enkripton të dhënat, ose në pjesën e tynelit e cila enkripton dhe dekripton të dhënat 
+përgjatë transmetimit si të trupit të të dhënave ashtu edhe të kokës. 
+ Autentifikimi - përfshin  krijimin  e  një  domaini  enkriptimi  i  cili  përfshin  autenticitetin  e 
+kompjuterit dhe të dhënave të paketës duke përdorur enkriptimin publik. 
+ 
+ 
+1.5  Kërkesat e VPN 
+ 
+Tani do të trajtojmë që i atribuohen zakonisht VPN, gjërat që do të meren në konsideratë poarandalojnë  
+nga vënia në rrezik e zgjidhjes së VPN. 
+1.5.1 Konsiderimet e sigurisë për VPN 
+Përdorimi i VPN ngre disa shqetësime të sigurisë përtej atyre që ishin të pranishëm në rrjetet më parë .  
+Një kalim të dhënash end-to-end mund të përmbajë: 
+ 
+ Një segment i jashtëm (Internet) që ku navigojnë dhe burimeve të jashtme.  
+ Pajisje  jashtë kontrollit (për  shembull,  aksesin  e  kutisë  së  ISP  në  një  segment  dial-in  dhe 
+ruternat në internet).  
+ Një segment të brëndshëm (intranet) që përmban hoste dhe routera. Disa mund të jenë keqdashës, 
+dhe disa mund të shërbejnë si trafik mes rrjetit të jashtëm dhe të brëndshëm të kompanisë. 
+ Një portë sigurie (Fireëall ose router) që është i vendosur  mes një segmenti të brëndshëm dhe të 
+të jashtëm. 
+ 
+Pra sic kuptohet ka shumë munësit pët të ndryshuar përmbajtjen e datagramës, mundësi për të përgjuar, të 
+bëjë sulme DoS(denial-of-service)etj.[4] 
+ 
+1.5.1.1  Një path tipik end-to-end 
+Për të kuptuar çështjet me siguri të VPN-së end-to-end, ne shohim elementët përgjatë një pathi end-to-
+end. Trafiku end-to-end do të kalojë në tre segmenteve bazë: një segment dial-in, një segment të jashtëm 
+(Internet) dhe një segment të brendshëm (intranet).  
+----------------Page (9) Break----------------
+11 
+ 
+ 
+ Segmenti Dial-in: Ky segment zgjatet nga një makinë e përdoruesit në distancë tek një akses boks të 
+mundësuar nga ISP. Protokollet dhe procedurat të përdorur në lidhje janë specifikuar nga ISP. Sot 
+shumë ISP mbështesin protokollin point-to-point (PPP) në këtë segment. 
+  
+ Rrjeti i jashtëm (Internet): Një trafik i një kompanie në internet nuk und të quhet si e izoluar, ashtu 
+si mund të ishte me një rrjet privat të dedikuar, që kur rrjedh nga VPN të ndryshme është e miksuar në  
+backbone të Internetit. 
+ 
+ Rrjeti  i  brëndshëm  (intranet): Ky  segment  është  në  fund  të  rrugës  së  komunikimit.  Rrjeti  i 
+brëndshëm  është  nën  kontrollin  e  kompanisë. I gjithë  trafiku  në  rrjetin  e  brëndshëm  të  kompanisë 
+gjenerohet nga kompania; shumë pak trafik hyn apo del jashtë saj; bashkë me protokollet ne intranet. 
+  
+1.5.1.2  Ekspozimet në klientin e dial-in 
+Klienti dial-in është kur fillon komunikimi kështu që mbrojtja është në aksesin fizik të klientit dial-in. 
+Klienti duhet të mbrojë kur nuk e ka nën mbikqyrje. Një shembull i thjeshtë është vendosja e passëordit, 
+edhe kur e lë vetëm për një kohë të shkurtër. Fikja e kompjuterit dhe mbyllja e dhomës duhet marë në 
+konsideratë. 
+1.5.1.3  Ekspozimet në segmentin dial-in 
+Segmenti dial-in dërgon trafikun e të dhënave të përdoruesit direkt tek një ISP.  Në rast se të dhënat janë 
+të  pa  enkriptuara, dhe është  mjaft  e  lehtë  për  ISP  për  të  shqyrtuar  të  dhënat  sensitive,  adhtu  dhe  për 
+njëhacker. Enkriptimi i shtresës së linkut ndërmjet hostit në distancë dhe ISP mund të bëjë mbrojtjen nga 
+përgjuesit pasivë, por nuk mund të mbrojë nga një ISP keqbërëse. Që kur ISP mund të dekritpjë rrjedhjen 
+e të dhënave të përdoruesit, të dhënat sensitive janë të akoma në ISP në formë të pa ekriptuar.  
+1.5.1.4  Ekspozimet në internet 
+Në disa skenarë të qasjes në largësi, një ISP ndërton një tynelim për të zgjatur shtrirjen e lidhjeve PPP 
+kështu që pika fundore mund të bëhet kutia e aksesit dhe porta e sigurisë. Në rast se protokolli i tynelimit 
+nuk përfshin tipare të fuqishme të sigurisë, një ISP keqbërëse mundet që fare lehtë të ndërtojë një tynel që 
+të dërgon diku tjeter. Kështu, të dhënat e përdoruesit mund të dërgohen nga një tynel fals tek një portë e 
+ngritur për qëllime keqbërëse ku të dhënat mund të lexohen apo modifikohen. [4] 
+Ka gjithashtu rreziqe në kalimin e datagramit brënda tynelit. Në rast se datagramat janë në formë teksti, 
+ndonjë  ruter  lehtësisht mund  të  shqyrtojë  apo  modifikojë  datagramën,  dhe  një  sulmues  pasiv  mund  të 
+përgjojë në ndonjë nga lidhjet përgjatë rrugës.Enkriptimi link-pas-linku në secilën hap në backbonet e 
+internetit mundet të pengojë përgjimet, por nuk mbron të dhënat e përdoruesit nga nje ruter keqbërës, pasi 
+çdo ruter përgjatë  rrugës  do  të jetë  në  gjëndje  për të  bërë  dekriptimin  të të dhënave  të  përdoruesit,  as 
+enkriptimi i link-by-link nuk mund të mbrojtë nga tynelet false, pasi pikat fundore false të tynelit mund të 
+kenë  akses  në teksin  e  pastër. Edhe  protokollet  popullore  të  tynelimit  si  L2TP  nuk  mundëson  ndonjë 
+siguri  të  fuqishme.  Prandaj,  IETF  ka  rekomanduar  që  trafiku  në  tynel  duhet  të  mbrojet  me  protokolle 
+IPSec. 
+ 
+ 
+----------------Page (10) Break----------------
+12 
+ 
+1.5.1.6  Firewallet dhe ruterat e VPN 
+ 
+Përgjithësisht filtrimi i paketave të IP është i implementuar në Firewalle dhe rutera për të mbrojtur rrjetin 
+privat nga sulmet e internetit. Në situatën ku lidhja e VPN udhëton në Firewalle apo rutera që kryejnë 
+filtrimin e paketave IP si në figurën 5, konfigurimi i Firewallit apo ruterit do të ndryshohet për të lejuar 
+trafikun e VPN përgjatë Firewell apo ruterit. 
+ 
+Specifikisht, ndryshimet në konfigurimet e mëposhtme janë kërkuar për Fireëall apo rutera: 
+ 
+ Aktivizim i përcjelljes së IP 
+ Lejim të portës UDP 500 për IKE  
+ Lejim të protokolleve të IP 50 dhe 51 për ESP dhe AH  
+ Lejim të portës UDP 1701 për L2TP dhe L2F  
+ Lejim të protokollit të IP 47 (GRE) dhe të portës TCP 1723 për PPTP  
+ 
+ 
+1.5.1.7  Ekspozimet në intranet 
+ 
+Përgjithësisht  ekziston  besimi  se  rreziqet  më të mëdha  në internet vijnë nga  jashtë, por studime  të 
+ndryshme kanë treguar se shumica e sulmeve në fakt lindin nga brënda. Ëështë e mundur për një punonjës 
+keqbërës  të  modifikojë  një  kuti  të  brëndshme  duke  bërë  të  mundur  për  të  monitoruar,  ndryshuar  apo 
+riroutuar datagramat që rrjedhin në rrjetin e kompanisë. Kur të dhëna nga rrjete të ndryshme rrjedhin në 
+intranet (për shembull në rastin kur një lidhje VPN lidh prodhuesit me disa klientë) kërcënimet brënda 
+intranetit duhen ruajtur. Nëse një segment apo një partner nuk e ka rrjetin intranet të sigurt vihet kështu në 
+rrezik siguria e çdo partneri që komunikon me të. 
+ 
+1.6 Performanca e VPN 
+1.6.1  Konsiderime në performance 
+1.6.1.1  Numri i logeve (regjistrimeve) 
+ 
+Në mënyrë të ngjashme, regjistrimet e mesazheve dhe eventeve që kanë të bëjnë me trafikun e VPN ka të 
+ngjarë të shkaktojnë një ndikim në performancë. Ky ndikim do të jetë i ndryshëm për klientë, servera dhe 
+porta. Problemi për tu zgjidhur në këtë rast është mjaft delikat: 
+ 
+1. Në rast se braktisen krejt loget, rrezikohet kompromentimi i sigurisë së rrjetit sepse nuk do të 
+jemi në gjëndje për të zbuluar përpjekjet për ndërhyrje dhe sulme të ndryshme. Një zgjidhje e 
+mirë sigurie gjithmonë përfshin një sasi të caktuar të logeve. 
+ 
+2. Nëse  bëhen  loge  të  shumta  do  të  humbim  një  sasi të  konsiderushme  të  përpunimit  që  do  të 
+shkaktojë vonesa e trafikut dhe buffera apo hapësira të logeve të mbingarkuara. Kjo mund të 
+----------------Page (11) Break----------------
+13 
+ 
+bëjë që sistemet të jenë të pa-operueshme dhe e tërë zgjidhja e VPN jo praktike. 
+ 
+Praktikë  e  mirë  është  të  ngrihet  dhe  të  testues  për  sistemet  që  do  të  vendosen më  pas  për  të  ndërtuar 
+mjedisin  e  VPN.  Gjatë  fazës  së  testimit,  përcaktimi  se  çfarë  do  të  ruhet  nga  secila  këto  sisteme,  sa 
+performancë do të humbi gjatë logut dhe cila prej logeve do të tregohen në veçanti. Kjo do të ofrojë me 
+një kuptim se cilat evente janë të rëndësishme për tu regjistruar në mënyrë të përhershme dhe cilat evente 
+duhen vetëm të regjistrohen vetëm në rast se ka ndonjë problem specifik. 
+Porta e VPN në disa kompani gjithashtu kanë aftësi për të hyrë në një server logesh në mënyrë që të 
+shmangin mbingarkimet e burimeve lokale. Nëë këtë mënyrë do të mblidhen dhe vlerësohen regjistrimet 
+(loget) e informacionit në vendndodhjen qëndrore që do bëjë zbulimin e ndërhyrjeve dhe parandalimin e 
+tëyre më të lehtë. 
+1.6.1.2  Numri i përpunimeve të enriptimit 
+Një nga çështjet kyçe në lidhje me performancën do të jetë faktori i enriptimit. Për të përcaktuar impaktin 
+e procesit të enriptimit duhet llogaritur pikat e mëposhtme: 
+ 
+ Serverat me qasje të përhershme në akses VPN njoftojnë disa enriptime në ekzekutim deri në një 
+shkallë kur është dashur të ndahet serveri nga paisja e enriptimit. Kur arrihet kjo pikë nevojitet të 
+përcaktohet për platformadhe nuk mund të përgjithsohet apo të matet në numër lidhjesh apo sasia 
+e trafikut me kalimin e kohës. 
+ Sistemet  fundore, tipikisht  klientët VPN  dhe serverat  me  qasje rastësore  në VPN,  shumicën  e 
+kohës nuk njoftojnë për performancën duke përdorur enriptimin sepse ato vetëm ekzekutojnë ose 
+vetëm bëjnë të mundur lidhjen harmonike. 
+ Portat e  VPN  në  mënyrë  të  sigurtë  thithin  shumicën  e  procesit  të  enriptimit  në  shumicën  e 
+skenareve VPN. Prandaj, duke shtuar paisje speciale hardëare për enriptim apo shtimin e paisjeve 
+të dedikuara për VPN duhet të konsiderohet si një alternativë para se Fireëall të thyhet apo ruteri 
+nuk bën rrugëzime sepse është mbingarkuar me kryerjen e veprimeve të VPN. 
+ 
+1.7 Enkriptimi në VPN 
+1.7.1  Objektivi i përgjitshëm i enkrpitmit. 
+Enkriptimi është një mënyrë efiçente për të bërë të dhëna të palexueshme për marrës të padëshirueshëm. 
+Megjitatë nëse nuk trajtohet si duhet enkriptimi mund të bëhet më tepër një kërcënim për të dhënat sesa ti 
+mbrojë  ato.  Duhet  patur  parasysh  që  enriptimi  kërkon  çelsa  për  të  transferuar  teksin  e  pastër  në  një 
+grumbull  karakteresh  dhe  anasjelltas.  Në  rast  se  çelsat  humbin  ose  vidhen,  për  shembull  nga  një 
+administrator sistemi  i  cili  largohet  nga  puna  pa  dorëzimin  e  çelsave  të  enriptimit  tek  eprorët  e  tij, të 
+dhënat  janë  kompromentuar  dhe,  çfarë  është  më  e  keqja,  mund  të  mos  jetë  më  e  mundshme  për  ti 
+aksesuar këto të dhëna.Prandaj, si pjesë e rregullave të sigurisë, duhet që përcaktohet qartë nëse enriptimi 
+është  i  nevojshëm,  dhe  nëse  po,  për  cilat  tipe  të  dhënash,  në  cilën  pjesë  të  rrjetit,  dhe  kush  do  të 
+autorizohet për të përdorur atë. 
+Kryesisht janë dy mënyra për mbrojtjen nga humbja apo vjedhja e çelsave të enriptimit: 
+ 
+ 
+----------------Page (12) Break----------------
+14 
+ 
+Rigjenerim i çelsave 
+Kjo  teknikë  është  projektuar  për të lejuar  agjencitë  e  zbatimit të ligjit (LEA)  për të rimarrë  çelsat për 
+dekriptimin  e  mesazheve  sekrete  sipas  interesave të  tyre.  Kjo  është  një  teknikë  edhe  për  rikthimin  e 
+çelsave kriptografikë por është një proces mjaft i komplikuar dhe më pak praktik se ruajtja e çelsave. 
+Një mënyrë për implementimin e gjenerimit të çelsave është nga vendosja e blloqeve të rikuperimit të 
+çelsave në rrjedhën e të dhënave në intervale të rastësishme ose/dhe kur çelsi ndryshon. Këto blloqe të 
+rigjenerimit  të  çelsave  janë  të  enkriptuar  me  çelsa  publik  të  një  pale  të  tretë  të  sigurtë  (agjentë  të 
+rikuperimit  të  çelsave).  Agjentët  e  rikuperimit të  çelsave  mund  të  dekriptojnë  çelsin  me  çelsat  e  tyre 
+privat, atëhere çelsat e enkriptimit me çelsat publik të LEA dhe e dërgon atë tek LEA. LEA dekripton 
+çelsat me çelsin e saj privat dhe me pas dekripton mesazhin sheh teksin e pastër 
+ 
+Ruajtja e çelsit. 
+Kjo teknikë mundëson ruajtjen dhe tërheqjen e çelsave dhe të dhënave në rast se ato vidhen apo humbin. 
+Çelësat janë ruajtur nga një palë të tretë besuar (agjent rikuperimi apo ruajtës çelsash), si një pjesë e tërë 
+apo e ndarë, në vënde të sigurta, në mënyrë që të kthehen kur ato kërkohen. Pala e tretë e besueshme 
+mund të jetë nje administrator i çelsave në kompani i vendosur brënda apo jashtë kompanisë. Kjo siguron 
+që çelsat mbeten në zotërim të kompanisë edhe pasi administratori i sistemit ose kushdo që i përdorte këto 
+çelsa është larguar nga puna. 
+ 
+1.7.2  Rregullimet e eksport/import 
+Sa herë nevojitet të përdorim enkriptimin duhet të jemi të sigurtë se cili nivel i enkriptimit është i lejuar 
+nga shteti dhe për natyrën e biznesit. Zakonisht bankat mund të vendosin nivele të larta të enkriptimit në 
+krahësim me përdoruesit e zyrave të vogla, dhe në disa shtete janë më kufizuese se të tjerat. Në Shtetet e 
+Bashkuara enkriptimi është i rregulluar nga Departamenti i Tregetise. 
+ 
+1.7.3 Rreziqet nga enkriptimi end-to-end 
+Kur  një  enkriptim  end-to-end  është  i  lejuar,  kjo  e  hap  Fireëall  në  një  zonë  të  pabesueshme.  Kur 
+implementohet, trafiku i enkriptimit end-to-end nuk do të shihet nga klienti ku zbatohet ky përjashtim 
+për dizajnimin klient/server. Kjo nënkupton që vetëm një herë sulmuesi gjen akses në një pikë fundore, 
+ndërhyrësi  do  të  ketë  akses  në  të  gjithë  intranetin  e  kopmanisë.  Dos  mbështet  në  portën  e  VPN  ose 
+Fireëall gjithashtu nuk do të bëhet e përdorshme, dhe ndërhyrësi do të prishi një shërbim të rëndësishëm 
+klient/server. 
+ 
+ 
+ 
+ 
+----------------Page (13) Break----------------
+15 
+ 
+2. Teknologjitë e VPN 
+2.1 Firewall-et 
+ 
+Njё Firewall ёshtё njё sistem i cili qёndron ndёrmjet rrjetit tё brёndshёm dhe pjesёs sё jashtme. Firewallet 
+kanё qёnё vendosur nё njё rrjet tё madh publik pёr shumё vjet dhe kanё zёnё vend thelbёsor nё zhvillimin 
+e strategjive tё sigurisё. Edhe pse nuk ёshtё njё strategji e pёrsosur, firewalli ёshtё i lehtё nё konfigurim, 
+kёrkon modifikim tё vetёm njё portё tё ruterit. Nё rast se kemi njё lidhje tё shumёfishtё WAN me disa 
+pathe pёr nё internet, do tё ishte e mira tё krijohej njё Firewall pёr çdo pikё tё ndёrlidhjes. Kompleksiteti i 
+proçesit rritet nё mёnyrё dramatike nga njё pikё e vetme nё njё portё e shumfishtё. [4] 
+ 
+Figure 3 Pozicionimi i firewall-eve 
+ 
+2.1.1 Çfarё ёshtё njё firewall? 
+ 
+Firewallet zakonisht kanё dy funksione pёr njё administrator rrjeti. E para ёshtё tё kontrollojnё cilat pjesё 
+mund tё shohё njё i jashtёm nё rrjet dhe shёrbimet nё kёto paisje me cilat ai do tё ketё kontakte. E dyta 
+ёshtё kontrolli se cilat paisje nё Internet njё pёrdorues i Intranetit do tё shohi, apo mё saktё cilat shёrbime 
+ai do ti pёrdorё. Nje Firewall ёshtё mё shumё si njё polic trafiku, organizon se cilat pathe nё trafikun e 
+rrjetit do tё kalojnё dhe cilat do ti ndalojё. Fireëallet e internetit zakonisht e bёjnё kёtё duke inspektuar 
+çdo  pako  nё portat  e  ruterit,  e  cila  ёshtё  arsyeja  edhe  qё  atyre  i  referohen  si  sisteme  tё  "filtrimit  tё 
+paketave". 
+ 
+ 
+ 
+ 
+----------------Page (14) Break----------------
+16 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+2.1.2 Cilat janё tipet e firewalleve? 
+ 
+Qё  kur  thuajse  tё  gjitha  teknikat  e  firewallit  janё  projektuar  mbi  njё  model  tё  ngjashёm, njё  pikё  e 
+centralizuar e kontrollit, janё vetёm pak variante nё nivel tё lartё qё nevojiten tё eksplorohen. Gjithsej 
+janё  katёr  variante  qё  pёrdoren  mё  sё  shumti,  dhe  sigurisht  ne  jemi  duke  lёnё  jashtё  disa  arkitektura 
+komplekse dhe tё avancuara. [4] 
+2.1.2.1 Kufizimi apo filtrimi i paketave nё rutera. 
+ 
+Ruterat dhe kompjuterat qё transmetojne filtrimin e paketave zgjedhin tё dёrgojnё trafikun nё njё rret tё 
+bazuar me rregulla tё paracaktuara. Ruterat nuk veprojnё bazuar nё atё qё ёshtё brёnda ngarkesave, por se 
+nga vjen dhe cila ёshtё destinacioi i saj. Nё konsideratё ёshtё se a i pёrmbush paketa njё set parametrash, 
+dhe  duhen  marё  masat  pёr  tё  lejuar  apo  ndaluar  kalimin.  Tabelat  qё  bёjnё  lejimin  dhe  ndalimin  janё 
+ngritur nё pёrputhje me rregullat e sigurisё sё rrjetit tё brёndshёm tё vendosura nga administratori i rrjetit 
+apo koordinatori i sigurisё. 
+ 
+Njё  vёshtrim  nё  funksionimin  e  filtruesve  tё  paketave  tregon  se  ruterat  nuk  shohin  tek  pёrmbajtja  e 
+paketёs por tek koka e informacionit TCP/IP, pёr tё bёrё shqyrtimin e rastit. Kёshtu, nё rast se ruteri do tё 
+pyetet tё lejojё tё gjithё trafikun nga rrjeti 192.168.1.1/24, do tё kontrollojё tё gjitha paketat pёr tё parё 
+pёrputhjen e adresave vurim dhe i tejkalon ato mё tej. Ndёrkohё qё njё paketё duhet tё kalojё nga njё rrjet 
+nё njё tjetёr tjetёr filtri do tё lejojё tranzitin dhe paketa do tё kalojё mё tej. Pra, nё thelb, kjo tregon se si i 
+gjithё operacioni i kёtij firewalli bёn sigurinё. [4] 
+ 
+Figure 4 Njё Firewall tipik 
+----------------Page (15) Break----------------
+17 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                         Figura 6 Një paketë filtrimi në ruter 
+ 
+Filtrimi  i  paketave  mund  tё  marё  dy  forma  bazё.  E  para  ёshtё  njё  rrjet  i  hapur  me  filtrim  selektiv  tё 
+trafikut tё padёshiruar. Pёr secilin tip tё sulmit tё rrjetit, njё filtёr i pёrshtatshёm lihet nё vend tё ruterit. E 
+dyta ёshtё njё trafik i mbyllur me filtrim selektiv tё trafikut tё dёshiruar 
+Ruterat nё ditёt e sotme i kёrkohet tё bёjnё mrekulli, sidomos nё garёn pёr shumё e mё shumё bandëidth. 
+Puna e ruterit ёshtё e dedikuar pёr tё dёrguar trafikun, jo pёr tё kapur dhe pёr tё dёrguar paketa qё kanё 
+rrezik pёr sigurinё. 
+Ajo qё sygjerohet, natyrisht, ёshtё se do tё ketё njё ndryshim tё dukshёm nё atё qё portat e rrjetit do tё 
+duken nё tё ardhmen. Besohet se do tё ketё njё ndarje tё paisjeve tё ruterave dhe filtrimit tё paketave (ose 
+edhe tё paisjeve tё sigurisё, pёr kёtё çёshtje) nё njё afat tё afёrt. Produktet e reja tashmё vijnё nga ata qё 
+mbёshtesin autentifikimin  dinamik pёrmes njё filtruesi tё paketave nё ruter direkt nё nivel pёrdoruesi, 
+madje edhe nё njё lidhje tё enkriptuar. 
+Njё pengesё e fundit ёshtё ndryshimet e shpeshta nё rrjet mund tё kёrkojnё rikonfigurim tё portave tё 
+ruterit dhe filtrimit tё paketave nё fireëall. Kjo mund tё kёrkojё kohё dhe prirje tё gabuar nё rast se njё 
+gabim i pakapshёm ndodh mё shpesh nё rrjet tё gjёrё tё hapur, ose njё ndryshim i vogёl nё ruter tё paaftё 
+pёr tё kryer detyrёn e tij si njё drejtues tё trafikut nё rrjet. [4] 
+ 
+2.1.2.2 Bastioni i hostit 
+Nje  bastion  host  pёrdor  si  mekanizmin  e  filtrimit  tё  paketave,  tё  mundёsuar  nga  ruteri  dhe  njё  host  i 
+sigurtё. Njё host i sigurtё ёshtё vend qё ka sistemin e saj tё operimit dhe disa shёrbime nёn kujdesin e 
+ekspertit tё sigurisё. Siguria primare ёshtё mundёsuar nga njё ruter filtrimi i paketave, dhe hosti i sigurtё i 
+pёrdorur  pёr  tё  drejtuar  rrjedhёn e  informacionit  nё  cilindo  drejtim.  Hosti  bastion  ёshtё  njё  paisje  e 
+sigurisё sё kontrolluar qё ёshtё lidhur me internetin me tё njёjtёn metodё si paisjet e tjera.. Portat lejojnё 
+Figure 5 Një paketë filtrimi në ruter 
+----------------Page (16) Break----------------
+18 
+ 
+trafikun  tё  kalojё  nё  tё  nё  mёnyrё  mё  pak  tё  kufizuar.  Hostet  bastion  janё tipikisht  tё  pёrdorura  nё 
+kombinim me filtrimin e ruterave sepse filtrimi i paketave tё thjeshta nuk mund tё bёhet ne protokolle apo 
+nё shtresёn e aplikimit (Figura 9). 
+Njё host bastion ёshtё mё i lehtё pёr tu konfiguruar nё krahёsim mё njё server tё shpёrndarёdhe mё i lehtё 
+nё mirёmbajtje, sepse sasia mё e madhe e trafikut ёshtё dёrguar nё njё sistem. Qё kur hosti bastion ёshtё 
+pёrqёndruar nё shtresёn e brёndshme, nuk nevojiten mё pёrjashtues special prej paisjeve tё tjera tё lidhura 
+lokalisht. Rregullat e sigurisё do tё diktojnё se cfarё duhet pёr tё konfiguruar nё  to ruterat e filtrimit tё 
+paketave, tё cilat do tё bёhen sa mё kufizuese tё jetё e mundur. Nuk ёshtё e pazakontё pёr administratorin 
+qё tё pёrdorё njё kombinim tё strategjive, duke pёrdorur si filtrimin e paketave nё ruter ashtu dhe hostet 
+bastion.                                                                                                                 
+Njё ndёr gjёrat mё thelbёsore nё konfigurimin e hosteve basion pёr masat e sigurisё ёshtё konfigurimi i 
+filtrit  tё  paketave  tё  bёhet  pёr  masat  e  sigurisё  ёshtё  ai  konfigurim  i  filtrimit  tё  paketave  qё  tё  bёhet 
+gjenerike  gjёndja  “blloko  gjithcka”,  pasuar  nga  disa  gjёndje  shumё  specifike  tё  cilat  i  pёrkasin  vetёm 
+hostit bastion. Pёr ndryshimet e mёdha dhe tё shpeshta tё rrjetit, mund tёshihet qё kjo redukton ngarkesёn 
+e personelit tё sigurisё. Duke shtuar paisje tё reja apo duke pasur pёrdorues tё instaluar ose pёrdorues tё 
+instaluar dobёt nё paisjet e sigurta nuk ndikon nё Fireëall dhe mbrojtjen e ofruar nga hosti bastion. 
+ 
+ 
+Figure 6 Njё Firewall host-bastion 
+ 
+Sigurisht, duke patur njё pikё kontrolli tё qёndёrzuar ka disavantazhet e saj. Pёr njё rrjet tё madh dhe tё 
+ngarkuar  do  tё  duhen  disa  paisje  tё  aktrojnё  si  hoste bastion  (duke  e  bёrё  administrimin  e  tyre  mё  tё 
+shtrirё nё kohё), apo mё mirё, njё perimetёr i rrjetit tё hostit basion do tё nevojitej.. Çdo paisje kёrkon 
+seksionin e saj nё filtrimin e paketave nё fireëall, duke mbledhur kompleksitet, dhe me secilёn paisje ka 
+problem me prova dhe prova tё dyfishta pёr pastёrtinё. Bashkë me nevojën për Hoste të shumëfishtë për 
+të  parandaluar  ngjeshjen  në  rrjet,  qëndërzimi  i  informacionit  në  bastion  mund  të  tërheqë  sulme,  pa 
+llogaritur që një pengesë e madhe për këtë llog konfigurimi të Firewallit është se ajo mund të çojë në një 
+rrezik tragjik sigurisë, një sulmues mund të mari privilegjet e operatorit në hostin bastion, Kështu një pikë 
+e vetme e kontrollit është e barabrtë me një pikë të vetme të dështimit. 
+----------------Page (17) Break----------------
+19 
+ 
+ 
+2.1.2.3 DMZ ose zona e perimetrit nё rrjet 
+ 
+Njё teknikё e mirё pёr tё ndarё rrjetin e kompanive nga mjedisi i rrezikshёm i internetit ёshtё tё bёjё 
+“rutimin e rrjetit” nё tё cilin duhet tё kalojё i gjithё trafiku. Instalimet e mёdha zakonisht kanё gati tё tillё 
+rrjeta gati pёr tu ndarё ёshtu qё nё mёnyrё efektive mund tё ndahet trafiku local nga trafiku i MAN nga  
+WAN apo rrjeti botёror. Ashtu si mund tё mendohet, njё rutim nё rrjet konsiston vetёm nё rutera, duke 
+pёrfshirё lidhjet hyrёse dhe dalёse, dhe zakonisht shkon me termin "backbone." Njё konfigurim i tillё 
+shihet nё figurёn 10. Si fillim janё tё paktёn dy rutera tё pёrfshirё nё mbrojtjen e intranetit. Njё ruter 
+shёrben  si  portё  pёr  internetin, dhe tjetra  shёrben  si portё  pёr rrjetin e  brёndshёm.  Rrjeti  ndёrmjet  dy 
+ruterave nuk  duhet  tё  ketё  paisje  tjeter  nё  tё    me  pёrjashtim  tё  paisjeve   tё  rutimit  dhe  hosteve  tё 
+besueshёm.  
+         
+ 
+Figure 7 Një zonë perimetri në firewall 
+ 
+Tipi i dytё nё sigurinё e arkitekturёs DMZ pёrfshin njё degё tё sigurisё nё pjesёn e jashtme tё perimetrin 
+nё nivel ruteri ose nё njё host nё perimetrin e rrjetit; ndёrhyrёsit do tё shohin vetёm paisjet qё janё transit, 
+asgjё mё tepёr. Pёr tё pёrfituar akses nё njё rrjet tё brёndshёm, duhet tё krakohet perimetri i brёndshёm i 
+ruterit, i cili duhet ti dekurarojё ato deri sa 
+ tё largohen. Një zgjidhje e VPN nga rrjeti i brёndshёm duhet qё tё pёrfshijё enkriptimin e paketave, dhe 
+tё komplikojё njё pёrpjekje pёr tё rrezikur rrjetin 
+Nё njё zoё standarte tё perimetrit, kontollet mё komplekse janё vendosur nё rutera tё brёnshёm, tё cilёt 
+janё at qё ndajnё rrjetin e brёndsm nga permetri i rrjetit si dhe nga rrjeti i jashёm. Kjo ёshtё nj praktikё 
+mjat e mirё pr tё ngritur rrjetin DMZ nё kёtё, sepse ky konfigrim mund tё krahёsohet me nivlin e qareve 
+koncenrike—secila  prej  tyre  mё  pas  jep  mё  pak  siguri.  Gjithashu,  bёhet  nj  praktikё  e  shpeshtё  pёr  tё 
+----------------Page (18) Break----------------
+20 
+ 
+pёrdorur Netëork Address Translation (NAT) nё ruterat e brёndsm qё tё koplikojё mё tej vendnodhjen 
+dhe vjedhjen e infomacionit tё brёndshёm nё komunikim. NAT ofron siguri nga pёrkthimi i adresave jo tё 
+rutueshm  (tё  tilla  si  rangu  192.168.0.0)  nё  adresa reale  internet  nё  njё  mjedis dinamik.  Nuk  ёshtё  njё 
+mёnyrё  e  lehtё  pёr  tё  kёmbyer  informacion  me  hoste  tё  brёndshmё  mё  pёrjashtim  tё  rastit kur 
+anashkalohet pёrktihimi i adresave. 
+Siguria mё e fortё qё mund tё bёhet me DMZ do tё ishte tё mos lejojё tё gjithё trafikun tё dalё jashtё nga 
+rutera tё jashtёm, dhe tё mos lejojё tё gjithё trafikun tё futet nё rrjetin e brёndshёm direkt nga interneti. 
+Nё thelb, kjo bёn qё procesi i trafikut tё jetё me dy faza. Klientёt nё internet mund tё kontaktojnё vetёm 
+mё makinat qё janё tё lokalizuara nё perimetrin e rrjetit, dhe klientёt qё janё brёnda rrjetit tё brёndshёm 
+nuk mundet tё shohin internetin direkt; ato gjithashtu do tu nevojitet tё pёrdorin ndёrmjetёs pёrgjatё njё 
+bastioni host tё DMZ. Nje gjё e tillё mund tё rrёnojё perpjekjet e nje sulmuesi. 
+2.1.2.4 Serverat proxy 
+ 
+Njё shёrbim proxy ёshtё mё shumё se njё postobllok "tranzit" nё njё zonё tё informacionit. Proxy shtiret 
+tё jetё nё fund tё lidhjes, por mbron dёrguesin e vёrtetё apo marrёsin nga njё trafik i panjohur. Shёrbimi 
+qё  prezanton  problemin  mё  tё  madh  tek  manaxheri  i  sigurisё  "protokolli  standart  i  shkёmbimit  tё 
+skedarёve"(FTP). Ёshtё e pasigurё sepse pёrdoret nё mёnyrё rastёsore, nё numёr tё madh portash pёr tё 
+krijuar njё sesion peer-to-peer me njё klient. Duke pasur njё shёrbim qё vepron nё mё shumё se njё portё, 
+siguron njё problem pёr administratorin e sigurisё.  
+ 
+ 
+Figure 8 Një server proxy si një fireëall 
+ 
+Pёr tё adresuar kёtё njё sesion "pasiv" i FTP mund tё krijohet por jo tё gjithё klientёt e mbёshtesin kёtё. 
+Duke pёrdor njё proxy ashtu si nё figurёn 11, ёshtё njё tjetёr opsion pёr tё krijuar njё lidhje FTP pёrgjatё 
+Fireëall. Pasi tё krijohet njё makinё hosti nё njё perimetёr rrjeti qё vepron pёr klientёt, qё ёshtё vendosur 
+----------------Page (19) Break----------------
+21 
+ 
+nё rrjetin e brёndshёm, njё lidhje e plotё do tё bёjё qё me pak siguri tё dorёzohemi.                
+Proxy FTP ёshtё nё perimetrin e rrjetit dhe i ёshtё dhёnё akses pёrmes fireëallit tё jashtёm pёr tё krijuar 
+sesione FTP.                                       
+ 
+Pёr arsyen se njё proxy server ngjan mё shumё mё njё kompjuter se me llojet e tjerё tё fireëalleve, njё 
+kujdes special do tё pёrdoret pёr tё siguruar qё proxy server ёshtё siguruar mirё nga rregullat e sigurisё. 
+Gjithashtu, ёshtё e rёndёsishme tё theksohet qё njё shёrbim proxy ёshtё njё masё shtesё e mbrojtes dhe 
+nuk duhet tё konsiderohet si njё zgjidhje e pёrgjitshme. Mburoja e filtrimit tё paketave Firewall mund tё 
+ndihmoje pёr tё mbajtur gjёra tё ndara, dhe/ose rrjeti mund tё segmentohet nё subnete tё ndryshme, tё 
+izoluara nga rreziku mё i lartё tek rreziku mё i ulёt. 
+2.2 Enkriptimi dhe autentifikimi 
+Konfigurimi dhe vendosja e njё rrjeti privat virtual pёrfshin jo vetёm njё filtrim paketash nё ruter. 
+Enkriptimi mund tё pёrdoret si njё metodё pёr tё ndryshuar tё dhёnat nga njё formё normale nё njё formё 
+tё pa-pёrdorur nga askush pёrveç marrёsit tё mesazhit, i cili e ka tё nevojshme ta dekriptojё atё. Imputi nё 
+njё algoritёm enkriptimi ёshtё tipikisht njё teks i pastёr, ndёrkohё qё autputi ёshtё njё mal mё karaktere tё 
+pakuptimta. Procesi i enkrpitmit mbron tё dhёnat duke e bёrё punёn e ndёrhyrёsit shumё tё vёshtirё apo 
+mjaft tё gjatё pёr tё gjetur se çfarё nёnkuptojnё ato shifra. Rutinat kriptografike pёrdorin matematikёn pёr 
+tё ndryshuar tё dhёnat qё procesi tё jetё i nderlikuar. 
+ 
+2.2.1 Kriptografia nё rrjetat e komunikimit 
+Mbrojtja e komunikimit nё rrjet ёshtё mjaft themelore. Mbrojtja vjen nga nevoja pёr tё dёrguar tё dhёna 
+nё njё rrjet tё panjohur publik. Kjo shpesh referohet edhe si problem i "transmetimit  mbi njё kanal tё 
+pasigurtё", dhe shpesh zgjidhet nga njё apo dy metoda. 
+Zgjidhja mё e thjeshtё ёshtё, tё bёsh komunikimin tё sigurtё duke privaizuar kanalin e komunikimit. Nё 
+rast se bёjmё qё palёt e treat tё mos kenё akses nё rrjet, ndёrhyrjet bёhen tmerrёsisht tё veshtira, kёshtu qё 
+lidhja  ёshtё  solide.  Por  gjithsesi  kjo  nuk  ёshtё  zgjidhja  mё  e  mirё,  pёr  disa  arsye.  Ёshtё  mjaft  e 
+kushtueshme  pёr  tё  privatizuar  njё  infrastrukturё  kaq  tё  madhe  komunikimi,  të  cilat  mund  të  jenë  të 
+parealizueshme, si dhe jopraktike për të ndryshuar në kohën e duhur, pёr tё mos pёrmёndur qё do tё ishte 
+mjaft e vёshtirё pёr tё pёrmbushur pritshmёritё e pёrdoruesve. 
+Kjo ёshtё edhe arsyeja qё VPN po bёhet gjithmonё e mё shumё i pёrdorshёm. Qё nga koha qё zgjidhja 
+nuk  ёshtё  pёr  tё  privatizuar  njё  infrastrukturё  tё  tёrё,  duhet  qё  tё  sigurohen  tё  dhёnat  nё  njё  kanal  tё 
+pasigurtё. Me fjalё tё tjera, duke e bёrё tё aksesueshmё pёr tё gjithё, por duke e transferuar nё njё formё 
+(duke pёrdorur kriptografi) vetёm njё marrёs mund ta shohi atё. 
+ 
+----------------Page (20) Break----------------
+22 
+ 
+2.2.2 Algoritmet Kriptografike 
+ 
+Figure 9 Funksionet kriptografike 
+ 
+2.2.2.1 Kriptografia me çelsat private. 
+Me kriptografinё me çelsa sekret, njё çelёs i vetёm pёrdoret nga tё dy palёt e komunikimit, si enkriptimi 
+ashtu edhe dekriptimi. Pёr arsye se njё çelёs i vetёm pёrdoret pёr tё dy funksionet, kriptografia me çelsa 
+sekret ёshtё quajtur edhe enkriptimi simetrik. 
+Nё  kёtё  formё  kriptografie,  si  dёrguesi  ashtu  edhe  marёsi  duhet  tё  dijnё çelsin,  qё  ёshtё  sekret. 
+Vёshtirёsia mё e madhe nё kёtё rast ёshtё shpёrndarja e çelsit.  
+Algoritmet mё tё pёrdorshme pёr kriptografinё me çelsa sekret janё: 
+ Standarti i enkriptimit tё tё dhёnave (DES) 
+ Standarti i avancuar i enkriptimit (AES) 
+ Algoritmi ndërkombëtar i enkriptimit të të dhënave (IDEA) etj. 
+ 
+2.2.2.2 Kriptografia me çelsat publike  
+Kriptografia me çelsat publik ёshtё mendohet tё jetё zhvillimi mё i rёndёsishёm nё fushёn e kriptografisё 
+nё 300-400 vitet e fundit. Thelbi i kriptografisё me çelsa publikё ёshtё qё kripto sisteme nё tё cilёn dy 
+pjesё bashkёpunojnё nё njё komunikim tё sigurtё mbi njё rrjet komunikimi jo tё sigurtё pa patur njё çelёs 
+sekret. [5] 
+PKC varet nga ekzistenca e tё ashtёquajtura funksione njq mёnyrёse, ose funksione matematikore qё janё 
+tё lehta pёr tu pёrllogaritur, ndёrsa operacioni invers ёshtё mjaft i vёshtirё. 
+Dy shembuj pёr kёtё janё: 
+1. Multipleksimi  vs.  Faktorizimi:  Supozojmё  qё  kemi  dy  numra  primarё,  3  dhe  7,  dhe  duhet  tё 
+llogaritim  prodhimin;  dhe  nuk  do  shume  kohё  tё  llogaritёsh  pёrfundimin  qё  del  21.  Le  tё 
+mendojmё, nё vend tё saj, tё themi qё kemi njё numёr, 21, dhe duhet tё gjejmё se cilёt numra 
+primarё janё llogaritur pёr tё gjetur rezultatin. Zgjidhjen do ta gjejmё por sigurisht do tё dojё njё 
+kohё shumё mё tё gjatё se gjetja e prodhimit tё numrave 3 dhe 7. Problemi do tё jetё edhe mё i 
+----------------Page (21) Break----------------
+23 
+ 
+vёshtirё nёse do ta bёjmё pёr numra primarё me mbi 400 shifra e mё shumё, sepse produkti mund 
+tё ketё rreth 800 shifra. [5] 
+2. Eksponencialiteti dhe logaritmet. Supozojmё qё do tё marim numrin 3 nё fuqi tё 6; pёrsёri, ёshtё 
+e lehtё pёr tu llogaritur sepse 3 nё fuqi tё gjashtё ёshtё 729. Nёse do tё kemi se numrin 729 dhe tё 
+gjejmё dy numrat fillestarё qё pёrdorёm, do tё gjejmё log x tё 729=y, qё do tё dojё njё kohё tё 
+gjatё  ёpr  tё  gjetur  tё  dy  vlerat. Ndërkohë  që  shembujt  më  sipër  janë  të  parëndësishëm,  atpo 
+prezantojnë 2 nga pjesët funksionale që janë ëprdorur me PKC, lehtësinë e shumëzimit dhe të 
+eksponencialitetit  kundrejt  vështirësive  relative  të  faktorit  dhe  të  llogaritjes  së  algoritmeve 
+respektivisht.  "Mashtrimi"  matematik  në  PKC  është  për  të  gjetur  një  shteg  në  funksionin  një-
+mënyrësh  kështu  që  llogaritja  e  kundërt  bëhet  e  lehtë  duke  patur  parasysh  njohurinë  e  disa 
+elementeve të informacionit. [5] 
+Gjenerimi i çelsave publik PKC qё janё matematikisht tё lidhur me njёri tjetrin, gjithsesi nuk do tё thotё 
+se nё rast se di njёrin bёn llogaritjet pёr tё gjetur tjetrin. Njёri çelёs ёshtё ёprdorur pёr pёr tё enkriptuar 
+teksin e pastёr dhe tjetri pёr tё dekriptuar teksin e koduar. E rёndёsishme nuk ёshtё se cili çelёs ёshtё 
+pёrdorur nё fillim, por qё tё dy çelsat duhet pёr tё pёrmbushur proçesin e punёs. Pёr arsyen se kёrkohet 
+njё çift çelsash, kjo metodё quhet kriptografia asimetrike. 
+Nё PKC, njё nga çelёsat ёshtё projektuar si çelёsi publik dhe mund tё reklamohet gjerёsisht si dёshiron 
+zotёruesi i saj. Tjetri ёshtё i projektuar si çelёsi privat dhe nuk i jepet asnjёherё njё pale tjetёr. Kryesisht 
+mesazhet  dёrgohen  sipas  kёsaj  skeme.Supozojmё  qё  A  dёrgon  mesazhin  tek  B.  A  enkripton 
+informacionin duke pёrdorur çelsin publik. B dekripton mesazhin duke pёrdorur çelsin privat. Kjo metode 
+mund tё pёrdoret edhe nёse ёshtё dёrguar mesazhi apo jo. A pёr shembull mund tё enkriptojё teksin e 
+pastёr me çelsin e saj privat, dhe kur B dekripton atё duke pёrdorur çelёsin publik, ai e di qё A ёshtё 
+dёrguesi qё e ka dёrguar mesazhin dhe qё A nuk mund ta mohojё qё e ka dёrguar atё mesazh. 
+Algoritmet me çelsat public qё janё pёrdorur nё ditёt e sotme pёr kёmbim tё informacionit si dhe pёr 
+firma dixhitale pёrfshijnё: 
+ RSA 
+ Algoritmi i firmave dixhitale (DSA):  
+ Kriptografia e kurbës eliptikë (ECC) 
+ Standarti me çelsa public në kriptogra (PKCS): 
+ Algoritmi i shkëmbimit të çelsave (KEA) 
+2.2.2.3 Funksioni hash.  
+Njё funksion kriptografik hash ёshtё nёj funksion hash i cili mer njё input (apo mesazh) dhe kthen njё 
+vlerё fikse nё madhёsi e cila quhet vlera hash (shpesh quhet si kodi i mesazhit, etj). 
+Njё funksion ideal hash ka 4 veti kryesore: 
+ Ёshtё e lehtё tё llogaritёsh vlerёn hash tё njё tё dhёne 
+ .Ёshtё tmerrёsisht e vёshtirё tё llogaritёsh nё mёnyrё kompjuterike teksin qё ka njё vlerё hash tё 
+caktuar. 
+ Ёshtё tmerrёsisht e vёshtirё tё ndryshosh mesazhin pa zbёrthyer vlerёn Hash 
+----------------Page (22) Break----------------
+24 
+ 
+ Ёshtё thuajse e pamundur qё dy mesazhe tё ndryshme tё kenё tё njejtёn vlerё hash. 
+Funksionet me kёto cilёsi janё pёrdorur si funksione hash pёr njё shumёllojshmёri qёllimesh, jo vetёm nё 
+kriptografi.  Aplikacionet  praktike  pёrfshijnё  kontrolle  tё  integritetit  tё  mesazhit,  firma  dixhitale, 
+autenticitetin, dhe njё llojshmёri siguri informacionesh tё aplikacioneve. 
+Njё  funksion  hash  mer  njё  gjatёsi  stringu  si  njё  imput  dhe  prodhon  njё  string  me  njё  gjatёsi  fikse  qё 
+vepron si njё tip "firme" pёr tё dhёnat. Nё kёtё mёnyrё, njё person qё di vlerёn hash e ka tё pamundur pёr 
+tё gjeneruar mesazhin, por vetёm personi qё ka mesazhin origjinal mund tё vёrtetojё qё vlera hash ёshtё 
+krijuar apo jo nga ai mesazh. 
+2.2.3 Autenticiteti 
+Teknikat e autentifikimit janё thelbёsore tek VPN, ato sigurojnё pjesёt e komunikimit qё ato janё duke 
+shkёmbyer tё dhёna me pёrdorues apo hostet e duhur. Autenticiteti ёshtё analoge me "loget" nё njё sistem 
+me emer dhe fjalёkalim. VPN megjithatё do tё kёrkojё metoda mё tё rrepta pёr tё vёrtetuar identitetin. 
+Shume sisteme autenticiteti tё VPN janё tё bazuara nё njё sistem kyç. Çelsat janё drejtuar pёrmes njё 
+algoritmi hash, i cili gjeneron vlera hash. Pala tjetёr mban qё çelsat do tё gjenerojё vlerёn e saj hash dhe 
+do  ta  krahёsojё  atё  me  atё  qё  mori  nga  pala tjetёr.  Vlera  hash  e  dёrguar  pёrgjatё  internetit ёshtё  e 
+pakutpueshme pёr njё mbikqyrёs, kёshtu qё askush nuk do tё jetё nё gjёndje tё zbёrthejё atё. Protokolli i 
+autentifikimit tё "Shtrengimit tё duarve"(CHAP) ёshtё njё shembull i mirё tё njё metode autenticiteti qё 
+pёrdor kёtё skemё. Njё shembull tjetёr autenticiteti ёshtё RSA. 
+Autenticiteti tipikisht bёhet ne fillim tё çdo sesioni, dhe mё pas nё mёnyrё tё rastёsishmё pёrgjatё njё 
+sesioni  sigurohet  qё  nuk  ka  tё shtirur nё  kёtё  bashkёkomunikim. Autenticiteti mund tё  pёrdoret  pёr  tё 
+siguruar integritet tё dhёnash. Tё dhёnat mund tё dёrgohen pёrmes njё algoritmi hash pёr tё nxjerrё njё 
+vlerё qё ёshtё nё kontrollin e mesazhit. Çdo devijim nё kontroll dёrgohet nga njё palё tek tjetra do tё thotё 
+qё tё dhёnat janё korruptuar pёrgjatё dёrgimit soe janё kapur apo modifikuar pёrgjatё kohёs. 
+2.2.3.1 Pёrdorimi i kriptosistemeve dhe autentifikimit nё VPN 
+Ashtu  si  tek  tё  gjithё  komunikimet  e  sigurta,  tё  gjitha  sistemet  mbrojtёse  kanё  tre  funksione  tё 
+rёndёsishmё. Komunikimet e sigurta si fillim mbrojnё tё dhёnat tranzit nё mёnyrё qё palёt e treta nuk 
+kanё  mundёsi  tё  kapin  apo  tё  lexojnё  dёrgesёn.  Teknikat  mё  popullore  tё  enkriptimit  tё  pёrdorura  nё 
+VPN pёrfshijnё DES, Triple DES, RC2 dhe RC4. 
+ 
+Tё dyja palёt duhet tё dinё qё janё duke komunikuar me njёri-tjetrin, edhe pse nuk mund tё shohin njёri 
+tjetrin. Dёrguesi  dhe  marrёsi  duhet  tё  jenё  nё  gjёndje  nёse  njё  palё  e  tretё  po  tenton  tё  ngacmojё 
+mesazhet, apo ndonjё qёllim tjetёr dashakeq. Ky ёshtё koncepti i integritetit nё mesazh. 
+ 
+Kur  dёrgohet  njё  mesazh,  dёrguesi  e  konverton  mesazhin  nё  njё  vlerё  unike  hash  ose  njё  kod  tё 
+autentifikimit tё mesazhit (kodi MAC), i cili enkriptohet me çelёsin e tij privat qё pёrfshihet mё mesazh, 
+e gjitha enkriptohet me çelsin publik. Pas transmetimit marrёsi do tё dekriptojё paketёn me çelsin privat, 
+pёrllogarit vlerёn e MAC, dekripton tё gjithё meszhin me çelёsin privat, pёrllogarit vlerёn e MAC pёr 
+teksin e ri, dekripton kodin MAC tё pёrdoruesit me çelёs publik, krahёson kodin MAC, nё rast se nuk 
+pёrputhen dёrgesa ёshtё ndryshuar.  
+ 
+----------------Page (23) Break----------------
+25 
+ 
+Protokolli  SKIP  ёshtё  njё  implementim  mjaft  popullor  i  enkriptimit  dhe  autenticitetit.  SKIP  ёshtё  i 
+disponueshёm nga ofrues tё ndryshёm si nё Unix ashtu edhe nё Windows. Secili host qё pёrdor SKIP 
+mban lista e kontrollit tё aksesit duke specifikuar se cilёt hoste ёshtё i gatshёm pёr tё marrё nga trafiku 
+dhe çfarё tipe tё enkriptimit tё pёrdorё pёr secilёn prej tyre. Kur njё paketё IP ёshtё dёrguar nga njё host 
+SKIP nё njё tjetёr, dёrguesi enkripton paketёn me protokoll SKIP dhe mё pas pёrfundon njё tjetёr paketё 
+IP rreth saj kёshtu qё mund tё kalojё nё internet. 
+ 
+Çelsat pёr tё ngritur njё rrjet privat tё shkёmbimit tё tё dhёnave apo tё ruajtjes sё tё dhёnave tё sigurta 
+mbёshteten nё mundёsinё pёr tё qёnё nё gjёndje pёr tё parandaluar tё panjohur dhe pёr tё bёrё njё izolim 
+tё asaj qё duam tё mbrojmё. Pa fireëalle, njё VPN mund tё ekzistojё, gjithsesi pa tё njёjtёn filozofi tё 
+sigurisё. Por, pa enkriptim, njё VPN nuk do tё ekzistonte. Kodimi i masterialit zgjidh problemin e madh 
+tё sigurisё nё komunikim mbi njё kanal tё pasigurtё nё njё mjedis armiqesor.  
+ 
+3. Protokollet e tynelimit në VPN 
+3.1 Protokolli PPTP 
+Protokolli i tynelimit point-to-point (PPTP) është një protokoll rrjeti që lejon transferimin e të dhënave të 
+sigurta nga një klient në distancë tek një server i kompanisë duke krijuar një lidhje VPN përgjatë rrjetit 
+TCP/IP, normalisht duke përdorur një ISP. PPTP mbështet multi-protokollet, rrjetin privat virtual mbi një 
+rrjet publik të tillë si interneti. [6] 
+3.2.2 Protokolli PPP 
+PPP është një protokoll i aksesit në distancë i përdorur nga PPTP për të dërguar të dhëna multi-protokoll 
+përgjatë  rrjetit  të  bazuar  në  TCP/IP.  PPP  enkapsulon  IP,  IPX  (Shkëmbimi  i  paketave  në  rrjet),  dhe 
+NetBEUI (Zgjatim i ndërfaqes së përdoruesit NetBIOS) dhe tipe të tjera paketash në framet PPP. PPP më 
+pas dërgon paketat e enkapsuluara duke krijuar lidhje point-to-point ndërmjet dërguesit dhe marrësit.  
+3.2 L2TP mbi IPSec VPNs  
+L2TP mbi IPSec VPNs lejon biznesin të transmetojë të dhëna në internet, ndërsa ende mban një nivel të 
+lartë të sigurisë për të mbrojtur të dhënat. Mund të përdoren tipe të sigurta të lidhjes për zyra të vogla në 
+distancë  të  klientëve  që  duan  akses  në  rrjetin  e  kompanisë.  GJithashtu  mund  të  përdorim  VPN  të 
+L2TP/IPSec  për  rutera  tek  site  nëpërmjet  përdorimit  të  ISP--ve  lokale  duke  krijuar  një  lidhje  dial  në 
+qëndrën e kompanisë. 
+Kur kemi vendosur se ku dhe si të përdorim n lidhjen L2TP mbi IPSec, kujtojmë që pika e aksesit në 
+internet ose DMZ e rrjetit është vendi ku serveri i VPN do të vendoset. Serveri i VPN është përgjegjës për 
+të bërë që rregullat e aksesit do të konfigurohen në llogarinë e përdoruesit në programin e serverit, në 
+profilin e përdoruesit në rregullat e aksesit në distancë ose në IAS. 
+L2TP krijon sigurinë e nevojshme IPSec për të siguruar trafikun e të dhënave. Nuk është e nevojshme për 
+të vendosur apo aktivizuar rregullat e IPSec në dy kompjutera. Në rast se kompjuteri ka një rregull të 
+IPSec aktiv, L2TP do të shtojë rregull sigurie të mbrojë të dhënat e tynelimit L2TP është ekzistuesja.  [8] 
+ 
+----------------Page (24) Break----------------
+26 
+ 
+3.3 SSTP  
+ 
+Protokolli i tynelimit të sigurtë SSTP është një përcaktim nga protokolli i shtresës së aplikimit. Ajo është 
+projektuar  për  të  bërë  një  komunikim  sinkron  në  një  rradhë  dhe  lëvizje  ndërmejt  dy  programeve.  Ajo 
+lejon  shumë  aplikacione  fundore  përgjatë  lidhjes  së  internetit,  ndërmjet  nyjeve,  duke  bërë  të  mundur 
+përdorimin efikas të burimeve të komunikimit që janë të disponueshme në rrjetProtokolli SSTP i bazuar 
+në SSL në vend të PPTP me IPSec dhe përdor portën TCP 443 për përcjelljen e trafikut SSTP. Edhe pse 
+ajo është mjaft e lidhur me SSL, një krahësim i drejtpërdrejtë nuk mund të bëhet në mes të SSL e SSTP, 
+SSTP është vetëm një protokoll tynelimi ndryshe nga SSL. Shumë arsye janë për zgjedhjen e SSL përpara 
+IPSec si bazë për SSTP. IPSec është në mënyrë direkte mbështetës i idhjes së VPN site-to-site dhe SSL 
+është një bazë më e mirë për zhvillimin e SSTP, dhe e mbështet atë.  [10] 
+ 
+Disa arsye për të mos u bazuar në IPSec janë: 
+• Nuk kërkon autenticitet të fortë,, 
+• Diferencat që ekzistojnë për klientët që lidhen ngan jë kompani në një tjetër. 
+•  Protokollet jo-IP nuk mbështeten automatikisht, 
+• Për arsyen se siguria e IPSec është projektaur për lidhjen site-to-site , ka të ngjatë që të krijojë 
+problem për përdorues që lidhen nga vënde të ndryshme me një numër të limituar të adresave IP.  
+3.3.1 SSL VPN, një bazë më e pajtueshme për zhvillimin e SSTP 
+SSL VPN adreson këto çështje edhe më shumë. Ndryshe nga bazikja SSL, SSL VPN siguron një sesion të 
+tërë. Nuk kërkohen adresa statike, dhe një klient është i panevojshëm në shumë raste. Që kur lidhjet janë 
+bërë  nëpërmjet  shfletuesit  në  internet,  protokolli  i  lidhjes  default  është  TCP/IP.  Klientët  që  lidhen 
+nëpërjmet SSL VPN mun të përdorin në një desktop për përdorim të burimeve të rrjetit. Transparenca tek 
+përdoruesi, trafiku nga laptopi i tyre mund të jetë i kufizuar për burime të caktuara në bazë të kritereve të 
+paracaktuara të biznesit. [10] 
+3.3.2 SSTP – një zgjatim i VPN 
+Zhvillimi i SSTP u bë nga mungesa e aftësive të VPN. Mangësia kryesore e VPN ishin lidhjet e saj të 
+paqëndrushme.  Kjo  është  pasojë  fushave  të  saj  të  pamjaftueshme  të  mbulimit.  SSTP  rrit  hapësirën  e 
+mbulimit të lidhjes VPN, duke e rregulluar këtë problem. SSTP krijon një lidhje përmes një HTTP të 
+sigurtë, kjo lejon klientët të aksesojnë të sigurt në ruterat e NAT, firewalle dhe web proxy, pa rrezikun e 
+bllokimit të portave. SSTP nuk është projektuar për lidhjen VPN site-to-site por ka për qëllim të përdoret 
+për lidhjen e faqeve VPN të klientit. 
+Suksesi i SSTP mund të gjendet në karakteristikat e mëposhtme: 
+ 
+• SSTP përdor HTTPS për të krijuar një lidhje të sigurtë 
+• Tyneli SSTP (VPN) do të funksionojë mbi një HTTP të sigurtë. Problemet me lidhjen e VPN 
+bazuar në protokollin e tynelimit point-to-point (PPTP) ose L2TP do të eleminohen. Ëeb proxy, fireëallet 
+dhe ruterat e Adresave të Përkthimit në Rrjet (NAT) protokolli Point-to-Point Tunneling Protocol (PPTP) 
+ose Layer 2 Tunneling Protocol (L2TP) do të eleminohen. Web proxy, firewallet dhe adresat e përkthimit 
+në internet (NAT) të lokalizuara në rrugëzimin mes klientit dhe serverit nuk do të bllokojnë më lidhjen e 
+VPN.  
+• Ulet numri i portave të bllokuara 
+----------------Page (25) Break----------------
+27 
+ 
+• Çështjet e bllokimit përfshijnë lidhjen në raport me bllokimin e portës PPTP GRE ose L2TP ESP 
+nëpërmjet një fireëalli apo ruteri NAT që pengon klientin nga arritja në server, nuk do të jetë më problem. 
+Klientët do të jenë të aftë për tu lidhur nga kudo nëpërmjet internetit. 
+ 
+• SSTP do të ndërtohet në serverat Longhorn 
+• SSTP nuk do të kërjojë ritrajtim të çështjeve, çështjet e kontrollit të përdoruesit fundor të VPN 
+mbeten të pandryshuara. Tynelimi i bazur në SSTP lidhet direkt në ndërfaqen aktuale për kleintin e VPN 
+Mikrosoft dhe programin e serverit. 
+• Mbështetje të plotë për IPv6. SSTP VPN. 
+• Përdor integrimin e mbrojtjes në aksesin e rrjetit për klientë. 
+• Integrim i fortë në MS RRAS klient dhe server, me aftësi në dy faktorë autenticiteti. 
+• Rrit mbulimin e VPN nga disa pika në më shumë lidhje internet. Enkapsulim të SSL për udhëtim 
+në përtën 443. 
+• Mund të kontrollohet dhe të manaxhohet duke përdorur Firewall të shtresës së rrjetit të tillë si 
+ISA.  
+• Zgjidhje e plotë në rrjetin e VPN, jo vetëm një tynelim për një aplikacion. 
+• Integrim në NAP. 
+• Integrim të rregullave dhe konfigurim për të ndihmuar klientët.  
+• Një session i vetëm i krijuar për tynelim. 
+• Pavarsia e aplikacionit. 
+• Autenticitet më i fortë se IPSec 
+• Mbështetje për protokollet jo-IP, ky është një avantazh i madh në krahësim me IPSec. 
+• Nuk është e nevojshme të blesh paisje të shtrenjta, të vështira për të konfiguruar firewalle që nuk 
+mbështesin integrimin e Active Directory dhe integrimin e faktorëve të autentictetit 
+ 
+----------------Page (26) Break----------------
+28 
+ 
+ 
+Figure 10 Mekanizmi i lidhjes SSTP. 
+ 
+3.3.2 Hapat e punës së SSTP bazuar në VPN. 
+Klientëve SSTP i nevojitet lidhje internet. Kur verifikimi i lidhjes është bërë nga protokolli, lidhja TCP/IP 
+vendoset në server në portën 443. Negocimi SSL do të zërë vend në kryje të lidhjes së krijuar TCP, ko do 
+të kontrollohet për vërtetësinë e certefikatës. Në rast se cerfitekata është e saktë, lidhja do të krijohet, në 
+rast se jo, lidhja do të dështojë. 
+Klienti  dërgon  një  kërkesë  HTTPS  në  krye  të  sesionit  të  enkriptimit  të  SSL  në  server.  Klienti  dërgon 
+paketat e kontrollit SSTP në sesionin e HTTPS. Kjo nga ana tjetër krijon një gjëndje të SSTP në të dyja 
+pjesët për qëllime të kontrollit, të dyja anët janë iniciojnë komunikimin në shtresa të PPP. 
+Negicimi  i  SSTP  duke  përdorur  SSTP  me  HTTPS  tani  gjen  vënd  në  të  dy  pjesët  fundore.  Klientit  i 
+kërkohet të autetifikohet në server. [10] Ky sesion tani lidhet me ndërfaqet IP në të dy pjesët dhe një 
+adresë IP të caktuar për trafik të rutimit. Trafiku mund të kalojë në lidhjen e krijuar duke qënë trafik IP 
+ose diçka tjetër. 
+Mikrosofti është i bindur që ky protokoll do të ndihmojë me lehtësimin e çështjeve të VPN. Ekipi i RRAS 
+është duke bërë gati integrimin në SSTP dhe protokolli do të jetë pjesë e zgjidheve të problemeve. i vetmi 
+parakusht për momentin është që klienti shkon nga një sistem p.sh Vista në një server Longhorn. Tiparet e 
+vendosura  në  këtë  protokoll  të  vogël  janë  si  fleksibël  dhe  të  pasura  ashtu  edhe  protokolli  do  të  rrisë 
+eksperiencën e përdoruesit dhe të administratorit. 
+----------------Page (27) Break----------------
+29 
+ 
+3.4IKEv2 
+Shkёmbimi  i çelsave  nё  Internet  (version  2)  ёshtё  njё  protokoll  tynelimi  i  bazuar  nё  IPSec  qё  ёshtё 
+zhvilluar  nga  Mikrosoft  dhe  Cisco,  dhe  qё  ёshte  i  implementuar  nё  Ёindoёs  7  dhe  mё  tej.  Ky  standrt 
+tynelimi ёshtё i pёrdorur nga paisjet Blackbarry, dhe ёshtё zhvilluar nё mёnyrё tё pavarur si implementim 
+open  source  nga  sistemet Linux dhe  sisteme  tё  tjera  operative.  Quajtur  si lidhje VPN  nga  Mikrosoft, 
+IKEv2 ёshte veçanёrisht nga ri-krijimi i lidhes sё VPN nё mёnyrё automatike kur humbet pёrkohёsisht 
+lidhja. Pёrdoruesit  e  telefonive  Mobile,  pёrfitojnё  gjithashtu  nga  pёrdorimi  i  IKEv2,  kjo  pёr  shkak  tё 
+mbёshtetjes sё saj pёr to, gjithashtu i bёn mё elastik nё ndryshimin e rrjetave. Ky ёshtё njё lajm i mirё pёr 
+pёrdoruesit  e  celularёvё  gjithashtu,  pёr  shembull,  lidh  telefonat  e  tyre  inteligjentё  tek  njё  rrjet Wi-fi 
+ndёrkohё qё janё nё shtёpi dhe zgjedhin tё pёrdorin paketёn e internetit tё kompanisё celulare, apo kur 
+rregullisht zgjedhin mes hotspoteve. IKEv2 ёshtё mjaft i pёrdorshёm tek telefonat Blackbarry, dhe ёshtё 
+ndёr tё paktёt protokollё tynelimi qё mbёshteten nga paisjet Blackbarry. Nuk ёshtё aq i gjithёpranishёm 
+sa  IPSec (p.sh.  ёshtё  i  pёrfshirё  nё  pak  platforma), por  IKEv2  konsiderohet  po  aq  i  mirё,  nё  mos  mё 
+superior se L2TP/IPsec inga ana e sigurisё, performancёs (shpejtёsisё) dhe stabilitetit. [8] 
+Avantazhet 
+ Mё i shpejtё se PPTP, SSTP dhe L2TP, kёshtu qё ajo nuk pёrfshin mbingarkesat me protokollet 
+point-to-point (PPP) (PPP) 
+ Shumё e qёndrueshme – veçanёrisht kur zgjedhim rrjetat ose rilidhjet pas njё lidhjeje tё humbur 
+internet. 
+ Mjaft i sigurtё – mbёshtet AES 128, AES 192, AES 256 dhe 3DES  
+ I lehtё pёr tu instaluar (tё paktёn nё nivelin e pёrdoruesit fundor) 
+ Ёshtё i mbёshtetur nga paisjet Blackbarry 
+Disavantazhet 
+ Nuk mbёshtetet nё shumё platforma 
+ Pёrdor tё njёjtёn portё UTP me IPSec dhe PPTP), e cila ёshtё e lehtё pёr tё bllokuar zgjidhet me 
+bazё SSL tё tilla si OpenVPN dhe SSTP 
+ Ne vetёm i besojmё teknologjisё open source 
+3.5 Open VPN 
+OpenVPN  ёshtё  njё  teknologji  e  re  open  source  qё  pёrdor  librarinё  e  protokolleve,  bashkё  me  njё 
+amalgamё tё teknologjive tё tjera, pёr tё mundёsuar njё zgjidhje tё mirё tё VPN. Njё nga pikat e saj mё tё 
+forta ёshtё sepse ёshtё konfigurimi i saj, dhe megjithё se ajo punon mirё nё portat e UDP, ajo mund tё 
+punojё mirё nё cilёndo portё, pёrfshirё dhe portёn TCP 443. Kjo e bёn trafikun e saj tё komunikojё veç 
+nga trafiku duke pёrdorur standartin HTTPS mbi SSL (njёsoj si nё gmail), dhe ёshtё mjaftё e vёshtirё pёr 
+tu bllokuar. Njё tjetёr avantazh i OpenVPN ёshtё qё libraria e OpenSSL ёshtё pёrdorur pёr tё mbёshtetur 
+enkriptimin mё njё numёr algoritmesh kriptograifk (p.sh. AES, Bloёfish, 3DES, CAST-128, Camellia dhe 
+tё  tjerё),  megjithatё  ofruesit  e  VPN  mё  shumё  pёrdorin  AES  ose  Bloёfish.  Bloёfish  128-bit  ёshtё  i 
+ndёertuar default nё OpenVPN, dhe qё pёrgjithёsisht ёshtё konsideruar i sigurtё, ajo ka dobёsi tё njohura. 
+AES  ёshtё  njё teknologji e  re,  nuk  ka  dobёsi tё  njohura,  dhe  falё adoptimit nga  qeveria e  Shteteve  tё 
+Bashkuara, pёr pёrdorim tё saj pёr mbrojtje tё sigurt tё tё dhёnave, ajo konsiderohet si njё ‘standart i artё’ 
+----------------Page (28) Break----------------
+30 
+ 
+kur bёhet fjala pёr enkriptim.  Fakti qё ka njё madhёsi blloku prej 128-bit mё mirё se Blowfish qё ka 
+madhёsi  blloku  prej  64-bit  gjithashtu  ka  treguar  qё  pёr  tё  dhёna  me  madhёsi  tё  mёdha  (mbi  1  GB) 
+qёndron  mё  mirё  se  Bloëfish.  Gjithesi,  ty  dy  janё  tё  tё çertefikuar  nga  NIST,  tё  cilat  duke  e  njohur 
+gjёrёsisht si njё problem, ne kemi probleme me tё. 
+OpenVPN  ёshtё  bёrё  njё lidhje  default,  dhe  qё nuk  pёrdoret  nga  ndonjё  platformё,  ёshtё  mjaft  mirё  i 
+pёrdorur si njё palё e tretё softëare (duke pёrfshirё si iOS edhe Android). 
+Avantazhet 
+ I konfiguruar mirё 
+ Shumё i sigurt (mundёsisht edhe ndaj NSA) 
+ Mund tё anashkalojё VPN 
+ Mund tё pёrdorё njё gamё tё gjёrё tё algoritmeve tё enkriptimit 
+ Open source (dhe pёr kёtё arsye mund tё verifikohet) 
+Disavantazhet 
+ Kёrkon njё palё tё tretё programi 
+ Mund tё jetё i vёshtirё pёr tu ndёrtuar 
+ Mbёshtetja pёr telefoninё mobile ёshtё pёrmirёsuar, por nuk ёshtё dhe aq i mirё nё desktop. 
+ 
+3.6 L2F 
+Cisco propozoi një një protokoll tynelimi të shtresës së dytë të quajtur L2TP si një konkuret për PPTP. 
+Ajo përdor PPP për enkriptim dhe autenticitet por shtrin autenticitetin për të mbështetur TACACS+ dhe 
+RADIUS duke përdorur EAP (Protokolli i zgjeruar i autentifikimit). Ajo gjithashtu mbështet autenticitetin 
+e shtresës së dytë, një përdorues në distancë për ISP POP dhe një tjetër nga ISP POP tek portat e rrjetit të 
+kompanisë.  Tynelet  e  shumëfishta  të  VPN  mund  të  krijohen  duke  përdorur  L2F.  Ndërkohë  që  PPTP 
+mbështet vetëm IP, L2F mund të ekzekutohet në krye te protokollit të shtresës së dytë të tillë si ATM. [9] 
+4. Implementimi i VPN 
+Në implementimin e VPN qëllimi është të ndërtojmë një profil klienti dhe një profil server të cilat do të 
+lidhen mes tyre për të simuluar një lidhje të VPN. Për të bërë konfigurimin e klientit dhe të serverit ne do 
+të përdorim Ëindoës Server, në të cilën do të instalojmë disa aplikacione si Active Directory, DNS Server, 
+DHCP Server etj. Pas instalimit të Active Directory krijova një profil me emrin tim që i dhashë gjithashtu 
+kredenciale, të cilin do ta përdor për testim të VPN. Më pas do të konfiguroj VPN server për të aksesuar 
+Active Directory. Për të aksesuar Active Directory me anë të kredencialeve të mia, më duhet të konfiguroj 
+këtë lidhje me krijimin e lidhjes së VPN. Në momentin e konfigurimit dhe të krijimit të lidhjes së VPN, 
+në profiling e Active Directory mund të shoh përdoruesit e loguar, pra mund të shoh që profili im është i 
+aksesuar dhe që aty mundet edhe të bllokoj lidhjen apo ta çaktivizoj atë. 
+----------------Page (29) Break----------------
+31 
+ 
+4.1 Konfigurimi i serverit.  
+4.1.1 Krijimi i mjedisit për instalimin e VPN Server. 
+Fillimisht instalojmë një makinë virtuale Virtualbox, VirtualMachine etj, në të cilën instalojmë një sistem 
+serveri të cilin unë kam zgjedhur Windoës Server R2 64 bit. 
+Në  këtë  sistem  serveri  instaloj  fillimisht  Active  Directory.  Active  Directory  (AD)  është  një  shërbim 
+direktorie  i ofruar  nga  Mikrosoft  për  domain  të  rrjeteve  në Ëindoës  dhe  është  i  përfshirë  në  sistemet 
+operative Windows  server  si  një  grup  procesesh  dhe  shërbimesh.  Një  Active  Directory  kontrollon, 
+autorizon dhe autentifikon të gjithë kompjuterat dhe domainet e Windows në rrjet dhe përforcon rregullat 
+e sigurisë për të gjithë kompjutarat dhe instalimin apo përditësimin e programeve. Për shembull, kur një 
+përdorues  logohet  në  kompjuter  që  është  pjesë  e  domainit,  Active  Directory  cakton  passëordin  dhe 
+përcakton nëse përdoruesi është administrator apo përdorues i thjeshtë. Ka të drejta të paracaktuara nga 
+administratori i sistemit. 
+Fillimisht  pas  instalimit  të  Sistemit Windows  Server  bëhet  instalimi  i  Active  Directory  që  instalohet 
+njëherësh  edhe me sisteme të tjera serveri si DNS apo DHCP. Keto konfigurohen në Windows server dhe 
+më pas mund të kryejmë shërbime të tjera me to. 
+ 
+Figure 11 Përzgjedhja për instalim e AD, DHCP dhe DNS. 
+----------------Page (30) Break----------------
+32 
+ 
+ 
+Figure 12 Përzgjedhja e roleve të shërbimit 
+Më pas vendosim kredenciale të tilla si emri i domain, apo emri NetBios e cila zakonisht është emri root i 
+domain.  
+ 
+Figure 13 Vendosja e domainit për në direktorinë active 
+----------------Page (31) Break----------------
+33 
+ 
+Pasi zgjedhim root.domain name e cila do të na shërbejë si emri root ne Active Directory e cila do të na 
+shërbejë si domain kur të aksesojmë AD nga VPN. 
+Ne zgjedhim edhe emrin për NetBIOS që kryesisht zgjidhet emri root i Active Directory. 
+NetBIOS  (Network  Basic  I/O  System)  mundëson  aplikacione  në  kompjutera  të  ndarë  të  komunikojnë 
+përgjatë rrjetit lokal. NetBIOS nuk është një protokoll rrjeti. Sistemet e vjetra e ekzekutojnë NetBIOS me 
+IEE  802.2  dhe  IPX/SPX.  Në  sistemet  e  reja  normalisht  NetBIOS  ekzekutohet  mbi  TCP/IP  nëpërmjet 
+protokollit NBT (NetBIOS over TCP/IP). Kjo sjell si rezultat në secilin kompjuter në rrjet kemi adresë IP 
+dhe emër BIOS që korespondon me një emër host. 
+ 
+Figure 14 Vendosja e NetBIOS. 
+ 
+Më pas instalohet “Remote Acess” tek serverat e instaluar, e cila do të shërbejë për lidhjen me Active 
+Directory duke ditur që aksesi në distancë është në vetvete qëllimi i VPN. 
+----------------Page (32) Break----------------
+34 
+ 
+ 
+Figure 15 Instalimi i Remote Acess 
+ 
+4.1.2 Konfigurimi i VPN server. 
+Më  pas  Remote  Acess  del  tek  Server  Manager  të  cilin  mund  ta  konfigurojmë  duke  shkuar  tek  "Open 
+Getting Started Wizard" dhe përzgjedhur llojin e lidhjes që do krijojmë DirectAcess, VPN apo të dyja 
+bashkë. Më pas përzgjedhim opsione të konfigurimit të VPN të përzgjedhura si më poshtë. 
+ 
+Figure 16  Konfigurimi i aksesit në distancë 
+----------------Page (33) Break----------------
+35 
+ 
+Përzgjedhja  e  shërbimit  DirectAcess  apo  VPN  Në  ndryshim  nga  VPN  që  duhet  që  klienti  të  iniciojë 
+lidhjen,  në  rastin  e  DirectAcess  kjo  lidhje  qëndron  për  sa  kohë  përdoruesi  është  në  internet.  
+Më pas futemi tek profili i Routing dhe Remote Acess për të konfiguruar llojin e veçorive të lidhjes, të 
+cilat tregohen sipas figurave vijuese. 
+ 
+Figure 17 Konfigurimi i acess remote nga Serveri. 
+ 
+ 
+Figure 18 Përshtatja në konfigurimin e serverit të aksesit në distancë. 
+----------------Page (34) Break----------------
+36 
+ 
+ 
+Figure 19 Përzgjedhja e VPN nga llojet e aksesit në distancë. 
+ 
+4.1.3 Konfigurimi i Active Directory 
+Në foton më poshtë vendoset username e cila lidhet me domain root që u krijua në fillim sapo u instlua 
+AD. Domaini bejane.al do të shërbejë për tu loguar në AD por ky domain shpesh përdoret edhe si domain 
+tek  mail  serverat  të  cilat  lidhen  me  AD  në  kompani  të  ndryshme  për  përdorim  nga  punonjësit  e  saj. 
+Përdoruesit i vendosim emër/mbiemër/ si dhe përshrime të tjera të tij. Në Active Directory sipas punës 
+dhe hierarkisë së punonjësit i vendosen atribute, por ne nuk e kemi bërë një gjë të tillë sepse qëllimi i 
+krijimit të këtij profile është që të shërbejë për lidhjen e VPN. 
+ 
+Figure 20 Vendosja e kredencialeve në Acitve Directory 
+----------------Page (35) Break----------------
+37 
+ 
+Për arsye testi vendosëm që mos ndryshohet passëord si dhe afati i përdorimit të tij mos të jetë i kufizuar 
+ashtu si ndodh në AD kur për arsye sigurie fjalëkalimet përditësohen shpesh.  
+Në foton më poshtë vendoset username e cila lidhet me domain root që u krijua në fillim sapo u instlua 
+AD. Domaini bejane.al do të shërbejë për tu loguar në AD por ky domain shpesh përdoret edhe si domain 
+tek mail serverat të cilat lidhen me AD në kompani të ndryshme për përdorim nga punonjësit e saj. 
+4.2 Konfigurimi I lidhjes klient-server. 
+Konfigurimi i klientit bëhet duke marë disa të dhëna si IP, dhe duke vendosur saktë të dhënat e mara nga 
+profili i Active Directory, më pas do të përzgjidhet edhe lloji i enkriptimit, tynelit dhe veti të tjera që 
+endihmojnë mjaft VPN të rrisë sigurinë e saj. 
+ 
+Figure 21 Konfigurimet IP në Windoës 
+ 
+ 
+Figure 22 Krijimi i lidhjes sVPN, 
+----------------Page (36) Break----------------
+38 
+ 
+ 
+Figure 23 Përzgjedhja e internetit për tu lidhur me serverin AD. 
+ 
+ 
+Figure 24 Përzgjedhja e vetive të VPN. 
+ 
+----------------Page (37) Break----------------
+39 
+ 
+ 
+Figure 25 Pamja pas përfundimit 
+ 
+Përdoruesi akseson AD me anë të profilit të tij në VPN duke përdorur username/password dhe domain 
+profilin e tij në Active Directory. 
+ 
+Përfundime 
+ 
+Siguria është një 'hot topic' sot, pra një temë e nxehtë e cila ka sjellë shumë diskutime dhe probleme. 
+Sidomos për kompanitë e ndryshme ky problem dhe kjo çështjë bëhet dhe më aktuale pasi humbja e të 
+dhënave apo interceptimi ose ndryshimi i tyre nga palë të treta nënkupton vdekjen dhe rrënim të saj. Një 
+nga  mënyrat  e  gjetura  dhe përdoruara  masivisht  sot  janë dhe  VPN,  një rrjet  virtual  privat  që siguron 
+komunimim të painterceptuar në rrjet.  
+Duke  demonstruar  karakteristikat  dhe  komponentët  e  ndryshëm  të kësaj  teknologjie,  duke  vijuar  me 
+implementimin e saj, është arritur të krijohet një panoramë e plotë dhe bazë për kuptimin dhe zhvillimin e 
+individual.  
+----------------Page (38) Break----------------
+40 
+ 
+ 
+Referencat 
+ 
+1. Khiza, Joseph Miga. Guide to Computer Netëork Security. Tennessee : s.n., 2014. ISBN 978-1-4471-
+6653-5. 
+2. VPN Security. Infosec. 2008, Government of Hong Kong, p. 24. 
+3.     Hoë Virtual     Private     Netëorks Ëork. CISCO. [Online]     10     13,     2008. 
+http://ëëë.cisco.com/c/en/us/support/docs/security-vpn/ipsec-negotiation-ike-protocols/14106-hoë-vpn-
+ëorks.html. 
+4. Charile  Scott,  Paul Ëolfe,  Mike  Erëin. Virtual Private Netëorks, Second Edition. 1999.  ISBN:  1-
+56592-529-7. 
+5. Kessler, Gary C. Gary Kessler. [Online] 2015. http://garykessler.net/library/crypto.html. 
+6. Compaq. [Online] 1999. ftp://kierer.at/compaq/partners/microsoft/infolib/ecg5150899.pdf. 
+7. Microsoft. [Online] https://technet.microsoft.com/en-us/library/cc977622.aspx. 
+8. Craëford, Douglas. PPTP vs L2TP vs OpenVPN vs SSTP vs IKEv2. Bestvpn. [Online] May 1, 2013. 
+[Cited:  September  14, 2015.]  https://ëëë.bestvpn.com/blog/4147/pptp-vs-l2tp-vs-openvpn-vs-sstp-vs-
+ikev2/. 
+9. Christos  Douligeris,  Dimitrios  Serpanos. Netëork Security, Current Status and Future Directions. 
+2007. ISBN 978-0-471-70355-6. 
+10. M.Maghales,  Ricky. Secure Socket Tunneling Protocol. ËindoësSecurity. [Online] April 17, 2007. 
+[Cited:  September  16,  2015.]  http://ëëë.ëindoësecurity.com/articles-tutorials/fireëalls_and_VPN/Secure-
+Socket-Tunneling-Protocol.html. 
+11. CISCO https://www.cisco.com/c/en/us/products/ios-nx-os-software/ethernet-vpn.html 
+ 
+ 
+ 
+----------------Page (39) Break----------------
